@@ -1,0 +1,64 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:site_name" content="Zenith John's Nonsense"><meta property="og:type" content="article"><meta property="og:image" content="https://zenith-john.github.io//img/header.png"><meta property="twitter:image" content="https://zenith-john.github.io//img/header.png"><meta name=title content="我的工具"><meta property="og:title" content="我的工具"><meta property="twitter:title" content="我的工具"><meta name=description content><meta property="og:description" content><meta property="twitter:description" content><meta property="twitter:card" content="summary"><meta name=keyword content><link rel="shortcut icon" href=/img/favicon.ico><title>我的工具-</title><link rel=canonical href=/post/my_tools/><link rel=stylesheet href=/css/iDisqus.min.css><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/hux-blog.min.css><link rel=stylesheet href=/css/zanshang.css><link href=//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css rel=stylesheet type=text/css><script src=/js/jquery.min.js></script><script src=/js/bootstrap.min.js></script><script src=/js/hux-blog.min.js></script></head><nav class="navbar navbar-default navbar-custom navbar-fixed-top"><div class=container-fluid><div class="navbar-header page-scroll"><button type=button class=navbar-toggle>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span></button>
+<a class=navbar-brand href=/>Zenith John's Nonsense</a></div><div id=huxblog_navbar><div class=navbar-collapse><ul class="nav navbar-nav navbar-right"><li><a href=/>Home</a></li></ul></div></div></div></nav><script>var $body=document.body,$toggle=document.querySelector('.navbar-toggle'),$navbar=document.querySelector('#huxblog_navbar'),$collapse=document.querySelector('.navbar-collapse');$toggle.addEventListener('click',handleMagic);function handleMagic(a){$navbar.className.indexOf('in')>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf('in')<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script><style type=text/css>header.intro-header{background-image:url(/img/header.png)}</style><header class=intro-header><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><div class=tags></div><h1>我的工具</h1><h2 class=subheading></h2><span class=meta>Posted by
+[Zenith John]
+on
+Thursday, August 19, 2021</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-11 col-lg-offset-1
+col-md-10 col-md-offset-1
+post-container"><h2 id=manjaro-linux>Manjaro Linux</h2><p>目前我使用的发行版是Manjaro Linux，这个发行版基于 Arch 但是有图形化的安装界面对于新手更加的友好。使用这个发行版的好处是有大量的软件可以使用，其数量甚至超过 Ubuntu PPA，而且软件的更新速度非常快。当然也有很多不好的地方，不如很多软件包是个人维护的，最后可能就没人维护了。这种事情也常常发生。更新速度太快也可能会导致一些软件的 bug 被推送，比如我个人遇到过 ripgrep 的 bug。不过我个人的体验还是非常满意的，它的优点大大超过了它的缺点（做为桌面系统）。当然，我有了清华的源 <a href=https://mirror.tuna.tsinghua.edu.cn/>https://mirror.tuna.tsinghua.edu.cn/</a> 来加快速度。</p><h2 id=kde>KDE</h2><p>目前我使用的桌面环境是KDE，最开始转到KDE的原因是为了使用大佬的<a href=https://github.com/manateelazycat/emacs-application-framework>Emacs Application
+Framework</a>，但是经过一段时间的使用后发现还是不太适合我个人的工作流，因此就放弃了。
+但是在使用的过程中也发现了KDE环境有很多的优点，因此就一直使用了下来。使用平铺式
+桌面环境的一个痛点在于很多软件的设计对于平铺桌面非常不友好。在KDE中可以避免这一
+个烦恼。</p><p>对于我个人而言比较重要的配置有以下几点：</p><ol><li>选择一个你比较喜欢的主题和图标，我个人的选择是 Breeze Dark，和它配套的图标。</li><li>选择字体，我使用的是 Source Han Sans CN</li><li>关闭一些不必要的桌面动画，比如切换虚拟桌面的动画，因为我经常切换虚拟桌面因此
+动画会让我感到厌烦。</li><li>将虚拟桌面数量固定为4。选择4这个数字是因为我的键盘只有左Windows，因此同时按
+Windows 和 4 就已经比较极限了。同时4个虚拟桌面的数量已经足够满足我的个人需求。</li><li>开机自启动。我有一个 zstart 程序来进行我需要的开机自启动。</li><li>键盘设置。使得 Caps Lock 变为 LControl。使用 Emacs 的都懂。通过 xcape 进行更
+多的设置，在 zstart 中更多地进行介绍。</li><li>关闭 File Search。这点非常重要，由于KDE的文件搜索缓存引擎 Baloo 对于非拉丁语
+系的支持非常不好，如果不关闭在搜索中文时就会一无所获，因此必须进行关闭。</li><li>设置快捷键。这点对我而言非常重要。我会选择直接覆盖默认的快捷键。Win + num，切
+换虚拟桌面。 Win + Shift + num，移动窗口到虚拟桌面。 Win + m，最小化。 Win +
+0，最大化。 Win + i,o,k,l,u,y，分别打开 Firefox, Okular, Konsole, Dolphin,
+Emacs, Zathura。这一点在 wmctrl 中会进一步介绍。 Win + p，运行命令 rofi -modi
+combi -combi-modi window,drun -show combi。而 Windows 键可以运行我自己的脚本
+<a href=https://github.com/zenith-john/ZSelectWindow>ZSelectWindow</a>。Win + Left, Right，将窗口分配到左右半屏。Win + Up, Down，将桌面
+分配到右上角，右下角。 Win + Shift + q 关闭窗口。</li><li>KDE widget, global menu 类似 Mac 的效果使得软件有更好的体验，遗憾的是并不是所
+有的软件都支持，如 Firefox(但是可以通过 firefox-ubuntu-bin 获得)。</li></ol><h2 id=kde系软件>KDE系软件</h2><p>相比于 Gnome 而言确实 KDE 系的软件要好看不少。我个人比较常用的有以下几个：</p><ol><li>Konsole. 终端，使用内置的 Breath2 theme，同时使用字体 Source Code Pro 并开启
+无限滚动，用了这个之后我就不再用 Tmux，通过 Control-Shift-C/V 进行复制粘贴非
+常方便。当然也要对于快捷键进行一定的设置。</li><li>Okular. Pdf, dvi 等文件的查看器。同时备注功能较为强大，但是选择文本的交互总是
+让我感觉很难受，而且 Open in Tabs 在不同虚拟桌面中有问题。需要将以下文件放入
+desktop 文件夹中，然后用 mimeopen 将默认程序设为这个。（依赖于 wmctrl）</li><li>Dolphin. 文件管理器，可以选择单模式。</li><li>Juk. 音乐播放器，和 KDE 整合较好。</li><li>KOrganizer. 和 Org Agenda 配合使用，通过读取 iCalendar 文件提供日程提示。</li><li>Latte Dock. Mac-like Dock. 可以自动隐藏，放于桌面左侧。</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c>[Desktop Entry]
+MimeType<span style=color:#f92672>=</span>image<span style=color:#f92672>/</span>vnd.djvu;image<span style=color:#f92672>/</span>vnd.djvu<span style=color:#f92672>+</span>multipage;application<span style=color:#f92672>/</span>epub<span style=color:#f92672>+</span>zip;application<span style=color:#f92672>/</span>x<span style=color:#f92672>-</span>mobipocket<span style=color:#f92672>-</span>ebook;application<span style=color:#f92672>/</span>pdf;application<span style=color:#f92672>/</span>x<span style=color:#f92672>-</span>gzpdf;application<span style=color:#f92672>/</span>x<span style=color:#f92672>-</span>bzpdf;application<span style=color:#f92672>/</span>x<span style=color:#f92672>-</span>wwf;
+Terminal<span style=color:#f92672>=</span>false
+Name<span style=color:#f92672>=</span>Okular_Unique
+GenericName<span style=color:#f92672>=</span>Document Viewer
+Comment<span style=color:#f92672>=</span>Universal document viewer
+Exec<span style=color:#f92672>=</span>okular<span style=color:#f92672>-</span>unique <span style=color:#f92672>%</span>U
+Icon<span style=color:#f92672>=</span>okular
+Type<span style=color:#f92672>=</span>Application
+InitialPreference<span style=color:#f92672>=</span><span style=color:#ae81ff>8</span>
+Categories<span style=color:#f92672>=</span>Qt;KDE;Graphics;Viewer;
+X<span style=color:#f92672>-</span>KDE<span style=color:#f92672>-</span>Keywords<span style=color:#f92672>=</span>PDF, Portable Document Format
+NoDisplay<span style=color:#f92672>=</span>true
+</code></pre></div><h2 id=其他软件>其他软件</h2><ol><li>Firefox / Chrome. 网页浏览，必须要有的插件是广告拦截 （我用的是 uBlock origin，
+注意要开启 Filter Lists/Regions,Languages/CHN) 和 Auto Switch。</li><li>Goldendict. 英语词典，可以自己添加词典，我使用的是网上下载的，常用的包括 New
+Oxford English-Chinese Dictionary，牛津高阶学习词典（OALD）,牛津英语搭配词典，
+USE THE RIGHT WORD, WordNet 3.0 等。</li><li>Zeal. 文档查询，与 Mac 的 Dash 相似。（实际上使用的就是相同的词典）</li><li>Mega / Nutstore. 云盘用于同步，我用 Mega 同步较大量的文档，通过 Nutstore 同步
+一些较小的配置。</li><li>ZClock. 我个人编写的一个闹钟，每隔一段时间放音乐，提示你应该休息了。<a href=https://github.com/zenith-john/ZClock>ZClock</a></li><li>Thunderbird. 邮件管理。尝试过使用 Emacs 进行管理，但是弄不好多邮箱配置最后放
+弃了。</li><li>Emacs. 之后细讲。</li><li>QT Creator. 用于开发 QT Application。虽然实际上我只写了一个 ZClock。</li><li>fcitx, rime. rime 输入法，你值得拥有。</li><li>Zathura. 另一个 pdf 查看器，小巧，快速，用于与 latex 相配合。</li><li>Zotero 联合 Firefox 插件进行文献管理。</li><li>flameshot。一个有用的截屏软件。</li><li>psensor 一个监控 cpu 的软件。</li><li>fsearch Linux 下的 Everything。</li></ol><h2 id=命令行程序>命令行程序</h2><ol><li>wmctrl. 非常重要的命令行程序，通过它可以实现 RaiseOrRun 的效果，即 wmctrl
+-x -R &lsquo;class_name&rsquo; || appname，其中 class name 可以通过 xprop 获得。</li><li>git. 版本控制不用多说了。</li><li>vim. 快。</li><li>trojan. 详见<a href=https://manateelazycat.github.io/proxy/2020/02/10/trojan.html>https://manateelazycat.github.io/proxy/2020/02/10/trojan.html</a></li><li>rcm. 用于管理小的配置文件，比如 .zshrc 等。可以通过 mkrc 将文件搜集到
+~/.dotfiles，并通过 rcup 进行恢复，而收集后的文件就可以通过 git 进行管理。</li><li>texlive. 对于学术工作者而言非常重要。注意使用网上的脚本
+latexindent-module-installer 进行必要的安装使得 latexindent perl 脚本可用。</li><li>ripgrep. 快速的 grep，同时与 Emacs 等软件配合。</li><li>zsh. 更加好用的 shell。可以参考我的 zshell 配置，并不是非常复杂。 其中 z.lua
+使你可以快速地在文件夹间穿梭。</li><li>fd. 快速的 find.</li><li>fzf. 命令行结果选择工具，可以用于搜索历史等，非常方便。</li><li>ZSelectWindow. 严格来说，它并不是命令行工具，它可以实现类似 Emacs 中 Avy 的
+效果来切换窗口。不足之处是由于使用 python 编写速度不是很快。</li><li>xcape. 另一个非常重要的程序，通过处理 X Windows 的指令使得键盘更加好用。我添
+加的设置有将单击 Caps Lock 设置为 Escape，将单击 Alt_R 设置为 Ctrl + X，将单
+击 Shift_R 设置为 Ctrl + C，将单击 Windows 设置为快捷键然后连接到</li><li>pyenv. python 版本控制，非常不友好，几乎废弃。</li><li>nvm. node.js 版本控制。</li><li>you-get 用于下载视频。参考<a href=post/.org>半自动化下载B站收藏夹视频</a></li><li>atool 通用解压工具。</li><li>sd <a href=https://github.com/chmln/sd>https://github.com/chmln/sd</a> sd 是 sed 的 Rust 替代品，提供了更为简单和符合直观的参数。</li></ol><h2 id=python-相关>Python 相关</h2><ol><li>black. 文件格式化程序，确保你的代码规范。</li><li>magic-import. 智能 import.</li><li>python-language-server. <a href=https://github.com/microsoft/python-language-server>https://github.com/microsoft/python-language-server</a>,
+编译指令，当然因此我也需要 dotnet</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cd python-language-server/src/LanguageServer/Impl
+dotnet publish -c Release -r linux
+</code></pre></div><h2 id=c-c-plus-plus-相关>C/C++ 相关</h2><ol><li>cmake. C++ 构建工具。</li><li>ccls. C++/C language server。</li><li>clang. 其中 clang-tidy 用于查错，同时 clang-format 用于格式化代码。个人偏向于
+使用 microsoft 格式，但是将缩进改为 4。</li></ol><hr><ul class=pager><li class=previous><a href=/post/reason_and_sensibility/ data-toggle=tooltip data-placement=top title=理性与感性>&larr;
+Previous Post</a></li><li class=next><a href=/post/the_source_of_my_discrimination/ data-toggle=tooltip data-placement=top title=我为什么鄙视（歧视）别人？>Next
+Post &rarr;</a></li></ul><div id=disqus-comment></div></div><div class="col-lg-11 col-lg-offset-1
+col-md-10 col-md-offset-1
+sidebar-container"></div></div></div></article><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li><a href=mailto:zenith-john@foxmail.com><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://github.com/zenith-john/><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted">Copyright &copy; Zenith John's Nonsense 2021<br><a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
+<iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe></p></div></div></div></footer><script>function loadAsync(f,b){var c=document,d='script',a=c.createElement(d),e=c.getElementsByTagName(d)[0];a.src=f,b&&a.addEventListener('load',function(a){b(null,a)},!1),e.parentNode.insertBefore(a,e)}</script><script>$('#tag_cloud').length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:'#bbbbee',end:'#0085a1'}},$('#tag_cloud a').tagcloud()})</script><script>loadAsync("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js",function(){var a=document.querySelector("nav");a&&FastClick.attach(a)})</script></body></html>

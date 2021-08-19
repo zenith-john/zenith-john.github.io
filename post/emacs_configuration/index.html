@@ -1,0 +1,638 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:site_name" content="Zenith John's Nonsense"><meta property="og:type" content="article"><meta property="og:image" content="https://zenith-john.github.io//img/header.png"><meta property="twitter:image" content="https://zenith-john.github.io//img/header.png"><meta name=title content="Emacs"><meta property="og:title" content="Emacs"><meta property="twitter:title" content="Emacs"><meta name=description content><meta property="og:description" content><meta property="twitter:description" content><meta property="twitter:card" content="summary"><meta name=keyword content><link rel="shortcut icon" href=/img/favicon.ico><title>Emacs-</title><link rel=canonical href=/post/emacs_configuration/><link rel=stylesheet href=/css/iDisqus.min.css><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/hux-blog.min.css><link rel=stylesheet href=/css/zanshang.css><link href=//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css rel=stylesheet type=text/css><script src=/js/jquery.min.js></script><script src=/js/bootstrap.min.js></script><script src=/js/hux-blog.min.js></script></head><nav class="navbar navbar-default navbar-custom navbar-fixed-top"><div class=container-fluid><div class="navbar-header page-scroll"><button type=button class=navbar-toggle>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span></button>
+<a class=navbar-brand href=/>Zenith John's Nonsense</a></div><div id=huxblog_navbar><div class=navbar-collapse><ul class="nav navbar-nav navbar-right"><li><a href=/>Home</a></li></ul></div></div></div></nav><script>var $body=document.body,$toggle=document.querySelector('.navbar-toggle'),$navbar=document.querySelector('#huxblog_navbar'),$collapse=document.querySelector('.navbar-collapse');$toggle.addEventListener('click',handleMagic);function handleMagic(a){$navbar.className.indexOf('in')>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf('in')<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script><style type=text/css>header.intro-header{background-image:url(/img/header.png)}</style><header class=intro-header><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><div class=tags></div><h1>Emacs</h1><h2 class=subheading></h2><span class=meta>Posted by
+[Zenith John]
+on
+Thursday, August 19, 2021</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-11 col-lg-offset-1
+col-md-10 col-md-offset-1
+post-container"><header><h2>TOC</h2></header><nav id=TableOfContents><ul><li><ul><li><a href=#版本>版本</a></li><li><a href=#配置文件主体>配置文件主体</a></li><li><a href=#好的字体是成功的一半>好的字体是成功的一半</a></li><li><a href=#writeroom-mode-and-others>Writeroom-mode and others</a></li><li><a href=#在emacs中使用使用microsoft-python-language-server>在Emacs中使用使用Microsoft Python Language Server</a></li><li><a href=#org-mode>Org-mode</a></li><li><a href=#emacs换行问题>Emacs换行问题</a></li><li><a href=#关于注释问题>关于注释问题</a></li><li><a href=#evil-mode>Evil-mode</a></li><li><a href=#自动保存>自动保存</a></li><li><a href=#latex>LaTeX</a></li><li><a href=#版本控制>版本控制</a></li><li><a href=#ui>UI</a></li><li><a href=#自动补全>自动补全</a></li><li><a href=#ivy-mode>Ivy-mode</a></li><li><a href=#programming>Programming</a></li><li><a href=#琐碎>琐碎</a></li></ul></li></ul></nav><h2 id=版本>版本</h2><p>Emacs 是我最常用的编码工具。我使用的是 Emacs 28 版本，自己编译，编译选项为</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>./configure --with-modules --with-xwidgets --with-mailutils --with-imagemagick --with-native-comp
+</code></pre></div><h2 id=配置文件主体>配置文件主体</h2><p>对于新手而言，不建议自己从头开始配置。因为很有可能会迷失在配置文件之中，建议先使
+用其他人的配置，同时通过学习其他人的代码来进行学习，在一定时间之后再逐渐积累形成
+自己的配置。就我个人而言最开始使用的是purcell的配置文件。
+<a href=https://github.com/purcell/emacs.d>https://github.com/purcell/emacs.d</a> 又尝试了Spacemacs，
+<a href=https://github.com/syl20bnr/spacemacs>https://github.com/syl20bnr/spacemacs</a>, 但是由于Spacemacs启动速度过慢，同时有过多
+的冗余设置，加入自己的配置也不够方便，因此，开始了自己的配置。从各个repo中抄了很
+多的代码，途中也学习了不少关于Emacs和Lisp的知识。最近发现了
+Doom-emacs,<a href=https://github.com/hlissner/doom-emacs/>https://github.com/hlissner/doom-emacs/</a>。 相比于Spacemacs，Doom-emacs
+启动较快，同时利用Doom-emacs提供的各种宏，能够更好地在不改变原始仓库代码的同时进
+行配置。 <del>目前我的配置就建立在Doom-emacs的基础上</del> 。目前我已经重新使用完全由自己
+编码的配置来换取精确的控制。就我现在来看，我更加推荐 Purcell 的配置，并从他的配
+置中逐步学习。这是因为他的配置额外的结构较少，不容易像学习 spacemacs 一样陷入配
+置的重重引用中。</p><h2 id=好的字体是成功的一半>好的字体是成功的一半</h2><p>推荐字体 <strong>更纱黑体</strong> ，中英文等宽等高避免Org-mode的各种错位。虽然个人感觉英文字体
+没有那么好看，但还是可以接受的。(中文还是非常漂亮的)附链接:<a href=https://github.com/be5invis/Sarasa-Gothic>Sarasa Gothic</a></p><p>可以这样配置（中文使用更纱黑体，英文使用 Iosevka 与 Source Code Pro 的混合）：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(defvar zenith-font (<span style=color:#a6e22e>font-spec</span> :family <span style=color:#e6db74>&#34;Iosevka Term SS09&#34;</span> :size <span style=color:#ae81ff>16</span> :weight <span style=color:#e6db74>&#39;semi-bold</span>))
+(defvar zenith-unicode-font (<span style=color:#a6e22e>font-spec</span> :family <span style=color:#e6db74>&#34;Sarasa Term SC&#34;</span> :weight <span style=color:#e6db74>&#39;bold</span>))
+(setq inhibit-x-resources <span style=color:#66d9ef>t</span>)
+
+(defun zenith/init-font ()
+  (add-to-list <span style=color:#e6db74>&#39;default-frame-alist</span> <span style=color:#f92672>`</span>(font <span style=color:#f92672>.</span> <span style=color:#f92672>,</span>(<span style=color:#a6e22e>font-xlfd-name</span> zenith-font)))
+  (<span style=color:#a6e22e>set-fontset-font</span> <span style=color:#66d9ef>t</span> <span style=color:#e6db74>&#39;unicode</span> zenith-unicode-font <span style=color:#66d9ef>nil</span> <span style=color:#e6db74>&#39;prepend</span>))
+
+(zenith/init-font)
+</code></pre></div><p>在GTK环境中，EMACS在打开后会根据GConf重新设置字体格式，因此要有效的设置字体必须在.emacs或者init.el中加入</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(<span style=color:#a6e22e>define-key</span> special-event-map [config-changed-event] <span style=color:#e6db74>&#39;ignore</span>)
+</code></pre></div><p>更具体的说明请看<a href=https://emacs.stackexchange.com/questions/32641/something-changes-the-default-face-in-my-emacs/32664#32664>https://emacs.stackexchange.com/questions/32641/something-changes-the-default-face-in-my-emacs/32664#32664</a></p><h2 id=writeroom-mode-and-others>Writeroom-mode and others</h2><p>至少在Ubuntu 18.04中，这些使文字居中的模式(Writeroom )不能够很好地与ibus协作，
+ibus的选单会发生偏移。原因和解决方案有待进一步观察。（目前我已经使用
+darkroom-mode 但是会遇到同样的问题）</p><p>事实上，这个问题可以使用 Emacs 的内置输入法来解决。但是内置输入法太弱，因此我们
+使用 <a href=https://github.com/tumashu/pyim>https://github.com/tumashu/pyim</a> 。事实上，pyim 除了输入法外还提供了很多非常
+有用的功能。比如根据环境切换中英文状态，比如将英文字符串转变为输入法的输入等。配
+置可以参考我的 config/init-pyim.el 。其中我使用的 pyim 后端是 rime， rime 是一个
+非常好用的输入法。</p><h2 id=在emacs中使用使用microsoft-python-language-server>在Emacs中使用使用Microsoft Python Language Server</h2><h3 id=why>Why</h3><p>目前来看 Microsoft 的 Python Language Server 由于使用 C# 写成，因此速度最快，卡顿较少，补全效果较好。</p><h3 id=how>How</h3><p>主要的过程都在这篇文章之中：<a href=https://vxlabs.com/2018/11/19/configuring-emacs-lsp-mode-and-microsofts-visual-studio-code-python-language-server/>https://vxlabs.com/2018/11/19/configuring-emacs-lsp-mode-and-microsofts-visual-studio-code-python-language-server/</a> ,但是有必要对于一些步骤进行改进。</p><p>首先在代码中对于 lsp-ui-sideline&ndash;format-info 和 lsp-ui-doc&ndash;extract 这两个函数添加了 advice，而这advice在输入的 doc 为 nil 时会报错，因此在ccls时这两个函数不能够正常工作，因此需要添加 (when doc ……) 这样的判定条件才能够保证其正确性。
+另一方面，在我的电脑上，python language server 在补全时会加入一些莫名其妙的东西。在字符较短时，会列出所有的关键字(不知道为什么)。因此需要修改 company-transformers 为了保证模糊匹配的效果，加入了 company-flx-transformer 来对所获得的序列进行排序。效果尚可。</p><h3 id=补充>补充</h3><p><del>由于目前emacs的lsp-mode速度较慢，因此我在使用Doom-emacs并没有开启lsp选项</del> 。 目前
+我使用的是 nox 是 eglot 的阉割版，自动支持 mspyls。</p><h2 id=org-mode>Org-mode</h2><h3 id=一些有用的功能>一些有用的功能</h3><p>首先就是 <a href=https://github.com/sabof/org-bullets>org-bullets</a>
+还有就是为了配合 ivy 等补全工具设置</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(setq org-outline-path-complete-in-steps <span style=color:#66d9ef>nil</span>
+      org-goto-interface <span style=color:#e6db74>&#39;outline-path-completion</span>)
+</code></pre></div><p>放大 latex preview 的公式，并让公式背景与主体适应：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(setq org-format-latex-options (<span style=color:#a6e22e>plist-put</span> org-format-latex-options :scale <span style=color:#ae81ff>1.5</span>))
+(setq-default
+ org-format-latex-options
+ (<span style=color:#a6e22e>plist-put</span> org-format-latex-options
+            :background
+            (face-attribute (or (cadr (<span style=color:#a6e22e>assq</span> <span style=color:#e6db74>&#39;default</span> face-remapping-alist))
+                                <span style=color:#e6db74>&#39;default</span>)
+                            :background <span style=color:#66d9ef>nil</span> <span style=color:#66d9ef>t</span>)))
+</code></pre></div><p>在字体使用粗体时，emphasis 的效果加粗无法很好的显示出来。因此我通过配置
+org-emphasis-alist改变了原来应该加粗的字体的颜色，并使得能够这一效果可以换行。代码如下：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(add-to-list <span style=color:#e6db74>&#39;org-emphasis-alist</span>
+             <span style=color:#f92672>&#39;</span>(<span style=color:#e6db74>&#34;*&#34;</span> (:foreground <span style=color:#e6db74>&#34;pink&#34;</span>)))
+(<span style=color:#a6e22e>setcar</span> (<span style=color:#a6e22e>nthcdr</span> <span style=color:#ae81ff>4</span> org-emphasis-regexp-components) <span style=color:#ae81ff>4</span>)
+(org-set-emph-re <span style=color:#e6db74>&#39;org-emphasis-regexp-components</span> org-emphasis-regexp-components)
+</code></pre></div><p>还有很多细碎的小配置就不赘述了。</p><h3 id=org-mode-easy-templates>Org mode Easy Templates</h3><p>在 Org-mode 9.2 中，easytemplate的使用方式发生了改变。从 <code>&lt;s &lt;TAB></code> ;变成了 ~C-c C-,~ 。
+不得不说 Org-babel 是个很好用的功能，可以探索一下。</p><h3 id=org-refile>org-refile</h3><p>由于我个人倾向于将笔记放在一起，因此使用了一个笔记本文件夹，为了使得 refile 能够
+与此配合需要一些配置。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(defun zenith/refile-targets-notes ()
+  (<span style=color:#a6e22e>directory-files</span> zenith/note-directory <span style=color:#66d9ef>t</span> <span style=color:#e6db74>&#34;.*\\.org\\&#39;&#34;</span>))
+
+(setq-default org-refile-targets
+              <span style=color:#f92672>&#39;</span>((<span style=color:#66d9ef>nil</span> :maxlevel <span style=color:#ae81ff>3</span>)
+                (org-agenda-files :maxlevel <span style=color:#ae81ff>3</span>)
+                (zenith/refile-targets-notes :maxlevel <span style=color:#ae81ff>3</span>)))
+</code></pre></div><h3 id=gtd>GTD</h3><p>Emacs Org-mode 的一个卖点就是 GTD。其中需要 org-agenda, org-capture, org-tags 等
+部分互相配合。关于关键词可以参考，在 Tag 中创建了一个 Group Must 来管理不得不做
+的一些事的 Tag：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(setq org-todo-keywords
+      <span style=color:#f92672>&#39;</span>((sequence <span style=color:#e6db74>&#34;TODO(t)&#34;</span> <span style=color:#e6db74>&#34;WAITING(w@/!)&#34;</span> <span style=color:#e6db74>&#34;PAUSE(p)&#34;</span> <span style=color:#e6db74>&#34;SOMEDAY(s)&#34;</span> <span style=color:#e6db74>&#34;NEXT(n)&#34;</span> <span style=color:#e6db74>&#34;|&#34;</span> <span style=color:#e6db74>&#34;DONE(d!)&#34;</span> <span style=color:#e6db74>&#34;CANCELLED(c@)&#34;</span>)
+        (sequence <span style=color:#e6db74>&#34;[ ](T)&#34;</span> <span style=color:#e6db74>&#34;[-](P)&#34;</span> <span style=color:#e6db74>&#34;[?](m)&#34;</span> <span style=color:#e6db74>&#34;|&#34;</span> <span style=color:#e6db74>&#34;[X](D)&#34;</span>))
+      org-todo-keyword-faces
+      <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>&#34;[-]&#34;</span> :inherit (font-lock-constant-face bold))
+        (<span style=color:#e6db74>&#34;[?]&#34;</span> :inherit (warning bold))
+        (<span style=color:#e6db74>&#34;WAITING&#34;</span> :inherit bold)
+        (<span style=color:#e6db74>&#34;LATER&#34;</span> :inherit (warning bold))))
+
+(setq org-capture-templates
+      <span style=color:#f92672>&#39;</span>(
+        (<span style=color:#e6db74>&#34;h&#34;</span> <span style=color:#e6db74>&#34;Homework&#34;</span> entry (file+headline <span style=color:#e6db74>&#34;~/Dropbox/task.org&#34;</span>  <span style=color:#e6db74>&#34;Homework&#34;</span>)
+         <span style=color:#e6db74>&#34;* TODO %? :Homework:\n&#34;</span>)
+        (<span style=color:#e6db74>&#34;s&#34;</span> <span style=color:#e6db74>&#34;Schedule&#34;</span> entry (file+headline <span style=color:#e6db74>&#34;~/Dropbox/task.org&#34;</span> <span style=color:#e6db74>&#34;Schedule&#34;</span>)
+         <span style=color:#e6db74>&#34;* %?\n&#34;</span>)
+        (<span style=color:#e6db74>&#34;r&#34;</span> <span style=color:#e6db74>&#34;Project&#34;</span> entry (file+headline <span style=color:#e6db74>&#34;~/Dropbox/task.org&#34;</span> <span style=color:#e6db74>&#34;Project&#34;</span>)
+         <span style=color:#e6db74>&#34;* TODO %?\n&#34;</span>)
+        (<span style=color:#e6db74>&#34;q&#34;</span> <span style=color:#e6db74>&#34;Question&#34;</span> entry (file+headline <span style=color:#e6db74>&#34;~/Dropbox/task.org&#34;</span> <span style=color:#e6db74>&#34;Question&#34;</span>)
+         <span style=color:#e6db74>&#34;* TODO %? :Question:\n&#34;</span>)
+        (<span style=color:#e6db74>&#34;d&#34;</span> <span style=color:#e6db74>&#34;Idea&#34;</span> entry (file+headline <span style=color:#e6db74>&#34;~/Dropbox/task.org&#34;</span> <span style=color:#e6db74>&#34;Idea&#34;</span>)
+         <span style=color:#e6db74>&#34;* TODO %? :Idea:\n&#34;</span>)))
+
+<span style=color:#75715e>;; Org tag</span>
+(setq org-tag-alist
+      <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>&#34;Improvement&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>?i</span>)
+        (:startgrouptag)
+        (<span style=color:#e6db74>&#34;Must&#34;</span>)
+        (:grouptags)
+        (<span style=color:#e6db74>&#34;Homework&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>?h</span>)
+        (<span style=color:#e6db74>&#34;Job&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>?j</span>)
+        (:endgrouptag)
+        (<span style=color:#e6db74>&#34;Personal&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>?p</span>)
+        (<span style=color:#e6db74>&#34;Question&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>?q</span>)
+        (<span style=color:#e6db74>&#34;Idea&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>?d</span>)))
+</code></pre></div><p>关于 Agenda 可以参考，在代码中创建了一个 &ldquo;b&rdquo; 视图，并且将紧急的事情，最近的
+Deadline 较遥远的 Deadline 等整合到了一起。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#75715e>;; Org agenda settings</span>
+(setq org-agenda-start-on-weekday <span style=color:#66d9ef>nil</span>
+      org-agenda-skip-scheduled-if-deadline-is-shown <span style=color:#66d9ef>t</span>
+      org-agenda-skip-deadline-prewarning-if-scheduled (quote pre-scheduled)
+      org-agenda-skip-scheduled-if-done <span style=color:#66d9ef>t</span>
+      org-agenda-skip-deadline-if-done <span style=color:#66d9ef>t</span>
+      org-agenda-span <span style=color:#ae81ff>7</span>
+      org-agenda-compact-blocks <span style=color:#66d9ef>t</span>
+      org-agenda-show-all-dates <span style=color:#66d9ef>nil</span>
+      org-deadline-warning-days <span style=color:#ae81ff>365</span>
+      org-agenda-show-future-repeats <span style=color:#66d9ef>t</span>
+      org-agenda-window-setup <span style=color:#e6db74>&#39;only-window</span>)
+
+
+(setq org-agenda-custom-commands
+      <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>&#34;b&#34;</span> <span style=color:#e6db74>&#34;Agenda View&#34;</span> ((tags <span style=color:#e6db74>&#34;AGENDAHEADER&#34;</span>
+                                  ((org-agenda-overriding-header <span style=color:#e6db74>&#34;Today&#39;s Schedule:&#34;</span>)))
+                            (agenda <span style=color:#e6db74>&#34;&#34;</span>
+                                    ((org-agenda-show-all-dates <span style=color:#66d9ef>t</span>)
+                                     (org-agenda-span <span style=color:#e6db74>&#39;day</span>)
+                                     (org-deadline-warning-days <span style=color:#ae81ff>0</span>)
+                                     (org-agenda-start-day <span style=color:#e6db74>&#34;+0d&#34;</span>)))
+                            (todo <span style=color:#e6db74>&#34;NEXT&#34;</span>
+                                  ((org-agenda-overriding-header <span style=color:#e6db74>&#34;========================================\nNext Tasks:&#34;</span>)))
+                            (tags-todo <span style=color:#e6db74>&#34;Must/!-NEXT&#34;</span>
+                                       ((org-agenda-overriding-header <span style=color:#e6db74>&#34;========================================\nMust Do:&#34;</span>)))
+                            (tags <span style=color:#e6db74>&#34;BEFOREWEEKGLANCE&#34;</span>
+                                  ((org-agenda-overriding-header <span style=color:#e6db74>&#34;========================================\nNext Week Glance:&#34;</span>)))
+                            (agenda <span style=color:#e6db74>&#34;&#34;</span>
+                                    ((org-agenda-show-all-dates <span style=color:#66d9ef>t</span>)
+                                     (org-agenda-span <span style=color:#ae81ff>6</span>)
+                                     (org-agenda-start-day <span style=color:#e6db74>&#34;+1d&#34;</span>)))
+                            (tags <span style=color:#e6db74>&#34;BEFOREDEADLINE&#34;</span>
+                                  ((org-agenda-overriding-header <span style=color:#e6db74>&#34;========================================\nFar Away Tasks:&#34;</span>)))
+                            (agenda <span style=color:#e6db74>&#34;&#34;</span>
+                                    ((org-agenda-span <span style=color:#ae81ff>180</span>)
+                                     (org-agenda-time-grid <span style=color:#66d9ef>nil</span>)
+                                     (org-agenda-show-all-dates <span style=color:#66d9ef>nil</span>)
+                                     (org-agenda-entry-types <span style=color:#f92672>&#39;</span>(:deadline :scheduled))
+                                     (org-agenda-start-day <span style=color:#e6db74>&#34;+7d&#34;</span>)))))
+        (<span style=color:#e6db74>&#34;i&#34;</span> <span style=color:#e6db74>&#34;Improvement&#34;</span> ((tags-todo <span style=color:#e6db74>&#34;Question&#34;</span>
+                                       ((org-agenda-overriding-header <span style=color:#e6db74>&#34;Unsolved Questions:&#34;</span>)))
+                            (tags-todo <span style=color:#e6db74>&#34;Improvement&#34;</span> ((org-agenda-overriding-header <span style=color:#e6db74>&#34;\n\nImprovment:&#34;</span>)))
+                            (tags-todo <span style=color:#e6db74>&#34;Idea+TODO&lt;&gt;\&#34;NEXT\&#34;|Personal+TODO&lt;&gt;\&#34;NEXT\&#34;&#34;</span>
+                                       ((org-agenda-overriding-header <span style=color:#e6db74>&#34;\n\nPersonal Project:&#34;</span>)))))))
+</code></pre></div><h3 id=gtd-补充>GTD 补充</h3><p>由于 Org-mode 本身并不带有更加可视化的视图以及提醒系统，我个人通过 org-icalendar
+和 KOrganizer 来做到这一点。确切来说，在使用 Org-agenda 时会将目前的配置导出到
+icalendar 文件中，然后再使用 KOrganizer 读取来达到目的。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#75715e>;; ox-icalendar</span>
+(with-eval-after-load <span style=color:#e6db74>&#39;ox-icalendar</span>
+  (setq org-icalendar-combined-agenda-file (<span style=color:#a6e22e>expand-file-name</span> <span style=color:#e6db74>&#34;~/Dropbox/agenda.ics&#34;</span>)
+        org-icalendar-include-todo <span style=color:#66d9ef>t</span>
+        org-icalendar-use-deadline <span style=color:#f92672>&#39;</span>(event-if-not-todo todo-due)
+        org-icalendar-use-scheduled <span style=color:#f92672>&#39;</span>(event-if-not-todo todo-start)
+        org-icalendar-alarm-time <span style=color:#ae81ff>15</span>
+        org-icalendar-store-UID <span style=color:#66d9ef>t</span>
+        org-agenda-default-appointment-duration <span style=color:#ae81ff>90</span>))
+(add-hook <span style=color:#e6db74>&#39;org-agenda-finalize-hook</span> <span style=color:#e6db74>&#39;org-icalendar-combine-agenda-files</span>)
+</code></pre></div><h3 id=org-attach>Org-attach</h3><p>attach 是将文件附与某个 headline 的方法，这样可以在 Org-mode 中将标题和文件关联
+起来，可以看成是另一种 Link. 我定义了一个方法，这个方法可以在 org-agenda 中更快
+地打开 attach 的文件，这也是它相对于一般的 Link 的优势所在。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#75715e>;; Org attach</span>
+(setq org-attach-method <span style=color:#e6db74>&#39;lns</span>)
+
+(zenith/autoload <span style=color:#f92672>&#39;</span>(org-attach org-attach-open) <span style=color:#e6db74>&#34;org-attach&#34;</span>)
+
+(defun org-agenda-attach-open ()
+  <span style=color:#e6db74>&#34;Open attachment with one-key stroke.&#34;</span>
+  (interactive)
+  (unless (<span style=color:#a6e22e>eq</span> major-mode <span style=color:#e6db74>&#39;org-agenda-mode</span>)
+    (let ((debug-on-quit <span style=color:#66d9ef>nil</span>))
+      (<span style=color:#a6e22e>signal</span> <span style=color:#e6db74>&#39;quit</span> <span style=color:#f92672>&#39;</span>(<span style=color:#e6db74>&#34;This was written expressly for `*Org Agenda*`.&#34;</span>))))
+  (let ((marker (or (<span style=color:#a6e22e>get-text-property</span> (<span style=color:#a6e22e>point</span>) <span style=color:#e6db74>&#39;org-hd-marker</span>)
+                    (<span style=color:#a6e22e>get-text-property</span> (<span style=color:#a6e22e>point</span>) <span style=color:#e6db74>&#39;org-marker</span>))))
+    (if marker
+        (save-excursion
+          (<span style=color:#a6e22e>set-buffer</span> (<span style=color:#a6e22e>marker-buffer</span> marker))
+          (<span style=color:#a6e22e>goto-char</span> marker)
+          (org-back-to-heading <span style=color:#66d9ef>t</span>)
+          (<span style=color:#a6e22e>call-interactively</span> <span style=color:#e6db74>&#39;org-attach-open</span>))
+      (<span style=color:#a6e22e>error</span> <span style=color:#e6db74>&#34;No task in current line&#34;</span>))))
+</code></pre></div><h3 id=org-id>Org-id</h3><p>一般的 Org-mode 之间的 Link 是依赖于文件结构的。这样当文件结构变化时其链接有可能
+会失效，因此 Org-Mode 提供了 Org-id 这一模块来实现更加健壮的链接。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(setq org-id-track-globally <span style=color:#66d9ef>t</span>
+      org-id-link-to-org-use-id <span style=color:#66d9ef>t</span>
+      org-id-locations-file (<span style=color:#a6e22e>expand-file-name</span> <span style=color:#e6db74>&#34;.org-id-locations&#34;</span> zenith-emacs-local-dir))
+
+(with-eval-after-load <span style=color:#e6db74>&#39;org-id</span>
+  (setq org-id-extra-files (directory-files-recursively zenith/note-directory <span style=color:#e6db74>&#34;.*\\.org&#34;</span>))
+  (org-id-update-id-locations)
+  (defun org-id-complete-link (<span style=color:#66d9ef>&amp;optional</span> arg)
+    <span style=color:#e6db74>&#34;Create an id: link using completion&#34;</span>
+    (<span style=color:#a6e22e>concat</span> <span style=color:#e6db74>&#34;id:&#34;</span>
+            (org-id-get-with-outline-path-completion org-refile-targets)))
+  (org-link-set-parameters <span style=color:#e6db74>&#34;id&#34;</span>
+                           :complete <span style=color:#e6db74>&#39;org-id-complete-link</span>)
+  (defun zenith/search-id-reverse-link ()
+    <span style=color:#e6db74>&#34;Search the id in the directory&#34;</span>
+    (interactive)
+    (let ((query
+           (<span style=color:#a6e22e>cdr</span> (first (org-entry-properties <span style=color:#66d9ef>nil</span> <span style=color:#e6db74>&#34;ID&#34;</span>)))))
+      (rg-project query <span style=color:#e6db74>&#34;*.org&#34;</span>)))
+  (defun zenith/org-insert-link-by-id ()
+    <span style=color:#e6db74>&#34;Insert the link by id&#34;</span>
+    (interactive)
+    (let ((link (org-link--try-special-completion <span style=color:#e6db74>&#34;id&#34;</span>)))
+      (org-insert-link <span style=color:#66d9ef>nil</span> link))))
+</code></pre></div><h3 id=org-与-latex>Org 与 LaTeX</h3><p>Org 有着非常丰富的导出选项，比如导出到 PDF，这一功能通过 LaTeX 实现。因此需要对
+于 ox-latex 进行一定的配置。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(with-eval-after-load <span style=color:#e6db74>&#39;ox-latex</span>
+  (add-to-list <span style=color:#e6db74>&#39;org-latex-classes</span>
+               <span style=color:#f92672>&#39;</span>(<span style=color:#e6db74>&#34;myart&#34;</span>
+                 <span style=color:#e6db74>&#34;\\documentclass{article}
+</span><span style=color:#e6db74>[DEFAULT-PACKAGES]
+</span><span style=color:#e6db74>[PACKAGES]
+</span><span style=color:#e6db74>\\usepackage[backend=biber,style=alphabetic]{biblatex}
+</span><span style=color:#e6db74>\\addbibresource[location=local]{~/Dropbox/Library.bib}
+</span><span style=color:#e6db74>\\setCJKmainfont{Source Han Sans CN}
+</span><span style=color:#e6db74>\\setmonofont{Source Code Pro}
+</span><span style=color:#e6db74>\\gappto{\\UrlBreaks}{\\UrlOrds}
+</span><span style=color:#e6db74>&#34;</span>
+                 (<span style=color:#e6db74>&#34;\\section{%s}&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\section*{%s}&#34;</span>)
+                 (<span style=color:#e6db74>&#34;\\subsection{%s}&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\subsection*{%s}&#34;</span>)
+                 (<span style=color:#e6db74>&#34;\\subsubsection{%s}&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\subsubsection*{%s}&#34;</span>)
+                 (<span style=color:#e6db74>&#34;\\paragraph{%s}&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\paragraph*{%s}&#34;</span>)
+                 (<span style=color:#e6db74>&#34;\\subparagraph{%s}&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\subparagraph*{%s}&#34;</span>)))
+  (setq org-latex-compiler <span style=color:#e6db74>&#34;xelatex&#34;</span>
+        org-latex-default-class <span style=color:#e6db74>&#34;myart&#34;</span>
+        org-export-with-sub-superscripts <span style=color:#66d9ef>nil</span>
+        org-latex-listings <span style=color:#e6db74>&#39;minted</span>
+        org-latex-minted-options <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>&#34;breaklines&#34;</span> <span style=color:#e6db74>&#34;true&#34;</span>)
+                                   (<span style=color:#e6db74>&#34;frame&#34;</span> <span style=color:#e6db74>&#34;single&#34;</span>)
+                                   (<span style=color:#e6db74>&#34;breakanywhere&#34;</span> <span style=color:#e6db74>&#34;true&#34;</span>))
+        org-latex-pdf-process
+        <span style=color:#f92672>&#39;</span>(<span style=color:#e6db74>&#34;latexmk -g -pdf -pdflatex=\&#34;%latex\&#34; -shell-escape -outdir=%o %f&#34;</span>))
+  (setq org-latex-packages-alist <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>&#34;&#34;</span> <span style=color:#e6db74>&#34;minted&#34;</span>)
+                                   (<span style=color:#e6db74>&#34;&#34;</span> <span style=color:#e6db74>&#34;xcolor&#34;</span>)
+                                   (<span style=color:#e6db74>&#34;&#34;</span> <span style=color:#e6db74>&#34;xeCJK&#34;</span>)
+                                   (<span style=color:#e6db74>&#34;&#34;</span> <span style=color:#e6db74>&#34;fontspec&#34;</span>)
+                                   (<span style=color:#e6db74>&#34;&#34;</span> <span style=color:#e6db74>&#34;etoolbox&#34;</span>))))
+</code></pre></div><h3 id=org-download-in-wsl>org-download in WSL</h3><p>由于一些 Windows 下所必须的软件，我有很多时候是在 WSL 中使用 Emacs，为了更好地在 WSL 中使用 org-download 我进行了一些必要的 Trick。首先要在 Windows 中安装 <a href=https://www.irfanview.com/>IrfanView</a>。然后需要使用我的 init-wsl.el 文件，其中包含了对文件路径进行一定的处理的函数。最后，再修改一下 org-download-yank 以及 org-download-screenshot 函数即可。当然，最好用的 drag-and-drop 还是无法使用的。</p><h2 id=emacs换行问题>Emacs换行问题</h2><p>关闭 auto-fill-mode，使用 visual-line-mode，因为visual-line-mode在操作hjkl时更加直观。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(remove-hook! org-mode
+              <span style=color:#a6e22e>#&#39;</span>auto-fill-mode)
+(global-visual-line-mode)
+</code></pre></div><p>现在我同时使用 auto-fill 和 visual-fill-column。事实上 auto-fill-mode 有很多的优
+点，在自己编辑时会感觉更加舒服，但是问题在于 auto-fill 后的文件给别人就会不舒服。
+这是 visual-fill-column 就派上了用场。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(defun zenith/fill-and-indent-region ()
+  <span style=color:#e6db74>&#34;Fill paragraph and indent region at once&#34;</span>
+  (interactive)
+  (when (or
+         (derived-mode-p <span style=color:#e6db74>&#39;text-mode</span>)
+         (<span style=color:#a6e22e>nth</span> <span style=color:#ae81ff>4</span> (syntax-ppss))
+         (<span style=color:#a6e22e>nth</span> <span style=color:#ae81ff>8</span> (syntax-ppss)))
+    (<span style=color:#a6e22e>call-interactively</span> <span style=color:#e6db74>&#39;fill-paragraph</span>))
+  (<span style=color:#a6e22e>call-interactively</span> <span style=color:#e6db74>&#39;indent-region</span>))
+
+<span style=color:#75715e>;; visual fill column</span>
+(<span style=color:#a6e22e>autoload</span> <span style=color:#e6db74>&#39;visual-fill-column-mode</span> <span style=color:#e6db74>&#34;visual-fill-column&#34;</span> <span style=color:#e6db74>&#34;&#34;</span> <span style=color:#66d9ef>t</span>)
+(setq-default visual-fill-column-width (<span style=color:#a6e22e>+</span> fill-column <span style=color:#ae81ff>20</span>))
+(add-hook <span style=color:#e6db74>&#39;visual-line-mode-hook</span> <span style=color:#e6db74>&#39;visual-fill-column-mode</span>)
+(add-hook <span style=color:#e6db74>&#39;auto-fill-mode-hook</span> <span style=color:#e6db74>&#39;visual-line-mode</span>)
+</code></pre></div><h2 id=关于注释问题>关于注释问题</h2><p>Doom-emacs默认的注释插件是evil-commentary，但是我觉得evil-nerd-commenter <a href=https://github.com/redguardtoo/evil-nerd-commenter>https://github.com/redguardtoo/evil-nerd-commenter</a> 更加便于使用，因为它能够toggle，注释和非注释状态。因此我使用evil-nerd-commenter取代了evil-commentary。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#75715e>;; evil-nerd-commenter</span>
+<span style=color:#75715e>;; dependencies: evil</span>
+(zenith/autoload
+ <span style=color:#f92672>&#39;</span>(evilnc-comment-operator
+   evilnc-comment-or-uncomment-lines
+   evilnc-comment-or-uncomment-paragraphs
+   evilnc-comment-or-uncomment-to-the-line
+   evilnc-copy-and-comment-lines
+   evilnc-copy-and-comment-operator
+   evilnc-copy-to-line)
+ <span style=color:#e6db74>&#34;evil-nerd-commenter&#34;</span>)
+</code></pre></div><p>其中 zenith/autoload 是我自己写的一个函数是 autoload 的一个封装，可以同时对多个
+函数进行 autoload。</p><h2 id=evil-mode>Evil-mode</h2><p>由于我已经使用了个人的配置，就不得不对于 Evil-mode 来进行一番配置了，事实上使用
+evil-collection 后基本上就按着默认来了。值得注意的是
+<a href=https://github.com/emacs-evil/evil-surround>https://github.com/emacs-evil/evil-surround</a> 和
+<a href=https://github.com/redguardtoo/evil-matchit>https://github.com/redguardtoo/evil-matchit</a> 两个包，非常好用值得一试。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#75715e>;; evil</span>
+<span style=color:#75715e>;; dependencies: undo-tree goto-chg</span>
+(setq evil-want-integration <span style=color:#66d9ef>t</span>  <span style=color:#75715e>; This is optional since it&#39;s already set to t by default.</span>
+      evil-want-keybinding <span style=color:#66d9ef>nil</span> <span style=color:#75715e>; loading keybindings</span>
+      evil-disable-insert-state-bindings <span style=color:#66d9ef>t</span> <span style=color:#75715e>; Use emacs&#39;s binding in insert state</span>
+      evil-want-C-d-scroll <span style=color:#66d9ef>nil</span> <span style=color:#75715e>; Use emacs&#39;s C-d</span>
+      evil-want-C-u-scroll <span style=color:#66d9ef>nil</span> <span style=color:#75715e>; Use emacs&#39;s C-u</span>
+      evil-want-C-i-jump <span style=color:#66d9ef>t</span>     <span style=color:#75715e>; Use vim&#39;s C-i</span>
+      evil-want-fine-undo <span style=color:#66d9ef>t</span>    <span style=color:#75715e>; Don not aggregate changes when exiting insert state</span>
+      evil-want-C-w-delete <span style=color:#66d9ef>t</span>   <span style=color:#75715e>; Use emacs&#39;s C-w</span>
+      evil-toggle-key <span style=color:#e6db74>&#34;&#34;</span>       <span style=color:#75715e>; C-z not entering emacs state</span>
+      )
+
+(require <span style=color:#e6db74>&#39;evil</span>)
+
+(evil-mode <span style=color:#ae81ff>1</span>)
+</code></pre></div><h2 id=自动保存>自动保存</h2><p>Emacs 的保存非常反人类，不如让他自己来保存吧。不过这个功能最好和版本控制系统一起
+使用，否则后果自负。这里调用了 evil 的 api， 每 2 秒没有操作就保存一次。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#75715e>;; The code is adjusted from https://github.com/manateelazycat/auto-save. The</span>
+<span style=color:#75715e>;; problem of the original code is that it calls buffer-modified-p which makes</span>
+<span style=color:#75715e>;; ws-butler unhappy.</span>
+(setq auto-save-idle <span style=color:#ae81ff>2</span>)
+
+(defun zenith/auto-save-buffers ()
+  (interactive)
+  (when (and
+         (not (<span style=color:#a6e22e>minibufferp</span>))
+         (or (not (<span style=color:#a6e22e>boundp</span> <span style=color:#e6db74>&#39;yas--active-snippets</span>))
+             (not yas--active-snippets))
+         (or (not (<span style=color:#a6e22e>boundp</span> <span style=color:#e6db74>&#39;company-candidates</span>))
+             (not company-candidates)))
+    (with-temp-message <span style=color:#e6db74>&#34;&#34;</span>
+      (let ((inhibit-message <span style=color:#66d9ef>t</span>))
+        (evil-write-all <span style=color:#66d9ef>nil</span>)))))
+
+(defun zenith/auto-save-enable ()
+  (interactive)
+  (run-with-idle-timer auto-save-idle <span style=color:#66d9ef>t</span> <span style=color:#a6e22e>#&#39;</span>zenith/auto-save-buffers))
+
+(zenith/auto-save-enable)
+</code></pre></div><h2 id=latex>LaTeX</h2><p>Ebib 是 bib 文件的查看器，但是我感觉用处并没有很大，很多时候我都是直接编辑的。</p><p>Auctex + reftex 是非常强大的 LaTeX 处理器，其中的功能非常强大而复杂。这里的代码
+使得 Reftex 能够更好地在写数学论文时进行引用。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(add-hook <span style=color:#e6db74>&#39;LaTeX-mode-hook</span> <span style=color:#e6db74>&#39;turn-on-reftex</span>)
+<span style=color:#75715e>;; Get ReTeX working with biblatex</span>
+<span style=color:#75715e>;; http://tex.stackexchange.com/questions/31966/setting-up-reftex-with-biblatex-citation-commands/31992#31992</span>
+(setq reftex-cite-format
+      <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>?a</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\autocite[]{%l}&#34;</span>)
+        (<span style=color:#e6db74>?b</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\blockcquote[]{%l}{}&#34;</span>)
+        (<span style=color:#e6db74>?c</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\cite[]{%l}&#34;</span>)
+        (<span style=color:#e6db74>?f</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\footcite[]{%l}&#34;</span>)
+        (<span style=color:#e6db74>?n</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\nocite{%l}&#34;</span>)
+        (<span style=color:#e6db74>?p</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\parencite[]{%l}&#34;</span>)
+        (<span style=color:#e6db74>?s</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\smartcite[]{%l}&#34;</span>)
+        (<span style=color:#e6db74>?t</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\textcite[]{%l}&#34;</span>))
+      reftex-plug-into-AUCTeX <span style=color:#66d9ef>t</span>
+      reftex-toc-split-windows-fraction <span style=color:#ae81ff>0.3</span>
+      reftex-bibpath-environment-variables <span style=color:#f92672>&#39;</span>(<span style=color:#e6db74>&#34;/home/zenith-john/Dropbox/&#34;</span>)
+      reftex-bibliography-commands <span style=color:#f92672>&#39;</span>(<span style=color:#e6db74>&#34;bibliography&#34;</span> <span style=color:#e6db74>&#34;nobibiliography&#34;</span> <span style=color:#e6db74>&#34;addbibresource&#34;</span>)
+      reftex-label-alist
+      <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>&#34;theorem&#34;</span> <span style=color:#e6db74>?m</span> <span style=color:#e6db74>&#34;thm:&#34;</span> <span style=color:#e6db74>&#34;~\\ref{%s}&#34;</span> <span style=color:#66d9ef>nil</span> (regexp <span style=color:#e6db74>&#34;[Tt]heorem&#34;</span> <span style=color:#e6db74>&#34;[Tt]h\\.&#34;</span>) <span style=color:#ae81ff>-3</span>)
+        (<span style=color:#e6db74>&#34;lemma&#34;</span>   <span style=color:#e6db74>?m</span> <span style=color:#e6db74>&#34;lem:&#34;</span> <span style=color:#e6db74>&#34;~\\ref{%s}&#34;</span> <span style=color:#66d9ef>nil</span> (regexp <span style=color:#e6db74>&#34;[Ll]emma&#34;</span>   <span style=color:#e6db74>&#34;[Ll]m\\.&#34;</span>) <span style=color:#ae81ff>-3</span>)
+        (<span style=color:#e6db74>&#34;proposition&#34;</span> <span style=color:#e6db74>?m</span> <span style=color:#e6db74>&#34;prop:&#34;</span> <span style=color:#e6db74>&#34;~\\ref{%s}&#34;</span> <span style=color:#66d9ef>nil</span> (regexp <span style=color:#e6db74>&#34;[Pp]roposition&#34;</span> <span style=color:#e6db74>&#34;[Pp]rop\\.&#34;</span>) <span style=color:#ae81ff>-3</span>)
+        (<span style=color:#e6db74>&#34;remark&#34;</span>      <span style=color:#e6db74>?m</span> <span style=color:#e6db74>&#34;rmk:&#34;</span>  <span style=color:#e6db74>&#34;~\\ref{%s}&#34;</span> <span style=color:#66d9ef>nil</span> (regexp <span style=color:#e6db74>&#34;[Rr]emark&#34;</span> <span style=color:#e6db74>&#34;[Rr]mk\\.&#34;</span>) <span style=color:#ae81ff>-3</span>)
+        (<span style=color:#e6db74>&#34;definition&#34;</span>  <span style=color:#e6db74>?m</span> <span style=color:#e6db74>&#34;def:&#34;</span>  <span style=color:#e6db74>&#34;~\\ref{%s}&#34;</span> <span style=color:#66d9ef>nil</span> (regexp <span style=color:#e6db74>&#34;[Dd]efinition&#34;</span> <span style=color:#e6db74>&#34;[Dd]ef\\.&#34;</span>) <span style=color:#ae81ff>-3</span>)
+        (<span style=color:#e6db74>&#34;corollary&#34;</span>   <span style=color:#e6db74>?m</span> <span style=color:#e6db74>&#34;cor:&#34;</span>  <span style=color:#e6db74>&#34;~\\ref{%s}&#34;</span> <span style=color:#66d9ef>nil</span> (regexp <span style=color:#e6db74>&#34;[Cc]orollary&#34;</span> <span style=color:#e6db74>&#34;[Cc]or\\.&#34;</span>) <span style=color:#ae81ff>-3</span>))
+      reftex-ref-macro-prompt <span style=color:#66d9ef>nil</span>)
+</code></pre></div><p>这里设置了自动补全的后端，注意顺序在这里是重要的。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(with-eval-after-load <span style=color:#e6db74>&#39;tex</span>
+  <span style=color:#75715e>;; the order of company-backend is important.</span>
+  <span style=color:#75715e>;; company-auctex</span>
+  <span style=color:#75715e>;; dependencies: yasnippet company auctex</span>
+  (require <span style=color:#e6db74>&#39;company-auctex</span>)
+  <span style=color:#75715e>;; company-math</span>
+  <span style=color:#75715e>;; dependencies: company math-symbol-lists</span>
+  (require <span style=color:#e6db74>&#39;company-math</span>)
+
+  (add-to-list <span style=color:#e6db74>&#39;+latex-company-backends</span> <span style=color:#e6db74>&#39;company-auctex-labels</span>)
+  (add-to-list <span style=color:#e6db74>&#39;+latex-company-backends</span> <span style=color:#e6db74>&#39;company-math-symbols-latex</span>)
+  (add-to-list <span style=color:#e6db74>&#39;+latex-company-backends</span> <span style=color:#f92672>&#39;</span>(company-auctex-macros company-auctex-environments)))
+
+(defun zenith/latex-company-setup ()
+  <span style=color:#e6db74>&#34;Setup company backends for latex editing.&#34;</span>
+  (<span style=color:#a6e22e>make-local-variable</span> <span style=color:#e6db74>&#39;company-backends</span>)
+  (setq zenith/local-company-backends <span style=color:#66d9ef>nil</span>)
+  (dolist (backend +latex-company-backends)
+    (add-to-list <span style=color:#e6db74>&#39;company-backends</span> backend)))
+
+(add-hook <span style=color:#e6db74>&#39;LaTeX-mode-hook</span> <span style=color:#e6db74>&#39;zenith/latex-company-setup</span>)
+</code></pre></div><p>在 auctex 中比较重要的设置是 TeX-source-correlate-mode，
+LaTeX-fill-break-at-separators 以及 TeX-command-extra-options，详情可以参考我的
+配置 config/init-latex.el 。值得注意的是其中我的几个函数，</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(defun LaTeX-star-environment-dwim ()
+  <span style=color:#e6db74>&#34;Convert between the starred and the not starred version of the current environment.&#34;</span>
+  (interactive)
+  <span style=color:#75715e>;; If the current environment is starred.</span>
+  (if (<span style=color:#a6e22e>string-match</span> <span style=color:#e6db74>&#34;\*$&#34;</span> (LaTeX-current-environment))
+      <span style=color:#75715e>;; Remove the star from the current environment.</span>
+      (LaTeX-modify-environment (<span style=color:#a6e22e>substring</span> (LaTeX-current-environment) <span style=color:#ae81ff>0</span> <span style=color:#ae81ff>-1</span>))
+    <span style=color:#75715e>;; Else add a star to the current environment.</span>
+    (LaTeX-modify-environment (<span style=color:#a6e22e>concat</span> (LaTeX-current-environment) <span style=color:#e6db74>&#34;*&#34;</span>))))
+
+(defun zenith/latex-toggle-section-with-star ()
+  (interactive)
+  (if (<span style=color:#a6e22e>member</span> <span style=color:#f92672>&#39;</span>(<span style=color:#e6db74>&#34;section&#34;</span> <span style=color:#ae81ff>2</span>) LaTeX-section-list) <span style=color:#75715e>;; TODO: Make it more robust.</span>
+      (setq LaTeX-section-list
+            <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>&#34;part&#34;</span> <span style=color:#ae81ff>0</span>)
+              (<span style=color:#e6db74>&#34;chapter&#34;</span> <span style=color:#ae81ff>1</span>)
+              (<span style=color:#e6db74>&#34;section*&#34;</span> <span style=color:#ae81ff>2</span>)
+              (<span style=color:#e6db74>&#34;subsection*&#34;</span> <span style=color:#ae81ff>3</span>)
+              (<span style=color:#e6db74>&#34;subsubsection*&#34;</span> <span style=color:#ae81ff>4</span>)
+              (<span style=color:#e6db74>&#34;paragraph&#34;</span> <span style=color:#ae81ff>5</span>)
+              (<span style=color:#e6db74>&#34;subparagraph&#34;</span> <span style=color:#ae81ff>6</span>)
+              (<span style=color:#e6db74>&#34;section&#34;</span> <span style=color:#ae81ff>2</span>)
+              (<span style=color:#e6db74>&#34;subsection&#34;</span> <span style=color:#ae81ff>3</span>)
+              (<span style=color:#e6db74>&#34;subsubsection&#34;</span> <span style=color:#ae81ff>4</span>)))
+    (setq LaTeX-section-list
+          <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>&#34;part&#34;</span> <span style=color:#ae81ff>0</span>)
+            (<span style=color:#e6db74>&#34;chapter&#34;</span> <span style=color:#ae81ff>1</span>)
+            (<span style=color:#e6db74>&#34;section&#34;</span> <span style=color:#ae81ff>2</span>)
+            (<span style=color:#e6db74>&#34;subsection&#34;</span> <span style=color:#ae81ff>3</span>)
+            (<span style=color:#e6db74>&#34;subsubsection&#34;</span> <span style=color:#ae81ff>4</span>)
+            (<span style=color:#e6db74>&#34;paragraph&#34;</span> <span style=color:#ae81ff>5</span>)
+            (<span style=color:#e6db74>&#34;subparagraph&#34;</span> <span style=color:#ae81ff>6</span>)))))
+(defvar zenith/equation-env-list
+  <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>&#34;\\begin{equation}\n&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\n\\end{equation}&#34;</span>)
+    (<span style=color:#e6db74>&#34;\\[&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\]&#34;</span>)
+    (<span style=color:#e6db74>&#34;\\(&#34;</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;\\)&#34;</span>))
+  <span style=color:#e6db74>&#34;The pairs of equation environment&#34;</span>)
+
+(defun zenith/regex-or (l)
+  (let ((regex <span style=color:#e6db74>&#34;\\(?:&#34;</span>)
+        (first-one <span style=color:#66d9ef>t</span>))
+    (dolist (e l)
+      (if (not first-one)
+          (setq regex
+                (<span style=color:#a6e22e>concat</span> regex <span style=color:#e6db74>&#34;\\\|&#34;</span>))
+        (setq first-one <span style=color:#66d9ef>nil</span>))
+      (setq regex
+            (<span style=color:#a6e22e>concat</span> regex (<span style=color:#a6e22e>regexp-quote</span> e))))
+    (<span style=color:#a6e22e>concat</span> regex <span style=color:#e6db74>&#34;\\)&#34;</span>)))
+
+(defun zenith/equation-match (beg end)
+  <span style=color:#e6db74>&#34;Check whether </span><span style=color:#e6db74>`beg&#39;</span><span style=color:#e6db74> and </span><span style=color:#e6db74>`end&#39;</span><span style=color:#e6db74> matches as equation&#34;</span>
+  (let ((beg-string (<span style=color:#a6e22e>buffer-substring-no-properties</span> beg (<span style=color:#a6e22e>min</span> (<span style=color:#a6e22e>+</span> beg <span style=color:#ae81ff>20</span>) (<span style=color:#a6e22e>point-max</span>))))
+        (end-string (<span style=color:#a6e22e>buffer-substring-no-properties</span> (<span style=color:#a6e22e>max</span> (<span style=color:#a6e22e>point-min</span>) (<span style=color:#a6e22e>-</span> end <span style=color:#ae81ff>20</span>)) end))
+        ret)
+    (dolist (e zenith/equation-env-list)
+      (when (and
+             (string-prefix-p (<span style=color:#a6e22e>car</span> e) beg-string)
+             (string-suffix-p (<span style=color:#a6e22e>cdr</span> e) end-string))
+        (setq ret e)))
+    ret))
+
+(defun zenith/cycle-equation ()
+  (interactive)
+  (if-let* ((regex (zenith/regex-or (<span style=color:#a6e22e>append</span> (<span style=color:#a6e22e>mapcar</span> <span style=color:#e6db74>&#39;car</span> zenith/equation-env-list)
+                                            (<span style=color:#a6e22e>mapcar</span> <span style=color:#e6db74>&#39;cdr</span> zenith/equation-env-list))))
+            (beg (save-excursion (<span style=color:#a6e22e>re-search-backward</span> regex <span style=color:#66d9ef>nil</span> <span style=color:#66d9ef>t</span>)))
+            (end (save-excursion (<span style=color:#a6e22e>re-search-forward</span> regex <span style=color:#66d9ef>nil</span> <span style=color:#66d9ef>t</span>)))
+            (kind (zenith/equation-match beg end))
+            (len (<span style=color:#a6e22e>safe-length</span> zenith/equation-env-list))
+            (pos (cl-position kind zenith/equation-env-list))
+            (next (<span style=color:#a6e22e>nth</span> (if (<span style=color:#a6e22e>=</span> pos (<span style=color:#a6e22e>-</span> len <span style=color:#ae81ff>1</span>))
+                           <span style=color:#ae81ff>0</span>
+                         (<span style=color:#a6e22e>+</span> pos <span style=color:#ae81ff>1</span>)) zenith/equation-env-list)))
+      (progn
+        (save-excursion
+          (<span style=color:#a6e22e>goto-char</span> beg)
+          (<span style=color:#a6e22e>delete-char</span> (<span style=color:#a6e22e>length</span> (<span style=color:#a6e22e>car</span> kind)))
+          (<span style=color:#a6e22e>insert</span> (<span style=color:#a6e22e>car</span> next))
+          (<span style=color:#a6e22e>re-search-forward</span> (zenith/regex-or (<span style=color:#a6e22e>mapcar</span>
+                                               <span style=color:#e6db74>&#39;cdr</span> zenith/equation-env-list)))
+          (delete-backward-char (<span style=color:#a6e22e>length</span> (<span style=color:#a6e22e>cdr</span> kind)))
+          (<span style=color:#a6e22e>insert</span> (<span style=color:#a6e22e>cdr</span> next))))
+    (<span style=color:#a6e22e>message</span> <span style=color:#e6db74>&#34;No match equation environment found.&#34;</span>)))
+</code></pre></div><p>其中 LaTeX-star-environment-dwim 可以为 environment 加上星号，
+zenith/latex-toggle-section-with-star 可以使得插入的 section 带上星号。而
+zenith/cycle-equation 可以使得公式在三种状态下切换。</p><h2 id=版本控制>版本控制</h2><p>Magit 是我见过的最好用的 git 前端，是我离不开 Emacs 的重要理由。同时 Emacs 还有
+两个插件 <a href=https://github.com/syohex/emacs-git-gutter>https://github.com/syohex/emacs-git-gutter</a> 和
+<a href=https://github.com/emacsmirror/git-timemachine>https://github.com/emacsmirror/git-timemachine</a> 来进一步强化 Emacs 和 Git 之间的
+协作。</p><h2 id=ui>UI</h2><p>我使用了 <a href=https://github.com/seagle0128/doom-modeline>https://github.com/seagle0128/doom-modeline</a> ，总体而言还是非常好用的，
+但是必须进行一定的 tweak 否则和 Org-mode 之间会有一定的冲突</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#75715e>;; Redefine `doom-modeline-redisplay&#39; to ignore `doom-modeline--size-hacked-p&#39;</span>
+<span style=color:#75715e>;; to fix the problem caused by reuse of some buffer, for example *Org Tags*</span>
+(defun zenith/doom-modeline-always-redisplay ()
+  <span style=color:#e6db74>&#34;Check whether this buffer should always display&#34;</span>
+  (or (<span style=color:#a6e22e>string-equal</span> (<span style=color:#a6e22e>buffer-name</span>) <span style=color:#e6db74>&#34; *Org tags*&#34;</span>)
+      (<span style=color:#a6e22e>string-equal</span> (<span style=color:#a6e22e>buffer-name</span>) <span style=color:#e6db74>&#34; *Org todo*&#34;</span>)))
+(defun doom-modeline-redisplay (<span style=color:#66d9ef>&amp;rest</span> _)
+  <span style=color:#e6db74>&#34;Call </span><span style=color:#e6db74>`redisplay&#39;</span><span style=color:#e6db74> to trigger mode-line height calculations.
+</span><span style=color:#e6db74>
+</span><span style=color:#e6db74>Certain functions, including e.g. </span><span style=color:#e6db74>`fit-window-to-buffer&#39;</span><span style=color:#e6db74>, base
+</span><span style=color:#e6db74>their size calculations on values which are incorrect if the
+</span><span style=color:#e6db74>mode-line has a height different from that of the </span><span style=color:#e6db74>`default&#39;</span><span style=color:#e6db74> face
+</span><span style=color:#e6db74>and certain other calculations have not yet taken place for the
+</span><span style=color:#e6db74>window in question.
+</span><span style=color:#e6db74>
+</span><span style=color:#e6db74>These calculations can be triggered by calling </span><span style=color:#e6db74>`redisplay&#39;</span><span style=color:#e6db74>
+</span><span style=color:#e6db74>explicitly at the appropriate time and this functions purpose
+</span><span style=color:#e6db74>is to make it easier to do so.
+</span><span style=color:#e6db74>
+</span><span style=color:#e6db74>This function is like </span><span style=color:#e6db74>`redisplay&#39;</span><span style=color:#e6db74> with non-nil FORCE argument.
+</span><span style=color:#e6db74>It accepts an arbitrary number of arguments making it suitable
+</span><span style=color:#e6db74>as a `:before&#39; advice for any function.  If the current buffer
+</span><span style=color:#e6db74>has no mode-line or this function has already been called in it,
+</span><span style=color:#e6db74>then this function does nothing.&#34;</span>
+  (when (and (bound-and-true-p doom-modeline-mode)
+             mode-line-format
+             (not doom-modeline--size-hacked-p))
+    (<span style=color:#a6e22e>redisplay</span> <span style=color:#66d9ef>t</span>)
+    (unless (zenith/doom-modeline-always-redisplay)
+      (setq doom-modeline--size-hacked-p <span style=color:#66d9ef>t</span>))))
+</code></pre></div><p>除此之外，我对于 hl-line-mode 也进行了一定的定制。由于某些主体 highlight 的颜色
+和 Mark 的颜色较为相似，造成分辨上的困难，我通过重定义使得在选择文本时关闭
+hl-line-highlight。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#75715e>;; Redefine `hl-line-highlight&#39; to disable highlight line when selection is</span>
+<span style=color:#75715e>;; active.</span>
+(defun hl-line-highlight ()
+  <span style=color:#e6db74>&#34;Activate the Hl-Line overlay on the current line.&#34;</span>
+  (if
+      (and hl-line-mode	<span style=color:#75715e>; Might be changed outside the mode function.</span>
+           (not (region-active-p)))
+      (progn
+        (unless hl-line-overlay
+          (setq hl-line-overlay (hl-line-make-overlay))) <span style=color:#75715e>; To be moved.</span>
+        (<span style=color:#a6e22e>overlay-put</span> hl-line-overlay
+                     <span style=color:#e6db74>&#39;window</span> (unless hl-line-sticky-flag (<span style=color:#a6e22e>selected-window</span>)))
+	(hl-line-move hl-line-overlay))
+    (hl-line-unhighlight)))
+</code></pre></div><h2 id=自动补全>自动补全</h2><p>自动补全使用的是 <a href=https://github.com/company-mode/company-mode>https://github.com/company-mode/company-mode</a> 和
+<a href=https://github.com/sebastiencs/company-box>https://github.com/sebastiencs/company-box</a> 。其中的配置可以参考
+config/init-company.el 。事实上，在其中我自己实现了一个 company 的模糊匹配但是效
+果不让人满意。</p><p>另一部分的自动补全是所谓的模板，模板使用的是
+<a href=https://github.com/joaotavora/yasnippet>https://github.com/joaotavora/yasnippet</a>。 同时我自己编写了一个插件实现模板的自动
+展开，其要求是前一个单词以 , 开始然后按下空格键。函数会尝试展开，如果展开失败，
+那么原封不动，如果展开成功，逗号就会消失。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#75715e>;; Make yasnippet expandsion easy for me.</span>
+(defvar zenith/snippet-prefix <span style=color:#e6db74>?,</span>
+  <span style=color:#e6db74>&#34;The first character of expanding yasnippet&#34;</span>)
+
+(defun zenith/may-expand ()
+  <span style=color:#e6db74>&#34;Auto expand if the word before the point are started with
+</span><span style=color:#e6db74></span><span style=color:#e6db74>`zenith/snippet-prefix&#39;</span><span style=color:#e6db74>. Return </span><span style=color:#e6db74>`t&#39;</span><span style=color:#e6db74> if the expansion is successful
+</span><span style=color:#e6db74>and </span><span style=color:#e6db74>`nil&#39;</span><span style=color:#e6db74> otherwise.&#34;</span>
+  (interactive)
+  (let* ((word-end (<span style=color:#a6e22e>point</span>))
+         (word-start (save-excursion
+                       (save-restriction
+                         (<span style=color:#a6e22e>narrow-to-region</span> (<span style=color:#a6e22e>line-beginning-position</span> <span style=color:#ae81ff>0</span>) (<span style=color:#a6e22e>line-end-position</span>))
+                         (search-backward-regexp <span style=color:#e6db74>&#34;^\\|[[:blank:]]\\|(\\|)\\|\\[\\|]\\|{\\|}&#34;</span> <span style=color:#66d9ef>nil</span> <span style=color:#66d9ef>t</span>))))
+         (word)
+         (len))
+
+    (when word-start
+      (if (<span style=color:#a6e22e>eq</span> (<span style=color:#a6e22e>char-after</span> word-start) zenith/snippet-prefix)
+          (setq word (<span style=color:#a6e22e>buffer-substring-no-properties</span> word-start word-end))
+        (setq
+         word-start (<span style=color:#a6e22e>+</span> word-start <span style=color:#ae81ff>1</span>)
+         word (<span style=color:#a6e22e>buffer-substring-no-properties</span> word-start word-end)))
+      (when (<span style=color:#a6e22e>eq</span> zenith/snippet-prefix (<span style=color:#a6e22e>string-to-char</span> word))
+        (<span style=color:#a6e22e>delete-region</span> word-start (<span style=color:#a6e22e>+</span> word-start <span style=color:#ae81ff>1</span>))
+        (if (<span style=color:#a6e22e>call-interactively</span> <span style=color:#e6db74>&#39;yas-expand</span>)
+            <span style=color:#66d9ef>t</span>
+          (setq len (<span style=color:#a6e22e>-</span> (<span style=color:#a6e22e>length</span> word) <span style=color:#ae81ff>1</span>))
+          (<span style=color:#a6e22e>backward-char</span> len)
+          (<span style=color:#a6e22e>insert-char</span> zenith/snippet-prefix)
+          (<span style=color:#a6e22e>forward-char</span> len)
+          <span style=color:#66d9ef>nil</span>)))))
+
+(defun zenith/post-command-hook ()
+  <span style=color:#e6db74>&#34;Check whether or not to expand after insertion of ~SPC~.&#34;</span>
+  (interactive)
+  (when
+      (and
+       yas-minor-mode
+       (<span style=color:#a6e22e>eq</span> last-command <span style=color:#e6db74>&#39;self-insert-command</span>)
+       (<span style=color:#a6e22e>eq</span> (<span style=color:#a6e22e>char-before</span>) <span style=color:#e6db74>?\s</span>))
+    (delete-backward-char <span style=color:#ae81ff>1</span>)
+    (unless (zenith/may-expand)
+      (<span style=color:#a6e22e>insert-char</span> <span style=color:#e6db74>?\s</span>)
+      (when (<span style=color:#a6e22e>boundp</span> company-mode)
+        (company-abort)))))
+
+(define-minor-mode auto-expand-mode
+  <span style=color:#e6db74>&#34;Minor mode for zenith/may-expand&#34;</span>
+  <span style=color:#66d9ef>nil</span> <span style=color:#66d9ef>nil</span> <span style=color:#66d9ef>nil</span>
+  (if auto-expand-mode
+      <span style=color:#75715e>;; Priority of the function should be high enough to run before fill</span>
+      <span style=color:#75715e>;; column</span>
+      (add-hook <span style=color:#e6db74>&#39;post-command-hook</span> <span style=color:#e6db74>&#39;zenith/post-command-hook</span> <span style=color:#ae81ff>0</span> <span style=color:#66d9ef>t</span>)
+    (remove-hook <span style=color:#e6db74>&#39;post-command-hook</span> <span style=color:#e6db74>&#39;zenith/post-command-hook</span> <span style=color:#66d9ef>t</span>)))
+(define-globalized-minor-mode global-auto-expand-mode auto-expand-mode auto-expand-mode-on)
+
+(defun auto-expand-mode-on ()
+  (auto-expand-mode <span style=color:#ae81ff>1</span>))
+
+(global-auto-expand-mode <span style=color:#ae81ff>1</span>)
+</code></pre></div><h2 id=ivy-mode>Ivy-mode</h2><p><a href=https://github.com/abo-abo/swiper>https://github.com/abo-abo/swiper</a> ivy, swiper, counsel 是强大的工具是对于 ido 的
+加强。<a href=https://github.com/DarwinAwardWinner/amx>https://github.com/DarwinAwardWinner/amx</a> 进一步加强了 execute-command。值
+得提到的有两点，一是</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp>(defun zenith/open-by-external-program (path)
+  <span style=color:#e6db74>&#34;Open file in external program&#34;</span>
+  (let ((display-buffer-alist <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>&#34;*Async Shell Command*&#34;</span> <span style=color:#f92672>.</span> (display-buffer-no-window)))))
+    (async-shell-command (<span style=color:#a6e22e>format</span> <span style=color:#e6db74>&#34;nohup xdg-open \&#34;%s\&#34; &gt;/dev/null 2&gt;&amp;1&#34;</span>
+                                 (file-relative-name path default-directory)))))
+</code></pre></div><p>这里个函数在 Linux 中通过系统默认的程序来打开文件。二是</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#75715e>;; https://github.com/tumashu/emacs-helper/commit/1932a9e8a64f08bb9603cf244df41f6c0bbc3dac</span>
+<span style=color:#75715e>;; Search chinese with pinyin</span>
+(defun zenith/ivy-cregexp-helper (str)
+  (<span style=color:#a6e22e>cons</span> (pyim-cregexp-build str) <span style=color:#66d9ef>t</span>))
+
+(defun zenith/ivy-cregexp-ignore-order (str)
+  (let ((str-list (split-string str)))
+    (if str-list
+      (<span style=color:#a6e22e>mapcar</span> <span style=color:#e6db74>&#39;zenith/ivy-cregexp-helper</span> (split-string str))
+      <span style=color:#e6db74>&#34;&#34;</span>)))
+
+(setq ivy-re-builders-alist <span style=color:#f92672>&#39;</span>((counsel-company <span style=color:#f92672>.</span> ivy--regex-fuzzy)
+                              (<span style=color:#66d9ef>t</span> <span style=color:#f92672>.</span> zenith/ivy-cregexp-ignore-order)))
+</code></pre></div><p>这样就可以在 ivy 的补全中直接使用拼音搜索，非常的好用。（事实上，在 ivy-posframe
+中，pyim 莫名地不可用）</p><h2 id=programming>Programming</h2><p>编码主要依赖于<a href=https://github.com/flycheck/flycheck>https://github.com/flycheck/flycheck</a>, 用于进行代码的事实检查。
+<a href=https://github.com/manateelazycat/nox>https://github.com/manateelazycat/nox</a> 用于和 LSP Server 通信提供补全跳转等编码体
+验，<a href=https://github.com/lassik/emacs-format-all-the-code>https://github.com/lassik/emacs-format-all-the-code</a> 提供代码格式化。同时
+<a href=https://github.com/bbatsov/projectile>https://github.com/bbatsov/projectile</a> 提供了项目管理（事实上这一功能我用的比较少）。</p><h2 id=琐碎>琐碎</h2><p>show-paren-mode 可以显示配对的括号。recentf 提供访问最近文件的方法。cua-mode 使
+得 C-x, C-c, C-v 有和其他软件类似的行为。display-line-number-mode 是高效的显示行
+号的方法。 winner-mode 提供对于 window 操作的撤销和重做。undo-tree 提供了非常好
+的撤销， <a href=https://github.com/Fuco1/smartparens>https://github.com/Fuco1/smartparens</a> 提供括号和命令的补全。
+<a href=https://github.com/lewang/ws-butler>https://github.com/lewang/ws-butler</a> 以一种友好的方式去除行末空格。
+<a href=https://github.com/abo-abo/ace-window>https://github.com/abo-abo/ace-window</a> 提供窗口切换的好方法。rg 提供快速的文本搜
+索，和 wgrep 配合提供文本的替换。<a href=https://github.com/raxod502/ctrlf>https://github.com/raxod502/ctrlf</a> 增强了 Emacs
+自带的搜索，使得行为更加可控。<a href=https://github.com/redguardtoo/wucuo>https://github.com/redguardtoo/wucuo</a> 提供了快速的
+拼写检查。 shackle 提供了对于弹出窗口的控制。
+<a href=https://github.com/noctuid/general.el>https://github.com/noctuid/general.el</a> 提供了绑定快捷键的好方法。
+<a href=https://github.com/justbur/emacs-which-key>https://github.com/justbur/emacs-which-key</a> 提供了探索快捷键的方法。除此之外，我
+还自己写了几个函数。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#75715e>;; Delete word in a more user friendly way</span>
+(defun zenith/aggressive-delete-space ()
+  <span style=color:#e6db74>&#34;Remove all the space until non-space character.&#34;</span>
+  (interactive)
+  (let ((end (<span style=color:#a6e22e>point</span>))
+        (begin (save-excursion
+                 (<span style=color:#a6e22e>re-search-backward</span> <span style=color:#e6db74>&#34;[^ \t\n\r]&#34;</span> <span style=color:#66d9ef>nil</span> <span style=color:#66d9ef>t</span>))))
+    (<span style=color:#a6e22e>delete-region</span> (<span style=color:#a6e22e>+</span> <span style=color:#ae81ff>1</span> begin) end)))
+
+(defun zenith/delete-word-or-space ()
+  <span style=color:#e6db74>&#34;Remove all the space until non-space character if the char at
+</span><span style=color:#e6db74>point and before are all space characters and delete word
+</span><span style=color:#e6db74>otherwise.&#34;</span>
+  (interactive)
+  (if (and (zenith/is-space (<span style=color:#a6e22e>char-before</span>))
+           (zenith/is-space (<span style=color:#a6e22e>char-before</span> (<span style=color:#a6e22e>-</span> (<span style=color:#a6e22e>point</span>) <span style=color:#ae81ff>1</span>))))
+      (zenith/aggressive-delete-space)
+    (backward-kill-word <span style=color:#ae81ff>1</span>)))
+</code></pre></div><p>zenith/aggressive-delete-space 使得删除词的行为更精细。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#75715e>;; jump in my way</span>
+(defvar zenith/jump-function-alist
+  <span style=color:#f92672>&#39;</span>((org-mode <span style=color:#f92672>.</span> org-goto)
+    (latex-mode <span style=color:#f92672>.</span> reftex-toc)
+    (org-agenda-mode <span style=color:#f92672>.</span> org-agenda-redo)
+    (<span style=color:#66d9ef>t</span> <span style=color:#f92672>.</span> counsel-imenu))
+  <span style=color:#e6db74>&#34;The function to call when jump&#34;</span>)
+
+(defun zenith/jump ()
+  <span style=color:#e6db74>&#34;Jump as </span><span style=color:#e6db74>`zenith/jump-function-alist&#39;</span><span style=color:#e6db74> like.&#34;</span>
+  (interactive)
+  (if-let ((func (alist-get major-mode zenith/jump-function-alist)))
+      (<span style=color:#a6e22e>funcall</span> func)
+    (<span style=color:#a6e22e>funcall</span> (alist-get <span style=color:#66d9ef>t</span> zenith/jump-function-alist))))
+</code></pre></div><p>zenith/jump 提供了浏览文件的统一方法。</p><hr><ul class=pager><li class=previous><a href=/post/mu4e/ data-toggle=tooltip data-placement=top title="Emacs mu4e 配置">&larr;
+Previous Post</a></li><li class=next><a href=/post/cornell_learning_strategies_center_review/ data-toggle=tooltip data-placement=top title="Cornell Learning Strategies Center 学习总结">Next
+Post &rarr;</a></li></ul><div id=disqus-comment></div></div><div class="col-lg-11 col-lg-offset-1
+col-md-10 col-md-offset-1
+sidebar-container"></div></div></div></article><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li><a href=mailto:zenith-john@foxmail.com><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://github.com/zenith-john/><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted">Copyright &copy; Zenith John's Nonsense 2021<br><a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
+<iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe></p></div></div></div></footer><script>function loadAsync(f,b){var c=document,d='script',a=c.createElement(d),e=c.getElementsByTagName(d)[0];a.src=f,b&&a.addEventListener('load',function(a){b(null,a)},!1),e.parentNode.insertBefore(a,e)}</script><script>$('#tag_cloud').length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:'#bbbbee',end:'#0085a1'}},$('#tag_cloud a').tagcloud()})</script><script>loadAsync("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js",function(){var a=document.querySelector("nav");a&&FastClick.attach(a)})</script></body></html>

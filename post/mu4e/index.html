@@ -1,0 +1,131 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:site_name" content="Zenith John's Nonsense"><meta property="og:type" content="article"><meta property="og:image" content="https://zenith-john.github.io//img/header.png"><meta property="twitter:image" content="https://zenith-john.github.io//img/header.png"><meta name=title content="Emacs mu4e 配置"><meta property="og:title" content="Emacs mu4e 配置"><meta property="twitter:title" content="Emacs mu4e 配置"><meta name=description content><meta property="og:description" content><meta property="twitter:description" content><meta property="twitter:card" content="summary"><meta name=keyword content><link rel="shortcut icon" href=/img/favicon.ico><title>Emacs mu4e 配置-</title><link rel=canonical href=/post/mu4e/><link rel=stylesheet href=/css/iDisqus.min.css><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/hux-blog.min.css><link rel=stylesheet href=/css/zanshang.css><link href=//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css rel=stylesheet type=text/css><script src=/js/jquery.min.js></script><script src=/js/bootstrap.min.js></script><script src=/js/hux-blog.min.js></script></head><nav class="navbar navbar-default navbar-custom navbar-fixed-top"><div class=container-fluid><div class="navbar-header page-scroll"><button type=button class=navbar-toggle>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span></button>
+<a class=navbar-brand href=/>Zenith John's Nonsense</a></div><div id=huxblog_navbar><div class=navbar-collapse><ul class="nav navbar-nav navbar-right"><li><a href=/>Home</a></li></ul></div></div></div></nav><script>var $body=document.body,$toggle=document.querySelector('.navbar-toggle'),$navbar=document.querySelector('#huxblog_navbar'),$collapse=document.querySelector('.navbar-collapse');$toggle.addEventListener('click',handleMagic);function handleMagic(a){$navbar.className.indexOf('in')>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf('in')<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script><style type=text/css>header.intro-header{background-image:url(/img/header.png)}</style><header class=intro-header><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><div class=tags></div><h1>Emacs mu4e 配置</h1><h2 class=subheading></h2><span class=meta>Posted by
+[Zenith John]
+on
+Thursday, August 19, 2021</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-11 col-lg-offset-1
+col-md-10 col-md-offset-1
+post-container"><h2 id=offlineimap>Offlineimap</h2><p>首先我们需要使用 Offlineimap 来获取服务器上的邮件。我们需要准备几个文件，一是 ~/.offlineimaprc 如下</p><pre><code class=language-conf data-lang=conf>[general]
+accounts = Foxmail, Tsinghua
+pythonfile = ~/.offlineimap.py
+
+[Account Foxmail]
+localrepository = LocalFoxmail
+remoterepository = RemoteFoxmail
+proxy = SOCKS5:172.26.240.1:10800
+
+[Repository LocalFoxmail]
+type = Maildir
+localfolders = ~/Documents/Mail/Foxmail
+
+[Repository RemoteFoxmail]
+type = IMAP
+remotehost = imap.qq.com
+remoteuser = zenith-john@foxmail.com
+remotepasseval = mailpasswd(&quot;foxmail&quot;)
+ssl = yes
+maxconnection = 1
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Account Tsinghua]
+localrepository = LocalTsinghua
+remoterepository = RemoteTsinghua
+
+[Repository LocalTsinghua]
+type = Maildir
+localfolders = ~/Documents/Mail/Tsinghua
+
+[Repository RemoteTsinghua]
+type = IMAP
+remotehost = mails.tsinghua.edu.cn
+remoteuser = znt21@mails.tsinghua.edu.cn
+remotepasseval = mailpasswd(&quot;tsinghua&quot;)
+ssl = yes
+maxconnection = 1
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+</code></pre><p>其中的各项含义都较为显然，有趣的是我直接登入 Foxmail 经常获取邮件失败，挂了代理反而没有问题。注意这里没有使用原文存放密码，而是使用 ~/.offlineimap.py 中的 mailpasswd 函数使用 gpg 来获得密码。~/.offlineimap.py 代码如下：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> os
+<span style=color:#f92672>import</span> subprocess
+
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>mailpasswd</span>(acct):
+  acct <span style=color:#f92672>=</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(acct)
+  path <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;/home/zenith-john/.passwd/</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>.gpg&#34;</span> <span style=color:#f92672>%</span> acct
+  args <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;gpg&#34;</span>, <span style=color:#e6db74>&#34;--use-agent&#34;</span>, <span style=color:#e6db74>&#34;--quiet&#34;</span>, <span style=color:#e6db74>&#34;--batch&#34;</span>, <span style=color:#e6db74>&#34;-d&#34;</span>, path]
+  <span style=color:#66d9ef>try</span>:
+    <span style=color:#66d9ef>return</span> subprocess<span style=color:#f92672>.</span>check_output(args)<span style=color:#f92672>.</span>strip()
+  <span style=color:#66d9ef>except</span> subprocess<span style=color:#f92672>.</span>CalledProcessError:
+    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;&#34;</span>
+</code></pre></div><p>其中主要是使用 gpg 来获得密码。我们可以通过</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 创建密钥</span>
+gpg --full-generate-key
+
+<span style=color:#75715e># 加密</span>
+gpg -e -r RECIPIENT ~/.passwd/file
+</code></pre></div><p>来创建加密后的文件。</p><h2 id=使用-mu4e>使用 mu4e</h2><p>使用 <a href=https://github.com/djcb/mu>https://github.com/djcb/mu</a> 获得代码，编译得到最新版本，并将 mu4e 加入加载路径。我们要将加入 smtp 服务器加入 ./.authinfo 其每一行类似</p><pre><code class=language-conf data-lang=conf>machine * login * port * password **
+</code></pre><p>注意要使用 mu4e 查看邮件，在编译时最好使用 xml2 以及 &ndash;with-mailutils 选项。</p><p>同时为了使用不同的邮件我加入了函数，使得在发送邮件时选择邮箱。一个样例配置如下。其中选择 <code>mu4e-sent-message-behavior</code> 需要设置为 <code>\'delete</code> 来使得在下载邮件时不会导致出现重复。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp>(setq mail-user-agent <span style=color:#e6db74>&#39;mu4e-user-agent</span>
+      <span style=color:#a6e22e>user-full-name</span> <span style=color:#e6db74>&#34;Zenith John&#34;</span>
+      message-send-mail-function <span style=color:#e6db74>&#39;smtpmail-send-it</span>
+      send-mail-function <span style=color:#e6db74>&#39;smtpmail-send-it</span>)
+
+(setq mu4e-get-mail-command <span style=color:#e6db74>&#34;offlineimap&#34;</span>
+      mu4e-update-interval <span style=color:#ae81ff>600</span>
+      mu4e-maildir-list <span style=color:#e6db74>&#34;~/Documents/Mail&#34;</span>
+      mu4e-view-use-old <span style=color:#66d9ef>nil</span>
+      mu4e-sent-messages-behavior <span style=color:#e6db74>&#39;delete</span>)
+
+(setq mu4e-sent-folder <span style=color:#e6db74>&#34;/Foxmail/Sent Messages&#34;</span>
+      mu4e-drafts-folder <span style=color:#e6db74>&#34;/Foxmail/Drafts&#34;</span>
+      user-mail-address <span style=color:#e6db74>&#34;zenith-john@foxmail.com&#34;</span>
+      smtpmail-smtp-server <span style=color:#e6db74>&#34;smtp.qq.com&#34;</span>
+      smtpmail-local-domain <span style=color:#e6db74>&#34;qq.com&#34;</span>
+      smtpmail-smtp-service <span style=color:#ae81ff>465</span>
+      smtpmail-stream-type <span style=color:#e6db74>&#39;ssl</span>)
+
+(defvar zenith/mu4e-account-alist
+  <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>&#34;Foxmail&#34;</span>
+     (mu4e-sent-folder <span style=color:#e6db74>&#34;/Foxmail/Sent Messages&#34;</span>)
+     (mu4e-drafts-folder <span style=color:#e6db74>&#34;/Foxmail/Drafts&#34;</span>)
+     (user-mail-address <span style=color:#e6db74>&#34;zenith-john@foxmail.com&#34;</span>)
+     (smtpmail-smtp-server <span style=color:#e6db74>&#34;smtp.qq.com&#34;</span>)
+     (smtpmail-local-domain <span style=color:#e6db74>&#34;qq.com&#34;</span>)
+     (smtpmail-smtp-service <span style=color:#ae81ff>465</span>)
+     (smtpmail-stream-type ssl))
+    (<span style=color:#e6db74>&#34;Tsinghua&#34;</span>
+     (mu4e-sent-folder <span style=color:#e6db74>&#34;/Tsinghua/Sent Items&#34;</span>)
+     (mu4e-drafts-folder <span style=color:#e6db74>&#34;/Tsinghua/Drafts&#34;</span>)
+     (user-mail-address <span style=color:#e6db74>&#34;znt21@mails.tsinghua.edu.cn&#34;</span>)
+     (smtpmail-smtp-server <span style=color:#e6db74>&#34;mails.tsinghua.edu.cn&#34;</span>)
+     (smtpmail-local-domain <span style=color:#e6db74>&#34;mails.tsinghua.edu.cn&#34;</span>)
+     (smtpmail-smtp-service <span style=color:#ae81ff>465</span>)
+     (smtpmail-stream-type ssl))))
+
+(defun zenith/mu4e-set-account ()
+  <span style=color:#e6db74>&#34;Set the account for composing a message.&#34;</span>
+  (let* ((account
+          (if mu4e-compose-parent-message
+              (let ((maildir (mu4e-message-field mu4e-compose-parent-message :maildir)))
+                (<span style=color:#a6e22e>string-match</span> <span style=color:#e6db74>&#34;/\\(.*?\\)/&#34;</span> maildir)
+                (match-string <span style=color:#ae81ff>1</span> maildir))
+            (<span style=color:#a6e22e>completing-read</span> (<span style=color:#a6e22e>format</span> <span style=color:#e6db74>&#34;Compose with account: (%s) &#34;</span>
+                                     (<span style=color:#a6e22e>mapconcat</span> <span style=color:#a6e22e>#&#39;</span>(lambda (var) (<span style=color:#a6e22e>car</span> var))
+                                                zenith/mu4e-account-alist <span style=color:#e6db74>&#34;/&#34;</span>))
+                             (<span style=color:#a6e22e>mapcar</span> <span style=color:#a6e22e>#&#39;</span>(lambda (var) (<span style=color:#a6e22e>car</span> var)) zenith/mu4e-account-alist)
+                             <span style=color:#66d9ef>nil</span> <span style=color:#66d9ef>t</span> <span style=color:#66d9ef>nil</span> <span style=color:#66d9ef>nil</span> (caar zenith/mu4e-account-alist))))
+         (account-vars (<span style=color:#a6e22e>cdr</span> (<span style=color:#a6e22e>assoc</span> account zenith/mu4e-account-alist))))
+    (if account-vars
+        (<span style=color:#a6e22e>mapc</span> <span style=color:#a6e22e>#&#39;</span>(lambda (var)
+                  (<span style=color:#a6e22e>set</span> (<span style=color:#a6e22e>car</span> var) (cadr var)))
+              account-vars)
+      (<span style=color:#a6e22e>error</span> <span style=color:#e6db74>&#34;No email account found&#34;</span>))))
+
+(add-hook <span style=color:#e6db74>&#39;mu4e-compose-pre-hook</span> <span style=color:#e6db74>&#39;zenith/mu4e-set-account</span>)
+
+(require <span style=color:#e6db74>&#39;smtpmail</span>)
+(require <span style=color:#e6db74>&#39;mu4e</span>)
+</code></pre></div><p>接下来，就能很好地使用 mu4e 了。</p><hr><ul class=pager><li class=previous><a href=/post/ti9/ data-toggle=tooltip data-placement=top title="TI9 感想">&larr;
+Previous Post</a></li><li class=next><a href=/post/emacs_configuration/ data-toggle=tooltip data-placement=top title=Emacs>Next
+Post &rarr;</a></li></ul><div id=disqus-comment></div></div><div class="col-lg-11 col-lg-offset-1
+col-md-10 col-md-offset-1
+sidebar-container"></div></div></div></article><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li><a href=mailto:zenith-john@foxmail.com><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://github.com/zenith-john/><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted">Copyright &copy; Zenith John's Nonsense 2021<br><a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
+<iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe></p></div></div></div></footer><script>function loadAsync(f,b){var c=document,d='script',a=c.createElement(d),e=c.getElementsByTagName(d)[0];a.src=f,b&&a.addEventListener('load',function(a){b(null,a)},!1),e.parentNode.insertBefore(a,e)}</script><script>$('#tag_cloud').length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:'#bbbbee',end:'#0085a1'}},$('#tag_cloud a').tagcloud()})</script><script>loadAsync("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js",function(){var a=document.querySelector("nav");a&&FastClick.attach(a)})</script></body></html>
