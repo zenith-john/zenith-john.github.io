@@ -1,4 +1,17 @@
 baseURL = "https://zenith-john.github.io/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+languageCode = "zh-cn"
+title = "Zenith John's Nonsense"
 theme = "hugo-theme-cleanwhite"
+hasCJKLanguage = true
+preserveTaxonomyNames = true
+paginate = 10
+
+[params]
+    header_image = "img/header.png"
+    sidebar_avatar = "img/avatar.jpeg"
+    sidebar_about_description = "Emacser, Graduate Student in Mathematics"
+    about_me = true
+
+    [params.social]
+    email = "zenith-john@foxmail.com"
+    github = "https://github.com/zenith-john/"

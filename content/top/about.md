@@ -1,0 +1,3 @@
+我叫张南涛，是一位Emacser，Linuxer，开源爱好者。我个人的 Emacs 配置可见 <https://github.com/zenith-john/zenith-emacs>。我本科就读于清华大学生命科学系，并于2021年毕业。目前，我是清华大学数学系的学生。我感兴趣的研究方向包括镜像对称，计数几何和几何表示论。在数学学习之余，我对马克思主义、哲学和文学比较感兴趣。
+
+My name is Zhang Nantao，an Emacser, a Linuxer, an open source amateur. My personal emacs configuration can be found at <https://github.com/zenith-john/zenith-emacs>. In 2021, I graduated from Tsinghua University with a bachelor degree in life science. Currently, I am a graduate student of mathematics department at Tsinghua University. My research interest includes mirror symmetry, enumerative geometry and geometric representation theory. Apart from mathematics, I am a fan of Marxism, philosophy and literature.
