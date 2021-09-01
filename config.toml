@@ -20,5 +20,14 @@ paginate = 10
 
 [markup]
     [markup.tableOfContents]
-    endLevel = 2
-    startLevel = 1
+    endLevel = 3
+    startLevel = 2
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+          unsafe = true
+markup = "md"
+math = "true"
+
+[taxonomies]
+category = 'categories'
+tag = 'tags'
