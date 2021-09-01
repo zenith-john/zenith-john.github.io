@@ -61,7 +61,7 @@ gpg --full-generate-key
 <span style=color:#75715e># 加密</span>
 gpg -e -r RECIPIENT ~/.passwd/file
 </code></pre></div><p>来创建加密后的文件。</p><h2 id=使用-mu4e>使用 mu4e</h2><p>使用 <a href=https://github.com/djcb/mu>https://github.com/djcb/mu</a> 获得代码，编译得到最新版本，并将 mu4e 加入加载路径。我们要将加入 smtp 服务器加入 ./.authinfo 其每一行类似</p><pre><code class=language-conf data-lang=conf>machine * login * port * password **
-</code></pre><p>注意要使用 mu4e 查看邮件，在编译时最好使用 xml2 以及 &ndash;with-mailutils 选项。</p><p>同时为了使用不同的邮件我加入了函数，使得在发送邮件时选择邮箱。一个样例配置如下。其中选择 <code>mu4e-sent-message-behavior</code> 需要设置为 <code>\'delete</code> 来使得在下载邮件时不会导致出现重复。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp>(setq mail-user-agent <span style=color:#e6db74>&#39;mu4e-user-agent</span>
+</code></pre><p>注意要使用 mu4e 查看邮件，在编译时最好使用 xml2 以及 &ndash;with-mailutils 选项。</p><p>同时为了使用不同的邮件我加入了函数，使得在发送邮件时选择邮箱。一个样例配置如下。其中选择 <code>mu4e-sent-message-behavior</code> 需要设置为 <code>~'delete</code> 来使得在下载邮件时不会导致出现重复。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp>(setq mail-user-agent <span style=color:#e6db74>&#39;mu4e-user-agent</span>
       <span style=color:#a6e22e>user-full-name</span> <span style=color:#e6db74>&#34;Zenith John&#34;</span>
       message-send-mail-function <span style=color:#e6db74>&#39;smtpmail-send-it</span>
       send-mail-function <span style=color:#e6db74>&#39;smtpmail-send-it</span>)
