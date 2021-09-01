@@ -1,17 +1,17 @@
 +++
 title = "Emacs"
 author = ["Zenith John"]
-publishDate = 2021-08-19T00:00:00+08:00
+publishDate = 2021-08-19
 draft = false
 showtoc = true
 +++
 
 ## 版本 {#版本}
 
-Emacs 是我最常用的编码工具。我使用的是 Emacs 28 版本，自己编译，编译选项为
+Emacs 是我最常用的编码工具。我使用的是 Emacs 27 版本，自己编译，编译选项为
 
 ```bash
-./configure --with-modules --with-xwidgets --with-mailutils --with-imagemagick --with-native-comp
+./configure --with-modules --with-xwidgets --with-mailutils --with-imagemagick
 ```
 
 

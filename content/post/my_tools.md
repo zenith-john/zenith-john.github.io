@@ -1,7 +1,7 @@
 +++
 title = "我的工具"
 author = ["Zenith John"]
-publishDate = 2021-08-19T00:00:00+08:00
+publishDate = 2021-08-19
 draft = false
 +++
 
@@ -122,7 +122,7 @@ NoDisplay=true
     击 Shift\_R 设置为 Ctrl + C，将单击 Windows 设置为快捷键然后连接到
 13. pyenv. python 版本控制，非常不友好，几乎废弃。
 14. nvm. node.js 版本控制。
-15. you-get 用于下载视频。参考[半自动化下载B站收藏夹视频](post/.org)
+15. you-get 用于下载视频。参考[半自动化下载B站收藏夹视频]({{< relref "bilibili_favourites_download" >}})
 16. atool 通用解压工具。
 17. sd <https://github.com/chmln/sd> sd 是 sed 的 Rust 替代品，提供了更为简单和符合直观的参数。
 

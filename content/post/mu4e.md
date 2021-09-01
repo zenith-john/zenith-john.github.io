@@ -1,7 +1,7 @@
 +++
 title = "Emacs mu4e 配置"
 author = ["Zenith John"]
-publishDate = 2021-08-19T00:00:00+08:00
+publishDate = 2021-08-19
 draft = false
 +++
 
@@ -89,7 +89,7 @@ machine * login * port * password **
 
 注意要使用 mu4e 查看邮件，在编译时最好使用 xml2 以及 --with-mailutils 选项。
 
-同时为了使用不同的邮件我加入了函数，使得在发送邮件时选择邮箱。一个样例配置如下。其中选择 `mu4e-sent-message-behavior` 需要设置为 `\'delete` 来使得在下载邮件时不会导致出现重复。
+同时为了使用不同的邮件我加入了函数，使得在发送邮件时选择邮箱。一个样例配置如下。其中选择 `mu4e-sent-message-behavior` 需要设置为 `~'delete` 来使得在下载邮件时不会导致出现重复。
 
 ```elisp
 (setq mail-user-agent 'mu4e-user-agent

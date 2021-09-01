@@ -1,10 +1,11 @@
 +++
 title = "Compare Scapple, CmapTools and yEd Graph Editor"
 author = ["Zenith John"]
-publishDate = 2021-08-19T00:00:00+08:00
+publishDate = 2021-08-19
 draft = false
 +++
 
+<span class="timestamp-wrapper"><span class="timestamp">[2021-07-05 Mon 17:19]</span></span>
 最近在寻找绘制概念图的工具。概念图与思维导图不同，它是无中心的，也就是说它不是从中心发散的网络结构而是一个自然的网络结构。
 
 首先发现的是 [Scapple](https://www.literatureandlatte.com/scapple/overview)。这个软件的优点在于绘图非常自然，比如双击创建图案等，较为人性化。但是由于它箭头的类型较少，同时对于箭头进行标注不是很自然，除此之外，它还缺少其他二者所有的分析的工具。因此首先放弃。（PS:Scapple 付费且只支持 Windows 和 Mac OS）

@@ -1,7 +1,7 @@
 +++
 title = "Windows 装机指南"
 author = ["Zenith John"]
-publishDate = 2021-08-19T00:00:00+08:00
+publishDate = 2021-08-19
 draft = false
 showtoc = true
 +++

@@ -1,10 +1,41 @@
 +++
 title = "Ubuntu 安装后"
 author = ["Zenith John"]
-publishDate = 2021-08-19T00:00:00+08:00
+publishDate = 2021-08-19
 draft = false
 showtoc = true
 +++
+
+## 使用的代理软件 {#使用的代理软件}
+
+v2raya 以及 v2ray-core。具体可以参考 [这篇文章](https://v2xtls.org/v2ray-linux%e5%ae%a2%e6%88%b7%e7%ab%afv2raya%e4%b8%8b%e8%bd%bd%e5%ae%89%e8%a3%85%e5%8f%8a%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b-%e6%94%af%e6%8c%81vmess-vless-ss-ssr-trojan-pingtunnel/)。
+
+同时，为让命令行工具使用代理，我使用的是 privoxy
+
+```bash
+apt install privoxy
+vim /etc/privoxy/config
+```
+
+修改为
+
+```conf
+forward-socks5t   /   127.0.0.1:1080 .
+listen-address  127.0.0.1:8118
+```
+
+注意 . 不可省略。
+
+在 zsh 配置文件中加入
+
+```sh
+# proxy setting
+alias proxyon="export http_proxy='http://127.0.0.1:8118'; export https_proxy=$http_proxy"
+alias proxyoff="unset http_proxy; unset https_proxy"
+```
+
+然后就可以使用这两个命令来临时开启、关闭代理。
+
 
 ## 软件包安装 {#软件包安装}
 
@@ -171,6 +202,7 @@ GSConnect 是 Gnome 的一个 Extension 与 KDE connect 一样，其安卓 app �
 
 ## 无法 hibernate {#无法-hibernate}
 
+<span class="timestamp-wrapper"><span class="timestamp">[2021-08-14 Sat]</span></span>
 在 Linux 中，进行 Hibernate 较为复杂，主要参考的是 <https://blog.ivansmirnov.name/how-to-set-up-hibernate-on-ubuntu-20-04/> 。我使用的是 swapfile 首先需要将 \\/swapfile 扩大。可以参考的命令是
 
 ```sh
@@ -241,3 +273,41 @@ systemctl start touchscreen
 ```
 
 来解决这个问题，但是即使这样，但是由于在开机的过程中，这个错误的程序是无法加载的，因此也就会导致存储的文件无法正常使用，因此也就无法使用 hibernate 了。
+
+
+## Ubuntu 安装 deepin-wine {#ubuntu-安装-deepin-wine}
+
+来自：<https://zhuanlan.zhihu.com/p/341481469>
+系统：Ubuntu 20.10
+
+今天使用Ubuntu，想安装一下deepin的qq，在网上找到以下方法：
+
+```sh
+wget -O- https://deepin-wine.i-m.dev/setup.sh | sh
+```
+
+正常执行
+
+```sh
+sudo apt-get install com.qq.im.deepin
+```
+
+报错：
+
+下列软件包有未满足的依赖关系：
+ libgirepository-1.0-1 : 破坏: python-gi (< 3.34.0-4~) 但是 3.30.4-1 正要被安装
+E: 无法修正错误，因为您要求某些软件包保持现状，就是它们破坏了软件包间的依赖关系。
+
+我试着安装python-gi，同样报错，我又试着删了libgirepository-1.0-1，但是他是很多包的依赖，不敢删。
+
+百度搜索无果，bing搜索外国也没找到解决办法，倒是有人遇到了同样的问题。
+
+在ubuntu搜集信息后，发现libgirepository-1.0-1依赖于libffi7，但是apt下载不到他，只能去<https://packages.ubuntu.com/zh-cn/focal/libffi7> 手动下载。安装完后又去<https://packages.ubuntu.com/zh-cn/focal/python-gi> 手动下载python-gi，先后安装成功。
+
+再次安装qq，重启，安装成功。
+
+但是发现字体显示不全。找了个网站下载了simsun.ttc，放到 ~/.deepinwine/Deepin-QQ/drive\_c/windows/Fonts/
+
+问题解决。
+
+PS:注意 deepin-wine 是无法使用摄像头的。
