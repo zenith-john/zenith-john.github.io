@@ -2,6 +2,7 @@
 title = "HUGO SUMMARY"
 author = ["Zenith John"]
 date = 2018-12-30T21:17:00+08:00
+categories = ["computer"]
 draft = false
 +++
 

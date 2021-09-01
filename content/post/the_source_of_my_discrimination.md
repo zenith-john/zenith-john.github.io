@@ -2,7 +2,8 @@
 title = "我为什么鄙视（歧视）别人？"
 author = ["Zenith John"]
 publishDate = 2021-08-19
-tags = ["扪心自问"]
+tags = ["Introspection"]
+categories = ["Essay"]
 draft = false
 +++
 

@@ -2,6 +2,7 @@
 title = "一个国庆群众游行的亲历者――可以言说和不可以言说的东西"
 author = ["Zenith John"]
 publishDate = 2021-08-19
+categories = ["Essay"]
 draft = false
 +++
 

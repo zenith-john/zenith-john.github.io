@@ -2,7 +2,8 @@
 title = "理性与感性"
 author = ["Zenith John"]
 publishDate = 2021-08-19
-tags = ["扪心自问"]
+tags = ["Introspection"]
+categories = ["Essay"]
 draft = false
 +++
 

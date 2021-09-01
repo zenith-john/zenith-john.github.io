@@ -2,6 +2,7 @@
 title = "关于施一公"
 author = ["Zenith John"]
 publishDate = 2021-08-19
+categories = ["Essay"]
 draft = false
 +++
 

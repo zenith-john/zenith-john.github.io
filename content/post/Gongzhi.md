@@ -2,6 +2,7 @@
 title = "关于公知的几条评论"
 author = ["Zenith John"]
 publishDate = 2021-08-19
+categories = ["Essay"]
 draft = false
 +++
 

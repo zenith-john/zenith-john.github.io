@@ -2,6 +2,7 @@
 title = "Ubuntu 安装后"
 author = ["Zenith John"]
 publishDate = 2021-08-19
+categories = ["computer"]
 draft = false
 showtoc = true
 +++

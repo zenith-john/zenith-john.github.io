@@ -2,6 +2,7 @@
 title = "我的工具"
 author = ["Zenith John"]
 publishDate = 2021-08-19
+categories = ["computer"]
 draft = false
 +++
 

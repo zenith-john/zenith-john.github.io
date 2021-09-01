@@ -2,7 +2,6 @@
 title = "Mathematics Notes"
 author = ["Zenith John"]
 date = 2021-08-31
-lastmod = 2021-09-01T08:28:08+08:00
 categories = ["Mathematics"]
 draft = false
 showtoc = true
@@ -33,7 +32,7 @@ showtoc = true
 
 Let \\(f\\) be a smooth real valued function on manifold M. Let \\(a < b\\) and
 suppose that the set \\(f^{-1}[a,b]\\) is **compact** and contain no critical points
-of \\(f\\). Then \\(M^{a}\\) is differomorphic to \\(M^{b}\\). Futhermore, \\(M^{a}\\)
+of \\(f\\). Then \\(M^{a}\\) is differomorphic to \\(M^{b}\\). Furthermore, \\(M^{a}\\)
 is a deformation retract of \\(M^{b}\\), inclusion map \\(M^{a} \to M^{b}\\) is a
 homotopy equivalence.
 
@@ -42,7 +41,7 @@ The theorem supplies the condition when the retraction is possible.
 {{% theorem %}}
 If \\(f\\) is a differentiable function on a manifold \\(M\\), with no degenerate
 critical points, and if each \\(M^{a}\\) is compact, then \\(M\\) has the homotopy
-type of a CW-complex, wiht one cell of dimension \\(\lambda\\) for each critical
+type of a CW-complex, with one cell of dimension \\(\lambda\\) for each critical
 point of index \\(\lambda\\).
 {{% /theorem %}}
 
@@ -71,10 +70,7 @@ Author L. C. Evans
 
 ## Representation of finite groups {#representation-of-finite-groups}
 
-
-### Reference of Representation of Finite Groups {#reference-of-representation-of-finite-groups}
-
-Representation Theory of Finite Groups: An Introductory Approach, Benjamin Steinberg, Chapter 1-6
+The reference includes <sup id="19580479584332ed50a4af7bf7f3f201"><a href="#steinberg2012" title="Steinberg, Representation Theory of Finite Groups: An Introductory Approach, {Springer} (2012).">steinberg2012</a></sup> Chapter 1-6.
 
 
 ### Representation of finite groups {#representation-of-finite-groups}
@@ -205,10 +201,7 @@ A finite subgroup of O(3) is called a point group.
 
 ## Representation of quivers {#representation-of-quivers}
 
-
-### Reference of Representation of Quivers {#reference-of-representation-of-quivers}
-
-A Journey Through Representation Theory: From Finite Groups to Quivers via Algebras, Caroline Gruson, Vera Serganova, Chapter 7-9
+The basics of the quivers are from <sup id="df38f5636bec59103a70400bed4764c9"><a href="#kirillov2016" title="Kirillov, Quiver Representations and Quiver Varieties, {American Mathematical Society} (2016).">kirillov2016</a></sup>.
 
 
 ### Definition of Quivers {#definition-of-quivers}
@@ -498,7 +491,7 @@ For \\(K \subset L \subset M\\), we have homomorphism \\(r\_{K}^{L}: h\_{k}(M, M
 Theorem 16.4.1 in <sup id="5ad6139c99b6d2508f6ef6f11ce7f09d"><a href="#dieck2008" title="tom Dieck, Algebraic Topology, {European Mathematical Society} (2008).">dieck2008</a></sup>.
 
 {{% theorem %}}
-Let \\(M\\) be a compact connected \\(n\\)-[Manifold](#manifold). Then one of following holds:
+Let \\(M\\) be a compact connected \\(n\\)-[Manifold](#manifold). Then one of the following holds:
 
 -   \\(M\\) is orientable, then we have that \\(H\_{n}(M) \cong \ZZ\\) and for each \\(x \in M\\), \\(r^{M}\_{x}\\) is isomorphism.
 -   \\(M\\) is non-orientable, then \\(H\_{n}(M) = 0\\).
@@ -506,7 +499,21 @@ Let \\(M\\) be a compact connected \\(n\\)-[Manifold](#manifold). Then one of fo
 
 Cf. [Orientation](#orientation), [Local homology group](#local-homology-group).
 
-If \\(M\\) is orientable, then a generator will be called **fundamental class**.
+If \\(M\\) is orientable, then a generator will be called **fundamental class**. If \\(M\\) is a manifold with boundary, then we call \\(z \in H\_{n}(M, \partial M)\\) a **fundamental class** if for each \\(x \in M \backslash \partial M\\) the restriction of \\(z\\) is a generator in \\(H\_{n}(M, M \backslash x)\\), cf. [Local homology group](#local-homology-group).
+
+Theorem 16.5.1 (ibid.)
+
+{{% theorem %}}
+Let \\(M\\) be a compact connected \\(n\\)-manifold with non-empty boundary. Then one of the following holds:
+
+-   \\(H\_{n}(M, \partial M) \cong \ZZ\\) and a generator of this group is a fundamental class. The image of the map \\(\partial: H\_{n}(M, \partial M) \to H\_{n - 1}(\partial M)\\) is a fundamental class. The interior \\(M \backslash \partial M\\) is orientable.
+-   \\(H\_{n}(M, \partial M) = 0\\), and \\(M \backslash \partial M\\) is not orientable.
+{{% /theorem %}}
+
+
+### <span class="org-todo todo TODO">TODO</span> Cohomology {#cohomology}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-01 Wed 18:07]</span></span>
 
 
 ## Mirror Symmetry {#mirror-symmetry}
@@ -559,7 +566,7 @@ The moduli space of stable maps from \\(n\\)-pointed genus \\(g\\) nodal curves 
 
 </div>
 
-The moduli space \\(\overline{M}\_{g,n}(X, \beta)\\) is a Deligne-Mumford stack. And the moduli    space admits **virtual fundamental class**.
+The moduli space \\(\overline{M}\_{g,n}(X, \beta)\\) is a Deligne-Mumford stack. And the moduli    space admits [Virtual fundamental class](#virtual-fundamental-class).
 
 
 ### Gromov-Witten theory {#gromov-witten-theory}
@@ -670,9 +677,17 @@ For \\(X = \mathbb{P}^{2}\\), we denote that \\(N\_{d} = \langle I\_{0, 3d - 1, 
 \\[N\_{d} = \sum\_{d = d\_{1} + d\_{2}, d\_{1}, d\_{2} > 0} N\_{d\_{1}}N\_{d\_{2}} (d\_{1}^{2}d\_{2}^{2} \binom{3d - 4}{3d\_{1} - 2} - d\_{1}^{3}d\_{2} \binom{3d - 4}{3d\_{1} - 1})\\]
 
 
-### <span class="org-todo todo TODO">TODO</span> Hilbert scheme {#hilbert-scheme}
+### Hilbert scheme {#hilbert-scheme}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-29 Sun 15:24]</span></span>
+We fix a class \\(\beta \in H\_{2}(X, \ZZ)\\) and fix an integer \\(\chi \in \ZZ\\).
+
+<div class="definition">
+  <div></div>
+
+The **Hilbert scheme** \\({\rm Hilb}\_{\chi}(X, \beta)\\) parametrizes \\(1\\) dimensional subscheme \\(Z \subset X\\) whose irreducible components are at most \\(1\\)-dimension with numerical invariants \\(\beta = [Z] \in H\_{2}(X, \ZZ)\\) and \\(\chi(\mathscr{O}\_{Z}) = \chi\\).
+
+</div>
 
 
 ### <span class="org-todo todo TODO">TODO</span> Symplectic resolution {#symplectic-resolution}
@@ -680,10 +695,48 @@ For \\(X = \mathbb{P}^{2}\\), we denote that \\(N\_{d} = \langle I\_{0, 3d - 1, 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-29 Sun 15:25]</span></span>
 
 
-### <span class="org-todo todo TODO">TODO</span> Donald-Thomas theory {#donald-thomas-theory}
+### <span class="org-todo todo TODO">TODO</span> Virtual fundamental class {#virtual-fundamental-class}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-01 Wed 16:57]</span></span>
+The analog of [Virtual fundamental class](#virtual-fundamental-class) for stacks and orbifold.
+
+
+### Calabi-Yau variety {#calabi-yau-variety}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-01 Wed 17:49]</span></span>
+
+
+### Donaldson-Thomas theory {#donaldson-thomas-theory}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-29 Sun 16:00]</span></span>
 Cf. [Enumerative geometry](#enumerative-geometry).
+
+We consider the case when \\({\rm dim}\_{\CC}(X) = 3\\). We fix a class \\(\beta \in H\_{2}(X, \ZZ)\\) and fix an integer \\(\chi \in \ZZ\\). The **Donaldson-Thomas theory** describes the intersection theory on [Hilbert scheme](#hilbert-scheme) of \\(X\\). Due to existence of nonvanishing higher \\({\rm Ext}\\) group, the deformation-obstruction theory and [Virtual fundamental class](#virtual-fundamental-class) of virtual fundamental class is not well-defined. To remedy the issue, we consider \\(I\_{\chi}(X, \beta)\\) parametrizing pairs \\((E, \phi)\\) such that
+
+-   \\(E\\) is a torsion free sheaf on \\(X\\) of rank \\(1\\).
+-   \\(E\\) is equipped with a trivialization \\(\phi: \det E \cong \mathbb{O}\_{X}\\).
+-   The numerical invariants of \\(E\\) is given by \\(c\_{2}(E) = - \beta\\), \\(\xi(E) = \xi(\mathbb{O}\_{X}) - \chi\\).
+
+The natural map
+\\[{\rm Hilb}\_{\chi}(X, \beta) \to I\_{\chi}(X, \beta)\\]
+\\[Z \to J\_{Z}\\]
+is an isomorphism on the level of closed points.
+
+The expected dimension is given by \\(\dim(\ext\_{0}^{1}(E, E)) - \dim(\ext\_{0}^{2}(E,E))\\), where \\(\ext\_{0}\\) denote the trace free subspace. So we have that \\(\virdim I\_{\chi}(X, \beta) = \chi(E, E) - \chi(\OO) = -K\_{X} \cdot \beta\\). In [Gromov-Witten theory](#gromov-witten-theory), we also have the fundamental class of dimension equal to \\(-K\_{X} \cdot \beta\\). So if \\(X\\) is [Calabi-Yau variety](#calabi-yau-variety), we have \\(\virdim I\_{\chi}(X, \beta) = 0\\).
+
+We don't have evaluation map in Donaldson-Thomas theory, so we consider
+\\[\tilde{J} \to \hilb(X) \times X\\]
+for the purpose of integration. Given \\(\alpha \in H^{\*}(X)\\), we can define an operator
+\\[\sigma\_{0}(\alpha): \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha) \cap \pi\_{\hilb}^{\*}(-)), H\_{\*}(\hilb(X)) \to H\_{\*}(\hilb(X))\\]
+Then the **Donaldson-Thomas invariants** are defined by
+
+\begin{align}\langle \alpha\_{1}, \cdots, \alpha\_{n} \rangle^{DT}\_{\beta, m} &= \deg \prod\_{k} \sigma\_{0}(\alpha\_{k})[I\_{\chi}(X, \beta)]^{vir}\\\
+&= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \sigma\_{0}(\alpha\_{k}) \\\ &=
+\int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha\_{k}) \cap \pi^{\*} \beta)\end{align}
+
+Here note \\(-\ch\_{2}(I\_{Z}) = \beta\\) is represented by cycle class \\(Z \subset X\\).
+
+There may be some mistakes in definition, because I suppose that the second line is not well-defined and the \\(\beta\\) in the last line is unnatural. However, I don't know the correct algebraic definition of Donaldson-Thomas theory yet. So I still follow the definition in [GW/DT Theory](https://www.bilibili.com/video/BV1Gi4y1T7ed) Lecture 11.
 
 
 ## Geometric representation theory {#geometric-representation-theory}
@@ -728,4 +781,8 @@ The function can be extend as a meromorphic function on \\(\CC\\).
 The similarity over number fields, function fields, algebraic curves over \\(\CC\\).
 
 ## Bibliography
+<a id="steinberg2012"></a>[steinberg2012] Steinberg, Representation Theory of Finite Groups: An Introductory Approach, Springer (2012). [↩](#19580479584332ed50a4af7bf7f3f201)
+
+<a id="kirillov2016"></a>[kirillov2016] Kirillov, Quiver Representations and Quiver Varieties, American Mathematical Society (2016). [↩](#df38f5636bec59103a70400bed4764c9)
+
 <a id="dieck2008"></a>[dieck2008] tom Dieck, Algebraic Topology, European Mathematical Society (2008). [↩](#5ad6139c99b6d2508f6ef6f11ce7f09d)

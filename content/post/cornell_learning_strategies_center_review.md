@@ -2,6 +2,7 @@
 title = "Cornell Learning Strategies Center 学习总结"
 author = ["Zenith John"]
 publishDate = 2021-08-19
+categories = ["Essay"]
 draft = false
 +++
 

@@ -9,9 +9,14 @@ paginate = 10
 [params]
     header_image = "img/header.png"
     sidebar_avatar = "img/avatar.jpeg"
-    sidebar_about_description = "Emacser, Graduate Student in Mathematics"
+    sidebar_about_description = "Graduate Student in Mathematics, Emacser, Linuxer"
     about_me = true
+    desription = "张南涛，数学研究生，Emacser, 开源爱好者 | 实迷途其未远，觉今是而昨非"
     showtoc = false
+    featured_tags = true
+
+    image_404 = "img/header.png"
+    title_404 = "方可方不可，方不可方可"
 
     [params.social]
     email = "zenith-john@foxmail.com"
