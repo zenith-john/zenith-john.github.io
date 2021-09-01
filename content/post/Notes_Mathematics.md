@@ -222,7 +222,7 @@ The Jacobson radical of the path algebra \\(k(Q)\\) is the span of all one-way p
 
 ### Manifold {#manifold}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-24 Tue 10:54]</span></span>
+
 
 <div class="definition">
   <div></div>
@@ -245,7 +245,7 @@ We call a compact manifold without boundary a **closed manifold**.
 
 ### Lie group {#lie-group}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-24 Tue 10:55]</span></span>
+
 
 <div class="definition">
   <div></div>
@@ -279,7 +279,7 @@ For a smooth map \\(f: M \to N\\), a point \\(x \in M\\) is called a **regular p
 
 ### Sard theorem {#sard-theorem}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-26 Thu 19:22]</span></span>
+
 
 {{% theorem %}}
 The set of singular values of a smooth map has measure zero, and the set of regular values is dense.
@@ -314,7 +314,7 @@ Cf. [Vector bundle](#vector-bundle), [Tangent bundle](#tangent-bundle).
 
 ### Whitney embedding theorem {#whitney-embedding-theorem}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-26 Thu 19:52]</span></span>
+
 
 {{% theorem %}}
 A smooth \\(n\\)-manifold has an embedding as a closed submanifold of \\(\RR^{2n + 1}\\).
@@ -348,7 +348,7 @@ Given two \\(n\\)-[manifolds](#manifold) \\(M\_{1}\\), and \\(M\_{2}\\), we defi
 
 ### Vector bundle {#vector-bundle}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-24 Tue 10:10]</span></span>
+
 
 <div class="definition">
   <div></div>
@@ -407,7 +407,7 @@ Given a commutative monoid \\(M\\) which is a set together with an associative a
 
 ### Numerable {#numerable}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-24 Tue 09:45]</span></span>
+
 
 <div class="definition">
   <div></div>
@@ -430,7 +430,7 @@ Cf. [Vector bundle](#vector-bundle)
 
 ### Eilenberg-Mac Lane space {#eilenberg-mac-lane-space}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-24 Tue 09:57]</span></span>
+
 
 <div class="definition">
   <div></div>
@@ -472,8 +472,6 @@ Compared with classical cohomology theory, the equivariant cohomology is more ge
 
 ### <span class="org-todo todo TODO">TODO</span> Equivariant K-theory {#equivariant-k-theory}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-29 Sun 15:29]</span></span>
-
 
 ### Local homology group {#local-homology-group}
 
@@ -513,12 +511,8 @@ Let \\(M\\) be a compact connected \\(n\\)-manifold with non-empty boundary. The
 
 ### <span class="org-todo todo TODO">TODO</span> Cohomology {#cohomology}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-01 Wed 18:07]</span></span>
-
 
 ## Mirror Symmetry {#mirror-symmetry}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-26 Thu 07:35]</span></span>
 
 
 ## Algebraic Geometry {#algebraic-geometry}
@@ -543,7 +537,7 @@ There are several aspects of enumerative geometry, beyond the numbers.
 
 ### Moduli space of Stable Maps {#moduli-space-of-stable-maps}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-23 Mon 19:50]</span></span>
+
 
 <div class="definition">
   <div></div>
@@ -692,8 +686,6 @@ The **Hilbert scheme** \\({\rm Hilb}\_{\chi}(X, \beta)\\) parametrizes \\(1\\) d
 
 ### <span class="org-todo todo TODO">TODO</span> Symplectic resolution {#symplectic-resolution}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-29 Sun 15:25]</span></span>
-
 
 ### <span class="org-todo todo TODO">TODO</span> Virtual fundamental class {#virtual-fundamental-class}
 
@@ -702,8 +694,6 @@ The analog of [Virtual fundamental class](#virtual-fundamental-class) for stacks
 
 
 ### Calabi-Yau variety {#calabi-yau-variety}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-01 Wed 17:49]</span></span>
 
 
 ### Donaldson-Thomas theory {#donaldson-thomas-theory}
@@ -771,7 +761,7 @@ The function can be extend as a meromorphic function on \\(\CC\\).
 
 ### Langlands correspondence {#langlands-correspondence}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-31 Tue 14:02]</span></span>
+
 
 {{< figure src="/img/2021-08-31_14-02-53_screenshot.png" >}}
 

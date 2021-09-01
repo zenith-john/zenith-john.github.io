@@ -6,7 +6,6 @@ categories = ["Essay"]
 draft = false
 +++
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-11 Wed 17:32]</span></span>
 参考文献：<https://lsc.cornell.edu/>
 
 我主要关注的是 Guideline for Creating a Study Schedule， 3 P’s for Effective Reading， Textbook Reading Systems， Cornell Note Taking System 以及 Concept Map 5 篇文章。对我个人来说，具有启发意义的几点是：
