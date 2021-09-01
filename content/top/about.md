@@ -2,11 +2,16 @@
 
 我本科就读于清华大学生命科学系，并于2021年毕业。目前，我是清华大学数学系的研究生。我感兴趣的研究方向包括镜像对称，计数几何和几何表示论。[这里]({{< relref "notes_mathematics">}})是我的数学笔记。在数学学习之余，我对马克思主义、中西方哲学（孔孟老庄、尼采、福柯以及语言哲学）和文学（主要是中国古代诗词歌赋和一些近代的中外小说）比较感兴趣。
 
+首页的图片来自 Andrei Okounkov 在 ICM 2018 上演讲的 [slides](http://www.math.columbia.edu/%7Eokounkov/icm.pdf)。
+
 可以通过邮件联系我：[zenith-john@foxmail.com](mailto:zenith-john/foxmail.com)
 
 My name is Zhang Nantao，a grauduate in mathematics at Tsinghua University. I am also an Emacser, a Linuxer, an open source amateur and a Vocaloid fan. My personal Linux configuration can be found at [My tools]({{< relref "my_tools">}}) and [After installation of Ubuntu]({{< relref "ubuntu">}})。My emacs configuration can be found at [Emacs]({{< relref "emacs_configuration">}})，[Emacs mu4e configuration]({{< relref "mu4e">}}). The complete code emacs configuration can be found at <https://github.com/zenith-john/zenith-emacs>. 
 
-In 2021, I graduated from Tsinghua University with a bachelor degree in life science. Currently, I am a graduate student of mathematics department at Tsinghua University. My research interest includes mirror symmetry, enumerative geometry and geometric representation theory. [Here]({{< relref "notes_mathematics">}}) is my note of mathematics。Apart from mathematics, I am a fan of Marxism, philosophy (Confucius, Mencius, Lao, Zhuangzi, Nietzsche, Foucault and language philosophy) and literature (the chinese poems and modern novels).
+In 2021, I graduated from Tsinghua University with a bachelor degree in life science. Currently, I am a graduate student of mathematics department at Tsinghua University. My research interest includes mirror symmetry, enumerative geometry and geometric representation theory. [Here]({{< relref "notes_mathematics">}}) is my note of mathematics。Apart from mathematics, I am a fan of Marxism, philosophy (Confucius, Mencius, Lao, Zhuangzi, Nietzsche, Foucault and language philosophy) and literature (the Chinese poems and modern novels).
+
+The picture on the home page is from the
+[slides](http://www.math.columbia.edu/%7Eokounkov/icm.pdf) of Andrei Okounkov on ICM 2018.
 
 You may contact me by E-mail: [zenith-john@foxmail.com](mailto:zenith-john/foxmail.com)
 
