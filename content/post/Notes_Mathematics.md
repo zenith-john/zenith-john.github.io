@@ -7,67 +7,6 @@ draft = false
 showtoc = true
 +++
 
-## Functional Analysis {#functional-analysis}
-
-
-### Banach-Hahn Theorem {#banach-hahn-theorem}
-
-
-### Open Mapping Theorem {#open-mapping-theorem}
-
-
-### Closed Graph Theorem {#closed-graph-theorem}
-
-
-### Banach-Alaoglu Theorem {#banach-alaoglu-theorem}
-
-
-### Arzelà–Ascoli Theorem {#arzelà-ascoli-theorem}
-
-
-## Morse Theory {#morse-theory}
-
-
-### Morse Theory {#morse-theory}
-
-Let \\(f\\) be a smooth real valued function on manifold M. Let \\(a < b\\) and
-suppose that the set \\(f^{-1}[a,b]\\) is **compact** and contain no critical points
-of \\(f\\). Then \\(M^{a}\\) is differomorphic to \\(M^{b}\\). Furthermore, \\(M^{a}\\)
-is a deformation retract of \\(M^{b}\\), inclusion map \\(M^{a} \to M^{b}\\) is a
-homotopy equivalence.
-
-The theorem supplies the condition when the retraction is possible.
-
-{{% theorem %}}
-If \\(f\\) is a differentiable function on a manifold \\(M\\), with no degenerate
-critical points, and if each \\(M^{a}\\) is compact, then \\(M\\) has the homotopy
-type of a CW-complex, with one cell of dimension \\(\lambda\\) for each critical
-point of index \\(\lambda\\).
-{{% /theorem %}}
-
-{{% theorem %}}
-Let \\(\phi\_{0}\\) and \\(\phi\_{1}\\) be homotopic maps from the sphere
-\\(\dot{e^{\lambda}}\\) to \\(X\\). Then the identity map of \\(X\\) extends to a homotopy
-equivalence \\(k:X \cup\_{\phi\_{0}} e^{\lambda} \to X \cap\_{\phi\_{1}}
-e^{\lambda}\\).
-{{% /theorem %}}
-
-{{% proof %}}
-\\[\begin{align} k(x) = x && x \in X \\\ k(tu) = 2tu && 0 \leq t \leq 1/2 \\\ k(tu) = \phi\_{2-2t}(u) && 1/2 \leq t \leq 1 \\\ \end{align}\\]
-{{% /proof %}}
-
-{{% lemma %}}
-Let \\(\phi:\dot{e^{\lambda}} \to X\\) be an attaching map. Any homotopy
-equivalence \\(f:X \to Y\\) extends to a homotopy equivalence \\(F:X
-\cup\_{\phi}e^{\lambda} \to Y \cup\_{f\phi}e^{\lambda}\\)
-{{% /lemma %}}
-
-
-## Partial Differential Equation {#partial-differential-equation}
-
-Author L. C. Evans
-
-
 ## Representation of finite groups {#representation-of-finite-groups}
 
 The reference includes <sup id="19580479584332ed50a4af7bf7f3f201"><a href="#steinberg2012" title="Steinberg, Representation Theory of Finite Groups: An Introductory Approach, {Springer} (2012).">steinberg2012</a></sup> Chapter 1-6.
@@ -202,6 +141,7 @@ A finite subgroup of O(3) is called a point group.
 ## Representation of quivers {#representation-of-quivers}
 
 The basics of the quivers are from <sup id="df38f5636bec59103a70400bed4764c9"><a href="#kirillov2016" title="Kirillov, Quiver Representations and Quiver Varieties, {American Mathematical Society} (2016).">kirillov2016</a></sup>.
+\\(test formu\\)
 
 
 ### Definition of Quivers {#definition-of-quivers}
@@ -341,6 +281,9 @@ The proposition is similar to the existence of the tubular neighborhood for [Nor
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-31 Tue 17:46]</span></span>
 Given two \\(n\\)-[manifolds](#manifold) \\(M\_{1}\\), and \\(M\_{2}\\), we define the **connected sum** of \\(M\_{1}\\) and \\(M\_{2}\\) by remove two \\(D^{n}\\) in \\(M\_{1}\\) and \\(M\_{2}\\) and glue two \\(S^{n - 1}\\) together, denoted by \\(M\_{1} \sharp M\_{2}\\).
+
+
+### <span class="org-todo todo TODO">TODO</span> Lie derivative {#lie-derivative}
 
 
 ## Algebraic Topology {#algebraic-topology}
@@ -720,13 +663,39 @@ for the purpose of integration. Given \\(\alpha \in H^{\*}(X)\\), we can define 
 \\[\sigma\_{0}(\alpha): \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha) \cap \pi\_{\hilb}^{\*}(-)), H\_{\*}(\hilb(X)) \to H\_{\*}(\hilb(X))\\]
 Then the **Donaldson-Thomas invariants** are defined by
 
-\begin{align}\langle \alpha\_{1}, \cdots, \alpha\_{n} \rangle^{DT}\_{\beta, m} &= \deg \prod\_{k} \sigma\_{0}(\alpha\_{k})[I\_{\chi}(X, \beta)]^{vir}\\\
-&= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \sigma\_{0}(\alpha\_{k}) \\\ &=
-\int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha\_{k}) \cap \pi^{\*} \beta)\end{align}
+\begin{align}\langle \alpha\_{1}, \cdots, \alpha\_{n} \rangle^{DT}\_{\beta, m} &= \deg \prod\_{k} \sigma\_{0}(\alpha\_{k})[I\_{\chi}(X, \beta)]^{vir} \\\ &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \sigma\_{0}(\alpha\_{k}) \\\ &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha\_{k}) \cap \pi^{\*} \beta)\end{align}
 
 Here note \\(-\ch\_{2}(I\_{Z}) = \beta\\) is represented by cycle class \\(Z \subset X\\).
 
 There may be some mistakes in definition, because I suppose that the second line is not well-defined and the \\(\beta\\) in the last line is unnatural. However, I don't know the correct algebraic definition of Donaldson-Thomas theory yet. So I still follow the definition in [GW/DT Theory](https://www.bilibili.com/video/BV1Gi4y1T7ed) Lecture 11.
+
+
+## Symplectic Geometry {#symplectic-geometry}
+
+
+
+
+### Symplectic manifold {#symplectic-manifold}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-02 Thu 10:43]</span></span>
+A **symplectic manifold** is a [smooth Manifold](#manifold) \\(X\\) of even dimension \\(\dim X = 2n\\), equipped with a **symplectic form** a closed smooth \\(2\\)-form \\(\omega \in \Omega\_{cl}^{2}(X)\\) such that \\(\omega\\) is non-degenerate. That is \\(\omega^{n}\\) has the maximal rank at every point \\(p\\), or equivalently that \\((\wedge^{2} T\_{p}^{\* }X, \omega\_{p})\\) symplectic vector space for every \\(p\\).
+
+
+### Liouville vector field {#liouville-vector-field}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-02 Thu 10:51]</span></span>
+Let \\((M, \omega)\\) is a [Symplectic manifold](#symplectic-manifold). A vector field \\(V: M \to TM\\) is **Liouville** if \\(L\_{X} \omega = \omega\\).
+Cf. [Lie derivative](#lie-derivative).
+
+The existence of a Liouville vector field implies that \\((M, \omega)\\) is exact as the one-form \\(\lambda = i\_{V} \omega\\) satisfies that \\(\dif \lambda = \omega\\).
+
+
+### Weinstein manifold {#weinstein-manifold}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-02 Thu 10:42]</span></span>
+A [Symplectic manifold](#symplectic-manifold) \\((M, \omega)\\) is **Weinstein** if it comes with a distinguished [Liouville vector field](#liouville-vector-field) \\(Y\\), and a proper bounded below function \\(h: M \to \RR\\), such that \\(\dif h(Y)\\) is positive on a sequence of level set \\(h^{-1}(c\_{k})\\) with \\(\lim\_{k}c\_{k} = \infty\\).
+
+A Weinstein manifold is called **of finite type** if \\(\dif h(Y) > 0\\) outside a compact subset of \\(M\\) and is called **complete** if the flow of \\(Y\\) is defined for all times.
 
 
 ## Geometric representation theory {#geometric-representation-theory}

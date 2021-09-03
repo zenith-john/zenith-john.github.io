@@ -1,0 +1,49 @@
+.timestamp {
+    display: none;
+}
+
+.theorem-content, .proposition-content, .proof-content, .conjecture-content, .lemma-content, .corollary-content {
+    display: block;
+    padding: 5px 20px 5px 20px;
+    margin: 15px 0px 15px 0px;
+}
+
+.theorem {
+    background-color: #ffffcc;
+}
+
+.theorem-header {
+    padding: 5px 20px 5px 20px;
+    background-color: #cccc99;
+    font-weight: bold;
+}
+
+.proof {
+    background-color: #ccff99;
+}
+
+.proof-header {
+    padding: 5px 20px 5px 20px;
+    background-color: #66cccc;
+    font-weight: bold;
+}
+
+.proposition, .lemma, .corollary {
+    background-color: #ddffff;
+}
+
+.proposition-header, .lemma-header, .corollary-header {
+    padding: 5px 20px 5px 20px;
+    background-color: #2196f3;
+    font-weight: bold;
+}
+
+.conjecture {
+    background-color: #ffcccc;
+}
+
+.conjecture-header {
+    padding: 5px 20px 5px 20px;
+    background-color: #996699;
+    font-weight: bold;
+}
