@@ -2,7 +2,7 @@
     display: none;
 }
 
-.theorem-content, .proposition-content, .proof-content, .conjecture-content, .lemma-content, .corollary-content {
+.theorem-content, .proposition-content, .proof-content, .conjecture-content, .lemma-content, .corollary-content, .remark-content {
     display: block;
     padding: 5px 20px 5px 20px;
     margin: 15px 0px 15px 0px;
@@ -38,11 +38,11 @@
     font-weight: bold;
 }
 
-.conjecture {
+.conjecture, .remark {
     background-color: #ffcccc;
 }
 
-.conjecture-header {
+.conjecture-header, .remark-header {
     padding: 5px 20px 5px 20px;
     background-color: #996699;
     font-weight: bold;
