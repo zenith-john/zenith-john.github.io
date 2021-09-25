@@ -10,7 +10,7 @@ showtoc = true
 
 ## Representation of finite groups {#representation-of-finite-groups}
 
-The reference includes <sup id="19580479584332ed50a4af7bf7f3f201"><a href="#steinberg2012" title="Steinberg, Representation Theory of Finite Groups: An Introductory Approach, {Springer} (2012).">steinberg2012</a></sup> Chapter 1-6.
+The reference includes [<span id="19580479584332ed50a4af7bf7f3f201"><a href="#steinberg2012" title="Steinberg, Representation Theory of Finite Groups: An Introductory Approach, {Springer} (2012).">steinberg2012</a></span>] Chapter 1-6.
 
 
 ### Representation of finite groups {#representation-of-finite-groups}
@@ -55,7 +55,7 @@ Group algebra
 Suppose that \\(\phi,\rho: G \to U\_{n}( C)\\) are inequivalent irreducible unitary representations. Then
 \\[\begin{equation} \langle \phi\_{ij}, \rho\_{kl} \rangle = 0 \end{equation}\\]
 
-\\[\begin{equation} \langle \phi\_{ij}, \phi\_{kl} \rangle =  \begin{cases} 1/n & \text{if } i = k \text{ and } j = l \\\    0 & \text{else} \end{cases} \end{equation}\\]
+\\[\begin{equation} \langle \phi\_{ij}, \phi\_{kl} \rangle =  \begin{cases} 1/n & \text{if } i = k \text{ and } j = l \\\\\\\\ 0 & \text{else} \end{cases} \end{equation}\\]
 {{% /theorem %}}
 
 
@@ -84,7 +84,7 @@ and \\({\rm dim} Z(L(G)) = |Cl(G)|\\).
 {{% theorem %}}
 Let \\(C\\), \\(C'\\) be conjugacy classes of \\(G\\), and let \\(g \in C\\) and \\(h \in C'\\). Then
 
-\begin{equation} \sum\_{i = 1}^{s}\chi\_{i}(g) \overline{\chi\_{i}(h)} = \begin{cases} |G|/|C| & C = C' \\\ 0 & C \neq C' \end{cases} \end{equation}
+\begin{equation} \sum\_{i = 1}^{s}\chi\_{i}(g) \overline{\chi\_{i}(h)} = \begin{cases} |G|/|C| & C = C' \\\\\\\\  0 & C \neq C' \end{cases} \end{equation}
 
 That is the columns of the character table are orthogonal.
 {{% /theorem %}}
@@ -141,7 +141,7 @@ A finite subgroup of O(3) is called a point group.
 
 ## Representation of quivers {#representation-of-quivers}
 
-The basics of the quivers are from <sup id="df38f5636bec59103a70400bed4764c9"><a href="#kirillov2016" title="Kirillov, Quiver Representations and Quiver Varieties, {American Mathematical Society} (2016).">kirillov2016</a></sup>.
+The basics of the quivers are from [<span id="df38f5636bec59103a70400bed4764c9"><a href="#kirillov2016" title="Kirillov, Quiver Representations and Quiver Varieties, {American Mathematical Society} (2016).">kirillov2016</a></span>].
 \\(test formu\\)
 
 
@@ -156,6 +156,25 @@ The category of representations of \\(Q\\) over a field \\(k\\) is equivalent to
 {{% lemma %}}
 The Jacobson radical of the path algebra \\(k(Q)\\) is the span of all one-way paths of \\(Q\\).
 {{% /lemma %}}
+
+
+## Linear Algebra {#linear-algebra}
+
+
+
+
+### Simultaneously diagonalizable {#simultaneously-diagonalizable}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-17 Fri 21:45]</span></span>
+For two linear endomorphism \\(A, B\\), if \\([A,B] = 0\\), then \\(A, B\\) can be simultaneously diagonalized.
+
+
+## Lie Algebra {#lie-algebra}
+
+
+
+
+### <span class="org-todo todo TODO">TODO</span> Poinccaré-Birkhoff-Witt theorem {#poinccaré-birkhoff-witt-theorem}
 
 
 ## Differential Geometry {#differential-geometry}
@@ -196,6 +215,9 @@ A **Lie group** is a smooth manifold with a group structure, where the group mul
 </div>
 
 Cf. [Manifold](#manifold).
+
+
+#### <span class="org-todo todo TODO">TODO</span> E8 {#e8}
 
 
 ### Tangent space {#tangent-space}
@@ -384,7 +406,7 @@ Cf. [Tangent bundle](#tangent-bundle).
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-09 Thu 19:44]</span></span>
 Let \\(M\\) be a smooth [Manifold](#manifold), and \\(\omega \in \Omega^{k}(M)\\). For any smooth vector fields \\(X\_{1}, \cdots, X\_{k + 1}\\) on \\(M\\).
 
-\begin{align}\dif \omega (X\_{1}, \cdots, X\_{k + 1}) &= \\\ & \sum\_{1 \leq i \leq k + 1}(-1)^{i - 1}X\_{i}(\omega(X\_{1}, \cdots, \widehat{X\_{i}}, \cdots, X\_{k + 1})) \\\ & + \sum\_{1 \leq i < j \leq k + 1} (-1)^{i + j} \omega([X\_{i}, X\_{j}], X\_{1}, \cdots, \widehat{X}\_{i}, \cdots, \widehat{X\_{j}}, \cdots, X\_{k + 1})\end{align}
+\begin{align}\dif \omega (X\_{1}, \cdots, X\_{k + 1}) &= \\\\\\\\  & \sum\_{1 \leq i \leq k + 1}(-1)^{i - 1}X\_{i}(\omega(X\_{1}, \cdots, \widehat{X\_{i}}, \cdots, X\_{k + 1})) \\\\\\\\  & + \sum\_{1 \leq i < j \leq k + 1} (-1)^{i + j} \omega([X\_{i}, X\_{j}], X\_{1}, \cdots, \widehat{X}\_{i}, \cdots, \widehat{X\_{j}}, \cdots, X\_{k + 1}) \end{align}
 
 Cf. [Differential form](#differential-form), [Exterior derivative](#exterior-derivative).
 
@@ -634,7 +656,7 @@ For \\(K \subset L \subset M\\), we have homomorphism \\(r\_{K}^{L}: h\_{k}(M, M
 ### Fundamental class {#fundamental-class}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-31 Tue 18:12]</span></span>
-Theorem 16.4.1 in <sup id="5ad6139c99b6d2508f6ef6f11ce7f09d"><a href="#dieck2008" title="tom Dieck, Algebraic Topology, {European Mathematical Society} (2008).">dieck2008</a></sup>.
+Theorem 16.4.1 in [<span id="5ad6139c99b6d2508f6ef6f11ce7f09d"><a href="#dieck2008" title="tom Dieck, Algebraic Topology, {European Mathematical Society} (2008).">dieck2008</a></span>].
 
 {{% theorem %}}
 Let \\(M\\) be a compact connected \\(n\\)-[Manifold](#manifold). Then one of the following holds:
@@ -708,7 +730,7 @@ We call \\(x \cap y\\) the **cup product** of \\(x, y\\). The cup product is def
 #### External product {#external-product}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-07 Tue 21:42]</span></span>
-For details see, section 17.3 in <sup id="5ad6139c99b6d2508f6ef6f11ce7f09d"><a href="#dieck2008" title="tom Dieck, Algebraic Topology, {European Mathematical Society} (2008).">dieck2008</a></sup>.
+For details see, section 17.3 in [<span id="5ad6139c99b6d2508f6ef6f11ce7f09d"><a href="#dieck2008" title="tom Dieck, Algebraic Topology, {European Mathematical Society} (2008).">dieck2008</a></span>].
 
 The **external product** is a family of \\(R\\)-linear maps
 \\[h^{m}(X, A) \otimes\_{R} h^{n}(Y, B) \to h^{m + n}((X, A) \times (Y, B)), x \otimes y \to x \times y\\]
@@ -997,6 +1019,8 @@ The **Hilbert scheme** \\({\rm Hilb}\_{\chi}(X, \beta)\\) parametrizes \\(1\\) d
 
 </div>
 
+In [<span id="24e67c8afe5163064e4018cb5a5cbd8a"><a href="#nakajima1999" title="Nakajima, Lectures on {{Hilbert}} Schemes of Points on Surfaces, {American Mathematical Society} (1999).">nakajima1999</a></span>], there is another notation of Hilbert schemes, where in \\(\hilb(X, p)\\), the \\(p\\) denote the Hilbert polynomial. And we write \\(X^{ [n]}\\) for \\(\hilb(X, n)\\) for Hilbert scheme of points.
+
 
 ### <span class="org-todo todo TODO">TODO</span> Symplectic resolution {#symplectic-resolution}
 
@@ -1034,7 +1058,7 @@ for the purpose of integration. Given \\(\alpha \in H^{\*}(X)\\), we can define 
 \\[\sigma\_{0}(\alpha): \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha) \cap \pi\_{\hilb}^{\*}(-)), H\_{\*}(\hilb(X)) \to H\_{\*}(\hilb(X))\\]
 Then the **Donaldson-Thomas invariants** are defined by
 
-\begin{align}\langle \alpha\_{1}, \cdots, \alpha\_{n} \rangle^{DT}\_{\beta, m} &= \deg \prod\_{k} \sigma\_{0}(\alpha\_{k})[I\_{\chi}(X, \beta)]^{vir} \\\ &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \sigma\_{0}(\alpha\_{k}) \\\ &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha\_{k}) \cap \pi^{\*} \beta)\end{align}
+\begin{align}\langle \alpha\_{1}, \cdots, \alpha\_{n} \rangle^{DT}\_{\beta, m} &= \deg \prod\_{k} \sigma\_{0}(\alpha\_{k})[I\_{\chi}(X, \beta)]^{vir} \\\\\\\\  &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \sigma\_{0}(\alpha\_{k}) \\\\\\\\  &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha\_{k}) \cap \pi^{\*} \beta)\end{align}
 
 Here note \\(-\ch\_{2}(I\_{Z}) = \beta\\) is represented by cycle class \\(Z \subset X\\).
 
@@ -1062,7 +1086,7 @@ An **algebraic group** \\(G\\) over a field \\(k\\) is a [Group scheme](#group-s
 #### Radical {#radical}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 08:52]</span></span>
-<sup id="868cb56e509be613430cca58b1ead9f3"><a href="#milne2017" title="Milne, Algebraic {{Groups}}: {{The Theory}} of {{Group Schemes}} of {{Finite Type}} over a {{Field}}, {Cambridge University Press} (2017).">milne2017</a></sup> p.135
+[<span id="868cb56e509be613430cca58b1ead9f3"><a href="#milne2017" title="Milne, Algebraic {{Groups}}: {{The Theory}} of {{Group Schemes}} of {{Finite Type}} over a {{Field}}, {Cambridge University Press} (2017).">milne2017</a></span>] p.135
 
 Let \\(G\\) be a connected [Algebraic group](#algebraic-group) over \\(k\\). \\(G\\) contains a largest connected solvable normal subgroup called the **radical**, \\(R(G)\\) of \\(G\\).
 
@@ -1070,7 +1094,7 @@ Let \\(G\\) be a connected [Algebraic group](#algebraic-group) over \\(k\\). \\(
 #### Unipotent {#unipotent}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 09:01]</span></span>
-<sup id="868cb56e509be613430cca58b1ead9f3"><a href="#milne2017" title="Milne, Algebraic {{Groups}}: {{The Theory}} of {{Group Schemes}} of {{Finite Type}} over a {{Field}}, {Cambridge University Press} (2017).">milne2017</a></sup> p.135
+[<span id="868cb56e509be613430cca58b1ead9f3"><a href="#milne2017" title="Milne, Algebraic {{Groups}}: {{The Theory}} of {{Group Schemes}} of {{Finite Type}} over a {{Field}}, {Cambridge University Press} (2017).">milne2017</a></span>] p.135
 
 An [Algebraic group](#algebraic-group) \\(G\\) is said to be **unipotent** if every nonzero representation of \\(G\\) has a nonzero fixed point. Or equivalently speaking, every finite-dimensional representation \\(r: G \to \GL\_{V}\\) there is a basis such that \\(r(G) \subset \U\_{n}\\).
 
@@ -1078,7 +1102,7 @@ An [Algebraic group](#algebraic-group) \\(G\\) is said to be **unipotent** if ev
 #### Unipotent radical {#unipotent-radical}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 09:01]</span></span>
-<sup id="868cb56e509be613430cca58b1ead9f3"><a href="#milne2017" title="Milne, Algebraic {{Groups}}: {{The Theory}} of {{Group Schemes}} of {{Finite Type}} over a {{Field}}, {Cambridge University Press} (2017).">milne2017</a></sup> p.135
+[<span id="868cb56e509be613430cca58b1ead9f3"><a href="#milne2017" title="Milne, Algebraic {{Groups}}: {{The Theory}} of {{Group Schemes}} of {{Finite Type}} over a {{Field}}, {Cambridge University Press} (2017).">milne2017</a></span>] p.135
 
 The **unipotent radical** of \\(G\\) is the largest connected normal unipotent sub-[Algebraic group](#algebraic-group) of \\(G\\), denoted by \\(R\_{u}(G)\\).
 
@@ -1088,7 +1112,7 @@ Cf. [Radical](#radical).
 #### Semisimple {#semisimple}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 08:50]</span></span>
-<sup id="868cb56e509be613430cca58b1ead9f3"><a href="#milne2017" title="Milne, Algebraic {{Groups}}: {{The Theory}} of {{Group Schemes}} of {{Finite Type}} over a {{Field}}, {Cambridge University Press} (2017).">milne2017</a></sup> p.135
+[<span id="868cb56e509be613430cca58b1ead9f3"><a href="#milne2017" title="Milne, Algebraic {{Groups}}: {{The Theory}} of {{Group Schemes}} of {{Finite Type}} over a {{Field}}, {Cambridge University Press} (2017).">milne2017</a></span>] p.135
 
 An [Algebraic group](#algebraic-group) is called **semisimple** if \\(R(G\_{k^{a}})\\) is trivial, where \\(k^{a}\\) is the algebraic closure of \\(k\\).
 
@@ -1098,7 +1122,7 @@ Cf. [Radical.](#radical)
 #### Reductive {#reductive}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 08:49]</span></span>
-<sup id="868cb56e509be613430cca58b1ead9f3"><a href="#milne2017" title="Milne, Algebraic {{Groups}}: {{The Theory}} of {{Group Schemes}} of {{Finite Type}} over a {{Field}}, {Cambridge University Press} (2017).">milne2017</a></sup> p.135
+[<span id="868cb56e509be613430cca58b1ead9f3"><a href="#milne2017" title="Milne, Algebraic {{Groups}}: {{The Theory}} of {{Group Schemes}} of {{Finite Type}} over a {{Field}}, {Cambridge University Press} (2017).">milne2017</a></span>] p.135
 
 An [Algebraic group](#algebraic-group) is called **reductive** if \\(R\_{u}(G\_{k^{a}})\\) is trivial, where \\(k^{a}\\) is the algebraic closure of \\(k\\).
 
@@ -1149,7 +1173,7 @@ Given an action \\(\sigma\\) of \\(G/S\\) over \\(X/S\\), and \\((Y, \phi)\\) is
 A **character** of a [Torus](#torus) is a group homomorphism \\(\chi: T \to \CC^{\* }\\).
 
 
-### Torus {#torus}
+### <span class="org-todo todo TODO">TODO</span> Torus {#torus}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-08 Wed 19:51]</span></span>
 A torus is \\(\CC^{\* n}\\).
@@ -1167,10 +1191,13 @@ If \\(H \subset T\\) is an irreducible group subvariety of \\(T\\). Then \\(H\\)
 {{% /proposition %}}
 
 
+### Splitting torus {#splitting-torus}
+
+
 ### <span class="org-todo todo TODO">TODO</span> Toric variety {#toric-variety}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-08 Wed 20:08]</span></span>
-The toric variety is a field connecting algebraic geometry, combinatorial and mathematical physics. Our main reference is <sup id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></sup>.
+The toric variety is a field connecting algebraic geometry, combinatorial and mathematical physics. Our main reference is [<span id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></span>].
 
 Cf. [Affine toric variety](#affine-toric-variety)
 
@@ -1186,7 +1213,7 @@ An **affine toric variety** is an irreducible affine variety \\(V\\) containing 
 
 </div>
 
-There are several ways of constructing toric varieties. First, consider a finite subset \\(\mathscr{A} = \\{\chi^{1}, \cdots, \chi^{l}\\} \subset \ZZ^{n}\\) a lattice equivalent to the character of a torus \\((\CC^{\* })^{n}\\). Then we may consider a map \\(\Phi\_{\mathscr{A}}(t) = (\chi^{1}(t), \cdots, \chi^{l}(t)), T\_{N} \to \CC^{s}\\). The Zariski closure of the image is a toric variety denoted by \\(Y\_{\mathscr{A}}\\). The ideal of the affine toric variety is a [Toric ideal](#toric-ideal). Detailed construction can see <sup id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></sup> p.14-15.
+There are several ways of constructing toric varieties. First, consider a finite subset \\(\mathscr{A} = \\{\chi^{1}, \cdots, \chi^{l}\\} \subset \ZZ^{n}\\) a lattice equivalent to the character of a torus \\((\CC^{\* })^{n}\\). Then we may consider a map \\(\Phi\_{\mathscr{A}}(t) = (\chi^{1}(t), \cdots, \chi^{l}(t)), T\_{N} \to \CC^{s}\\). The Zariski closure of the image is a toric variety denoted by \\(Y\_{\mathscr{A}}\\). The ideal of the affine toric variety is a [Toric ideal](#toric-ideal). Detailed construction can see [<span id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></span>] p.14-15.
 
 Another construction concerns [Affine semigroup](#affine-semigroup). given a affine semigroup \\(S\\), we have \\(\CC[S] = \\{\sum\_{m \in S} c\_{m} \chi^{m} \mid c\_{m} \in \CC \text{ and } c\_{m} = 0 \text{ for all but finitely many } m\\}\\), where \\(\chi^{m}\\) is dependent on the embedding into the lattice \\(M\\). The multiplication is induced by \\(\chi^{m} \cdot \chi^{m'} = \chi^{m + m'}\\). We have
 
@@ -1208,7 +1235,7 @@ Let \\(V\\) be an affine variety. The followings are equivalent:
 4.  \\(V = \spec \CC[S]\\) for an affine semigroup \\(S\\).
 {{% /proposition %}}
 
-We consider the relation between sublattice variety and original variety. (<sup id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></sup> Proposition 1.3.18) For \\(N'\\) have finite index in \\(N\\) a sublattice and quotient \\(G = N/N'\\) and \\(\sigma \subset N\_{\RR}' = N\_{\RR}\\) be a [Strongly convex](#strongly-convex) [Rational](#rational) [Polyhedral cone](#polyhedral-cone). Then we have
+We consider the relation between sublattice variety and original variety. ([<span id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></span>] Proposition 1.3.18) For \\(N'\\) have finite index in \\(N\\) a sublattice and quotient \\(G = N/N'\\) and \\(\sigma \subset N\_{\RR}' = N\_{\RR}\\) be a [Strongly convex](#strongly-convex) [Rational](#rational) [Polyhedral cone](#polyhedral-cone). Then we have
 
 1.  There are natural isomorphisms
     \\[G \cong \Hom\_{\ZZ}(M'/M, \CC^{\* }) = \ker(T\_{N'} \to T\_{N})\\]
@@ -1223,7 +1250,7 @@ That is the original variety is [Geometric quotient](#geometric-quotient) of the
 ### Different characters may give same toric variety {#different-characters-may-give-same-toric-variety}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-08 Wed 20:26]</span></span>
-Exercise 1.1.6 in <sup id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></sup>. We consider two map
+Exercise 1.1.6 in [<span id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></span>]. We consider two map
 \\[\Phi\_{1}(s,t) = (s^{2}, st, st^{3}), \quad \Phi\_{2}(s,t) = (s^{3}, st, t^{3})\\]
 We can show that \\(\Phi\_{1}\\) and \\(\Phi\_{2}\\) gives same affine toric variety. However \\(\Phi\_{2}\\) is surjective and \\(\Phi\_{1}\\) is not.
 
@@ -1287,18 +1314,18 @@ The pointed affine semigroup is related to [Affine toric variety](#affine-toric-
 {{% proposition %}}
 If we write \\(V = \spec(\CC[S])\\), then the torus action has a fixed point if and only if \\(S\\) is pointed. What's more, the fixed point is unique and given by semigroup homomorphism
 \\(\phi:S \to \CC\\) defined by
-\\[m \to \begin{cases} 1 & m = 0 \\\ 0 & m \neq 0 \end{cases} \\]
+\\[m \to \begin{cases} 1 & m = 0 \\\\\\\\ 0 & m \neq 0 \end{cases} \\]
 {{% /proposition %}}
 
 
 #### Saturated {#saturated}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-12 Sun 19:44]</span></span>
-An [Affine semigroup](#affine-semigroup) \\(S \subset M\\) is **saturated** if for all \\(k \in \NN \backslash \\{0\\}\\) and \\(m \in M\\), \\(km \in S\\) implies \\(m \in S\\). (<sup id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></sup> p.37)
+An [Affine semigroup](#affine-semigroup) \\(S \subset M\\) is **saturated** if for all \\(k \in \NN \backslash \\{0\\}\\) and \\(m \in M\\), \\(km \in S\\) implies \\(m \in S\\). ([<span id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></span>] p.37)
 
 One important source of the saturated affine semigroup is \\(S\_{\sigma} = \sigma^{\vee} \cap M\\) where \\(\sigma\\) is a [Strongly convex](#strongly-convex) [Rational](#rational) [Polyhedral cone](#polyhedral-cone).
 
-The saturated affine semigroup is related to normal [Affine toric variety](#affine-toric-variety). (<sup id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></sup> Theorem 1.3.5)
+The saturated affine semigroup is related to normal [Affine toric variety](#affine-toric-variety). ([<span id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></span>] Theorem 1.3.5)
 
 {{% theorem %}}
 Let \\(V\\) be an affine toric variety with torus \\(T\_{N}\\). Then \\(V\\) is normal if and only if \\(V = \spec(\CC[S])\\), where \\(S \subset M\\) is a saturated affine semigroup.
@@ -1427,7 +1454,7 @@ For \\(m \in M\_{\RR}\\), the dual space of \\(N\_{\RR}\\), We define \\(H\_{m} 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-11 Sat 20:04]</span></span>
 A **face** of a cone of the [Polyhedral cone](#polyhedral-cone) \\(\sigma\\) is \\(\tau = H\_{m} \cap \sigma\\) for some \\(m \in \sigma^{\vee}\\) and \\(H\_{m}\\) is the [Supporting hyperplane](#supporting-hyperplane). We may write as \\(\tau \preceq \sigma\\). If \\(\tau \neq \sigma\\), we called \\(\tau\\) the **proper face** and write \\(\tau \prec \sigma\\). A **facet** is a face of codimension \\(1\\) and an **edge** is a face of dimension \\(1\\).
 
-The faces of the [Strongly convex](#strongly-convex) [Rational](#rational) [Polyhedral cone](#polyhedral-cone) gives affine open subset of the [Affine toric variety](#affine-toric-variety). (<sup id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></sup> Proposition 1.3.16)
+The faces of the [Strongly convex](#strongly-convex) [Rational](#rational) [Polyhedral cone](#polyhedral-cone) gives affine open subset of the [Affine toric variety](#affine-toric-variety). ([<span id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></span>] Proposition 1.3.16)
 
 {{% proposition %}}
 Let \\(\tau\\) be a face of strongly convex rational polyhedral cone \\(\sigma\\) and \\(\tau = H\_{m} \cap \sigma\\) for some \\(m \in \sigma^{\vee} \cap M\\). Then we have
@@ -1484,7 +1511,7 @@ For rational cone, \\(\rho \subset \sigma\\) an edge, the generator of \\(\rho \
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-11 Sat 20:20]</span></span>
 A [Strongly convex](#strongly-convex), [Rational](#rational) [Polyhedral cone](#polyhedral-cone) is called **smooth** or **regular** if its minimal generators form part of a \\(\ZZ\\)-basis of \\(N\\).
 
-The following theorem justify the above name. (<sup id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></sup> Theorem 1.3.12)
+The following theorem justify the above name. ([<span id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></span>] Theorem 1.3.12)
 
 {{% theorem %}}
 Let \\(\sigma \subset N\_{\RR}\\) be a strongly convex rational polyhedral cone. Then \\(U\_{\sigma}\\) is smooth if and only if \\(\sigma\\) is smooth. Furthermore, all smooth affine varieties are of this form.
@@ -1573,7 +1600,7 @@ A coherent sheaf \\(E\\) of dimension \\(d\\) is **\\(\mu\\)-(semi)stable** if \
 ### Extension {#extension}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 20:28]</span></span>
-See <sup id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="Sernesi, Deformations of {{Algebraic Schemes}}, {Springer Berlin Heidelberg} (2006).">sernesi2006</a></sup> p.9.
+See [<span id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="Sernesi, Deformations of {{Algebraic Schemes}}, {Springer Berlin Heidelberg} (2006).">sernesi2006</a></span>] p.9.
 
 Let \\(A \to R\\) be a ring homomorphism. An \\(A\\)-\*extension\* of \\(R\\) by \\(I\\) is an exact sequence
 \\[(R', \phi) : 0 \to I \to R' \stackrel{\phi}{\to} R \to 0\\]
@@ -1590,9 +1617,9 @@ Here \\(R'\\) has to be an \\(A\\)-algebras, and therefore rings. And \\(\chi\\)
 
 The \\(A\\)-extension \\((R', \phi)\\) is called **trivial** if it has a section, that is we have ring homomorphism \\(\psi :R \to R'\\) such that \\(\phi \circ \phi = 1\_{R}\\). In that case, we say \\((R', \phi)\\) **splits** and \\(\psi\\) is called a **splitting**.
 
-Examples: dual number, small extension. See <sup id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="Sernesi, Deformations of {{Algebraic Schemes}}, {Springer Berlin Heidelberg} (2006).">sernesi2006</a></sup> p.11.
+Examples: dual number, small extension. See [<span id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="Sernesi, Deformations of {{Algebraic Schemes}}, {Springer Berlin Heidelberg} (2006).">sernesi2006</a></span>] p.11.
 
-The extension of algebras can be extended to extension of schemes. An **extension** of \\(X/S\\) is a closed immersion \\(X \subset X'\\), where \\(X'\\) is an \\(S\\)-scheme, defined by a sheaf of ideals \\(\mathscr{I} \subset \mathscr{O}\_{X'}\\) such that \\(\mathscr{I}^{2} = 0\\). The **isomorphism**, **homomorphism**, **triviality**, and \\(\ex(X/S, \mathscr{I})\\) is similar to the algebra case. For details, see <sup id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="Sernesi, Deformations of {{Algebraic Schemes}}, {Springer Berlin Heidelberg} (2006).">sernesi2006</a></sup> p.15. (Cf. [Ex\_A(R,I)](#ex-a--r-i) and [Exact sequence about extensions](#exact-sequence-about-extensions))
+The extension of algebras can be extended to extension of schemes. An **extension** of \\(X/S\\) is a closed immersion \\(X \subset X'\\), where \\(X'\\) is an \\(S\\)-scheme, defined by a sheaf of ideals \\(\mathscr{I} \subset \mathscr{O}\_{X'}\\) such that \\(\mathscr{I}^{2} = 0\\). The **isomorphism**, **homomorphism**, **triviality**, and \\(\ex(X/S, \mathscr{I})\\) is similar to the algebra case. For details, see [<span id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="Sernesi, Deformations of {{Algebraic Schemes}}, {Springer Berlin Heidelberg} (2006).">sernesi2006</a></span>] p.15. (Cf. [Ex\_A(R,I)](#ex-a--r-i) and [Exact sequence about extensions](#exact-sequence-about-extensions))
 
 In particular, we have following theorem relating the deformation to the \\(\ext\\) groups.
 
@@ -1609,7 +1636,7 @@ to
 ### Ex\_A(R,I) {#ex-a--r-i}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 21:15]</span></span>
-See <sup id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="Sernesi, Deformations of {{Algebraic Schemes}}, {Springer Berlin Heidelberg} (2006).">sernesi2006</a></sup> p.12.
+See [<span id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="Sernesi, Deformations of {{Algebraic Schemes}}, {Springer Berlin Heidelberg} (2006).">sernesi2006</a></span>] p.12.
 
 We now consider all isomorphism class of \\(A\\)-[Extensions](#extension) of \\(R\\) by \\(I\\), called \\(\ex\_{A}(R,I)\\). We want to show that \\(\ex\_{A}(R, I)\\) is an \\(R\\)-module. We first construct the **pullback** and **pushout** for extensions. We define the pullback, denoted by \\(f^{\* }(R', \phi)\\) by following diagram:
 
@@ -1628,7 +1655,7 @@ By above construction, \\(\ex\_{A}(R, -)\\) is a covariant functor from \\(R\\)-
 ### <span class="org-todo todo TODO">TODO</span> Exact sequence about extensions {#exact-sequence-about-extensions}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 21:29]</span></span>
-See <sup id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="Sernesi, Deformations of {{Algebraic Schemes}}, {Springer Berlin Heidelberg} (2006).">sernesi2006</a></sup> Proposition 1.1.5, Proposition 1.1.7, and Corollary 1.1.8.
+See [<span id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="Sernesi, Deformations of {{Algebraic Schemes}}, {Springer Berlin Heidelberg} (2006).">sernesi2006</a></span>] Proposition 1.1.5, Proposition 1.1.7, and Corollary 1.1.8.
 
 {{% remark %}}
 The proof in my mind is straightforward but a little tricky when manipulate the objects, since sometimes we need to consider the \\(R\\)-module structure and sometimes as \\(A\\)-algebra.
@@ -1638,7 +1665,7 @@ The proof in my mind is straightforward but a little tricky when manipulate the 
 ### First cotangent module {#first-cotangent-module}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 21:33]</span></span>
-See <sup id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="Sernesi, Deformations of {{Algebraic Schemes}}, {Springer Berlin Heidelberg} (2006).">sernesi2006</a></sup> p.14.
+See [<span id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="Sernesi, Deformations of {{Algebraic Schemes}}, {Springer Berlin Heidelberg} (2006).">sernesi2006</a></span>] p.14.
 
 The \\(R\\)-module \\(\ex\_{A}(R,R)\\) is called the **first cotangent module** of \\(R\\) over \\(A\\), and is denoted by \\(T\_{R/A}^{1}\\). We omit \\(A\\) if \\(A = k\\). The **first cotagent sheaf** is obtained by gluing the first cotangent modules.
 
@@ -1655,6 +1682,98 @@ is a versal \\(A\\)-extension of \\(R\\).
 {{% remark %}}
 The word versal is similar to universal and certainly has some similarities. However, I don't know which words come into math world first.
 {{% /remark %}}
+
+
+### <span class="org-todo todo TODO">TODO</span> Jacobian criterion {#jacobian-criterion}
+
+
+### <span class="org-todo todo TODO">TODO</span> Linearly reductive {#linearly-reductive}
+
+
+### <span class="org-todo todo TODO">TODO</span> Root system {#root-system}
+
+
+### Hilbert-Chow morphism {#hilbert-chow-morphism}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-16 Thu 20:25]</span></span>
+For [Hilbert scheme](#hilbert-scheme) of points, we have a well define map
+\\[\pi:X^{ [n]}\_{red} \to S^{n}X\\]
+by \\(\pi(Z) = \sum\_{x \in X}l(Z\_{x})[x]\\), here \\(l\\) denote the length.
+
+
+### Symmetric power of P^1 {#symmetric-power-of-p-1}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-16 Thu 20:28]</span></span>
+Fact, \\(S^{n}(\PP^{1}) = \PP^{n}\\).
+
+
+### <span class="org-todo todo TODO">TODO</span> Luna's slice theorem {#luna-s-slice-theorem}
+
+
+### Hilb(A^2,n) {#hilb--a-2-n}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-16 Thu 20:35]</span></span>
+See [<span id="24e67c8afe5163064e4018cb5a5cbd8a"><a href="#nakajima1999" title="Nakajima, Lectures on {{Hilbert}} Schemes of Points on Surfaces, {American Mathematical Society} (1999).">nakajima1999</a></span>], Theorem 1.9.
+
+We have a specific characterization of \\(\hilb(A^{2}, n)\\). Let
+\\[\tilde{H} = \\{(B\_{1}, B\_{2}, i) \mid [B\_{1}, B\_{2}] = 0 \text{ and stable}\\}\\]
+The triple \\((B\_{1}, B\_{2}, i)\\) is called stable if there exists no proper subspace \\(S \subsetneq k^{n}\\) such that \\(B\_{\alpha}(S) \subset S\\), \\(\alpha = 0,1\\) and \\(\im i \subset S\\). \\(B\_{\alpha} \in \End(k^{n}) \\) and \\(i \in \ho(k, k^{n})\\). We have a natural \\(\GL\_{n}\\) action on \\(\tilde{H}\\) defined by \\((B\_{1}, B\_{2}, i) \to (gB\_{1}g^{-1}, gB\_{2}g^{-1}, gi)\\). And by quotient, we define \\(H = \tilde{H}/ \GL\_{n}\\). And we have that \\(H \cong \hilb(\mathbb{A}^{2},n)\\).
+
+Cf. [Hilbert scheme](#hilbert-scheme).
+
+
+### Smoothness of Hilbert scheme {#smoothness-of-hilbert-scheme}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-16 Thu 20:44]</span></span>
+See [<span id="24e67c8afe5163064e4018cb5a5cbd8a"><a href="#nakajima1999" title="Nakajima, Lectures on {{Hilbert}} Schemes of Points on Surfaces, {American Mathematical Society} (1999).">nakajima1999</a></span>], Section 1.3.
+
+{{% theorem %}}
+Suppose \\(X\\) is nonsingular of dimension \\(2\\), then \\(X^{ [n]}\\) is nonsingular of dimension \\(2n\\) and the Hilbert-Chow morphism is a resolution of singularities.
+{{% /theorem %}}
+
+Cf. [Hilbert scheme](#hilbert-scheme), [Hilbert-Chow morphism](#hilbert-chow-morphism).
+
+
+### Symplectic structure of Hilbert scheme {#symplectic-structure-of-hilbert-scheme}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-16 Thu 20:41]</span></span>
+See [<span id="24e67c8afe5163064e4018cb5a5cbd8a"><a href="#nakajima1999" title="Nakajima, Lectures on {{Hilbert}} Schemes of Points on Surfaces, {American Mathematical Society} (1999).">nakajima1999</a></span>], Section 1.4.
+
+{{% theorem %}}
+Suppose \\(X\\) has a holomorphic symplectic form \\(\omega\\). Then \\(X^{ [n]}\\) also has a holomorphic symplectic form.
+{{% /theorem %}}
+
+Cf. [Symplectic manifold](#symplectic-manifold), [Hilbert scheme](#hilbert-scheme).
+
+
+### Kahler manifold with holomorphic symplectic structure {#kahler-manifold-with-holomorphic-symplectic-structure}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-16 Thu 20:50]</span></span>
+See [<span id="24e67c8afe5163064e4018cb5a5cbd8a"><a href="#nakajima1999" title="Nakajima, Lectures on {{Hilbert}} Schemes of Points on Surfaces, {American Mathematical Society} (1999).">nakajima1999</a></span>], Proposition 1.19.
+
+The following proposition may be useful.
+
+{{% proposition %}}
+Let \\(X\\) be a compact Kähler manifold which admits a holomorphic symplectic structure. Then \\(X\\) has a hyper-Kähler structure.
+{{% /proposition %}}
+
+Cf. [Calabi-Yau variety](#calabi-yau-variety), [Holonomy group](#holonomy-group).
+
+
+### <span class="org-todo todo TODO">TODO</span> Yoneda product {#yoneda-product}
+
+
+### Summary of relation between enumerative invariants {#summary-of-relation-between-enumerative-invariants}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-17 Fri 17:28]</span></span>
+GW/DT [<span id="71c689e646b740e15274e4c45df483c9"><a href="#maulik2006" title="Maulik, Nekrasov, Okounkov \&amp; Pandharipande, Gromov\textendash{{Witten}} Theory and {{Donaldson}}\textendash{{Thomas}} Theory, {{I}}, {Compositio Mathematica}, v(05), 1263--1285 (2006).">maulik2006</a></span>], [<span id="a94d6b5af3fa210c91d9309d3da103af"><a href="#maulik2006a" title="Maulik, Nekrasov, Okounkov \&amp; Pandharipande, Gromov\textendash{{Witten}} Theory and {{Donaldson}}\textendash{{Thomas}} Theory, {{II}}, {Compositio Mathematica}, v(05), 1286--1304 (2006).">maulik2006a</a></span>], toric case [<span id="e25e310ddc34f4e55392b368230bb1bf"><a href="#maulik2011" title="Maulik, Oblomkov, Okounkov \&amp; Pandharipande, Gromov-{{Witten}}/{{Donaldson}}-{{Thomas}} Correspondence for Toric 3-Folds, {Inventiones mathematicae}, v(2), 435--479 (2011).">maulik2011</a></span>].
+GW/PT [<span id="909250c4d905735b782534d99f6095f5"><a href="#pandharipande2014" title="Pandharipande \&amp; Pixton, Gromov\textendash{{Witten}}/Pairs Descendent Correspondence for Toric 3\textendash Folds, {Geometry \&amp; Topology}, v(5), 2747--2821 (2014).">pandharipande2014</a></span>], [<span id="88221b9c6d4636326d6b0764fc915f73"><a href="#pandharipande2017" title="Pandharipande \&amp; Pixton, Gromov-{{Witten}}/{{Pairs}} Correspondence for the Quintic 3-Fold, {Journal of the American Mathematical Society}, v(2), 389--449 (2017).">pandharipande2017</a></span>].
+
+
+### <span class="org-todo todo TODO">TODO</span> Several signs for GW/DT correspondence {#several-signs-for-gw-dt-correspondence}
+
+
+### <span class="org-todo todo TODO">TODO</span> K3 surfaces {#k3-surfaces}
 
 
 ## Symplectic Geometry {#symplectic-geometry}
@@ -1881,6 +2000,122 @@ The theorem also shows that [h-Cobordism](#h-cobordism) theorem fails for \\(n =
 \\(\RR^{4}\\) has infinitely many smooth structures. While other Eucliean space has unique smooth structure by Stallings.
 
 
+### Intersection forms {#intersection-forms}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-17 Fri 21:48]</span></span>
+For \\(4\\)-manifold, we have nondegenerated bilinear form
+\\[Q\_{X}: H^{2}(X; \ZZ)/(tors) \times H^{2}(X; \ZZ)/(tors) \to \ZZ\\]
+defined by \\((\alpha \cup \beta)[X]\\) called **intersection form**. It is a symmetric, unimodular form.
+
+As an example of the intersection form, we have the intersection form of K3 surfaces \\(Q\_{X} = 2E\_{8} \oplus 3 \begin{pmatrix} 0 & 1 \\\\\\\\ 1 & 0 \end{pmatrix}\\)
+
+Cf. [K3 surfaces](#k3-surfaces), [E8](#e8).
+
+
+### Signature {#signature}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-17 Fri 21:50]</span></span>
+For [Intersection forms](#intersection-forms) \\(Q\_{X}\\), we have \\(b^{+ }(X)/b^{- }(X)\\) denote the number of the positive and negative eigenvalues of \\(Q\_{X}\\). And we define the **signature** to be \\(\sigma(X) = b^{+ }(X) - b\_{2}^{-}(X)\\).
+
+
+### Whitehead theorem {#whitehead-theorem}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-17 Fri 21:55]</span></span>
+The **Whitehead theorem** is of the following form:
+
+{{% theorem %}}
+Suppose \\(\pi\_{1}(X\_{1}) = \pi\_{1}(X\_{2}) = 1\\). Then
+\\[Q\_{X\_{0}} \cong Q\_{X\_{1}} \Rightarrow X\_{0} \cong\_{homotopy} X\_{1}\\]
+{{% /theorem %}}
+
+The proof relies on the following lemma of Hopf.
+
+{{% lemma %}}
+\\[\pi\_{3}(S^{2} \vee \cdots \vee S^{2}) \cong \\{n \times n \text{ symmetric matrices with integer coefficient}\\}\\]
+The left hand side has \\(n\\) copies of \\(S^{2}\\) and the isomorphism is group homomorphism.
+{{% /lemma %}}
+
+
+### Freedman's classification of topological 4-manifold {#freedman-s-classification-of-topological-4-manifold}
+
+
+
+{{% theorem %}}
+1.  Let \\(X\_{0}, X\_{1}\\) be two simply connected topological \\(4\\)-manifolds. Then \\(X\_{0} \cong\_{top} X\_{1} \Leftrightarrow Q\_{X\_{0}} \cong Q\_{X\_{1}}, \ks(X\_{0}) = \ks(X\_{1})\\).
+2.  Given any unimodular, symmetric bilinear form \\(Q\\). Then
+    1.  Suppose \\(Q\\) is odd, i.e. there exists \\(v\\) such that \\(Q(v,v)\\) is odd, then any combination of \\((Q, i)\\) where \\(i \in \\{0,1\\}\\) can be realized as the intersection form and KS invariant of some simply connected topological \\(4\\)-manifold \\(X\\).
+    2.  Suppose \\(Q\\) is even, i.e. for every \\(v\\), \\(Q(v,v)\\) is even. Then \\((Q, i)\\) can be realized if and only if \\(i \equiv \frac{\sigma(Q)}{8} \mod 2\\).
+{{% /theorem %}}
+
+Cf. [Manifold](#manifold), [Kirby-Sieberman invariant](#kirby-sieberman-invariant), [Whitehead theorem](#whitehead-theorem), [Intersection forms](#intersection-forms), [Signature](#signature).
+
+
+### Spin structure {#spin-structure}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-17 Fri 22:16]</span></span>
+Let \\(\SO(n) \to {\rm Fr} \to X\\) be the frame bundle of a smooth [Manifold](#manifold). A **spin structure** is a lift of \\({\rm Fr}\\) to a \\(\Spin(n)\\) bundle.
+
+We have following lemma on the existence of spin structure.
+
+{{% lemma %}}
+\\(X\\) has a spin strucutre if and only if the second Stiefel-Whitney class \\(\omega\_{2}(X) = 0\\). Furthermore, when \\(\dim X = 4\\) and \\(\pi\_{1} = 1\\), \\(X\\) has a spin structure if and only if \\(Q\_{X}\\) is even.
+{{% /lemma %}}
+
+
+### Rokhlin Theorem {#rokhlin-theorem}
+
+
+
+{{% theorem %}}
+Let \\(X\\) be a smooth spin \\(4\\)-[Manifold](#manifold). Then \\(16 | \sigma(X)\\).
+{{% /theorem %}}
+
+Cf. [Signature](#signature).
+
+
+### Donaldson diagonalizable theorem {#donaldson-diagonalizable-theorem}
+
+
+
+{{% theorem %}}
+Let \\(X\\) be a smooth \\(4\\)-manifold. Suppose \\(Q\_{X}\\) is definite that is the matrix \\(Q\_{X}\\) is postive or negative definite, we have \\(Q\_{X} \cong \pm \begin{pmatrix} 1 & \cdots & 0 \\\\\\\\ \vdots & \ddots & \vdots \\\\\\\\ 0 & \cdots & 1 \end{pmatrix} \\).
+{{% /theorem %}}
+
+Cf. [Intersection forms](#intersection-forms).
+
+
+### 11/8 conjecture {#11-8-conjecture}
+
+By [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold), [Rokhlin Theorem](#rokhlin-theorem) and [Donaldson diagonalizable theorem](#donaldson-diagonalizable-theorem), the only remaining case to determine the existence of smooth structure on topological \\(4\\)-manifold are those with \\(Q\_{X}\\) even and indefinite. That is \\(Q\_{X} = mE\_{8} \oplus n \begin{pmatrix} 0 & 1 \\\\\\\\ 1 & 0 \end{pmatrix}\\). Since we have K3 surface with \\(Q\_{X} = 2E\_{8} \oplus 3 \begin{pmatrix}0 & 1\\\\\\\\ 1 & 0 \end{pmatrix}\\) and \\(S^{2} \times S^{2}\\) with \\(Q\_{X} = \begin{pmatrix} 0 & 1\\\\\\\\ 1 & 0 \end{pmatrix}\\), we can show that the for \\(Q\_{X}\\) with \\(m = 2k\\) and \\(n \geq 3k\\) the smooth structure on the manifold exists. The conjecture is that that is the only possibility for the existence of smooth structure.
+
+{{% conjecture %}}
+If \\(X\\) is spin, smooth and \\(Q\_{X} = 2k E\_{8} \oplus n \begin{pmatrix}0 & 1\\ 1 & 0 \end{pmatrix}\\), then \\(n \geq 3k\\). Or equivalently speaking \\(b\_{2}(X) \geq \frac{11}{8} \abs{\sigma(X)}\\).
+{{% /conjecture %}}
+
+{{% remark %}}
+The current status (2021 Sep.) of the conjecture is that \\(k \leq 1\\) case is proved. For \\(k > 1\\), we have
+\\[n \geq 2k + \begin{cases} 2 & k = 1,2,5,6 \\\\\\\\ 3 & k = 3,4,7 \\\\\\\\ 4 & 0 \end{cases} \mod 8 \\]
+{{% /remark %}}
+
+
+### Kirby-Sieberman invariant {#kirby-sieberman-invariant}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-17 Fri 22:00]</span></span>
+We define the set \\(\topo\_{m} = \\{\text{ homomorphism } f: \RR^{m} \to \RR^{m} \text{ such that } f(0) = 0\\}\\). And \\(\pl\_{m} = \\{\text{ piecewise linear homeomorphism} f: \RR^{m} \to \RR^{m} \text{ such that } f(0) = 0\\}\\).
+
+The Kirby and Sieberman has following deep and mysterious theorem.
+
+{{% theorem %}}
+For \\(m \geq 5\\), \\(k < m\\). Then \\(\pi\_{k}(\topo\_{m}/ \pl\_{m}) = \begin{cases} 0 & k \neq 3 \\\\\\\\ \ZZ/2 & k = 3 \end{cases}\\).
+{{% /theorem %}}
+
+So to have PL structure on \\(X\\), \\(\dim X \geq 5\\) we need to overcome the obstruction called **Kirby-Sieberman** invariant \\(KS(X) \in H^{4}(X; \ZZ/2)\\). So \\(X\\) has a \\(\pl\\)-structure then \\(\ks(X) = 0\\). And for \\(\dim X = 4\\), \\(\ks(X) = 0\\) if and only \\(X \times \RR\\) has a \\(\pl\\)-structure.
+
+{{% remark %}}
+For \\(\dim X \leq 7\\), we have existence of piecewise linear structure equivalent to existence of smooth structure.
+{{% /remark %}}
+
+
 ## Quantum Fields and Strings {#quantum-fields-and-strings}
 
 
@@ -1936,8 +2171,20 @@ We can define the tensor product of modules and algebras naturely.
 
 <a id="dieck2008"></a>[dieck2008] tom Dieck, Algebraic Topology, European Mathematical Society (2008). [↩](#5ad6139c99b6d2508f6ef6f11ce7f09d)
 
+<a id="nakajima1999"></a>[nakajima1999] Nakajima, Lectures on Hilbert Schemes of Points on Surfaces, American Mathematical Society (1999). [↩](#24e67c8afe5163064e4018cb5a5cbd8a)
+
 <a id="milne2017"></a>[milne2017] Milne, Algebraic Groups: The Theory of Group Schemes of Finite Type over a Field, Cambridge University Press (2017). [↩](#868cb56e509be613430cca58b1ead9f3)
 
 <a id="cox2011"></a>[cox2011] Cox, Little & Schenck, Toric Varieties, American Mathematical Society (2011). [↩](#8a8485591c9ae40ab7e9a4d136fca3d2)
 
 <a id="sernesi2006"></a>[sernesi2006] Sernesi, Deformations of Algebraic Schemes, Springer Berlin Heidelberg (2006). [↩](#7cd3e01b28c2ede526fee96d60981f02)
+
+<a id="maulik2006"></a>[maulik2006] Maulik, Nekrasov, Okounkov & Pandharipande, Gromov\textendashWitten Theory and Donaldson\textendashThomas Theory, I, <i>Compositio Mathematica</i>, <b>142(05)</b>, 1263-1285 (2006). <a href="http://dx.doi.org/10.1112/S0010437X06002302">doi</a>. [↩](#71c689e646b740e15274e4c45df483c9)
+
+<a id="maulik2006a"></a>[maulik2006a] Maulik, Nekrasov, Okounkov & Pandharipande, Gromov\textendashWitten Theory and Donaldson\textendashThomas Theory, II, <i>Compositio Mathematica</i>, <b>142(05)</b>, 1286-1304 (2006). <a href="http://dx.doi.org/10.1112/S0010437X06002314">doi</a>. [↩](#a94d6b5af3fa210c91d9309d3da103af)
+
+<a id="maulik2011"></a>[maulik2011] Maulik, Oblomkov, Okounkov & Pandharipande, Gromov-Witten/Donaldson-Thomas Correspondence for Toric 3-Folds, <i>Inventiones mathematicae</i>, <b>186(2)</b>, 435-479 (2011). <a href="http://dx.doi.org/10.1007/s00222-011-0322-y">doi</a>. [↩](#e25e310ddc34f4e55392b368230bb1bf)
+
+<a id="pandharipande2014"></a>[pandharipande2014] Pandharipande & Pixton, Gromov\textendashWitten/Pairs Descendent Correspondence for Toric 3\textendash Folds, <i>Geometry & Topology</i>, <b>18(5)</b>, 2747-2821 (2014). <a href="http://dx.doi.org/10.2140/gt.2014.18.2747">doi</a>. [↩](#909250c4d905735b782534d99f6095f5)
+
+<a id="pandharipande2017"></a>[pandharipande2017] Pandharipande & Pixton, Gromov-Witten/Pairs Correspondence for the Quintic 3-Fold, <i>Journal of the American Mathematical Society</i>, <b>30(2)</b>, 389-449 (2017). <a href="http://dx.doi.org/10.1090/jams/858">doi</a>. [↩](#88221b9c6d4636326d6b0764fc915f73)
