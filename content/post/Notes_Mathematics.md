@@ -4,9 +4,23 @@ author = ["Zenith John"]
 date = 2021-08-31
 categories = ["Mathematics"]
 draft = false
-lastmod = 2021-09-15
+lastmod = 2021-09-28
 showtoc = true
 +++
+
+## General Mathematics {#general-mathematics}
+
+
+
+
+### Existence proof {#existence-proof}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-27 Mon 20:43]</span></span>
+One kind of the importance theorem in mathematics is the existence theorem which states something with certain property exists. Basically, there are two kinds of proof of the existence theorem.
+
+-   Construction. E.g. existence of smooth but not differentiable function.
+-   Proof by contradiction. E.g. infiniteness of prime numbers, [Brouwer fixed point theorem](#brouwer-fixed-point-theorem).
+
 
 ## Representation of finite groups {#representation-of-finite-groups}
 
@@ -139,6 +153,27 @@ A finite subgroup of O(3) is called a point group.
 1.  在有限群上的很多操作可以复制到紧群和李群上，如李群表示中的不可约表示以及傅里叶分析。
 
 
+### Representation category {#representation-category}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 19:03]</span></span>
+For a group \\(G\\), we may define the category \\(\cat{Rep}(G)\\) for finite dimensional representation of \\(G\\) with morphisms of representations.
+
+Cf. [Representation of finite groups](#representation-of-finite-groups), [Algebraic group](#algebraic-group).
+
+
+### Fibre functor {#fibre-functor}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 19:09]</span></span>
+For [Tensor category](#tensor-category) \\((\mathscr{C}, \otimes)\\), a **fibre functor** \\(F\\) is a functor \\(\mathscr{C} \to \cat{Vec}\\) satisfies that \\(F(V\_{1} \otimes V\_{2}) \cong F(V\_{1}) \otimes F(V\_{2})\\).
+
+
+### Associativity constraint {#associativity-constraint}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 19:10]</span></span>
+For \\(\mathscr{C}\\) category with functor \\(\otimes\\), an **associativity constraint** is a functorial isomorphism
+\\[\phi: X \otimes (Y \otimes Z) \to (X \otimes Y) \otimes Z\\]
+
+
 ## Representation of quivers {#representation-of-quivers}
 
 The basics of the quivers are from [<span id="df38f5636bec59103a70400bed4764c9"><a href="#kirillov2016" title="Kirillov, Quiver Representations and Quiver Varieties, {American Mathematical Society} (2016).">kirillov2016</a></span>].
@@ -175,6 +210,42 @@ For two linear endomorphism \\(A, B\\), if \\([A,B] = 0\\), then \\(A, B\\) can 
 
 
 ### <span class="org-todo todo TODO">TODO</span> Poinccaré-Birkhoff-Witt theorem {#poinccaré-birkhoff-witt-theorem}
+
+
+### <span class="org-todo todo TODO">TODO</span> Root system {#root-system}
+
+
+### Positive root {#positive-root}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 18:53]</span></span>
+Let \\((G, T)\\) split [Reductive](#reductive), there exists [Borel](#borel) \\(B \supset T\\), and therefore \\(\mathfrak{b} \supset \mathfrak{t}\\). Let \\(\phi\\) be the [Root system](#root-system) of \\(G\\), we define the **positive root** to by \\(\phi^{+ }(B) = \\{\alpha \in \phi \mid \mathfrak{g}\_{\alpha} \subset \mathfrak{b}\\}\\).
+
+
+### Base {#base}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 18:56]</span></span>
+A **base** of a [Root system](#root-system) \\(\Delta \in \phi\\) is a basis for \\(V\\) such that each \\(\alpha \in \phi\\) is a positive or negative integer linear combination from \\(\Delta\\).
+
+For a base \\(\Delta\\) we have \\(\NN \Delta \cap \phi\\) system of [Positive roots](#positive-root). And positive roots can give a bases by [simple roots](#simple-root).
+
+
+### Fundamental weight {#fundamental-weight}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 18:58]</span></span>
+For \\(\Delta = \\{\alpha\_{1}, \cdots, \alpha\_{n}\\}\\) [Base](#base) for \\(\phi\\), we define the **fundamental weights** \\(\\{\lambda\_{1}, \cdots, \lambda\_{n}\\}\\) basis for \\(V\\) dual to \\(\Delta^{\vee}\\) so that \\(\langle \lambda\_{i}, \alpha\_{j}^{\vee}\rangle = \delta\_{ij}\\).
+
+Cf. [Root system](#root-system).
+
+
+### Dominant {#dominant}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 19:00]</span></span>
+For \\(\\{\lambda\_{i}\\}\\) [Fundamental weights](#fundamental-weight), \\(\lambda \in P(\phi) = \oplus\_{i} \ZZ \lambda\_{i}\\) is called **dominant** if \\(\langle \lambda, \alpha\_{j}^{\vee} \rangle \geq 0\\) for all \\(j\\).
+
+Cf. [Root system](#root-system).
+
+
+### <span class="org-todo todo TODO">TODO</span> simple root {#simple-root}
 
 
 ## Differential Geometry {#differential-geometry}
@@ -265,6 +336,8 @@ Remark: in most applications, the dense property implies the existence, as in th
 An atlas is called **orienting** if any two charts are positively related, that is every two charts has the same orientation as a subset of \\(\RR^{n}\\). If a [Manifold](#manifold) \\(M\\) has an orienting atlas, we call \\(M\\) **orientable**. Notice that if a manifold is orientable, it naturally has two orientation.
 
 Given [Local homology group](#local-homology-group), a generator of the homology group \\(H\_{n}(M, M \backslash x; R) \cong R\\) is called a **local \\(R\\)-orientation**. Let \\(M\\) be a \\(n\\)-manifold and \\(A \subset M\\). An \\(R\\)-orientation of \\(M\\) along \\(A\\) is a section \\(s \subset \Gamma(A; R)\\) of \\(\omega: H\_{n}(M, M \backslash \bullet; R) \to M\\) such that \\(s(a) \in H\_{n}(M, M \backslash a; R) \cong R\\) is a generator for each \\(a \in A\\). For \\(A = M\\), we called it **\\(R\\)-orientation** and for \\(R = \ZZ\\), it is called **orientation**.
+
+By characteristic class theory, a manifold is orientable if the first [Stiefel-Whitney class](#stiefel-whitney-class) vanishes that is \\(w\_{1}(E) = 0\\).
 
 
 ### Tangent bundle {#tangent-bundle}
@@ -708,14 +781,26 @@ As in homology theory, we called \\(h^{n}(pt)\\) the coefficient groups of the t
 Also, we have triple exact sequence
 \\[ \cdots \to h^{n - 1}(A, B) \stackrel{\delta}{\to} h^{n}(X, A) \to h^{n}(X, B) \to h^{n}(A, B) \stackrel{\delta}{\to} \cdots\\]
 
+Cf. [de Rham cohomology](#de-rham-cohomology).
+
 
 #### <span class="org-todo todo TODO">TODO</span> Singular cohomology {#singular-cohomology}
+
+
+#### Compactly supported cohomology {#compactly-supported-cohomology}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-27 Mon 20:24]</span></span>
+Let \\(\mathscr{K}\\) denote the set of compact subspaces of \\(X\\). We define **compactly supported cohomology** of \\(X\\) by
+\\[H\_{c}^{k}(X) :=\colim\_{K \in \mathscr{K}} H^{k}(X, X - K)\\]
+In particular if \\(X\\) is compact, we have \\(H\_{c}^{k}(X) = H^{k}(X)\\).
+
+The compactly supported cohomology also satisfies [Mayer-Vietoris sequence](#mayer-vietoris-sequence).
 
 
 #### Cup product {#cup-product}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-03 Fri 20:36]</span></span>
-One of the most difference between homology theory and cohomology theory is the multiplicative structure on cohomology rings.
+One of the most difference between homology theory and cohomology theory is the multiplicative structure making cohomology group a cohomology rings.
 \\[h^{m}(X, A) \otimes\_{R} h^{n}(X, B) \to h^{m + n}(X, A \cap B)\\]
 We call \\(x \cap y\\) the **cup product** of \\(x, y\\). The cup product is defined if \\(A\\) or \\(B\\) is empty or \\(A = B\\). We have axioms of cup product
 
@@ -725,6 +810,32 @@ We call \\(x \cap y\\) the **cup product** of \\(x, y\\). The cup product is def
 -   Unit element: There is a unit \\(1 \in h^{0}(pt)\\) such that \\(1\_{X} = p^{\*}(1)\\) is the unit of multiplication in cohomology ring.
 -   Associativity: \\((x \cup y) \cup z = x \cup (y \cup z)\\).
 -   Commutativity: \\(x \cup y = (-1)^{\abs{x} \abs{y}} y \cup x\\). Here \\(\abs{x}\\) is the grade in the cohomology ring.
+
+For the most importanct case \\(A = B = \emptyset\\), the cup product can be given by [Alexander-Whitney map](#alexander-whitney-map), that is
+\\[(\alpha \cup \beta)(\sigma) = \alpha(\_{p}\sigma) \cdot \beta(\sigma\_{q})\\]
+
+The morphism \\(H^{\* }(-; R)\\) is natural, that is it is a functor from the category of topological spaces to the category of graded commutative rings.
+
+
+#### Cap product {#cap-product}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-26 Sun 21:34]</span></span>
+We have **cap product** between [Cohomology](#cohomology) and [Homology](#homology). That is we first consider the pairing
+\\[\langle -, - \rangle: S^{\bullet}(X; R) \times\_{R} S\_{\bullet}(X;R) \to R\\]
+for \\(\alpha \in S^{p}(X)\\), \\(\sigma \in S\_{p}(X)\\), \\(r \in R\\), defined as \\(\langle \alpha, (\sigma \otimes r) \rangle = \alpha(\sigma) \cdot r\\).
+
+The we define the cap product by composing the above pairing by \\(1 \otimes \Delta\\), so we have
+\\[S^{\bullet}(X;R) \otimes S\_{\bullet}(X;R) \to S^{\bullet}(X;R) \otimes S\_{\bullet}(X \times X; R) \to S^{\bullet}(X;R) \otimes S\_{\bullet}(X;R) \otimes S\_{\bullet}(X;R) \to S\_{\bullet}(X;R)\\]
+which induced the map
+\\[\cap : H^{p}(X; R) \otimes H\_{p + q}(X; R) \to H\_{q}(X; R)\\]
+
+The cap product makes \\(H\_{\bullet}(X; R)\\) an \\(H^{\bullet}(X;R)\\)-module.
+
+{{% remark %}}
+The cap product can be generalized to relative case
+\\[\cap: H^{p}(X;A) \otimes H\_{p + q}(X, A) \to H\_{q}(X)\\]
+\\[\cap: H^{p}(X) \otimes H\_{p + q}(X, A) \to H\_{q}(X, A)\\]
+{{% /remark %}}
 
 
 #### External product {#external-product}
@@ -743,13 +854,207 @@ The external products satisfying some properties.
 
 The **reduced cohomology groups** are defined to be \\(\tilde{h}^{n}(X) \to \coker(h^{n}(pt) \to h^{n}(X))\\) where the map is induced by \\(p: X \to pt\\).
 
+Cf. [Cohomology](#cohomology).
+
 
 ### Mayer-Vietoris sequence {#mayer-vietoris-sequence}
 
 
 
-There are **Mayer-Vietoris sequence** for homology and cohomology theory. For \\((A; A\_{0}, A\_{1}) \subset (X; X\_{0}, X\_{1})\\) be excisive triads that is \\(A = A\_{0}^{\circ} \cap A\_{1}^{\circ}\\) and \\(X = X\_{0}^{\circ} \cap X\_{1}^{\circ}\\). Set \\(X\_{01} = X\_{0} \cap X\_{1}\\) and \\(A\_{01} = A\_{0} \cap A\_{1}\\). Then we have exact sequence
+There are **Mayer-Vietoris sequence** for homology and [Cohomology](#cohomology) theory. For \\((A; A\_{0}, A\_{1}) \subset (X; X\_{0}, X\_{1})\\) be excisive triads that is \\(A = A\_{0}^{\circ} \cap A\_{1}^{\circ}\\) and \\(X = X\_{0}^{\circ} \cap X\_{1}^{\circ}\\). Set \\(X\_{01} = X\_{0} \cap X\_{1}\\) and \\(A\_{01} = A\_{0} \cap A\_{1}\\). Then we have exact sequence
 \\[\cdots \to h^{n - 1}(X\_{01}, A\_{01}) \to h^{n}(X, A) \to h^{n}(X\_{0}, A\_{0}) \oplus h^{n}(X\_{1}, A\_{1}) \to h^{n}(X\_{01}, A\_{01}) \to \cdots\\]
+
+
+### Hurewicz theorem {#hurewicz-theorem}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-26 Sun 15:54]</span></span>
+The **Hurewicz theorem** relates the [Homotopy](#homotopy) theory and [Homology](#homology) theory. We first fix generator satisfying the compatibility conditions \\(i\_{n} \in \tilde{H}\_{n}(S^{n}) = H\_{n}(D^{n}, S^{n - 1}) = \tilde{H}\_{n - 1}(S^{n - 1})\\). Then we can define **Hurewicz map**
+\\[\rho: \pi\_{n}(X) \to H\_{n}(X)\\]
+by sending \\([f: S^{n} \to X] \to f\_{\* }(i\_{n})\\). Then we have
+
+{{% proposition %}}
+The Hurewicz map is a group homomorphism.
+{{% /proposition %}}
+
+The Hurewicz theorem states that in certian circumstances the above homomorphism can be isomorphism.
+
+{{% theorem %}}
+Let \\(X\\) be a path-connected \\((n - 1)\\)-connected space. Then the Hurewicz map
+\\[\rho\_{n}(\pi\_{n}(X)) \to H\_{n}(X)\\]
+is the abelianization homomorphism.
+{{% /theorem %}}
+
+Notice that for \\(n \geq 2\\), the homotopy group \\(\pi\_{n}(X)\\) is already abelian.
+
+The theorem can also be written in relative form.
+
+{{% theorem %}}
+Let \\((X, A)\\) be a pair of path-connected spaces and \\(A\\) non-empty simply connected. If \\((X, A)\\)is \\((n - 1)\\)-connected, then
+\\[H\_{i}(X,A) = 0 \text{ for } i < n\\]
+and the Hurewicz map
+\\[\pi\_{n}(X,A) \to H\_{n}(X, A)\\]
+is an isomorphism.
+{{% /theorem %}}
+
+
+### Whitehead theorem {#whitehead-theorem}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-26 Sun 16:14]</span></span>
+The **Whitehead theorem** means that weak homotopy equivalence is equivalent to homotopy equivalence for CW complexes.
+
+By [Hurewicz theorem](#hurewicz-theorem), the Whitehead theorem also has an [Homology](#homology) version.
+
+{{% theorem %}}
+Let \\(f: X \to Y\\) between simply connected CW complexes. Assume
+\\[f\_{\* }: H\_{n}(X) \to H\_{n}(Y)\\]
+is an isomorphism for each \\(n\\). Then \\(f\\) is a homotopy equivalence.
+{{% /theorem %}}
+
+
+### Eilenberg-Zilber theorem {#eilenberg-zilber-theorem}
+
+
+
+{{% theorem %}}
+If \\(H\_{0}(S\_{\bullet}(X \times Y)) = H\_{0}(S\_{\bullet}(X)) \otimes H\_{0}(S\_{\bullet}(Y))\\), then there exists natural transformations
+\\[S\_{\bullet}(- \times -) \stackrel{F}{\underset{G} \Longleftrightarrow} S\_{\bullet}(-) \otimes S\_{\bullet}(-)\\]
+And therefore isomorphisms on homology groups. Here \\(F\\), \\(G\\) is called **Eilenberg-Zilber map**.
+{{% /theorem %}}
+
+The proof of the theorem relies on [Spectral sequence](#spectral-sequence) and is rather abstract. However, for [Singular homology](#singular-homology), there exists a explicit form of the Eilenberg-Zilber map, called **Alexander-Whitney map**. First for \\(\sigma: \Delta^{n} \to X\\), we introduce the map \\( \_{p} \sigma: \Delta^{p} \to X, \_{p} \sigma(t\_{0}, \cdots, t\_{p}) = \sigma(t\_{0}, \cdots, t\_{p}, 0 ,\cdots, 0)\\) and \\(\sigma\_{q}(t\_{0}, \cdots, t\_{q}) = \sigma(0, \cdots, 0, t\_{0}, \cdots, t\_{q})\\), and then we have Alexander-Whitney map
+\\[AW: S\_{\bullet}(X \times Y) \to S\_{\bullet}(X) \otimes S\_{\bullet}(Y)\\]
+given by
+\\[AW(\sigma) = \sum\_{p + q = n} {}\_{p}(\pi\_{X} \circ \sigma) \otimes (\pi\_{Y} \circ \Sigma)\_{q}\\]
+By Eilenberg-Zilber theorem, the above map is a chain homotopy equivalence.
+
+Cf. [Homology](#homology).
+
+
+### Alexander-Whitney map {#alexander-whitney-map}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-26 Sun 21:25]</span></span>
+See [Eilenberg-Zilber theorem](#eilenberg-zilber-theorem).
+
+
+### Künneth formula {#künneth-formula}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-26 Sun 21:14]</span></span>
+The algebraic version of **Künneth formula** is
+
+{{% theorem %}}
+Let \\(C\_{\bullet}\\) and \\(D\_{\bullet}\\) be chain complex of free abelian groups. Then there is a split exact sequence
+\\[0 \to (H\_{\bullet}( C) \otimes H\_{\bullet}(D))\_{n} \to H\_{n}(C\_{\bullet} \otimes D\_{\bullet}) \to \tor(H\_{\bullet}( C), H\_{\bullet}(D))\_{n - 1} \to 0\\]
+Here \\(\tor(H\_{\bullet}, H\_{\bullet}(D))\_{k} = \oplus\_{p + q = k} \tor(H\_{p}( C), H\_{q}(D))\\).
+{{% /theorem %}}
+
+Apply the algebraic version to the [Singular homology](#singular-homology), we have
+
+{{% theorem %}}
+For any topological spaces \\(X, Y\\) and \\(n \geq 0\\), there is a split exact sequence
+\\[0 \to \oplus\_{p + q = n} H\_{p}(X) \otimes H\_{q}(X) \to H\_{n}(X \times Y) \to \oplus\_{p + q = n - 1} \tor(H\_{p}(X), H\_{q}(Y)) \to 0\\]
+{{% /theorem %}}
+
+
+### Poincaré duality {#poincaré-duality}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-27 Mon 20:21]</span></span>
+The Poincaré duality is the following famous theorem.
+
+{{% theorem %}}
+Given \\(X\\) an oriented \\(n\\)-manifold. Then for any \\(p\\)
+\\[D: H\_{c}^{p}(X) \to H\_{n - p}(X)\\]
+is an isomorphism. In particular, if \\(X\\) is compact, then \\(H^{p}(X) \cong H\_{n - p}(X)\\). The isomorphism is given by cap product with the fundamental class of \\(X\\).
+{{% /theorem %}}
+
+Cf. [Orientation](#orientation), [Manifold](#manifold), [Compactly supported cohomology](#compactly-supported-cohomology), [Singular homology](#singular-homology), [Fundamental class](#fundamental-class).
+
+
+### Lefschetz fixed point theorem {#lefschetz-fixed-point-theorem}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-27 Mon 20:33]</span></span>
+The [Poincaré duality](#poincaré-duality) gives the **intersection pairing**
+\\[\langle -, - \rangle : H\_{i}(X) \times H\_{n - i}(X) \to H\_{0}(X) \cong \mathbb{Z}\\]
+or equivalently
+\\[\langle -, - \rangle : H^{i}(X) \times H^{n - i}(X) \to H^{n}(X) \cong \mathbb{Z}\\]
+
+Cf. [Intersection forms](#intersection-forms).
+
+By consider the intersection of the diagonal \\(\Delta\\) and the graph of the map \\(f\\), we get the fixed points of \\(f\\). We define the **Lefschetz number** of \\(f\\) by
+\\[L(f) := \sum\_{p}(-1)^{p} \tr(f\_{\* }: H\_{p}(X; \QQ) \to H\_{p}(X; \QQ))\\]
+Then we have **Lefschetz fixed point theorem**
+
+{{% theorem %}}
+When \\(\Gamma\_{f}\\) and \\(\Delta\\) intersections transversely, then we have
+\\[\abs{ {\rm Fix}(f)} = L(f)\\]
+{{% /theorem %}}
+
+
+### Brouwer fixed point theorem {#brouwer-fixed-point-theorem}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-27 Mon 20:40]</span></span>
+The Brouwer fixed point theorem is an example of non construction existence proof.
+
+{{% theorem %}}
+Let \\(f: D^{2} \to D^{2}\\). Then there exists \\(x \in D^{2}\\) such that \\(f(x) = x\\).
+{{% /theorem %}}
+
+
+### Euler class {#euler-class}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-22 Wed 20:34]</span></span>
+Let \\(p: E \to X\\) be a real [Oriented](#orientation) [Vector bundle](#vector-bundle) of dimension \\(n\\), we want to find a nowhere vanishing section \\(s: X \to E\\), the primary obstruction is defined as the **Euler class** \\(e(E) \in H^{n}(X; \ZZ)\\). A geometric definition is taht we consider a generic section \\(s: X \to E\\) which is transverse to zero section, then \\(s^{-1}(0)\\) is a submanifold of \\(X\\) of codimension \\(n\\) and \\(e(E)\\) can be taken as Poincaré dual of \\([s^{-1}(0)]\\).
+
+
+### Poincaré-Hopf thereom {#poincaré-hopf-thereom}
+
+
+
+{{% theorem %}}
+\\(\chi(X) = e(TX) [X] = \sum\_{i = 0}^{\dim X}(-1)^{i}b\_{i}(X)\\), here \\(b\_{i}(X)\\) is the ith betti number.
+{{% /theorem %}}
+
+Cf. [Euler class](#euler-class), [Vector bundle](#vector-bundle).
+
+
+### Chern class {#chern-class}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-22 Wed 20:40]</span></span>
+Consider complex [Vector bundle](#vector-bundle) \\(E \to X\\), we wan to find sections linear independent everywhere. Then we have primary obstruction **Chern class** \\(c\_{n - k + 1} \in H^{2 (n - k + 1)}(X; \ZZ)\\). Axioms of Chern class include \\(c\_{0}(E) = 1\\), naturality and product structure and normalization \\(c(T \CC \PP^{n}) = (1 + w)^{n + 1}\\) for \\(w = \pd [\CC \PP^{n - 1}]\\).
+
+All characteristic class (classes satisfies the naturality condition) for complex vector bundles are combination of Chern classes.
+
+
+### Stiefel-Whitney class {#stiefel-whitney-class}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-22 Wed 20:44]</span></span>
+For \\(p: E \to X\\) real [Vector bundle](#vector-bundle), we want to find sections linear independent. And we define the **Stiefel-Whitney class** \\(w\_{\* }(E)\\) as the obstruction in \\(H^{\* }(X; \ZZ/2)\\). It is universal for characteristic class in \\(\ZZ/2\\) coeffecients.
+
+
+### Pontryagin class {#pontryagin-class}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-22 Wed 20:46]</span></span>
+The **Pontryagin class** is defined as \\(P\_{i}(E) = (-1)^{i}c\_{2i}(E \otimes\_{\RR} \CC)\\), where \\(c\_{i}\\) is the [Chern class](#chern-class).
+
+
+### <span class="org-todo todo TODO">TODO</span> Degree {#degree}
+
+
+
+For degree of isogeny, see [Isogeny](#isogeny).
+
+
+### <span class="org-todo todo TODO">TODO</span> Homotopy {#homotopy}
+
+
+### <span class="org-todo todo TODO">TODO</span> Homology {#homology}
+
+
+
+
+#### <span class="org-todo todo TODO">TODO</span> Singular homology {#singular-homology}
+
+
+### <span class="org-todo todo TODO">TODO</span> Fundamental group {#fundamental-group}
 
 
 ## Mirror Symmetry {#mirror-symmetry}
@@ -788,6 +1093,18 @@ There are several aspects of enumerative geometry, beyond the numbers.
 -   applications of enumerative geometry to categorification and low-dimensional topology
 -   Hall algebras and their refined versions (cohomological, K-theoretic, derived categories)
 -   Enumerative geometry of Nakajima quiver variety and the representation of quantum groups (symplectic resolution, etc)
+
+
+#### MNOP conjecture {#mnop-conjecture}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-28 Tue 20:20]</span></span>
+The MNOP conjecture is proposed in [<span id="71c689e646b740e15274e4c45df483c9"><a href="#maulik2006" title="Maulik, Nekrasov, Okounkov \&amp; Pandharipande, Gromov\textendash{{Witten}} Theory and {{Donaldson}}\textendash{{Thomas}} Theory, {{I}}, {Compositio Mathematica}, v(05), 1263--1285 (2006).">maulik2006</a></span>] (primary case), [<span id="a94d6b5af3fa210c91d9309d3da103af"><a href="#maulik2006a" title="Maulik, Nekrasov, Okounkov \&amp; Pandharipande, Gromov\textendash{{Witten}} Theory and {{Donaldson}}\textendash{{Thomas}} Theory, {{II}}, {Compositio Mathematica}, v(05), 1286--1304 (2006).">maulik2006a</a></span>] (descent case). The Gromov-Witten/Donaldson-Thomas correspondence is proved in toric case [<span id="e25e310ddc34f4e55392b368230bb1bf"><a href="#maulik2011" title="Maulik, Oblomkov, Okounkov \&amp; Pandharipande, Gromov-{{Witten}}/{{Donaldson}}-{{Thomas}} Correspondence for Toric 3-Folds, {Inventiones mathematicae}, v(2), 435--479 (2011).">maulik2011</a></span>].
+
+The Pandharipande-Thomas (PT) invariants is introduced in [<span id="431caa59e2d75afb6b38719ad8dca5d9"><a href="#pandharipande2009" title="Pandharipande \&amp; Thomas, Curve Counting via Stable Pairs in the Derived Category, {Inventiones mathematicae}, v(2), 407--447 (2009).">pandharipande2009</a></span>], whose moduli space behaves better than the Donaldson-Thomas invariants. And correspondence between DT and PT is proved in [<span id="f9133d12da33e9b2ae5ee8e0f8d3fa3a"><a href="#toda2010" title="Toda, Curve Counting Theories via Stable Objects {{I}}. {{DT}}/{{PT}} Correspondence, {Journal of the American Mathematical Society}, v(4), 1119--1157 (2010).">toda2010</a></span>] and therefore the problem of GW/DT correspondence is reduced to GW/PT correspondence, where the latter is easier to handle.
+
+The toric case of GW/PT correspondence is given in [<span id="909250c4d905735b782534d99f6095f5"><a href="#pandharipande2014" title="Pandharipande \&amp; Pixton, Gromov\textendash{{Witten}}/Pairs Descendent Correspondence for Toric 3\textendash Folds, {Geometry \&amp; Topology}, v(5), 2747--2821 (2014).">pandharipande2014</a></span>] and the local complete intersection in product of projective space case is established in [<span id="88221b9c6d4636326d6b0764fc915f73"><a href="#pandharipande2017" title="Pandharipande \&amp; Pixton, Gromov-{{Witten}}/{{Pairs}} Correspondence for the Quintic 3-Fold, {Journal of the American Mathematical Society}, v(2), 389--449 (2017).">pandharipande2017</a></span>]. The explicit formula of the matrix coefficient is given in [<span id="5475808075c4e5ae5aa873cba4119875"><a href="#oblomkov2020" title="Oblomkov, Okounkov \&amp; Pandharipande, {{GW}}/{{PT Descendent Correspondence}} via {{Vertex Operators}}, {Communications in Mathematical Physics}, v(3), 1321--1359 (2020).">oblomkov2020</a></span>].
+
+Based on GW/PT correspondence, in toric variety, [Virasoro constraint](#virasoro-constraint) for stable pairs and therefore for GW theory is obtained in [<span id="b79997d2a1ead8b84a185c6680e7e9db"><a href="#moreira2020" title="Moreira, Oblomkov, Okounkov \&amp; Pandharipande, Virasoro Constraints for Stable Pairs on Toric 3-Folds, {arXiv:2008.12514 [math]}, v(), (2020).">moreira2020</a></span>]
 
 
 ### Moduli space of Stable Maps {#moduli-space-of-stable-maps}
@@ -1028,7 +1345,7 @@ In [<span id="24e67c8afe5163064e4018cb5a5cbd8a"><a href="#nakajima1999" title="N
 ### <span class="org-todo todo TODO">TODO</span> Virtual fundamental class {#virtual-fundamental-class}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-01 Wed 16:57]</span></span>
-The analog of [Virtual fundamental class](#virtual-fundamental-class) for stacks and orbifold.
+The analog of [Fundamental class](#fundamental-class) for stacks and orbifold.
 
 
 ### Calabi-Yau variety {#calabi-yau-variety}
@@ -1129,6 +1446,24 @@ An [Algebraic group](#algebraic-group) is called **reductive** if \\(R\_{u}(G\_{
 Cf. [Unipotent radical](#unipotent-radical).
 
 
+#### Parabolic {#parabolic}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 18:50]</span></span>
+A smooth subgroup \\(P \subset G\\) is **parabolic** if \\(G/P\\) complete as algebraic variety.
+
+{{% proposition %}}
+For \\(k\\) algebraic closed, a smooth connected algebraic group \\(B \subset G\\) is minimal among parabolics \\(P\\) is equivalent to \\(B\\) solvable parabolic.
+{{% /proposition %}}
+
+Cf. [Algebraic group](#algebraic-group).
+
+
+#### Borel {#borel}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 18:51]</span></span>
+A algebraic subgroup \\(B\\) is called **Borel** if it is [Parabolic](#parabolic), smooth, connected and solvable.
+
+
 ### Categorical quotient {#categorical-quotient}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-07 Tue 20:59]</span></span>
@@ -1173,12 +1508,12 @@ Given an action \\(\sigma\\) of \\(G/S\\) over \\(X/S\\), and \\((Y, \phi)\\) is
 A **character** of a [Torus](#torus) is a group homomorphism \\(\chi: T \to \CC^{\* }\\).
 
 
-### <span class="org-todo todo TODO">TODO</span> Torus {#torus}
+### Torus {#torus}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-08 Wed 19:51]</span></span>
-A torus is \\(\CC^{\* n}\\).
+Over \\(\CC\\), a torus is \\(\CC^{\* n}\\). In general a scheme \\(X\\) over \\(k\\) is called a torus if \\(X\_{k^{a}}\\) is of the form \\((k^{a})^{\times n}\\) where \\(k^{a}\\) is the algbraic closure of \\(k\\).
 
-The following proposition is useful in toric geometry. The image of a torus in a torus is also a torus.
+The following proposition is useful in toric geometry over \\(\CC\\). The image of a torus in a torus is also a torus.
 
 {{% proposition %}}
 Let \\(T\_{1}\\) and \\(T\_{2}\\) be tori, and \\(\Phi: T\_{1} \to T\_{2}\\) a group homomorphism and morphism of varieties. Then the image of \\(\Phi\\) is a torus and closed in \\(T\_{2}\\).
@@ -1192,6 +1527,11 @@ If \\(H \subset T\\) is an irreducible group subvariety of \\(T\\). Then \\(H\\)
 
 
 ### Splitting torus {#splitting-torus}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-16 Thu 20:02]</span></span>
+A **splitting torus** is a torus of type \\(k^{\times n}\\).
+
+Cf. [Torus](#torus).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Toric variety {#toric-variety}
@@ -1382,6 +1722,11 @@ We define the **generalized Serre's condition** \\(S\_{k,c}\\) as
 
 
 ### <span class="org-todo todo TODO">TODO</span> Spectral sequence {#spectral-sequence}
+
+
+
+
+#### <span class="org-todo todo TODO">TODO</span> Beilison spectral sequence {#beilison-spectral-sequence}
 
 
 ### Dual sheaf {#dual-sheaf}
@@ -1690,9 +2035,6 @@ The word versal is similar to universal and certainly has some similarities. How
 ### <span class="org-todo todo TODO">TODO</span> Linearly reductive {#linearly-reductive}
 
 
-### <span class="org-todo todo TODO">TODO</span> Root system {#root-system}
-
-
 ### Hilbert-Chow morphism {#hilbert-chow-morphism}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-16 Thu 20:25]</span></span>
@@ -1721,6 +2063,8 @@ The triple \\((B\_{1}, B\_{2}, i)\\) is called stable if there exists no proper 
 
 Cf. [Hilbert scheme](#hilbert-scheme).
 
+The manifold \\(\hilb(\mathbb{A}^{2}, n)\\) admits a hyper-Kähler metric.
+
 
 ### Smoothness of Hilbert scheme {#smoothness-of-hilbert-scheme}
 
@@ -1746,7 +2090,7 @@ Suppose \\(X\\) has a holomorphic symplectic form \\(\omega\\). Then \\(X^{ [n]}
 Cf. [Symplectic manifold](#symplectic-manifold), [Hilbert scheme](#hilbert-scheme).
 
 
-### Kahler manifold with holomorphic symplectic structure {#kahler-manifold-with-holomorphic-symplectic-structure}
+### Kähler manifold with holomorphic symplectic structure {#kähler-manifold-with-holomorphic-symplectic-structure}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-16 Thu 20:50]</span></span>
 See [<span id="24e67c8afe5163064e4018cb5a5cbd8a"><a href="#nakajima1999" title="Nakajima, Lectures on {{Hilbert}} Schemes of Points on Surfaces, {American Mathematical Society} (1999).">nakajima1999</a></span>], Proposition 1.19.
@@ -1763,17 +2107,182 @@ Cf. [Calabi-Yau variety](#calabi-yau-variety), [Holonomy group](#holonomy-group)
 ### <span class="org-todo todo TODO">TODO</span> Yoneda product {#yoneda-product}
 
 
-### Summary of relation between enumerative invariants {#summary-of-relation-between-enumerative-invariants}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-17 Fri 17:28]</span></span>
-GW/DT [<span id="71c689e646b740e15274e4c45df483c9"><a href="#maulik2006" title="Maulik, Nekrasov, Okounkov \&amp; Pandharipande, Gromov\textendash{{Witten}} Theory and {{Donaldson}}\textendash{{Thomas}} Theory, {{I}}, {Compositio Mathematica}, v(05), 1263--1285 (2006).">maulik2006</a></span>], [<span id="a94d6b5af3fa210c91d9309d3da103af"><a href="#maulik2006a" title="Maulik, Nekrasov, Okounkov \&amp; Pandharipande, Gromov\textendash{{Witten}} Theory and {{Donaldson}}\textendash{{Thomas}} Theory, {{II}}, {Compositio Mathematica}, v(05), 1286--1304 (2006).">maulik2006a</a></span>], toric case [<span id="e25e310ddc34f4e55392b368230bb1bf"><a href="#maulik2011" title="Maulik, Oblomkov, Okounkov \&amp; Pandharipande, Gromov-{{Witten}}/{{Donaldson}}-{{Thomas}} Correspondence for Toric 3-Folds, {Inventiones mathematicae}, v(2), 435--479 (2011).">maulik2011</a></span>].
-GW/PT [<span id="909250c4d905735b782534d99f6095f5"><a href="#pandharipande2014" title="Pandharipande \&amp; Pixton, Gromov\textendash{{Witten}}/Pairs Descendent Correspondence for Toric 3\textendash Folds, {Geometry \&amp; Topology}, v(5), 2747--2821 (2014).">pandharipande2014</a></span>], [<span id="88221b9c6d4636326d6b0764fc915f73"><a href="#pandharipande2017" title="Pandharipande \&amp; Pixton, Gromov-{{Witten}}/{{Pairs}} Correspondence for the Quintic 3-Fold, {Journal of the American Mathematical Society}, v(2), 389--449 (2017).">pandharipande2017</a></span>].
-
-
-### <span class="org-todo todo TODO">TODO</span> Several signs for GW/DT correspondence {#several-signs-for-gw-dt-correspondence}
-
-
 ### <span class="org-todo todo TODO">TODO</span> K3 surfaces {#k3-surfaces}
+
+
+### Framed moduli space {#framed-moduli-space}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 19:28]</span></span>
+See [<span id="24e67c8afe5163064e4018cb5a5cbd8a"><a href="#nakajima1999" title="Nakajima, Lectures on {{Hilbert}} Schemes of Points on Surfaces, {American Mathematical Society} (1999).">nakajima1999</a></span>] p.17.
+
+We define \\(\mathscr{M}(r,n)\\), the **framed moduli space** of torsion free [Sheaves](#sheaf) on \\(\PP^{2}\\) with rank (r) and \\(c\_{2} = n\\). That is the isomorphism class of pairs \\((E, \Phi)\\) on \\(\PP^{2}\\) with \\(\rk(E) = n\\) \\(c\_{2}(E) = n\\) which is locally free in a neighborhood of \\(l\_{\infty}\\) such that \\(\Phi: E|\_{l\_{\infty}} \ito \mathscr{O}\_{l\_{\infty}}^{\oplus r}\\). The latter isomorphism is called **framing at infinity**.
+
+We have following simple characterization of framed moduli space.
+
+{{% theorem %}}
+There exists a bijection between \\(\mathscr{M}(r,n)\\) and pairs \\((B\_{1}, B\_{2}, i, j)\\) such that \\([B\_{1}, B\_{2}] + ij = 0\\), and stability condition there exists no proper subspace \\(S \subsetneq \CC^{n}\\) such that \\(B\_{\alpha}(S) \subset S\\) and \\(\im i \subset S\\) modulo the action of \\(\GL\_{n}(\CC)\\). Here \\(B\_{1}, B\_{2} \in \End(\CC^{n})\\), \\(i \in \Hom(\CC^{r}, \CC^{n})\\) and \\(j \in \Hom(\CC^{n}, \CC^{r})\\) with the action
+\\[g \cdot (B\_{1}, B\_{2}, i, j) = (gB\_{1}g^{-1}, gB\_{2}g^{-1}, gi, jg^{-1})\\]
+{{% /theorem %}}
+
+Cf. [Hilb(A^2,n)](#hilb--a-2-n).
+
+There is a interesting lemma with basic techniques in linear algebra.
+
+{{% lemma %}}
+When \\(r = 1\\) and \\(B\_{1}, B\_{2}, i, j\\) same as above theorem, for \\(ij + [B\_{1}, B\_{2}] = 0\\), we have that \\(ji = 0\\).
+{{% /lemma %}}
+
+See [<span id="24e67c8afe5163064e4018cb5a5cbd8a"><a href="#nakajima1999" title="Nakajima, Lectures on {{Hilbert}} Schemes of Points on Surfaces, {American Mathematical Society} (1999).">nakajima1999</a></span>] p.26. We have \\(S^{n}(\CC^{2}) \cong \\{(B\_{1}, B\_{2}, i, j) \mid [B\_{1}, B\_{2}] + i j = 0\\} // \GL\_{n}(\CC)\\), where \\(//\\) denote the algebro-geometric quotient.
+
+Cf. [Geometric quotient](#geometric-quotient).
+
+
+### <span class="org-todo todo TODO">TODO</span> Cohen strcuture theorem {#cohen-strcuture-theorem}
+
+
+
+{{% corollary %}}
+Let \\(X\\) be a locally Noetherian scheme over a field \\(k\\), having dimension \\(n\\) at a smooth point \\(x\\). Then \\(\hat{\OO}\_{X,x} \cong k(x)[ [x\_{1}, \cdots, x\_{n}]]\\).
+{{% /corollary %}}
+
+
+### <span class="org-todo todo TODO">TODO</span> Ring {#ring}
+
+
+
+
+#### <span class="org-todo todo TODO">TODO</span> Local ring {#local-ring}
+
+
+#### Complete {#complete}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 20:14]</span></span>
+A [Local ring](#local-ring) is called **complete** if it is complete with respect to the \\(\mathfrak{m}\\)-adic topology.
+
+
+#### <span class="org-todo todo TODO">TODO</span> Noetherian {#noetherian}
+
+
+### Predeformation functor {#predeformation-functor}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 20:14]</span></span>
+A **predeformation functor** is a covariant functor \\(F: \cat{Art}(\Lambda, k) \to \cat{Set}\\) such that \\(F(k)\\) is the one-element set. The **tangent space** \\(T\_{F}\\) is defined to be \\(F(k[\epsilon]/(\epsilon^{2}))\\). The objects of \\(\cat{Art}(\Lambda, k)\\) are local Artin \\(\Lambda\\)-algebra with residue field \\(k\\).
+
+Cf. [Tangent space](#tangent-space).
+
+
+### Flat {#flat}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 20:23]</span></span>
+A \\(R\\)-module \\(M\\) is called **flat** if tensoring with \\(M\\) is an exact functor.
+
+
+### Prorepresnetable {#prorepresnetable}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 20:23]</span></span>
+Let \\(\widehat{\cat{Art}(\Lambda, k)}\\) be the category of complete Noetherian local \\(\Lambda\\)-algebra with residue field \\(k\\). Set \\(\hat{F} := \varprojlim\_{n} F(R/ \mathfrak{m}^{n})\\). We say that \\(F\\) is **propresentable** if and only if \\(\hat{F}\\) is representable.
+
+
+### Smooth {#smooth}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-28 Tue 19:58]</span></span>
+Let \\(F, F': \cat{Art}(\Lambda, k) \to \cat{Set}\\) be covariant functors, with a morphism \\(\phi: F \to F'\\). We say that \\(\phi\\) is **smooth** if for every surjection \\(A \to B\\) in \\(\cat{Art}(\Lambda, k)\\) the map
+\\[F(A) \to F(B) \times\_{F'(B)}F'(A)\\]
+is surjective.
+
+
+### Hull {#hull}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 20:23]</span></span>
+Let \\(F\\) be a [Predeformation functor](#predeformation-functor) and \\(\hat{F}\\) its completeion. We say a pair \\((R, \eta)\\) with \\(R\\) a [Noetherian](#noetherian) [Complete](#complete) [Local ring](#local-ring), and \\(\eta \in \hat{F}( R)\\), is a **hull** for \\(F\\) if the induced map \\(\bar{h}\_{R} \to F\\) is smooth, and induces a bijection \\(T\_{\bar{h}\_{R}} \ito T\_{F}\\) on tangent spaces.
+
+
+### Small thickening {#small-thickening}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 20:23]</span></span>
+A surjective map \\(f: A \to B\\) in \\(\cat{Art}(\Lambda, k)\\) is a **small thickening** if \\(\ker f \mathfrak{m}\_{A} = 0\\) and \\(\ker f\\) is principal.
+
+
+### Schlessinger's theorem {#schlessinger-s-theorem}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 20:24]</span></span>
+The **Schlessinger's theorem** is a criterion for existence of [Hull](#hull) or [Prorepresnetibility](#prorepresnetable).
+
+{{% theorem %}}
+Let \\(F\\) be a predoformation functor. Then \\(F\\) has a hull if and only if the following conditions (1-3) holds, and \\(F\\) is prorepresentable if and only if in addition (4) holds.
+
+1.  The map
+    \\[F(A' \times\_{A} A'') \to F(A') \times\_{F(A)} F(A'')\\]
+    is surjective when \\(A'' \to A\\) is a small thickening.
+2.  The above map is bijective when \\(A = k\\) and \\(A'' = k[\epsilon]\\).
+3.  The tangent space \\(T\_{F}\\) is finite-dimensional over \\(k\\).
+4.  The above map is bijective if \\(A'' = A'\\) and \\(A' \to A\\) is a small thickening.
+{{% /theorem %}}
+
+Cf. [Predeformation functor](#predeformation-functor), [Small thickening](#small-thickening).
+
+
+### Deformation functor {#deformation-functor}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 20:24]</span></span>
+A [Predeformation functor](#predeformation-functor) is called a **deformation functor** if it satisfies (1-2) in [Schlessinger's theorem](#schlessinger-s-theorem).
+
+
+### <span class="org-todo todo TODO">TODO</span> Hyper-Kähler quotient {#hyper-kähler-quotient}
+
+
+### <span class="org-todo todo TODO">TODO</span> Anti-self-dual connection {#anti-self-dual-connection}
+
+
+### Simple singularity {#simple-singularity}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:32]</span></span>
+See [Simple resolution](#simple-resolution).
+
+
+### Simple resolution {#simple-resolution}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:31]</span></span>
+See [<span id="24e67c8afe5163064e4018cb5a5cbd8a"><a href="#nakajima1999" title="Nakajima, Lectures on {{Hilbert}} Schemes of Points on Surfaces, {American Mathematical Society} (1999).">nakajima1999</a></span>] p.47.
+
+A **simple singularity** is a quotient space \\(\CC^{2} / \Gamma\\), where \\(\Gamma\\) is a finite subgroup of \\(\SU(2)\\). A **simple resolution** is a resolution of simple singularity.
+
+The following theorem construct the simple resolution by [Hilbert scheme](#hilbert-scheme) of points.
+
+{{% theorem %}}
+Consider the Hilbert scheme \\((\CC^{2})^{ [N]}\\) where \\(N\\) is the order of \\(\Gamma\\). The \\(\Gamma\\) orbit of a point \\(p\\) in \\(\CC\backslash \\{0\\}\\) defines a \\(0\\) dimensional subscheme \\(Z \in (\CC^{2})^{ [N]}\\). Let \\(X\\) be the component of \\(\Gamma\\) fixed point set which contains the set of \\(\Gamma\\)-orbits \\(\Gamma \cdot (\CC \backslash \\{0\\})\\). Then we have that the restriction of the Hilbert-Chow morphism to \\(X\\) is the minimal resolution of singularities of \\(\CC^{2} \backslash \Gamma \cong (S^{N}(\CC^{2}))^{\Gamma}\\).
+{{% /theorem %}}
+
+
+### <span class="org-todo todo TODO">TODO</span> Dykin diagram {#dykin-diagram}
+
+
+### <span class="org-todo todo TODO">TODO</span> McKay correspondence {#mckay-correspondence}
+
+
+### Castelnuovo theorem {#castelnuovo-theorem}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 18:32]</span></span>
+The **Castelnuovo theorem** classified the mimimal surfaces.
+
+{{% theorem %}}
+Two birational [minimal models](#minimal-model) are isomorphic unless they are both birational to a ruled surface \\(C \times \CC P^{1}\\).
+{{% /theorem %}}
+
+
+### Rational surface {#rational-surface}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 18:36]</span></span>
+A **rational surface** is an algebraic surface birational equivalent to \\(\CC P^{2}\\).
+
+
+### Isogeny {#isogeny}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 18:46]</span></span>
+An **isogeny** is a surjective homomorphism between smooth connected [Algebraic groups](#algebraic-group) \\(\phi: G \to G'\\) with finite kernel \\(K\\). The **degree** of \\(\phi\\) is given by \\(\abs{K}\\).
+
+
+### <span class="org-todo todo TODO">TODO</span> minimal model {#minimal-model}
 
 
 ## Symplectic Geometry {#symplectic-geometry}
@@ -1816,6 +2325,14 @@ In geometric representation theory, we tries to encode the algebra operation in 
 For a general symplectic resolution
 \\[\pi: X \to X\_{0}\\]
 we have the **Steinerg variety** \\(X \times\_{X\_{0}} X\\).
+
+
+### Langlands dual pair {#langlands-dual-pair}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 18:39]</span></span>
+The **Langlands dual** is a pair of [Algebraic groups](#algebraic-group) \\((X, Y)\\) such that the root system of \\(X\\) is coroot of \\(Y\\) and vice versa. The center of \\(X\\) is the fundamental group of \\(Y\\) and vice versa.
+
+For example \\((\Sp(n), \SO(2n + 1))\\), \\((\SO(2n), \SO(2n))\\) and \\((\SL(n), \PGL(n))\\).
 
 
 ## Number Theory {#number-theory}
@@ -1863,6 +2380,12 @@ A **link** is an isotopy class of an [Immersion](#immersion) \\(\hat{L}: (S^{1})
 Cf. [Knot](#knot).
 
 
+### Framed {#framed}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 16:01]</span></span>
+See [Framing](#framing).
+
+
 ### Framing {#framing}
 
 **Framing** of a [Link](#link) in \\(\RR^{3}\\) is an isotopy class of a continuous section of a normal bundle to \\(L \subset \RR^{3}\\).
@@ -1906,6 +2429,142 @@ Skein relations are compatible with Reidemeister moves.
 Since [Skein relations](#skein-relations) are compatible with Reidemeister moves, for every [Link](#link), we may consider its diagram \\(D\_{L}\\) and we define \\([D\_{L}] = \langle L \rangle [O]\\). Here \\(O\\) is one loop and \\(\langle L \rangle \in \ZZ[A, B^{\pm 1}, C]\\). \\(\langle L \rangle\\) depends only on \\(L\\) but not on representative diagram \\(D\_{L}\\). \\(\langle L \rangle\\) is the **HOMFLY** invariant of framed links.
 
 For unframed links, we also have **HOMFLY invariants** by consider \\(L = L\_{1} \coprod \cdots \coprod L\_{n}\\) as framed links and consider \\(\langle \langle L \rangle \rangle = B^{- \sum\_{i} w(L\_{i})} \langle L \rangle\\) where \\(w(L\_{i})\\) is the winding number.
+
+
+### Geometric braid {#geometric-braid}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:38]</span></span>
+A **geometric braid** in \\(\RR^{2} \times [0,1]\\) is an embedding \\(\hat{\beta} : [0,1]^{\coprod n} \to \RR^{2} \times [0,1]\\) connecting \\(\\{x\_{0}, \cdots, x\_{n}\\} \times \\{0\\}\\) and \\(\\{x\_{0}, \cdots, x\_{n}\\} \times \\{1\\}\\) componentwise.
+
+
+### Braid {#braid}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:41]</span></span>
+A **braid** is the isotopy class of a [Geometric braid](#geometric-braid).
+
+{{% theorem %}}
+The braids are in bijection with Redemeister classes of diagrams.
+
+{{< figure src="/img/2021-09-21_15-46-24_screenshot.png" >}}
+{{% /theorem %}}
+
+
+#### Pure {#pure}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:46]</span></span>
+A [Braid](#braid) is called **pure** if it connects \\(\\{x\_{0}\\} \times \\{0\\}\\) to \\(\\{x\_{i}\\} \times \\{1\\}\\).
+
+
+### Braid diagram {#braid-diagram}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:42]</span></span>
+Consider the projection \\(\pi: \RR^{2} \times [0,1] \to \RR \times [0,1]\\). Then \\(\hat{\beta}\\) is called **generic** if \\(\pi(\hat{\beta})\\) has simple transversal singular points outside of \\(\RR \times \\{0,1\\}\\). Such \\(\pi(\hat{\beta})\\) is called a **geometric braid diagram**.
+
+A **braid diagram** is a regular isotopy class of a geometric braid diagram.
+
+
+### Braid group {#braid-group}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:44]</span></span>
+The [Braids](#braid) form a group called **braid group** where the composition is given by glueing two embeddings. Obviously, the [Pure](#pure) braids form a subgroup of braid group. The braid group is denoted by \\(B\_{n}\\), and pure braid group by \\(P\_{n}\\).
+
+{{% theorem %}}
+\\(B\_{n}\\) is generated by elements
+
+{{< figure src="/img/2021-09-21_15-49-51_screenshot.png" >}}
+
+with defining relations
+\\[s\_{i}s\_{i+1}s\_{i} = s\_{i + 1}s\_{i}s\_{i + 1},\; i = 1, \cdots, n - 1\\]
+\\[s\_{i}s\_{j} = s\_{j}s\_{i}, \; \abs{i - j} > 1\\]
+{{% /theorem %}}
+
+The braid group can be realized as a [Fundamental group](#fundamental-group) of a manifold. Define \\(C\_{n} = \\{x\_{1}, \cdots, x\_{n} \in \RR^{2} \mid x\_{i} \neq x\_{j}\\}\\). Then we have \\(\pi\_{1}(C\_{n}) = P\_{n}\\). By considering the \\(S\_{n}\\) action on \\(C\_{n}\\), we have that \\(B\_{n} = \pi\_{1}(C\_{n}/ S\_{n})\\).
+
+
+### Hecke-Iwahori algebra {#hecke-iwahori-algebra}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:53]</span></span>
+For [Braid group](#braid-group) \\(B\_{n}\\), the elements \\((s\_{i} - q)(s\_{i} + q^{-1})\\) generates an ideal in the group algebra \\(\CC[B\_{n}]\\). The **Hecke-Iwahori algebra** is the quotient algebra with respect to the ideal, i.e.,
+\\[H\_{n}(q) = \langle s\_{1}, \cdots, s\_{n} \rangle\\]
+such that
+\\[s\_{i}s\_{i+1}s\_{i} = s\_{i + 1}s\_{i}s\_{i + 1},\; i = 1, \cdots, n - 1\\]
+\\[s\_{i}s\_{j} = s\_{j}s\_{i}, \; \abs{i - j} > 1\\]
+\\[(s\_{i} - q)(s\_{i} + q^{-1}) = 0\\]
+The interesting case is that \\(q\\) be the root of \\(1\\).
+
+\\(H\_{n}(q)\\) is a deformation of \\(\CC[S\_{n}]\\).
+
+
+### Affine braid group {#affine-braid-group}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:56]</span></span>
+We define the **affine braid group** to be
+\\[\tilde{B\_{n}} = \langle s\_{1}, \cdots, s\_{n -1}, t\_{1}, \cdots, t\_{n}\rangle\\]
+with the same condition as [Braid group](#braid-group) with addition
+\\[s\_{i}t\_{i + 1} = t\_{i} s\_{i}\\]
+
+
+### Jones-Markov trace {#jones-markov-trace}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:58]</span></span>
+There exists a **Jones-Markov** trace \\(\tr: \tilde{B}\_{n} \to k = \ZZ[q, q^{-1}][\frac{1}{(q - q^{-1})}]\\) such that
+\\[\tr(\beta \gamma \beta^{-1}) = \tr(\gamma)\\]
+\\[\tr(\beta s\_{n}) = \tr(\beta t\_{n}) = z \tr(\beta)\\]
+
+It defines invariants of [Framed](#framed) [Links](#link). To get a invariant of links, we consider [Writhe number](#writhe-number), \\(\omega(\beta)\\). We have \\(\tr(\beta)z^{w(\beta)}\\) is an invarinat of links.
+
+{{% remark %}}
+For \\(z = q^{2}\\) the polynomial is the [Jones polynomial](#jones-polynomial).
+{{% /remark %}}
+
+
+### Writhe number {#writhe-number}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 16:02]</span></span>
+We define the **Writhe number** of \\(\beta\\) to be
+
+{{< figure src="/img/2021-09-21_16-02-43_screenshot.png" >}}
+
+
+### Yang-Baxter equation {#yang-baxter-equation}
+
+
+
+<div class="definition">
+  <div></div>
+
+A morphism \\(R: V \otimes V \to V \otimes V\\) satisfies the **Yang-Baxter equation** if
+\\[R\_{12}R\_{13}R\_{23} = R\_{23}R\_{13}R\_{12} \in \End(V^{\otimes 3})\\]
+where \\(R\_{12} = R \otimes 1\\) and so on.
+
+</div>
+
+An solution is given by
+\\[R(e\_{i} \otimes e\_{j}) =  \begin{cases}     q e\_{i} \otimes e\_{i} & i = j \\\\\\\\     e\_{i} \otimes e\_{j} & i < j \\\\\\\\     e\_{i} \otimes e\_{j} + (q - q^{-1})e\_{j} \otimes e\_{i} & i > j   \end{cases} \\]
+
+
+### Representation of braids {#representation-of-braids}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 16:10]</span></span>
+The following proposition relates the representation of [Braid group](#braid-group) to [Yang-Baxter equation](#yang-baxter-equation).
+
+{{% proposition %}}
+If \\(R\\) satisfies the Yang-Baxter equation, the mapping
+\\[\rho: B\_{n} \to \Aut(V^{\otimes n})\\]
+\\[\rho(s\_{i}) = 1 \otimes \cdots \otimes PR \otimes \cdots \otimes 1\\]
+where \\(P(x \otimes y) = y \otimes 1\\) extends uniquely to a representation of \\(B\_{n}\\) in \\(V^{\otimes n}\\).
+{{% /proposition %}}
+
+
+### Jones twist {#jones-twist}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 16:15]</span></span>
+A map \\(\mu: V \to V\\) is called **Jones twist** if
+\\[(\mu \otimes \mu) R = R(\mu \otimes \mu)\\]
+\\[(\id \otimes \tr)(\id \otimes \mu) PR = z \id\_{V}\\]
+
+
+### <span class="org-todo todo TODO">TODO</span> Jones polynomial {#jones-polynomial}
 
 
 ## Geometric Topology {#geometric-topology}
@@ -2101,19 +2760,70 @@ The current status (2021 Sep.) of the conjecture is that \\(k \leq 1\\) case is 
 ### Kirby-Sieberman invariant {#kirby-sieberman-invariant}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-17 Fri 22:00]</span></span>
-We define the set \\(\topo\_{m} = \\{\text{ homomorphism } f: \RR^{m} \to \RR^{m} \text{ such that } f(0) = 0\\}\\). And \\(\pl\_{m} = \\{\text{ piecewise linear homeomorphism} f: \RR^{m} \to \RR^{m} \text{ such that } f(0) = 0\\}\\).
+We define the set \\(\cat{Top}\_{m} = \\{\text{ homomorphism } f: \RR^{m} \to \RR^{m} \text{ such that } f(0) = 0\\}\\). And \\(\cat{PL}\_{m} = \\{\text{ piecewise linear homeomorphism} f: \RR^{m} \to \RR^{m} \text{ such that } f(0) = 0\\}\\).
 
 The Kirby and Sieberman has following deep and mysterious theorem.
 
 {{% theorem %}}
-For \\(m \geq 5\\), \\(k < m\\). Then \\(\pi\_{k}(\topo\_{m}/ \pl\_{m}) = \begin{cases} 0 & k \neq 3 \\\\\\\\ \ZZ/2 & k = 3 \end{cases}\\).
+For \\(m \geq 5\\), \\(k < m\\). Then \\(\pi\_{k}(\cat{Top}\_{m}/ \cat{PL}\_{m}) = \begin{cases} 0 & k \neq 3 \\\\\\\\ \ZZ/2 & k = 3 \end{cases}\\).
 {{% /theorem %}}
 
-So to have PL structure on \\(X\\), \\(\dim X \geq 5\\) we need to overcome the obstruction called **Kirby-Sieberman** invariant \\(KS(X) \in H^{4}(X; \ZZ/2)\\). So \\(X\\) has a \\(\pl\\)-structure then \\(\ks(X) = 0\\). And for \\(\dim X = 4\\), \\(\ks(X) = 0\\) if and only \\(X \times \RR\\) has a \\(\pl\\)-structure.
+So to have PL structure on \\(X\\), \\(\dim X \geq 5\\) we need to overcome the obstruction called **Kirby-Sieberman** invariant \\(KS(X) \in H^{4}(X; \ZZ/2)\\). So \\(X\\) has a \\(\cat{PL}\\)-structure then \\(\ks(X) = 0\\). And for \\(\dim X = 4\\), \\(\ks(X) = 0\\) if and only \\(X \times \RR\\) has a \\(\cat{PL}\\)-structure.
 
 {{% remark %}}
 For \\(\dim X \leq 7\\), we have existence of piecewise linear structure equivalent to existence of smooth structure.
 {{% /remark %}}
+
+
+### Characteristic class for 4-manifold {#characteristic-class-for-4-manifold}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-22 Wed 20:49]</span></span>
+We may assume that \\(X\\) is a connected, closed, oriented, smooth \\(4\\)-manifold.
+We have a [Signature](#signature) theorem by Hirzebruch.
+
+{{% theorem %}}
+\\[P\_{1}(TX)[X] = 3 \sigma(X)\\]
+{{% /theorem %}}
+
+Cf. [Pontryagin class](#pontryagin-class).
+
+And theorem by Wenjun Wu on [Stiefel-Whitney class](#stiefel-whitney-class).
+
+{{% theorem %}}
+1.  For all \\(\alpha \in H^{2}(X; \ZZ/2)\\), we have \\(w\_{2}(TX) \cup \alpha = \alpha \cup \alpha\\)
+2.  \\(w\_{3}(TX) = \sq^{1}(w\_{2}(TX))\\), here \\(\sq^{1}\\) is the square operator.
+{{% /theorem %}}
+
+By above theorem, [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold), [Donaldson diagonalizable theorem](#donaldson-diagonalizable-theorem) and algebraic classification of bilinear forms, we have
+
+{{% proposition %}}
+Let \\(X\\) be a smooth, closed \\(4\\)-manifold. Then homeomorphism type of \\(X\\) is determined by \\(e(TX), P\_{1}(TX)\\)and \\(w\_{2}(TX)\\).
+{{% /proposition %}}
+
+{{% remark %}}
+However, characteristic class in dimension \\(4\\) cannot detect exotic phenomenon.
+{{% /remark %}}
+
+
+### Lefschetz hyperplane theorem {#lefschetz-hyperplane-theorem}
+
+
+
+{{% theorem %}}
+Let \\(X\\) be a hypersurface in \\(\CC \PP^{n}\\) defined by a single polynomial, then \\(X \to \CC P^{n}\\) induces isomorphism on \\(\pi\_{k}(-)\\) if \\(k < n - 1\\).
+{{% /theorem %}}
+
+{{% corollary %}}
+The hypersurface in \\(\CC P^{3}\\) is simply connected.
+{{% /corollary %}}
+
+
+### Elliptic fibration {#elliptic-fibration}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 18:31]</span></span>
+A map \\(q: X \to \Sigma\\) is an **elliptic fibration** if there exists a finite set \\(S \subset \Sigma\\) such that \\(X \backslash q^{-1}(S) \to \Sigma \backslash S\\) is a fiber bundle whose fiber is a smooth curve of genus \\(1\\), that is the elliptic curve. We call \\(q^{-1}(t)\\) a **regular fiber** if \\(t \not \in S\\) and a **singular fiber** if \\(t \in S\\).
+
+Cf. [Vector bundle](#vector-bundle).
 
 
 ## Quantum Fields and Strings {#quantum-fields-and-strings}
@@ -2171,6 +2881,24 @@ We can define the tensor product of modules and algebras naturely.
 
 <a id="dieck2008"></a>[dieck2008] tom Dieck, Algebraic Topology, European Mathematical Society (2008). [↩](#5ad6139c99b6d2508f6ef6f11ce7f09d)
 
+<a id="maulik2006"></a>[maulik2006] Maulik, Nekrasov, Okounkov & Pandharipande, Gromov\textendashWitten Theory and Donaldson\textendashThomas Theory, I, <i>Compositio Mathematica</i>, <b>142(05)</b>, 1263-1285 (2006). <a href="http://dx.doi.org/10.1112/S0010437X06002302">doi</a>. [↩](#71c689e646b740e15274e4c45df483c9)
+
+<a id="maulik2006a"></a>[maulik2006a] Maulik, Nekrasov, Okounkov & Pandharipande, Gromov\textendashWitten Theory and Donaldson\textendashThomas Theory, II, <i>Compositio Mathematica</i>, <b>142(05)</b>, 1286-1304 (2006). <a href="http://dx.doi.org/10.1112/S0010437X06002314">doi</a>. [↩](#a94d6b5af3fa210c91d9309d3da103af)
+
+<a id="maulik2011"></a>[maulik2011] Maulik, Oblomkov, Okounkov & Pandharipande, Gromov-Witten/Donaldson-Thomas Correspondence for Toric 3-Folds, <i>Inventiones mathematicae</i>, <b>186(2)</b>, 435-479 (2011). <a href="http://dx.doi.org/10.1007/s00222-011-0322-y">doi</a>. [↩](#e25e310ddc34f4e55392b368230bb1bf)
+
+<a id="pandharipande2009"></a>[pandharipande2009] Pandharipande & Thomas, Curve Counting via Stable Pairs in the Derived Category, <i>Inventiones mathematicae</i>, <b>178(2)</b>, 407-447 (2009). <a href="http://dx.doi.org/10.1007/s00222-009-0203-9">doi</a>. [↩](#431caa59e2d75afb6b38719ad8dca5d9)
+
+<a id="toda2010"></a>[toda2010] Toda, Curve Counting Theories via Stable Objects I. DT/PT Correspondence, <i>Journal of the American Mathematical Society</i>, <b>23(4)</b>, 1119-1157 (2010). <a href="http://dx.doi.org/10.1090/S0894-0347-10-00670-3">doi</a>. [↩](#f9133d12da33e9b2ae5ee8e0f8d3fa3a)
+
+<a id="pandharipande2014"></a>[pandharipande2014] Pandharipande & Pixton, Gromov\textendashWitten/Pairs Descendent Correspondence for Toric 3\textendash Folds, <i>Geometry & Topology</i>, <b>18(5)</b>, 2747-2821 (2014). <a href="http://dx.doi.org/10.2140/gt.2014.18.2747">doi</a>. [↩](#909250c4d905735b782534d99f6095f5)
+
+<a id="pandharipande2017"></a>[pandharipande2017] Pandharipande & Pixton, Gromov-Witten/Pairs Correspondence for the Quintic 3-Fold, <i>Journal of the American Mathematical Society</i>, <b>30(2)</b>, 389-449 (2017). <a href="http://dx.doi.org/10.1090/jams/858">doi</a>. [↩](#88221b9c6d4636326d6b0764fc915f73)
+
+<a id="oblomkov2020"></a>[oblomkov2020] Oblomkov, Okounkov & Pandharipande, GW/PT Descendent Correspondence via Vertex Operators, <i>Communications in Mathematical Physics</i>, <b>374(3)</b>, 1321-1359 (2020). <a href="http://dx.doi.org/10.1007/s00220-020-03686-4">doi</a>. [↩](#5475808075c4e5ae5aa873cba4119875)
+
+<a id="moreira2020"></a>[moreira2020] Moreira, Oblomkov, Okounkov & Pandharipande, Virasoro Constraints for Stable Pairs on Toric 3-Folds, <i>arXiv:2008.12514 [math]</i>,  (2020). [↩](#b79997d2a1ead8b84a185c6680e7e9db)
+
 <a id="nakajima1999"></a>[nakajima1999] Nakajima, Lectures on Hilbert Schemes of Points on Surfaces, American Mathematical Society (1999). [↩](#24e67c8afe5163064e4018cb5a5cbd8a)
 
 <a id="milne2017"></a>[milne2017] Milne, Algebraic Groups: The Theory of Group Schemes of Finite Type over a Field, Cambridge University Press (2017). [↩](#868cb56e509be613430cca58b1ead9f3)
@@ -2178,13 +2906,3 @@ We can define the tensor product of modules and algebras naturely.
 <a id="cox2011"></a>[cox2011] Cox, Little & Schenck, Toric Varieties, American Mathematical Society (2011). [↩](#8a8485591c9ae40ab7e9a4d136fca3d2)
 
 <a id="sernesi2006"></a>[sernesi2006] Sernesi, Deformations of Algebraic Schemes, Springer Berlin Heidelberg (2006). [↩](#7cd3e01b28c2ede526fee96d60981f02)
-
-<a id="maulik2006"></a>[maulik2006] Maulik, Nekrasov, Okounkov & Pandharipande, Gromov\textendashWitten Theory and Donaldson\textendashThomas Theory, I, <i>Compositio Mathematica</i>, <b>142(05)</b>, 1263-1285 (2006). <a href="http://dx.doi.org/10.1112/S0010437X06002302">doi</a>. [↩](#71c689e646b740e15274e4c45df483c9)
-
-<a id="maulik2006a"></a>[maulik2006a] Maulik, Nekrasov, Okounkov & Pandharipande, Gromov\textendashWitten Theory and Donaldson\textendashThomas Theory, II, <i>Compositio Mathematica</i>, <b>142(05)</b>, 1286-1304 (2006). <a href="http://dx.doi.org/10.1112/S0010437X06002314">doi</a>. [↩](#a94d6b5af3fa210c91d9309d3da103af)
-
-<a id="maulik2011"></a>[maulik2011] Maulik, Oblomkov, Okounkov & Pandharipande, Gromov-Witten/Donaldson-Thomas Correspondence for Toric 3-Folds, <i>Inventiones mathematicae</i>, <b>186(2)</b>, 435-479 (2011). <a href="http://dx.doi.org/10.1007/s00222-011-0322-y">doi</a>. [↩](#e25e310ddc34f4e55392b368230bb1bf)
-
-<a id="pandharipande2014"></a>[pandharipande2014] Pandharipande & Pixton, Gromov\textendashWitten/Pairs Descendent Correspondence for Toric 3\textendash Folds, <i>Geometry & Topology</i>, <b>18(5)</b>, 2747-2821 (2014). <a href="http://dx.doi.org/10.2140/gt.2014.18.2747">doi</a>. [↩](#909250c4d905735b782534d99f6095f5)
-
-<a id="pandharipande2017"></a>[pandharipande2017] Pandharipande & Pixton, Gromov-Witten/Pairs Correspondence for the Quintic 3-Fold, <i>Journal of the American Mathematical Society</i>, <b>30(2)</b>, 389-449 (2017). <a href="http://dx.doi.org/10.1090/jams/858">doi</a>. [↩](#88221b9c6d4636326d6b0764fc915f73)
