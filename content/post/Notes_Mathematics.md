@@ -4,7 +4,7 @@ author = ["Zenith John"]
 date = 2021-08-31
 categories = ["Mathematics"]
 draft = false
-lastmod = 2021-09-28
+lastmod = 2021-10-09
 showtoc = true
 +++
 
@@ -22,7 +22,164 @@ One kind of the importance theorem in mathematics is the existence theorem which
 -   Proof by contradiction. E.g. infiniteness of prime numbers, [Brouwer fixed point theorem](#brouwer-fixed-point-theorem).
 
 
-## Representation of finite groups {#representation-of-finite-groups}
+## Category Theory {#category-theory}
+
+
+
+
+### Tensor category {#tensor-category}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 19:04]</span></span>
+A **tensor category** is data \\((\mathscr{C}, \otimes, \phi, \psi)\\) where \\(\phi\\) is the [Associativity constraint](#associativity-constraint) and \\(\psi\\) the [Commutativity constraint](#commutativity-constraint).
+
+The **identity object** in tensor cateogry is a pair \\((U, u)\\) where \\(U \in \mathscr{C}\\) with \\(u: U \ito U \otimes U\\) such that \\(U \otimes -\\) is an equivalence.
+
+The object \\(L\\) is called **invertible** if \\(L \otimes -\\) is an equivalence. If \\(L\\) is invertible, then \\(L\\) has inverse with \\(\delta: L \otimes L^{-1} \ito U\\).
+
+
+#### Rigid {#rigid}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 14:48]</span></span>
+A [Tensor category](#tensor-category) is called **rigid** if we have isomorphism
+\\[\ihom(X\_{1}, Y\_{1}) \otimes \ihom(X\_{2}, Y\_{2}) \to \ihom(X\_{1} \otimes X\_{2}, Y\_{1} \otimes Y\_{2})\\]
+for all \\(X\_{i}, Y\_{i}\\) and all objects are [Reflexive](#reflexive).
+
+In rigid category, we have trace \\(ihom(X, X) \to X^{\vee} \otimes X \to U\\) called **trace**. And we define the **rank** to be \\(\tr\_{X}({\rm id}\_{X})\\).
+
+The following is a criterion for rigidity.
+
+{{% proposition %}}
+Let \\(C\\) be an abelian category and \\(\otimes: C \times C \to C\\) bilinear. Take
+\\[F: C \to \cat{Vec}\_{k}\\]
+faithul exact and \\(\phi, \psi\\) isomorphisms of associativity and communitivity such that
+
+-   \\(F\\) repsects \\(\otimes\\).
+-   \\(F\\) induces usual associativitiy on \\(\cat{Vec}\_{k}\\).
+-   \\(F\\) induces usual communitivity on \\(\cat{Vec}\_{k}\\).
+-   There exists identity \\(U\\) in \\(C\\) where \\(k \cong \End(U)\\) and \\(\dim F(U) = 1\\).
+-   If \\(\dim F(L) = 1\\), then there exists \\(L^{-1}\\) such that \\(L \otimes L^{-1} \cong U\\).
+
+Then \\((C, \otimes)\\) is abelian rigid tensor category.
+{{% /proposition %}}
+
+Cf. [Associativity constraint](#associativity-constraint), [Commutativity constraint](#commutativity-constraint), [Tensor category](#tensor-category).
+
+
+### Tensor functor {#tensor-functor}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 14:51]</span></span>
+A **tensor functor** between [Tensor category](#tensor-category) is a functor with morphism
+\\[c:FX \otimes FY \ito F(X \otimes Y)\\]
+functorial in \\(X, Y\\) with compatibility with [Commutativity constraint](#commutativity-constraint) and [Associativity constraint](#associativity-constraint).
+
+
+### Invertible {#invertible}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 14:06]</span></span>
+See [Tensor category](#tensor-category).
+
+
+### Identity object {#identity-object}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 14:06]</span></span>
+See [Tensor category](#tensor-category).
+
+
+### Internal Hom {#internal-hom}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 14:07]</span></span>
+If \\(\mathscr{C}^{op} \to \cat{Set}\\), \\(T \to \Hom(T \otimes X, Y)\\) is representable, then write the representing object \\(\ihom(X,Y)\\) called **internal Hom**. \\(\ihom(T \otimes X, Y) \cong \Hom(T, \ihom(X,Y))\\). So we have \\({\rm ev}\_{X,Y}: \ihom(X, Y) \otimes X \to Y\\) isomorphic to \\({\rm id}\_{\ihom(X,Y)}\\).
+
+Cf. [Tensor category](#tensor-category).
+
+
+### Internal adjunction {#internal-adjunction}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 14:45]</span></span>
+With the notation of [Internal Hom](#internal-hom), we have **internal adjunction**  \\(\ihom(Z, \ihom(X,Y)) \ito \ihom(Z \otimes X, Y)\\).
+
+Cf. [Tensor category](#tensor-category).
+
+
+### Dual {#dual}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 14:46]</span></span>
+We define the **dual** to be \\(X^{\vee} = \ihom(X, U)\\), where \\(U\\) is the [Identity object](#identity-object).
+
+Cf. [Tensor category.](#tensor-category)
+
+
+### Reflexive {#reflexive}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 14:47]</span></span>
+An object \\(X\\) is called **reflexive** if \\(i\_{X}: X \ito X^{\vee \vee}\\).
+
+Cf. [Dual](#dual), [Tensor category](#tensor-category).
+
+
+### Fibre functor {#fibre-functor}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 19:09]</span></span>
+For [Tensor category](#tensor-category) \\((\mathscr{C}, \otimes)\\), a **fibre functor** \\(F\\) is a functor \\(\mathscr{C} \to \cat{Vec}\\) satisfies that \\(F(V\_{1} \otimes V\_{2}) \cong F(V\_{1}) \otimes F(V\_{2})\\).
+
+
+### Associativity constraint {#associativity-constraint}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 19:10]</span></span>
+For \\(\mathscr{C}\\) category with functor \\(\otimes\\), an **associativity constraint** is a functorial isomorphism
+\\[\phi: X \otimes (Y \otimes Z) \to (X \otimes Y) \otimes Z\\]
+satisfying pentagon identity.
+
+{{< figure src="/img/2021-09-30_13-57-58_screenshot.png" >}}
+
+
+### Commutativity constraint {#commutativity-constraint}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 13:58]</span></span>
+The **commutativity constraint** is \\(\psi\_{X,Y}: X \otimes Y \to Y \otimes X\\) for all \\(X, Y\\) such that
+\\[\psi\_{Y,X} \circ \psi\_{X,Y} = \id\_{X \otimes Y}\\]
+with some compatibility condition.
+
+{{< figure src="/img/2021-09-30_14-02-04_screenshot.png" >}}
+
+
+### <span class="org-todo todo TODO">TODO</span> Groupoid {#groupoid}
+
+
+### <span class="org-todo todo TODO">TODO</span> Limit {#limit}
+
+
+### <span class="org-todo todo TODO">TODO</span> Colimit {#colimit}
+
+
+### <span class="org-todo todo TODO">TODO</span> Complete {#complete}
+
+
+### <span class="org-todo todo TODO">TODO</span> Cocomplete {#cocomplete}
+
+
+### <span class="org-todo todo TODO">TODO</span> Hopf algebra {#hopf-algebra}
+
+
+### Comodule {#comodule}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 14:05]</span></span>
+Let \\(A\\) be a [Hopf algebra](#hopf-algebra). Then \\(V\\) with \\(k\\)-linear map \\(\rho: V \to V \otimes A\\) satisfying \\(V \stackrel{\rho}{\to} V \otimes A \stackrel{\id \otimes \epsilon}{\to} V \otimes k \cong V\\) is identity and \\(V \stackrel{\rho}{\to} V \otimes A \overset{\rho \otimes \id}{\underset{\id \otimes \Delta}{\rightrightarrows}} V \otimes A \otimes A\\) are same.
+
+
+### Monoid {#monoid}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 14:17]</span></span>
+A **monoid** is a group without inverse. In other words, a group is a monoid with inverse.
+
+
+### Group object {#group-object}
+
+
+## Sheaf Theory {#sheaf-theory}
+
+
+## Representation of groups {#representation-of-groups}
 
 The reference includes [<span id="19580479584332ed50a4af7bf7f3f201"><a href="#steinberg2012" title="Steinberg, Representation Theory of Finite Groups: An Introductory Approach, {Springer} (2012).">steinberg2012</a></span>] Chapter 1-6.
 
@@ -67,9 +224,10 @@ Group algebra
 
 {{% theorem %}}
 Suppose that \\(\phi,\rho: G \to U\_{n}( C)\\) are inequivalent irreducible unitary representations. Then
-\\[\begin{equation} \langle \phi\_{ij}, \rho\_{kl} \rangle = 0 \end{equation}\\]
 
-\\[\begin{equation} \langle \phi\_{ij}, \phi\_{kl} \rangle =  \begin{cases} 1/n & \text{if } i = k \text{ and } j = l \\\\\\\\ 0 & \text{else} \end{cases} \end{equation}\\]
+\begin{equation} \langle \phi\_{ij}, \rho\_{kl} \rangle = 0 \end{equation}
+
+\begin{equation} \langle \phi\_{ij}, \phi\_{kl} \rangle =  \begin{cases} 1/n & \text{if } i = k \text{ and } j = l \\\\\\ 0 & \text{else} \end{cases} \end{equation}
 {{% /theorem %}}
 
 
@@ -98,7 +256,7 @@ and \\({\rm dim} Z(L(G)) = |Cl(G)|\\).
 {{% theorem %}}
 Let \\(C\\), \\(C'\\) be conjugacy classes of \\(G\\), and let \\(g \in C\\) and \\(h \in C'\\). Then
 
-\begin{equation} \sum\_{i = 1}^{s}\chi\_{i}(g) \overline{\chi\_{i}(h)} = \begin{cases} |G|/|C| & C = C' \\\\\\\\  0 & C \neq C' \end{cases} \end{equation}
+\begin{equation} \sum\_{i = 1}^{s}\chi\_{i}(g) \overline{\chi\_{i}(h)} = \begin{cases} |G|/|C| & C = C' \\\\\\  0 & C \neq C' \end{cases} \end{equation}
 
 That is the columns of the character table are orthogonal.
 {{% /theorem %}}
@@ -158,20 +316,36 @@ A finite subgroup of O(3) is called a point group.
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 19:03]</span></span>
 For a group \\(G\\), we may define the category \\(\cat{Rep}(G)\\) for finite dimensional representation of \\(G\\) with morphisms of representations.
 
-Cf. [Representation of finite groups](#representation-of-finite-groups), [Algebraic group](#algebraic-group).
+Cf. [Representation of finite groups](#representation-of-groups), [Algebraic group](#algebraic-group).
 
 
-### Fibre functor {#fibre-functor}
+### Reconstruction theorem {#reconstruction-theorem}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 19:09]</span></span>
-For [Tensor category](#tensor-category) \\((\mathscr{C}, \otimes)\\), a **fibre functor** \\(F\\) is a functor \\(\mathscr{C} \to \cat{Vec}\\) satisfies that \\(F(V\_{1} \otimes V\_{2}) \cong F(V\_{1}) \otimes F(V\_{2})\\).
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 14:18]</span></span>
+Let \\(\cat{Rep}\_{k}(G)\\) be [Representation category](#representation-category) of affine [Group scheme](#group-scheme) \\(G\\). And let \\({\rm For}: \cat{Rep}\_{k}(G) \to \cat{Vec}\_{k}\\) be forgetful functor. Then we have \\(\cat{Aut}^{\otimes}({\rm For})( R) \ni \lambda\\) is data of \\(\lambda\_{X}: X \otimes R \to X \otimes R\\) for every \\(X \in \cat{Rep}\_{k}(G)\\) with compatibilities
+
+-   \\(\lambda\_{X\_{1} \otimes X\_{2}} = \lambda\_{X\_{1}} \otimes \lambda\_{X\_{2}}\\)
+-   \\(\lambda\_{\bold 1} = \id\_{k \otimes R = R}\\)
+
+And for all \\(\alpha: X \to Y\\) in \\(\cat{Rep}\_{k}(G)\\), it commutes with \\(\lambda\_{X}\\). We observe that \\(g \in G( R)\\) gives an element of \\(\cat{Aut}^{\otimes}({\rm For})( R)\\). In fact, we have
+
+{{% proposition %}}
+The associated morphism of schemes \\(G \to \cat{Aut}^{\otimes}({\rm For})\\) is an isomorphism.
+{{% /proposition %}}
 
 
-### Associativity constraint {#associativity-constraint}
+### Criterion for category being representation category {#criterion-for-category-being-representation-category}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 19:10]</span></span>
-For \\(\mathscr{C}\\) category with functor \\(\otimes\\), an **associativity constraint** is a functorial isomorphism
-\\[\phi: X \otimes (Y \otimes Z) \to (X \otimes Y) \otimes Z\\]
+
+
+{{% theorem %}}
+Let \\((C, \otimes)\\) rigid abelian tensor category, \\(\End({\bold 1}) = k\\) and \\(w: C \to \cat{Vec}\_{k}\\) exact faithful \\(k\\)-linear tensor functor. Then we have
+
+-   \\(\cat{Aut}^{\otimes}(w) \cong G\\) affine group scheme.
+-   \\(C \to \cat{Rep}\_{k}(G)\\) induced by \\(w\\) is tensor equivalence.
+{{% /theorem %}}
+
+Cf. [Tensor category](#tensor-category), [Rigid](#rigid), [Group scheme](#group-scheme).
 
 
 ## Representation of quivers {#representation-of-quivers}
@@ -340,6 +514,18 @@ Given [Local homology group](#local-homology-group), a generator of the homology
 By characteristic class theory, a manifold is orientable if the first [Stiefel-Whitney class](#stiefel-whitney-class) vanishes that is \\(w\_{1}(E) = 0\\).
 
 
+### Oriented {#oriented}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 13:36]</span></span>
+See [Orientation](#orientation).
+
+
+### Orientable {#orientable}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 13:36]</span></span>
+See [Orientation](#orientation).
+
+
 ### Tangent bundle {#tangent-bundle}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-26 Thu 19:45]</span></span>
@@ -382,7 +568,7 @@ The proposition is similar to the existence of the tubular neighborhood for [Nor
 ### Connected sum {#connected-sum}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-31 Tue 17:46]</span></span>
-Given two \\(n\\)-[manifolds](#manifold) \\(M\_{1}\\), and \\(M\_{2}\\), we define the **connected sum** of \\(M\_{1}\\) and \\(M\_{2}\\) by remove two \\(D^{n}\\) in \\(M\_{1}\\) and \\(M\_{2}\\) and glue two \\(S^{n - 1}\\) together, denoted by \\(M\_{1} \sharp M\_{2}\\).
+Given two \\(n\\)-[manifolds](#manifold) \\(M\_{1}\\), and \\(M\_{2}\\), we define the **connected sum** of \\(M\_{1}\\) and \\(M\_{2}\\) by remove two \\(D^{n}\\) in \\(M\_{1}\\) and \\(M\_{2}\\) and glue two \\(S^{n - 1}\\) together, denoted by \\(M\_{1} \shar M\_{2}\\).
 
 
 ### Lie derivative {#lie-derivative}
@@ -479,7 +665,7 @@ Cf. [Tangent bundle](#tangent-bundle).
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-09 Thu 19:44]</span></span>
 Let \\(M\\) be a smooth [Manifold](#manifold), and \\(\omega \in \Omega^{k}(M)\\). For any smooth vector fields \\(X\_{1}, \cdots, X\_{k + 1}\\) on \\(M\\).
 
-\begin{align}\dif \omega (X\_{1}, \cdots, X\_{k + 1}) &= \\\\\\\\  & \sum\_{1 \leq i \leq k + 1}(-1)^{i - 1}X\_{i}(\omega(X\_{1}, \cdots, \widehat{X\_{i}}, \cdots, X\_{k + 1})) \\\\\\\\  & + \sum\_{1 \leq i < j \leq k + 1} (-1)^{i + j} \omega([X\_{i}, X\_{j}], X\_{1}, \cdots, \widehat{X}\_{i}, \cdots, \widehat{X\_{j}}, \cdots, X\_{k + 1}) \end{align}
+\begin{align}\dif \omega (X\_{1}, \cdots, X\_{k + 1}) &= \\\\\\  & \sum\_{1 \leq i \leq k + 1}(-1)^{i - 1}X\_{i}(\omega(X\_{1}, \cdots, \widehat{X\_{i}}, \cdots, X\_{k + 1})) \\\\\\  & + \sum\_{1 \leq i < j \leq k + 1} (-1)^{i + j} \omega([X\_{i}, X\_{j}], X\_{1}, \cdots, \widehat{X}\_{i}, \cdots, \widehat{X\_{j}}, \cdots, X\_{k + 1}) \end{align}
 
 Cf. [Differential form](#differential-form), [Exterior derivative](#exterior-derivative).
 
@@ -530,7 +716,7 @@ The de Rham cohomology is homotopy invariants. If \\(M\\) and \\(N\\) is homotop
 
 
 {{% theorem %}}
-For every smooth manifold \\(M\\) and nonnegative integer \\(p\\), the de Rham homomorphism \\(J: H\_{dR}^{p}(M) \ot H^{p}(M; \RR)\\) is an isomorphism.
+For every smooth manifold \\(M\\) and nonnegative integer \\(p\\), the de Rham homomorphism \\(J: H\_{dR}^{p}(M) \to H^{p}(M; \RR)\\) is an isomorphism.
 {{% /theorem %}}
 
 Cf. [Singular cohomology](#singular-cohomology) and [de Rham cohomology](#de-rham-cohomology).
@@ -992,11 +1178,24 @@ When \\(\Gamma\_{f}\\) and \\(\Delta\\) intersections transversely, then we have
 ### Brouwer fixed point theorem {#brouwer-fixed-point-theorem}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-27 Mon 20:40]</span></span>
-The Brouwer fixed point theorem is an example of non construction existence proof.
+The **Brouwer fixed point theorem** is an example of non construction existence proof.
 
 {{% theorem %}}
 Let \\(f: D^{2} \to D^{2}\\). Then there exists \\(x \in D^{2}\\) such that \\(f(x) = x\\).
 {{% /theorem %}}
+
+The Brouwer fixed point theorem can give a proof of the fundamental theorem of algebra.
+
+
+### Borsuk-Ulam theorem {#borsuk-ulam-theorem}
+
+
+
+{{% theorem %}}
+Let \\(f: S^{2} \to \RR^{2}\\). Then there exists \\(x \in S^{2}\\) such that \\(f(x) = f(-x)\\).
+{{% /theorem %}}
+
+Cf. [Degree](#degree).
 
 
 ### Euler class {#euler-class}
@@ -1036,14 +1235,27 @@ For \\(p: E \to X\\) real [Vector bundle](#vector-bundle), we want to find secti
 The **Pontryagin class** is defined as \\(P\_{i}(E) = (-1)^{i}c\_{2i}(E \otimes\_{\RR} \CC)\\), where \\(c\_{i}\\) is the [Chern class](#chern-class).
 
 
-### <span class="org-todo todo TODO">TODO</span> Degree {#degree}
+### Degree {#degree}
 
 
 
 For degree of isogeny, see [Isogeny](#isogeny).
 
+For degree of a map \\(f: S^{n} \to S^{n}\\), the **degree** its image in the [Homotopy group](#homotopy-group) \\(\pi\_{n}(S^{n}) \cong \ZZ\\).
+
 
 ### <span class="org-todo todo TODO">TODO</span> Homotopy {#homotopy}
+
+
+### <span class="org-todo todo TODO">TODO</span> Homotopy group {#homotopy-group}
+
+
+
+Unlike the [Fundamental group](#fundamental-group), the higher homotopy group is abelian.
+
+{{% proposition %}}
+\\(\pi\_{n}(X)\\) is abelian if \\(n \geq 2\\).
+{{% /proposition %}}
 
 
 ### <span class="org-todo todo TODO">TODO</span> Homology {#homology}
@@ -1055,6 +1267,400 @@ For degree of isogeny, see [Isogeny](#isogeny).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Fundamental group {#fundamental-group}
+
+
+
+{{% proposition %}}
+Let \\(p: E \to B\\) be a covering and \\(E\\) path connected. Let \\(e \in E\\) and \\(b = p(e) \in B\\). Then the action of \\(\pi\_{1}(B, b)\\) on \\(p^{-1}(b)\\) is transitive, whose stabilizer at \\(e\\) is \\(\pi\_{1}(E, e)\\). In other words, we have following exact sequence
+\\[1 \to \pi\_{1}(E, e) \to \pi\_{1}(B, b) \to p^{-1}(b) \to 1\\]
+{{% /proposition %}}
+
+Cf. [Covering](#covering).
+
+{{% theorem %}}
+Let \\(p: E \to B\\) be a \\(G\\)-principal covering, \\(E\\) path connected, \\(e \in E\\), \\(b = p(e)\\). Then we have an exact sequence of groups
+\\[1 \to \pi\_{1}(E, e) \to \pi\_{1}(B, b) \to G \to 1\\]
+That is \\(\pi\_{1}(E, e)\\) is a normal subgroup of \\(\pi\_{1}(B, b)\\).
+{{% /theorem %}}
+
+Cf. [G-principal covering](#g-principal-covering) and above theorem.
+
+
+### <span class="org-todo todo TODO">TODO</span> Fundamental groupoid {#fundamental-groupoid}
+
+
+### <span class="org-todo todo TODO">TODO</span> Path connected {#path-connected}
+
+
+### Fibre bundle {#fibre-bundle}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 15:07]</span></span>
+Let \\(p: E \to B\\) be in \\(\cat{Top}\\). A **trivialization** of \\(p\\) over an open set \\(U \subset B\\) is a homeomorphism \\(\phi:p^{-1}(U) \to U \times F\\) over \\(U\\), such that the following diagram commutes
+
+![](/img/2021-10-07_15-09-18_screenshot.png)
+\\(p\\) is called **locally trivial** if there exists an open cover \\(\mathscr{U}\\) of \\(B\\) such that \\(p\\) has trivialization over each open \\(U \in \mathscr{U}\\). Such \\(p\\) is called a **fibre bundle**, \\(F\\) is called the **fiber** and \\(B\\) is called the **base**. And we denoted by
+\\[F \to E \to B\\]
+
+Cf. [Vector bundle](#vector-bundle).
+
+{{% exam %}}
+\\[S^{1} \to S^{2n + 1} \to \CC P^{n}\\]
+{{% /exam %}}
+
+
+### Fibre {#fibre}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 15:12]</span></span>
+See [Fibre bundle](#fibre-bundle).
+
+
+### Base {#base}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 15:12]</span></span>
+See [Fibre bundle](#fibre-bundle).
+
+
+### Trvialization {#trvialization}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 15:12]</span></span>
+See [Fibre bundle](#fibre-bundle).
+
+
+### Local trivial {#local-trivial}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 15:13]</span></span>
+See [Fibre bundle](#fibre-bundle).
+
+
+### Covering {#covering}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 15:10]</span></span>
+A **covering (space)** is a [Locally trivial](#local-trivial) map \\(p: E \to B\\) with discrete [Fibre](#fibre) \\(F\\). A covering map which is a trivial [Fibre bundle](#fibre-bundle) is also called a **trivial covering**.
+
+{{% exam %}}
+\\[S^{n} \to \RR P^{n}\\] is a double covering.
+{{% /exam %}}
+
+{{% exam %}}
+The map \\(\RR^{1} \to S^{1}\\), \\(t \to e^{2 \pi i t}\\) is a \\(\ZZ\\)-covering.
+{{% /exam %}}
+
+{{% theorem %}}
+Assume \\(B\\) is path connected, locally path connected and semi-locally simply connected and \\(b \in B\\). Then there exists an equivalence of categories
+\\[\cat{Cov}(B) \cong \pi\_{1}(B, b)-\cat{Set}\\]
+{{% /theorem %}}
+
+Cf. [Path connected](#path-connected), [Semi-locally simply connected](#semi-locally-simply-connected).
+
+
+### Deck transformation {#deck-transformation}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 16:29]</span></span>
+Let \\(B\\) be a [Path connected](#path-connected) and \\(p: E \to B\\) be a connected [Covering](#covering). A **deck transformation** is a homeomorphism \\(f: E \to E\\) such that \\(p \circ f = p\\). We denote the group of deck transformations by \\( \aut(p)\\).
+
+
+### <span class="org-todo todo TODO">TODO</span> Simply connected {#simply-connected}
+
+
+### Universal covering {#universal-covering}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 16:19]</span></span>
+A **universal covering** is a [Covering](#covering) which is [Simply connected](#simply-connected).
+
+{{% theorem %}}
+If \\(B\\) is path connected, locally path connected, and semi-locally simply connected. Then \\(B\\) admits a universal covering.
+{{% /theorem %}}
+
+Cf. [Path connected](#path-connected), [Semi-locally simply connected](#semi-locally-simply-connected).
+
+
+### Semi-locally simply connected {#semi-locally-simply-connected}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 16:21]</span></span>
+A space is **semi-locally simply connected** if for any \\(x\_{0} \in X\\), there is a neighborhood \\(U\_{0}\\) such that the image of the map \\(i\_{\* }: \pi\_{1}(U\_{0}, x\_{0}) \to \pi\_{1}(X, x\_{0})\\) is trivial.
+
+Cf. [Simply connected](#simply-connected), [Fundamental group](#fundamental-group).
+
+
+### <span class="org-todo todo TODO">TODO</span> Lifting {#lifting}
+
+
+
+The following theorem states when a map can be lifted to its [Covering](#covering) space.
+
+{{% theorem %}}
+Let \\(p: E \to B\\) be a covering. Consider a continuous map \\(f: X \to B\\), where \\(X\\) is path connected and locally path connected. Let \\(e\_{0} \in E\\), \\(x\_{0} \in X\\) such that \\(f(x\_{0}) = p(e\_{0})\\). Then there exists a lift \\(F\\) of \\(f\\) with \\(F(x\_{0}) = e\_{0}\\) if and only if
+\\[f\_{\* }(\pi\_{1}(X, x\_{0})) \subset \pi\_{\* }(\pi\_{1}(E, e\_{0}))\\]
+{{% /theorem %}}
+
+Cf. [Path connected](#path-connected).
+
+
+### Homotopy lifting property {#homotopy-lifting-property}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 15:43]</span></span>
+A map \\(p: E \to B\\) is said to have the **homotopy lifting property** with respect to \\(X\\) if for every \\(\tilde{f}\\) and \\(F\\) we have \\(\tilde{F}\\) making the following diagram commutes.
+
+{{< figure src="/img/2021-10-07_15-44-54_screenshot.png" >}}
+
+
+### Fibration {#fibration}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 15:42]</span></span>
+A map \\(p: E \to B\\) is a **fibration** if \\(p\\) has [Homotopy lifting property](#homotopy-lifting-property).
+
+{{% theorem %}}
+A covering is a fibration.
+{{% /theorem %}}
+
+Cf. [Covering](#covering).
+
+By the corollary in [Homotopy fiber](#homotopy-fiber), we see that fibration is similar to [Fibre bundle](#fibre-bundle). In the converse, we have following criterion for fibration
+
+{{% theorem %}}
+Let \\(p:E \to B\\) be a fiber bundle with \\(B\\) paracompact Hausdorff. Then \\(p\\) is a fibration.
+{{% /theorem %}}
+
+
+### <span class="org-todo todo TODO">TODO</span> Transport functor {#transport-functor}
+
+
+### <span class="org-todo todo TODO">TODO</span> Properly discontinuous {#properly-discontinuous}
+
+
+### G-principal covering {#g-principal-covering}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 15:54]</span></span>
+A left **\\(G\\)-principal covering** is a [Covering](#covering) \\(p: E \to B\\) with a left [Properly discontinuous](#properly-discontinuous) \\(G\\)-action on \\(E\\) over \\(B\\) commutes with the covering map.
+
+{{% exam %}}
+The map \\(\RR^{1} \to S^{1}\\) is a \\(\ZZ\\)-principal covering for action \\(n: t \to t + n\\).
+{{% /exam %}}
+
+
+### Deformation retract {#deformation-retract}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 16:19]</span></span>
+See [Retraction](#retraction).
+
+
+### Retraction {#retraction}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 16:01]</span></span>
+Let \\(i: A \subset X\\) be an inclusion. A continuous map \\(r: X \to A\\) is called a **retraction** if \\(r \circ i = 1\_{A}\\). \\(r\\) is called a **deformation retraction** if furthermore we have a homotopy \\(i  \circ r \cong 1\_{X} \text{ rel } A\\).
+
+
+### Wedge product {#wedge-product}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 16:42]</span></span>
+We define the **wedge product** \\(\vee\\) by \\(X \vee Y = X \coprod Y / \sim\\), where \\(\sim\\) identifies \\(x\_{0} \in X\\) and \\(y\_{0} \in Y\\).
+
+
+### Smash product {#smash-product}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 16:43]</span></span>
+We define the **smash product** \\(\wedge\\) by \\(X \wedge Y = X \times Y / X \vee Y\\).
+
+Cf. [Wedge product](#wedge-product).
+
+{{% exam %}}
+\\[S^{1} \wedge S^{n} \cong S^{n + 1}\\]
+{{% /exam %}}
+
+The above example will be used in the computation of [Homotopy group](#homotopy-group) of \\(S^{n}\\).
+
+
+### Seifert-Van Kampen theorem {#seifert-van-kampen-theorem}
+
+
+
+{{% theorem %}}
+Let \\(X = U \cap V\\) where \\(U, V \subset X\\) are open. Then the following diagram
+
+{{< figure src="/img/2021-10-07_16-50-43_screenshot.png" >}}
+
+is a pushout in the category \\(\cat{Groupoid}\\).
+{{% /theorem %}}
+
+Cf. [Groupoid](#groupoid), [Fundamental groupoid](#fundamental-groupoid).
+
+{{% theorem %}}
+Let \\(X = U \cap V\\) where \\(U, V \subset X\\) are open and \\(U, V, U \cap V\\) are path connected. Let \\(x\_{0} \in U \cap V\\). Then the following diagram
+
+![](/img/2021-10-07_16-52-14_screenshot.png)
+is a pushout in the category \\(\cat{Group}\\).
+{{% /theorem %}}
+
+Cf. [Path connected](#path-connected), [Fundamental group](#fundamental-group).
+
+
+### Compactly generated {#compactly-generated}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 15:43]</span></span>
+A subset \\(Y \subset X\\) is called **compactly closed** or **\\(k\\)-closed** if \\(f^{-1}(Y)\\) is closed in \\(K\\) for every continuous map \\(f: K \to X\\) with \\(K\\) compact Hausdorff. We define a new topology on \\(X\\) denoted by \\(X\\), where close subsets of \\(kX\\) are compactly closed subsets of \\(X\\). The map \\(kX \to X\\) is a continuous map. \\(X\\) is called **compactly generated** if \\(kX = X\\). The full subcategory of \\(\cat{Top}\\) consisting of compactly generated space is denoted by \\(\cat{CG}\\).
+
+{{% proposition %}}
+Every locally compact Hausdorff space is compact generated.
+{{% /proposition %}}
+
+We have exponential law in \\(\cat{CG}\\).
+
+{{% theorem %}}
+Let \\(X,Y,Z \in \cat{CG}\\). Then we have homeomorphism
+\\[{\rm Map}(X \times Y, Z) \to {\rm Map}(X, {\rm Map}(Y,Z))\\]
+{{% /theorem %}}
+
+
+### Weak Hausdorff {#weak-hausdorff}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 15:48]</span></span>
+A space \\(X\\) is **weak Hausdorff** if for every compact Hausdorff \\(K\\) and every continuous map \\(f:K \to X\\), the image \\(f(K)\\) is closed in \\(X\\). We denote the full subcategory of weak Hausdorff space by \\(\cat{WH}\\).
+
+
+### Category CGWH {#category-cgwh}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 15:51]</span></span>
+denote the full subcategory of [Compactly generated](#compactly-generated) [Weak Hausdorff](#weak-hausdorff) space by \\(\cat{CGWH}\\).
+
+{{% theorem %}}
+The category \\(\cat{CGWH}\\) is complete and cocomplete.
+{{% /theorem %}}
+
+Cf. [Complete](#complete), [Cocomplete](#cocomplete).
+
+Also, we have for \\(X, Y \in \cat{CGWH}\\),
+\\[{\rm Map}(X, Y) \in \cat{CGWH}\\]
+and the exponential law holds.
+
+
+### Loop space {#loop-space}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 21:17]</span></span>
+Given \\((X, x\_{0}) \in \cat{CGWH\* }\\), we define the **based loop space** \\(\Omega\_{x\_{0}}X\\) or simply \\(\Omega X\\) by
+\\[\Omega X = {\rm Map}\_{\* }(S^{1}, X)\\]
+And we define the **free loop space**
+\\[\mathscr{L}X = {\rm Map}(S^{1}, X)\\]
+
+Cf. [Category CGWH](#category-cgwh).
+
+
+### <span class="org-todo todo TODO">TODO</span> Suspension {#suspension}
+
+
+### Path space {#path-space}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 21:25]</span></span>
+Given \\(X \in \cat{CGWH}\\) and \\(x \in X\\), we define the **free path space** \\(PX = {\rm Map}(I, X)\\) and **based path space** \\(P\_{x}X = {\rm Map}((I, 0), (X, x))\\).
+
+For \\(f: X \to Y\\), and \\(p\_{1}:PY \to Y\\), we define the **mapping path space** \\(P\_{f}\\) by the pull-back \\(PY \times\_{Y} X\\).
+
+
+### Fibre homotopy {#fibre-homotopy}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 21:32]</span></span>
+For two fibrations \\(p\_{1}:E\_{1} \to B\\) and \\(p\_{2}: E\_{2} \to B\\) and two fiber maps \\(f\_{0}, f\_{1}:p\_{1} \to p\_{2}\\) are said to be **fiber homotopic** if there exists a homootpy \\(F: E\_{1} \times I \to E\_{2}\\) such that \\(F(-, t)\\) is a fiber map for each \\(t \in I\\). \\(f:p\_{1} \to p\_{2}\\) is a **fiber homotopic equivalence** if there exists an inverse.
+
+{{% proposition %}}
+Let \\(p\_{1}:E\_{1} \to B\\) and \\(p\_{2}: E\_{2} \to B\\) be two fibrations and \\(f:E\_{1} \to E\_{2}\\) be a fiber map. Assume \\(f: E\_{1} \to E\_{2}\\) is a homotopy equivalence, then \\(f\\) is a fiber homotopy equivalence. In particular, \\(f: p\_{1}^{-1}(b) \to p\_{2}^{-1}(b)\\) is a homotopy equivalence.
+{{% /proposition %}}
+
+
+### Homotopy fiber {#homotopy-fiber}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-09 Sat 14:52]</span></span>
+Let \\(f: X \to Y\\), we define its **homotopy fiber** over \\(y \in Y\\) to be the fiber of \\(P\_{f} \to Y\\) over \\(y\\). Then we have
+
+{{% proposition %}}
+If \\(Y\\) is path connected, then all homotopy fibers of \\(f:X \to Y\\) are homotopic equivalent.
+{{% /proposition %}}
+
+Cf. [Path connected](#path-connected).
+
+{{% proposition %}}
+If \\(f: X \to Y\\) is a fibration, then its homotopy fiber at \\(y\\) is homootpy equivalent to \\(f^{-1}(y)\\).
+{{% /proposition %}}
+
+{{% corollary %}}
+Let \\(f:X \to Y\\) be a fibration and \\(Y\\) path connected. Then all fibers of \\(f\\) are homotpy equivalent.
+{{% /corollary %}}
+
+Therefore, [Fibration](#fibration) is similar to [Fibre bundle](#fibre-bundle).
+
+
+### Exact Puppe sequence {#exact-puppe-sequence}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-09 Sat 14:26]</span></span>
+A sequence in \\(\cat{hCGWH}\\) is **exact** if for any \\(Y\\), the sequence \\(\cdots \to [Y, X\_{n + 1}]\_{0} \to [Y, X]\_{0} \to [Y, X\_{n - 1}]\_{0} \to \cdots\\) is exact. Let [Homotopy fiber](#homotopy-fiber) \\(F\_{f}\\) be the pullback of \\(p\_{1}:P\_{y\_{0}}Y \to Y\\) and \\(f:X \to Y\\) in category \\(\cat{CGWH\*}\\). Then we have
+
+{{% proposition %}}
+The sequence \\(F\_{f} \overset{\pi}{\to} X \to \overset{f}{\to} Y\\) is exact in \\(\cat{hCGWH}\\).
+{{% /proposition %}}
+
+We also have that \\(\Omega Y = F\_{F\_{f} \to X}\\). So we have exact sequence
+
+{{% lemma %}}
+The sequence \\(\Omega X \xrightarrow{\Omega f} \Omega Y \to F\_{f} \xrightarrow{\pi} X \xrightarrow{f} Y\\) is exact in \\(\cat{hCGWH}\\).
+{{% /lemma %}}
+
+Also by considering the adjunction formula \\([\sigma Y, X]\_{0} = [Y, \Omega X]\_{0}\\), we have that
+
+{{% lemma %}}
+Let \\(X\_{1} \to X\_{2} \to X\_{3}\\) be exact in \\(\cat{hCGWH\*}\\), then so is \\(\Omega X\_{1} \to X\_{2} \to X\_{3}\\).
+{{% /lemma %}}
+
+Combining two lemmas above, we get the **exact Puppe sequence**
+
+{{% theorem %}}
+Let \\(f:X \to Y\\) in \\(\cat{CGWH\*}\\). Then the following sequence is exact in \\(\cat{hCGWH\*}\\).
+\\[\cdots \to \Omega^{2}Y \to \Omega F\_{f} \to \Omega X \to \Omega Y \to F\_{f} \to X \to Y\\]
+{{% /theorem %}}
+
+{{% corollary %}}
+Let \\(p: E \to B\\) be a fibration whose fiber over the base point is \\(F\\). Then we have an exact sequence of homotopy groups
+\\[\cdots \to \pi\_{n}(F) \to \pi\_{n}(E) \to \pi\_{n}(B) \to \pi\_{n - 1}F \to \cdots \to \pi\_{0}(E) \to \pi\_{0}(B)\\]
+{{% /corollary %}}
+
+Cf. [Fibration](#fibration), [Homotopy group](#homotopy-group).
+
+
+### Homotopy extension property {#homotopy-extension-property}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-09 Sat 15:02]</span></span>
+A map \\(i: A \to X\\) is said to have the **homotopy extension property** (HEP) with respect to \\(Y\\) if for any map \\(f:X \to Y\\) and any homotopy \\(F:A \times I \to Y\\), we have following commutative diagram.
+
+{{< figure src="/img/2021-10-09_15-04-49_screenshot.png" >}}
+
+
+### Cofibration {#cofibration}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-09 Sat 15:05]</span></span>
+A map \\(i: A \to X\\) is called a **cofibration** if it has [Homotopy extension property](#homotopy-extension-property) for any spaces.
+
+An equivalent saying is the follow one.
+
+{{% proposition %}}
+Let \\(i: A \to X\\) and \\(j: M\_{i} \to X \times I\\). Then \\(i\\) is a cofibration if and only if there exists \\(r: X \times I \to M\_{i}\\) such that \\(r \circ j = 1\_{M\_{i}}\\).
+{{% /proposition %}}
+
+{{% proposition %}}
+Let \\(i: A \to X\\) be a cofibration. Then \\(i\\) is a homeomorphism to its image. If we work in \\(\cat{CGWH}\\), then \\(i\\) has closed image.
+{{% /proposition %}}
+
+{{% exam %}}
+The inclusion \\(S^{n - 1} \to D^{n}\\) is a cofibration.
+{{% /exam %}}
+
+
+### Cofibered {#cofibered}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-09 Sat 15:12]</span></span>
+We say a pair \\((X, A)\\) is **cofibered** if the inclusion \\(A \subset X\\) is a [Cofibration](#cofibration).
+
+
+### Mapping cylinder {#mapping-cylinder}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-09 Sat 15:06]</span></span>
+For \\(f: A \to X\\), we define the **mapping cyclinder** \\(M\_{f}\\) by the pushout of \\(A \times \\{0\\} \to A \times I\\) and \\(A \times \\{0\\} \to X \times \\{0\\}\\).
 
 
 ## Mirror Symmetry {#mirror-symmetry}
@@ -1375,7 +1981,7 @@ for the purpose of integration. Given \\(\alpha \in H^{\*}(X)\\), we can define 
 \\[\sigma\_{0}(\alpha): \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha) \cap \pi\_{\hilb}^{\*}(-)), H\_{\*}(\hilb(X)) \to H\_{\*}(\hilb(X))\\]
 Then the **Donaldson-Thomas invariants** are defined by
 
-\begin{align}\langle \alpha\_{1}, \cdots, \alpha\_{n} \rangle^{DT}\_{\beta, m} &= \deg \prod\_{k} \sigma\_{0}(\alpha\_{k})[I\_{\chi}(X, \beta)]^{vir} \\\\\\\\  &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \sigma\_{0}(\alpha\_{k}) \\\\\\\\  &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha\_{k}) \cap \pi^{\*} \beta)\end{align}
+\begin{align}\langle \alpha\_{1}, \cdots, \alpha\_{n} \rangle^{DT}\_{\beta, m} &= \deg \prod\_{k} \sigma\_{0}(\alpha\_{k})[I\_{\chi}(X, \beta)]^{vir} \\\\\\  &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \sigma\_{0}(\alpha\_{k}) \\\\\\  &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha\_{k}) \cap \pi^{\*} \beta)\end{align}
 
 Here note \\(-\ch\_{2}(I\_{Z}) = \beta\\) is represented by cycle class \\(Z \subset X\\).
 
@@ -1654,7 +2260,7 @@ The pointed affine semigroup is related to [Affine toric variety](#affine-toric-
 {{% proposition %}}
 If we write \\(V = \spec(\CC[S])\\), then the torus action has a fixed point if and only if \\(S\\) is pointed. What's more, the fixed point is unique and given by semigroup homomorphism
 \\(\phi:S \to \CC\\) defined by
-\\[m \to \begin{cases} 1 & m = 0 \\\\\\\\ 0 & m \neq 0 \end{cases} \\]
+\\[m \to \begin{cases} 1 & m = 0 \\\\\\ 0 & m \neq 0 \end{cases} \\]
 {{% /proposition %}}
 
 
@@ -1689,7 +2295,7 @@ where \\(d = \dim(E)\\) and \\(T\_{i}(E)\\) is the maximal subsheaf of \\(E\\) o
 ### Homological dimension {#homological-dimension}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-08 Wed 20:29]</span></span>
-Let \\(M\\) be a module of a local ring \\(A\\). The **homological dimension** denoted by \\(\dh(M)\\) is defined as the minimal length of a projective resolution of \\(M\\). It is also the length of free resolution of \\(M\\).
+Let \\(M\\) be a module of a local ring \\(A\\). The **homological dimension** denoted by \\(\dimh(M)\\) is defined as the minimal length of a projective resolution of \\(M\\). It is also the length of free resolution of \\(M\\).
 
 
 ### Regular sequence {#regular-sequence}
@@ -1710,7 +2316,7 @@ The maximal length of an \\(M\\)-[Regular sequence](#regular-sequence) is called
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-08 Wed 20:32]</span></span>
 Let \\(A\\) be a regular ring, then we have
-\\[\dh(M) + \depth(M) = \dim (A)\\]
+\\[\dimh(M) + \depth(M) = \dim (A)\\]
 Cf. [Homological dimension](#homological-dimension), [Depth](#depth).
 
 
@@ -1910,7 +2516,7 @@ For [Hilbert polynomial](#hilbert-polynomial) \\(P(E, m) = \sum\_{i = 0}^{\dim(E
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-11 Sat 20:40]</span></span>
 We write \\(p\_{1} \leq p\_{2}\\) for two polynomials if \\(p\_{1}(x) \leq p\_{2}(x)\\) when \\(x \gg 0\\).
 
-A coherent sheaf \\(E\\) of dimension \\(d\\) is **semistable** if \\(E\\) is [Pure](#pure) and for any proper subsheaf \\(F \subset E\\), one has \\(p(F) \leq p(E)\\). And is **stable** if \\(E\\) is semistable and \\(p(F) < p(E)\\)
+A coherent sheaf \\(E\\) of dimension \\(d\\) is **semistable** if \\(E\\) is [Pure](#pure) and for any proper subsheaf \\(F \subset E\\), one has [Hilbert polynomial](#hilbert-polynomial) \\(p(F) \leq p(E)\\). And is **stable** if \\(E\\) is semistable and \\(p(F) < p(E)\\)
 
 {{% proposition %}}
 Let \\(F\\) and \\(G\\) be semistable purely \\(d\\)-dimensional sheaves. If \\(p(F) \geq p(G)\\) then \\(\Hom(F, G) = 0\\). If \\(p(F) = p(G)\\) and \\(f: F \to G\\) non-trivial, then \\(f\\) is injective if \\(F\\) is stable and surjective if \\(G\\) is stable. If \\(p(F) = p(G)\\) and \\(\alpha\_{d}(F) = \alpha\_{d}(G)\\) then any non-trivial homomorphism \\(f: F \to G\\) is an isomorphism provided \\(F\\) or \\(G\\) is stable.
@@ -2059,7 +2665,7 @@ See [<span id="24e67c8afe5163064e4018cb5a5cbd8a"><a href="#nakajima1999" title="
 
 We have a specific characterization of \\(\hilb(A^{2}, n)\\). Let
 \\[\tilde{H} = \\{(B\_{1}, B\_{2}, i) \mid [B\_{1}, B\_{2}] = 0 \text{ and stable}\\}\\]
-The triple \\((B\_{1}, B\_{2}, i)\\) is called stable if there exists no proper subspace \\(S \subsetneq k^{n}\\) such that \\(B\_{\alpha}(S) \subset S\\), \\(\alpha = 0,1\\) and \\(\im i \subset S\\). \\(B\_{\alpha} \in \End(k^{n}) \\) and \\(i \in \ho(k, k^{n})\\). We have a natural \\(\GL\_{n}\\) action on \\(\tilde{H}\\) defined by \\((B\_{1}, B\_{2}, i) \to (gB\_{1}g^{-1}, gB\_{2}g^{-1}, gi)\\). And by quotient, we define \\(H = \tilde{H}/ \GL\_{n}\\). And we have that \\(H \cong \hilb(\mathbb{A}^{2},n)\\).
+The triple \\((B\_{1}, B\_{2}, i)\\) is called stable if there exists no proper subspace \\(S \subsetneq k^{n}\\) such that \\(B\_{\alpha}(S) \subset S\\), \\(\alpha = 0,1\\) and \\(\im i \subset S\\). \\(B\_{\alpha} \in \End(k^{n}) \\) and \\(i \in \Hom(k, k^{n})\\). We have a natural \\(\GL\_{n}\\) action on \\(\tilde{H}\\) defined by \\((B\_{1}, B\_{2}, i) \to (gB\_{1}g^{-1}, gB\_{2}g^{-1}, gi)\\). And by quotient, we define \\(H = \tilde{H}/ \GL\_{n}\\). And we have that \\(H \cong \hilb(\mathbb{A}^{2},n)\\).
 
 Cf. [Hilbert scheme](#hilbert-scheme).
 
@@ -2540,7 +3146,7 @@ where \\(R\_{12} = R \otimes 1\\) and so on.
 </div>
 
 An solution is given by
-\\[R(e\_{i} \otimes e\_{j}) =  \begin{cases}     q e\_{i} \otimes e\_{i} & i = j \\\\\\\\     e\_{i} \otimes e\_{j} & i < j \\\\\\\\     e\_{i} \otimes e\_{j} + (q - q^{-1})e\_{j} \otimes e\_{i} & i > j   \end{cases} \\]
+\\[R(e\_{i} \otimes e\_{j}) =  \begin{cases}     q e\_{i} \otimes e\_{i} & i = j \\\\\\     e\_{i} \otimes e\_{j} & i < j \\\\\\     e\_{i} \otimes e\_{j} + (q - q^{-1})e\_{j} \otimes e\_{i} & i > j   \end{cases} \\]
 
 
 ### Representation of braids {#representation-of-braids}
@@ -2550,7 +3156,7 @@ The following proposition relates the representation of [Braid group](#braid-gro
 
 {{% proposition %}}
 If \\(R\\) satisfies the Yang-Baxter equation, the mapping
-\\[\rho: B\_{n} \to \Aut(V^{\otimes n})\\]
+\\[\rho: B\_{n} \to \aut(V^{\otimes n})\\]
 \\[\rho(s\_{i}) = 1 \otimes \cdots \otimes PR \otimes \cdots \otimes 1\\]
 where \\(P(x \otimes y) = y \otimes 1\\) extends uniquely to a representation of \\(B\_{n}\\) in \\(V^{\otimes n}\\).
 {{% /proposition %}}
@@ -2641,7 +3247,7 @@ The dimension \\(4\\) smooth Poincaré conjecture is still open.
 Let \\(M\_{0}, M\_{1}\\) be simply-connected smooth \\(4\\)-manifold. Suppose \\(M\_{0} \cong\_{homotopy} M\_{1}\\). Then
 
 1.  \\(M\_{0}\\) is smoothly h-cobordant to \\(M\_{1}\\).
-2.  For \\(m \geq 0\\), \\(M\_{0} \sharp^{m} (S^{2} \times S^{2}) \cong\_{diff} M\_{1} \sharp^{m} (S^{2} \times S^{2})\\).
+2.  For \\(m \geq 0\\), \\(M\_{0} \shar^{m} (S^{2} \times S^{2}) \cong\_{diff} M\_{1} \shar^{m} (S^{2} \times S^{2})\\).
 {{% /theorem %}}
 
 {{% remark %}}
@@ -2666,9 +3272,17 @@ For \\(4\\)-manifold, we have nondegenerated bilinear form
 \\[Q\_{X}: H^{2}(X; \ZZ)/(tors) \times H^{2}(X; \ZZ)/(tors) \to \ZZ\\]
 defined by \\((\alpha \cup \beta)[X]\\) called **intersection form**. It is a symmetric, unimodular form.
 
-As an example of the intersection form, we have the intersection form of K3 surfaces \\(Q\_{X} = 2E\_{8} \oplus 3 \begin{pmatrix} 0 & 1 \\\\\\\\ 1 & 0 \end{pmatrix}\\)
+As an example of the intersection form, we have the intersection form of K3 surfaces \\(Q\_{X} = 2E\_{8} \oplus 3 \begin{pmatrix} 0 & 1 \\\\\\ 1 & 0 \end{pmatrix}\\)
 
 Cf. [K3 surfaces](#k3-surfaces), [E8](#e8).
+
+We can generalized above intersection form to manifold with boundary. The interesection form is defined on \\(V = \im(H\_{2}(X) \to H\_{2}(X, \partial X))/(torsion)\\). \\(Q\_{X}(i\_{\* }(\alpha), i\_{\* }(\beta)) = (\pd(\alpha) \cap \pd(\beta)) \cdot [X]\\).
+
+For a manifold with boundary, the intersection form is still nondegenerate but not necessarily unimodular. In fact, we have the following proposition
+
+{{% proposition %}}
+Given any symmetric \\(Q\\) with \\(\det(Q) \neq 0\\), there exists a simply connected \\(4\\)-manifold \\(X\\) such that \\(Q\_{X} = Q\\) and \\(\abs{\det(Q)} = \abs{H\_{1}(\partial X)}\\).
+{{% /proposition %}}
 
 
 ### Signature {#signature}
@@ -2737,7 +3351,7 @@ Cf. [Signature](#signature).
 
 
 {{% theorem %}}
-Let \\(X\\) be a smooth \\(4\\)-manifold. Suppose \\(Q\_{X}\\) is definite that is the matrix \\(Q\_{X}\\) is postive or negative definite, we have \\(Q\_{X} \cong \pm \begin{pmatrix} 1 & \cdots & 0 \\\\\\\\ \vdots & \ddots & \vdots \\\\\\\\ 0 & \cdots & 1 \end{pmatrix} \\).
+Let \\(X\\) be a smooth \\(4\\)-manifold. Suppose \\(Q\_{X}\\) is definite that is the matrix \\(Q\_{X}\\) is postive or negative definite, we have \\(Q\_{X} \cong \pm \begin{pmatrix} 1 & \cdots & 0 \\\\\\ \vdots & \ddots & \vdots \\\\\\ 0 & \cdots & 1 \end{pmatrix} \\).
 {{% /theorem %}}
 
 Cf. [Intersection forms](#intersection-forms).
@@ -2745,7 +3359,7 @@ Cf. [Intersection forms](#intersection-forms).
 
 ### 11/8 conjecture {#11-8-conjecture}
 
-By [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold), [Rokhlin Theorem](#rokhlin-theorem) and [Donaldson diagonalizable theorem](#donaldson-diagonalizable-theorem), the only remaining case to determine the existence of smooth structure on topological \\(4\\)-manifold are those with \\(Q\_{X}\\) even and indefinite. That is \\(Q\_{X} = mE\_{8} \oplus n \begin{pmatrix} 0 & 1 \\\\\\\\ 1 & 0 \end{pmatrix}\\). Since we have K3 surface with \\(Q\_{X} = 2E\_{8} \oplus 3 \begin{pmatrix}0 & 1\\\\\\\\ 1 & 0 \end{pmatrix}\\) and \\(S^{2} \times S^{2}\\) with \\(Q\_{X} = \begin{pmatrix} 0 & 1\\\\\\\\ 1 & 0 \end{pmatrix}\\), we can show that the for \\(Q\_{X}\\) with \\(m = 2k\\) and \\(n \geq 3k\\) the smooth structure on the manifold exists. The conjecture is that that is the only possibility for the existence of smooth structure.
+By [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold), [Rokhlin Theorem](#rokhlin-theorem) and [Donaldson diagonalizable theorem](#donaldson-diagonalizable-theorem), the only remaining case to determine the existence of smooth structure on topological \\(4\\)-manifold are those with \\(Q\_{X}\\) even and indefinite. That is \\(Q\_{X} = mE\_{8} \oplus n \begin{pmatrix} 0 & 1 \\\\\\ 1 & 0 \end{pmatrix}\\). Since we have K3 surface with \\(Q\_{X} = 2E\_{8} \oplus 3 \begin{pmatrix}0 & 1\\\\\\ 1 & 0 \end{pmatrix}\\) and \\(S^{2} \times S^{2}\\) with \\(Q\_{X} = \begin{pmatrix} 0 & 1\\\\\\ 1 & 0 \end{pmatrix}\\), we can show that the for \\(Q\_{X}\\) with \\(m = 2k\\) and \\(n \geq 3k\\) the smooth structure on the manifold exists. The conjecture is that that is the only possibility for the existence of smooth structure.
 
 {{% conjecture %}}
 If \\(X\\) is spin, smooth and \\(Q\_{X} = 2k E\_{8} \oplus n \begin{pmatrix}0 & 1\\ 1 & 0 \end{pmatrix}\\), then \\(n \geq 3k\\). Or equivalently speaking \\(b\_{2}(X) \geq \frac{11}{8} \abs{\sigma(X)}\\).
@@ -2753,22 +3367,22 @@ If \\(X\\) is spin, smooth and \\(Q\_{X} = 2k E\_{8} \oplus n \begin{pmatrix}0 &
 
 {{% remark %}}
 The current status (2021 Sep.) of the conjecture is that \\(k \leq 1\\) case is proved. For \\(k > 1\\), we have
-\\[n \geq 2k + \begin{cases} 2 & k = 1,2,5,6 \\\\\\\\ 3 & k = 3,4,7 \\\\\\\\ 4 & 0 \end{cases} \mod 8 \\]
+\\[n \geq 2k + \begin{cases} 2 & k = 1,2,5,6 \\\\\\ 3 & k = 3,4,7 \\\\\\ 4 & 0 \end{cases} \mod 8 \\]
 {{% /remark %}}
 
 
 ### Kirby-Sieberman invariant {#kirby-sieberman-invariant}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-17 Fri 22:00]</span></span>
-We define the set \\(\cat{Top}\_{m} = \\{\text{ homomorphism } f: \RR^{m} \to \RR^{m} \text{ such that } f(0) = 0\\}\\). And \\(\cat{PL}\_{m} = \\{\text{ piecewise linear homeomorphism} f: \RR^{m} \to \RR^{m} \text{ such that } f(0) = 0\\}\\).
+We define the set \\({\rm Top}\_{m} = \\{\text{ homomorphism } f: \RR^{m} \to \RR^{m} \text{ such that } f(0) = 0\\}\\). And \\({\rm PL}\_{m} = \\{\text{ piecewise linear homeomorphism} f: \RR^{m} \to \RR^{m} \text{ such that } f(0) = 0\\}\\).
 
 The Kirby and Sieberman has following deep and mysterious theorem.
 
 {{% theorem %}}
-For \\(m \geq 5\\), \\(k < m\\). Then \\(\pi\_{k}(\cat{Top}\_{m}/ \cat{PL}\_{m}) = \begin{cases} 0 & k \neq 3 \\\\\\\\ \ZZ/2 & k = 3 \end{cases}\\).
+For \\(m \geq 5\\), \\(k < m\\). Then \\(\pi\_{k}({\rm Top}\_{m}/ {\rm PL}\_{m}) = \begin{cases} 0 & k \neq 3 \\\\\\ \ZZ/2 & k = 3 \end{cases}\\).
 {{% /theorem %}}
 
-So to have PL structure on \\(X\\), \\(\dim X \geq 5\\) we need to overcome the obstruction called **Kirby-Sieberman** invariant \\(KS(X) \in H^{4}(X; \ZZ/2)\\). So \\(X\\) has a \\(\cat{PL}\\)-structure then \\(\ks(X) = 0\\). And for \\(\dim X = 4\\), \\(\ks(X) = 0\\) if and only \\(X \times \RR\\) has a \\(\cat{PL}\\)-structure.
+So to have PL structure on \\(X\\), \\(\dim X \geq 5\\) we need to overcome the obstruction called **Kirby-Sieberman** invariant \\(KS(X) \in H^{4}(X; \ZZ/2)\\). So \\(X\\) has a PL-structure then \\(\ks(X) = 0\\). And for \\(\dim X = 4\\), \\(\ks(X) = 0\\) if and only \\(X \times \RR\\) has a PL-structure.
 
 {{% remark %}}
 For \\(\dim X \leq 7\\), we have existence of piecewise linear structure equivalent to existence of smooth structure.
@@ -2826,6 +3440,220 @@ A map \\(q: X \to \Sigma\\) is an **elliptic fibration** if there exists a finit
 Cf. [Vector bundle](#vector-bundle).
 
 
+### Hessian {#hessian}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:21]</span></span>
+The **Hessian** is the well-defined map \\({\rm Hess} f\_{p}: T\_{p}X \otimes T\_{p}X \to \RR\\) defined by \\(\left(\frac{\partial^{2}f}{\partial x\_{i} \partial x\_{j}}\right)\\).
+
+
+### Critical point {#critical-point}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:16]</span></span>
+The **critical point** of \\(f: X \to \RR\\) is the map \\(\dif f\_{p}: T\_{p}X \to T\_{f(p)} \RR\\) is trivial. And \\(r = f(p)\\) is the **critical value**, otherwise \\(r\\) is called the **regular value**.
+
+Cf. [Regular point](#regular-point).
+
+
+#### Non-degenerate {#non-degenerate}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:19]</span></span>
+We say \\(p\\) [Critical point](#critical-point) **non-degenerate** if \\(\det({\rm Hess} f\_{p}) \neq q\\). The **index** of the \\(p\\) is the number of negative eigenvalues of [Hessian](#hessian) of \\(f\\) at \\(p\\).
+
+
+### Index {#index}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:54]</span></span>
+See [Non-degenerate](#non-degenerate).
+
+
+### Critical value {#critical-value}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:18]</span></span>
+See [Critical point](#critical-point).
+
+
+### Regular value {#regular-value}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:18]</span></span>
+See [Critical value](#critical-value).
+
+
+### Morse function {#morse-function}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:39]</span></span>
+A **Morse function** is a funciton if all critical points are non-degenerate. If the origin manifold \\(X\\) has boundary, then \\(f^{-1}(\max f) = \partial X\\).
+
+
+#### Self-indexed {#self-indexed}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:54]</span></span>
+A [Morse function](#morse-function) is called **self-indexed** if for all \\(x \in {\rm crit}(f)\\), we have \\(f(x) = {\rm index}(x)\\).
+
+
+### Morse theory {#morse-theory}
+
+Let \\(f\\) be a smooth real valued function on manifold M. Let \\(a < b\\) and
+suppose that the set \\(f^{-1}[a,b]\\) is **compact** and contain no critical points
+of \\(f\\). Then \\(M^{a}\\) is diffeomorphic to \\(M^{b}\\). Furthermore, \\(M^{a}\\)
+is a deformation retract of \\(M^{b}\\), inclusion map \\(M^{a} \to M^{b}\\) is a
+homotopy equivalence.
+
+The theorem supplies the condition when the retraction is possible.
+
+{{% theorem %}}
+If \\(f\\) is a differentiable function on a manifold \\(M\\), with no degenerate
+critical points, and if each \\(M^{a}\\) is compact, then \\(M\\) has the homotopy
+type of a CW-complex, with one cell of dimension \\(\lambda\\) for each critical
+point of index \\(\lambda\\).
+{{% /theorem %}}
+
+{{% theorem %}}
+Let \\(\phi\_{0}\\) and \\(\phi\_{1}\\) be homotopic maps from the sphere
+\\(\dot{e^{\lambda}}\\) to \\(X\\). Then the identity map of \\(X\\) extends to a homotopy
+equivalence \\(k:X \cup\_{\phi\_{0}} e^{\lambda} \to X \cap\_{\phi\_{1}} e^{\lambda}\\).
+{{% /theorem %}}
+
+{{% proof %}}
+\begin{align} k(x) = x && x \in X \\\\\\ k(tu) = 2tu && 0 \leq t \leq 1/2 \\\\\\ k(tu) = \phi\_{2-2t}(u) && 1/2 \leq t \leq 1 \\\\\\ \end{align}
+{{% /proof %}}
+
+{{% lemma %}}
+Let \\(\phi:\dot{e^{\lambda}} \to X\\) be an attaching map. Any homotopy
+equivalence \\(f:X \to Y\\) extends to a homotopy equivalence \\(F:X \cup\_{\phi}e^{\lambda} \to Y \cup\_{f\phi}e^{\lambda}\\)
+{{% /lemma %}}
+
+Given a Morse function, we have a [Handle decomposition](#handle-decomposition).
+
+{{% theorem %}}
+Suppose \\(f^{-1}( r) \cap {\rm crit}(f) = \\{x\_{1}, \cdots, x\_{l}\\}\\). Let \\(a\_{i} = {\rm index}(x\_{i})\\). Then for \\(\epsilon > 0\\) small enough, we have
+\\[X\_{\leq r + \epsilon} = X\_{\leq r - \epsilon} \cup (H\_{a\_{1}} \coprod H\_{a\_{2}}) \cdots \coprod H\_{a\_{l}}\\]
+where \\(H\_{i}\\) is the \\(i\\)-handle.
+{{% /theorem %}}
+
+
+### Morse complex {#morse-complex}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 16:38]</span></span>
+Now we consider the complex constructed from Morse theory. We have \\(X = X\_{0} | X\_{1} | \cdots | X\_{n}\\) [Monotone](#monotone). And for \\(H\_{k} \subset X\_{k}\\) and \\(H\_{k + 1} \subset X\_{k + 1}\\), we define the pairing \\(\langle H\_{k}, H\_{k + 1}\rangle\\) the intersection number of the belt sphere of \\(H\_{k}\\) and attaching sphere of \\(H\_{k + 1}\\). Then we have **Morse complex** \\(C\_{k}^{n}(X) = \ZZ \langle H\_{k}^{1}, \cdots, H\_{k}^{a\_{k}}\rangle\\) and define the differential to be
+\\[\dif H\_{k}^{i} = \sum\_{j} \langle H\_{k - 1}^{j}, H\_{k}^{i}\rangle H\_{k - 1}^{j}\\]
+We have that \\(\dif^{2} = 0\\).
+
+Cf. [Handle decomposition](#handle-decomposition).
+
+
+### Morse inequality {#morse-inequality}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 16:41]</span></span>
+From [Morse complex](#morse-complex), we have that
+
+{{% theorem %}}
+For any \\(0 \leq k \leq  \dim(X)\\), we have that
+\\[\sum\_{0 \leq i \leq k}(-1)^{k - i}b\_{i}(X) \leq \sum\_{0 \leq i \leq k} (-1)^{k - i} \abs{{\rm crit}\_{i}(f)}\\]
+{{% /theorem %}}
+
+{{% corollary %}}
+Suppose all critical points of \\(f\\) have even indices, then \\(b\_{2k}(X) = \abs{{\rm crit}\_{2k}(f)}\\).
+{{% /corollary %}}
+
+Cf. [Critical point](#critical-point), [Index](#index).
+
+
+### <span class="org-todo todo TODO">TODO</span> Handle move {#handle-move}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 16:44]</span></span>
+Any two [Monotone](#monotone) [Handle decomposition](#handle-decomposition) of \\(X\\) are related by the following handle moves
+
+-   handle slide
+-   creation / cancellation
+
+
+### <span class="org-todo todo TODO">TODO</span> Handle decomposition {#handle-decomposition}
+
+
+
+
+#### Monotone {#monotone}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:49]</span></span>
+A [Handle decomposition](#handle-decomposition) \\(X\_{0}| \cdots | X\_{k}\\) is called **monotone** if \\(X\_{i}\\) only consists of \\(i\\)-handles for all \\(i\\).
+
+{{% proposition %}}
+Any manifold has a monotone handle decomposition.
+{{% /proposition %}}
+
+{{% corollary %}}
+Every manifold has a self-indexed Morse function.
+{{% /corollary %}}
+
+Cf. [Self-indexed](#self-indexed) [Morse function](#morse-function).
+
+
+### <span class="org-todo todo TODO">TODO</span> Kirby calculus {#kirby-calculus}
+
+
+### <span class="org-todo todo TODO">TODO</span> Kirby move {#kirby-move}
+
+
+### <span class="org-todo todo TODO">TODO</span> Mazur manifold {#mazur-manifold}
+
+
+### <span class="org-todo todo TODO">TODO</span> Cork {#cork}
+
+
+### <span class="org-todo todo TODO">TODO</span> Alexander duality {#alexander-duality}
+
+
+### <span class="org-todo todo TODO">TODO</span> Surgery {#surgery}
+
+
+### Lickorish-Wallace theorem {#lickorish-wallace-theorem}
+
+
+
+{{% theorem %}}
+Every closed orientable connected \\(3\\)-manifold can be obtained from a surgery on a link with coefficient \\(\pm 1\\).
+{{% /theorem %}}
+
+Cf. [Link](#link), [Orientation](#orientation), [Surgery](#surgery).
+
+
+### Seifert surface {#seifert-surface}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 13:35]</span></span>
+For any [Oriented](#oriented) [Link](#link) \\(L \to S^{3}\\), there exists an embedded orientable surface \\(\Sigma \to S^{3}\\) with \\(\partial \Sigma = L\\). Such surface is called **Seifert surface**.
+
+The **Seifert genus** \\(g(K)\\) is the minimal genus of Seifert surface. The **slice genus** \\(g\_{S}(K)\\) is the minimal genus of orientable \\(\Sigma \to D^{4}\\) with \\(\partial \Sigma = K\\).
+
+Obviously, we have \\(g\_{S}(K) \leq g(K)\\).
+
+
+### Seifert genus {#seifert-genus}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 13:37]</span></span>
+See [Seifert surface](#seifert-surface).
+
+
+### Slice genus {#slice-genus}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 13:40]</span></span>
+See [Seifert surface](#seifert-surface).
+
+
+### Linking number {#linking-number}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 13:41]</span></span>
+Let \\(K\_{1}, K\_{2}\\) be [Oriented](#oriented) [Knots](#knot) in \\(S^{3}\\). We define the **linking number** \\(lK(K\_{1}, K\_{2}) \in \ZZ\\) by
+\\[[K\_{2}] = lK(K\_{1}, K\_{2})[m\_{1}] \in H\_{1}(S^{3} \backslash K\_{1}) \cong \ZZ\\]
+where \\(m\_{1}\\) is the meridian of \\(K\_{1}\\). The following is a sketch graph of meridian.
+
+{{< figure src="/img/2021-10-08_13-43-37_screenshot.png" >}}
+
+An alternative definition is consider \\(\Sigma\_{1}\\) [Seifert surface](#seifert-surface) of \\(K\_{1}\\) and then define \\(lK(K\_{1}, K\_{2}) = \Sigma\_{2} \cdot K\_{1}\\). Or we consider embeddings \\(\Sigma\_{1} \to D^{4}\\), \\(\Sigma\_{2} \to D^{4}\\) such that \\(\partial \Sigma\_{1} = K\_{1}\\), \\(\partial \Sigma\_{2} = K\_{2}\\) and define \\(lK(K\_{1}, K\_{2}) = K\_{1} \cdot K\_{2}\\).
+
+
+### <span class="org-todo todo TODO">TODO</span> Dot notation {#dot-notation}
+
+
 ## Quantum Fields and Strings {#quantum-fields-and-strings}
 
 
@@ -2868,9 +3696,6 @@ We also have **opposite algebra** \\(A^{o}\\) of \\(A\\) by product
 \\[x \cdot\_{opp} y = (-1)^{p(x)p(y)}y \cdot x\\]
 
 We can define the tensor product of modules and algebras naturely.
-
-
-### <span class="org-todo todo TODO">TODO</span> Tensor category {#tensor-category}
 
 
 ## Bibliography {#bibliography}
