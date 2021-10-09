@@ -2,48 +2,64 @@
     display: none;
 }
 
-.theorem-content, .proposition-content, .proof-content, .conjecture-content, .lemma-content, .corollary-content, .remark-content {
+.theorem, .proposition, .proof, .conjecture, .lemma,
+.corollary, .remark, .example {
     display: block;
-    padding: 5px 20px 5px 20px;
-    margin: 15px 0px 15px 0px;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    padding: 0 7px;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.theorem-header, .proposition-header, .proof-header, .conjecture-header, .lemma-header,
+.corollary-header, .remark-header, .example-header {
+    display: block;
+    float: left;
+    border-radius: 5px;
+    margin-left: 1em;
+    margin-top: -1em;
+    padding: 0 7px;
+    color: white;
+    font-style: normal;
 }
 
 .theorem {
-    background-color: #ffffcc;
+    background-color: #FFF9F3;
+    border: 1px solid #FF8618;
 }
 
 .theorem-header {
-    padding: 5px 20px 5px 20px;
-    background-color: #cccc99;
+    background-color: #FF8618;
     font-weight: bold;
 }
 
-.proof {
-    background-color: #ccff99;
+.proof, .example {
+    background-color: #F2FBF6;
+    border: 1px solid #00A652;
 }
 
-.proof-header {
-    padding: 5px 20px 5px 20px;
-    background-color: #66cccc;
+.proof-header, .example-header {
+    background-color: #00A652;
     font-weight: bold;
 }
 
 .proposition, .lemma, .corollary {
-    background-color: #ddffff;
+    background-color: #F2FBFF;
+    border: 1px solid #00AEF7;
 }
 
 .proposition-header, .lemma-header, .corollary-header {
-    padding: 5px 20px 5px 20px;
-    background-color: #2196f3;
+    background-color: #00AEF7;
     font-weight: bold;
 }
 
 .conjecture, .remark {
-    background-color: #ffcccc;
+    background-color: #FFE3E3;
+    border: 1px solid #996699;
 }
 
 .conjecture-header, .remark-header {
-    padding: 5px 20px 5px 20px;
     background-color: #996699;
     font-weight: bold;
 }
