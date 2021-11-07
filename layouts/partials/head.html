@@ -78,6 +78,7 @@
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
             // customised options
+            maxExpand: 10000,
             // • auto-render specific keys, e.g.:
             delimiters: [
                 {left: '$$', right: '$$', display: true},
@@ -92,7 +93,6 @@
             ],
             macros: {
                 "\\CC": "\\mathbb{C}",
-                "\\Ext": "\\mathscr{E}xt",
                 "\\HH": "\\mathbb{H}",
                 "\\NN": "\\mathbb{N}",
                 "\\OO": "\\mathscr{O}",
@@ -103,6 +103,9 @@
                 "\\iprod": "\\lrcorner",
                 "\\ihom": "\\underline{\\Hom}",
                 "\\shar": "\\#",
+                "\\shom": "\\mathcal{H}om",
+                "\\sext": "\\mathcal{E}xt",
+                "\\dirac": "\\cancel{D}",
 
                 "\\End": "\\operatorname{End}",
                 "\\Hom": "\\operatorname{Hom}",
@@ -113,7 +116,8 @@
                 "\\deg": "\\operatorname{deg}",
                 "\\dim": "\\operatorname{dim}",
                 "\\ex": "\\operatorname{Ex}",
-                "\\ext": "\\operatorname{Ext}",
+                "\\Ext": "\\operatorname{Ext}",
+                "\\Tor": "\\operatorname{Tor}",
                 "\\hol": "\\operatorname{Hol}",
                 "\\id": "\\operatorname{id}",
                 "\\im": "\\operatorname{im}",
@@ -135,6 +139,7 @@
                 "\\Spin": "\\operatorname{Spin}",
                 "\\U": "\\operatorname{U}",
 
+                "\\Char": "\\operatorname{Char}",
                 "\\ks": "\\operatorname{KS}",
                 "\\sq": "\\operatorname{Sq}",
 
@@ -150,7 +155,6 @@
                 "\\rk": "\\operatorname{rk}",
                 "\\spec": "\\operatorname{Spec}",
                 "\\supp": "\\operatorname{Supp}",
-                "\\tor": "\\operatorname{Tor}",
                 "\\virdim": "\\operatorname{virdim}",
             },
             // • rendering keys, e.g.:
