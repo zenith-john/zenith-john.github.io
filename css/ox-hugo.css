@@ -2,8 +2,7 @@
     display: none;
 }
 
-.theorem, .proposition, .proof, .conjecture, .lemma,
-.corollary, .remark, .example {
+.thm-block {
     display: block;
     margin-bottom: 1em;
     margin-top: 2em;
@@ -12,8 +11,7 @@
     font-style: italic;
 }
 
-.theorem-header, .proposition-header, .proof-header, .conjecture-header, .lemma-header,
-.corollary-header, .remark-header, .example-header {
+.thm-header {
     display: block;
     float: left;
     border-radius: 5px;
@@ -22,6 +20,13 @@
     padding: 0 7px;
     color: white;
     font-style: normal;
+}
+
+.thm-block>*:nth-child(2) {
+    margin-top: 2em;
+}
+.thm-block>*:last-child {
+    margin-bottom: 1em;
 }
 
 .theorem {
@@ -37,6 +42,7 @@
 .proof, .example {
     background-color: #F2FBF6;
     border: 1px solid #00A652;
+    font-style: normal;
 }
 
 .proof-header, .example-header {
