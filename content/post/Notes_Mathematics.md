@@ -4,7 +4,7 @@ author = ["Zenith John"]
 date = 2021-08-31
 categories = ["Mathematics"]
 draft = false
-lastmod = 2021-10-09
+lastmod = 2021-11-14
 showtoc = true
 +++
 
@@ -206,6 +206,32 @@ A bialgebra \\((A, \Delta, \epsilon)\\) equipped with an antiautomorphism \\(S: 
 However, the dual pair is not unique.
 
 
+#### Quasitriangular {#quasitriangular}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:13]</span></span>
+A [Hopf algebra](#hopf-algebra) \\((A, R \in A \hat{\otimes} A)\\) is called **quasitriangular** if
+\\[\Delta^{op}(a) = R \Delta(a)R^{-1}\\]
+\\[(\Delta \otimes \id)( R) = R\_{13}R\_{23} \in A^{\otimes 3}\\]
+\\[(\id \otimes \Delta)( R) = R\_{13}R\_{12} \in A^{\otimes 3}\\]
+
+
+#### Ribbon {#ribbon}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:21]</span></span>
+A [Hopf algebra](#hopf-algebra) is called **ribbon** if \\(v \in Z(A)\\) such that
+\\[\Delta\_{v} = (v \otimes v)(R\_{21}R)^{-1} = (R\_{21}R)^{-1}(v \otimes v)\\]
+
+Cf. [Ribbon category](#ribbon-category).
+
+
+### Drinfeld double {#drinfeld-double}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:15]</span></span>
+Let \\((H, H^{\vee}, \langle , \rangle)\\) [Dual pair](#dual-pair) of [Hopf algebra](#hopf-algebra), and let \\(H^{0}\\) be he Hopf algebra \\(H^{\vee}\\) with the opposite comultiplication. Then \\(D(H) = H \otimes H^{0}\\) has an algebra structure uniquely determined by
+\\[\Delta\_{D}(a)( R) = R \Delta\_{D}^{op}(a)\\]
+for any \\(a \in D(H)\\) and \\(R = \sum\_{i} (e\_{i} \otimes 1\_{H^{0}}) \otimes (1\_{H} \otimes e^{i})\\), where \\(e\_{i}\\) is basis in \\(H\\) and \\(e^{i}\\) basis in \\(H^{\vee}\\). Such construction is called **Drinfeld double**.
+
+
 ### Comodule {#comodule}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 14:05]</span></span>
@@ -288,6 +314,51 @@ Every monoidal category \\(C\\) is naturally equivalent to a strict monoidal cat
 A [Rigid](#rigid) [Monoidal category](#monoidal-category) is called **pivotal** if there exists a system of functorial isomorphism
 \\[\mu = \\{\mu\_{X}: X \to X^{\*\*}\\}\\] such that
 \\[\mu\_{X \otimes Y} = \mu\_{X} \otimes \mu\_{Y}\\]
+
+
+#### Trace {#trace}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:01]</span></span>
+We introduce the **categorical trace** by
+\\[\tr\_{f}^{L} = 1 \xrightarrow{i} V \otimes V^{\*} \xrightarrow{f \otimes \id} V \otimes V^{\*} \xrightarrow{\mu\_{V} \otimes \id} V^{\*\*} \otimes V^{\*} \xrightarrow{e\_{V^{\*}}} 1\\]
+Similarly, we can define the right trace \\(\tr\_{f}^{R}\\).
+
+We have following properties similar to classical trace
+\\(\tr^{L,R}(fg) = \tr^{L,R}(gf)\\) and \\(\tr^{L,R}(f \otimes g) = \tr^{L,R}(f) \otimes \tr^{L,R}(g)\\).
+
+
+#### Spherical {#spherical}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:07]</span></span>
+A [Pivotal](#pivotal) category is **spherical** if for any \\(V\\) and \\(f: V \to V\\), we have \\(\tr^{L}(f) = \tr^{R}(f)\\).
+
+Cf. [Trace](#trace).
+
+
+#### Dimension {#dimension}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:07]</span></span>
+In [Spherical](#spherical) category we can define the **categorical dimension** by \\(\dim V = \tr(\id\_{V})\\) since the two [Traces](#trace) are the same.
+
+
+#### Braided {#braided}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:09]</span></span>
+A [Monoidal category](#monoidal-category) is **braided** if there exists \\(c = \\{c\_{V,W}\\}\\), \\(c\_{V,W}: V \otimes W \to W \otimes V\\) with some compatibility conditions.
+
+
+### Rigid braided monoidal category {#rigid-braided-monoidal-category}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:10]</span></span>
+A **rigid braided monoidal category** is a [Rigid](#rigid) [Braided](#braided) [Monoidal category](#monoidal-category) such that
+\\[c\_{A^{\*}B^{\*}} = (c\_{B,A})^{\*}\\]
+
+
+### Ribbon category {#ribbon-category}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:19]</span></span>
+A **ribbon category** is a [Rigid braided monoidal category](#rigid-braided-monoidal-category) with \\(v = \\{v\_{X}\\}\\) such that
+\\[v\_{X \otimes Y} = (v\_{X} \otimes v\_{Y}) c\_{XY}^{-1}c\_{YX}^{-1}\\]
 
 
 ### <span class="org-todo todo TODO">TODO</span> Bialgebra {#bialgebra}
@@ -1627,11 +1698,8 @@ The following theorem is sometimes called **dimension axiom**.
 
 {{% theorem %}}
 If \\(X\\) is contractible, then
-\\[H<sub>n</sub>(X) =
 
-\begin{cases}   0 & n > 0 \\\\\\   \ZZ & n = 0 \end{cases}
-
-\\]
+\begin{equation} H\_{n}(X) =   \begin{cases}     0 & n > 0 \\\\\\     \ZZ & n = 0   \end{cases} \end{equation}
 {{% /theorem %}}
 
 
@@ -2069,11 +2137,8 @@ For based space, let \\(f:(X, x\_{0}) \to (Y, y\_{0}) \in \cat{CGWH\*}\\). We de
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-11 Mon 20:02]</span></span>
 Let \\(A\\) be a subspace of \\(X\\). \\(A\\) is called a **neighborhood deformation retract** if there exists a continuous map \\(u: X \to I\\) with \\(A = u^{-1}(0)\\) and a homotopy \\(H: X \times I \to X\\) such that
-\\[
 
-\begin{cases}   H(x, 0) = x & \forall x \in X \\\\\\   H(a, t) = a & \text{if } (a, t) \in A \times I \\\\\\   H(x, 1) \in A & \text{if } u(x) < 1 \end{cases}
-
-\\]
+\begin{equation}   \begin{cases}     H(x, 0) = x & \forall x \in X \\\\\\     H(a, t) = a & \text{if } (a, t) \in A \times I \\\\\\     H(x, 1) \in A & \text{if } u(x) < 1   \end{cases} \end{equation}
 
 If \\(A\\) is a NDR of \\(X\\), then \\(A\\) is a strong [Deformation retract](#deformation-retract) of the open subset \\(u^{-1}(\rinterval{0}{1})\\).
 
@@ -2207,9 +2272,6 @@ which induces isomorphisms
 {{% remark %}}
 The split exact sequence is natural for \\(G\\) but not for \\(X\\).
 {{% /remark %}}
-
-
-## Mirror Symmetry {#mirror-symmetry}
 
 
 ## Algebraic Geometry {#algebraic-geometry}
@@ -2806,7 +2868,8 @@ The pointed affine semigroup is related to [Affine toric variety](#affine-toric-
 {{% proposition %}}
 If we write \\(V = \spec(\CC[S])\\), then the torus action has a fixed point if and only if \\(S\\) is pointed. What's more, the fixed point is unique and given by semigroup homomorphism
 \\(\phi:S \to \CC\\) defined by
-\\[m \to \begin{cases} 1 & m = 0 \\\\\\ 0 & m \neq 0 \end{cases} \\]
+
+\begin{equation} m \to \begin{cases} 1 & m = 0 \\\\\\ 0 & m \neq 0 \end{cases} \end{equation}
 {{% /proposition %}}
 
 
@@ -3614,6 +3677,77 @@ Cf. [Cohomology](#cohomology).
 Examples: Betti stack, de Rham stack
 
 
+### Ind-scheme {#ind-scheme}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:23]</span></span>
+An **ind-scheme** is object in \\(\cat{Fun}(\cat{k-algebra}, \cat{Set})\\) which can be written as
+\\[X = \varinjlim\_{I} X\_{i}\\]
+such that \\(I\\) is a direct diagram, \\(X\_{i}\\) is a scheme, all maps \\(X\_{i} \to X\_{j}\\) are closed embedding. We call **ind-affine**, **ind-projective**, **ind-finite type** if all \\(X\_{i}\\) are affine, projective, finite type.
+
+
+### Arc space {#arc-space}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:26]</span></span>
+We define the **arc space** to be functor \\(Y[|t|]\\) such that \\(Y[|t|\]\( R) = Y(R[|t|])\\).
+
+Cf. [Loop space](#loop-space).
+
+{{% proposition %}}
+Arc spaces and \\(Y[k[t]/t^{n}]\\) are schemes. Moreover, if \\(Y\\) is affine then they are also affine.
+{{% /proposition %}}
+
+
+### Loop space {#loop-space}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:27]</span></span>
+We define the **loop space** to be functor \\(Y((t))( R) = Y(R((t)))\\).
+
+Cf. [Arc space](#arc-space).
+
+{{% proposition %}}
+The loop space is ind-scheme if \\(Y\\) is affine.
+{{% /proposition %}}
+
+Cf. [Ind-scheme](#ind-scheme).
+
+
+### Affine grassmannian {#affine-grassmannian}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:31]</span></span>
+Let \\(G\\) affine linear [Algebraic group](#algebraic-group). We define the functor
+\\[{\rm Gr}\_{G}( R) = G(R((t)))/G(R[|t|])\\]
+called **affine grassmannian**. We write \\(\mathcal{O} = k[|t|]\\) and \\(K = k((t))\\).
+
+Cf. [Loop space](#loop-space), [Arc space](#arc-space).
+
+We have Cartan decomposition for \\(G(K)\\).
+
+{{% theorem %}}
+\\[G(K) = \coprod\_{\mu \in X\_{\*}(T)^{+}} G(\mathcal{O})t^{\mu} G(\mathcal{O})\\]
+{{% /theorem %}}
+
+The above theorem gives a stratification of \\({\rm Gr}\_{G}\\)
+
+{{% corollary %}}
+\\[{\rm Gr}\_{G} = \coprod\_{\mu \in X\_{\*}(T)^{+}G(\mathcal{O})t^{\mu} G(\mathcal{O})/ G(\mathcal{O}) = \coprod\_{\mu} {\rm Gr}\_{\mu}\\]
+{{% /corollary %}}
+
+And we have following inclusion properties
+
+{{% proposition %}}
+For \\(G\\) reductive, we have
+\\[\overline{{\rm Gr}^{\lambda}} = \cup\_{\mu \leq \lambda} {\rm Gr}^{\mu}\\]
+{{% /proposition %}}
+
+
+### Minuscule {#minuscule}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:41]</span></span>
+A coweight \\(\mu\\) is **minuscule** if
+\\[\langle \alpha, \mu \rangle \leq 1\\]
+for all \\(\alpha\\) positive. For minuscule \\(\mu\\), we have \\({\rm Gr}\_{\mu} = \overline{{\rm Gr}\_{\mu}} = G/P\_{\mu}\\), where \\(P\_{\mu}\\) is a partial flag.
+
+
 ## Symplectic Geometry {#symplectic-geometry}
 
 
@@ -4000,6 +4134,12 @@ The theorem also shows that [h-Cobordism](#h-cobordism) theorem fails for \\(n =
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 18:51]</span></span>
 \\(\RR^{4}\\) has infinitely many smooth structures. While other Eucliean space has unique smooth structure by Stallings.
 
+{{% theorem %}}
+\\(\RR^{4}\\) has uncountably many smooth structures.
+{{% /theorem %}}
+
+The construction follows from the oberservation for \\(X = \CC P^{2} \shar 9 \overline{\CC P}^{2}\\), we have \\(Q\_{X} \cong (-E\_{8}) \oplus (-1) \oplus (1)\\). Then if all \\(\RR^{4}\\) has same smooth structure, some kind of surgery gives impossible \\(4\\)-manifolds. By examing the construction carefully, one shows that there exists a parameter such that every two construction gives different smooth structures.
+
 
 ### Intersection forms {#intersection-forms}
 
@@ -4158,19 +4298,37 @@ Let \\(X\\) be a smooth \\(4\\)-manifold. Suppose \\(Q\_{X}\\) is definite that 
 
 Cf. [Intersection forms](#intersection-forms).
 
+One of the proofs is given by [Seiberg-Witten invariant](#seiberg-witten-invariant) and following algebra result.
+
+{{% theorem %}}
+Let \\(Q: \ZZ^{m} \otimes \ZZ^{m} \to \ZZ\\) be a negative definite, unimodular form and let \\(\Char(Q) = \\{v \in \ZZ^{m} \mid Q(v, w) \equiv Q(w,w) \pmod 2\\}\\). Suppose that \\(Q(v, v) + m \leq 0, \quad \forall v \in \Char(Q)\\). Then \\(Q \cong -I\\).
+{{% /theorem %}}
+
 
 ### 11/8 conjecture {#11-8-conjecture}
 
 By [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold), [Rokhlin Theorem](#rokhlin-theorem) and [Donaldson diagonalizable theorem](#donaldson-diagonalizable-theorem), the only remaining case to determine the existence of smooth structure on topological \\(4\\)-manifold are those with \\(Q\_{X}\\) even and indefinite. That is \\(Q\_{X} = mE\_{8} \oplus n \begin{pmatrix} 0 & 1 \\\\\\ 1 & 0 \end{pmatrix}\\). Since we have K3 surface with \\(Q\_{X} = 2E\_{8} \oplus 3 \begin{pmatrix}0 & 1\\\\\\ 1 & 0 \end{pmatrix}\\) and \\(S^{2} \times S^{2}\\) with \\(Q\_{X} = \begin{pmatrix} 0 & 1\\\\\\ 1 & 0 \end{pmatrix}\\), we can show that the for \\(Q\_{X}\\) with \\(m = 2k\\) and \\(n \geq 3k\\) the smooth structure on the manifold exists. The conjecture is that that is the only possibility for the existence of smooth structure.
 
 {{% conjecture %}}
-If \\(X\\) is spin, smooth and \\(Q\_{X} = 2k E\_{8} \oplus n \begin{pmatrix}0 & 1\\ 1 & 0 \end{pmatrix}\\), then \\(n \geq 3k\\). Or equivalently speaking \\(b\_{2}(X) \geq \frac{11}{8} \abs{\sigma(X)}\\).
+If \\(X\\) is spin, smooth and \\(Q\_{X} = 2k E\_{8} \oplus n \begin{pmatrix} 0 & 1\\\\\\ 1 & 0 \end{pmatrix}\\), then \\(n \geq 3k\\). Or equivalently speaking \\(b\_{2}(X) \geq \frac{11}{8} \abs{\sigma(X)}\\).
 {{% /conjecture %}}
+
+A theorem by Furuta says
+
+{{% theorem %}}
+Let \\(X\\) be a spin \\(4\\)-manifold, such that \\(b\_{2}(X) \neq 0\\). Then
+\\[b\_{2}(X) \geq \frac{10}{8} \abs{\sigma(X)} + 2\\]
+{{% /theorem %}}
+
+The [Seiberg-Witten invariant](#seiberg-witten-invariant) together with spin Dirac operator can give one proof. The proof suggests [Bauer-Furuta invariant](#bauer-furuta-invariant).
 
 {{% remark %}}
 The current status (2021 Sep.) of the conjecture is that \\(k \leq 1\\) case is proved. For \\(k > 1\\), we have
 \\[n \geq 2k + \begin{cases} 2 & k = 1,2,5,6 \\\\\\ 3 & k = 3,4,7 \\\\\\ 4 & 0 \end{cases} \mod 8 \\]
 {{% /remark %}}
+
+
+### <span class="org-todo todo TODO">TODO</span> Bauer-Furuta invariant {#bauer-furuta-invariant}
 
 
 ### Kirby-Sieberman invariant {#kirby-sieberman-invariant}
@@ -4612,11 +4770,7 @@ Cf. [Self-dual](#self-dual).
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-23 Sat 15:28]</span></span>
 The **Seiberg-Witten equation** is the following equations for \\((A, \phi \in \Gamma^{S^{+}})\\)
-\\[
-
-\begin{cases}   F\_{A^{\tau}}^{+} - \rho^{-1}(\phi^{\*} \phi)\_{0} = 0 & \\\\\\   \dirac\_{A}^{+} \phi = 0 & \end{cases}
-
-\\]
+\\[ \begin{cases}      F\_{A^{\tau}}^{+} - \rho^{-1}(\phi^{\*} \phi)\_{0} = 0 & \\\\\\      \dirac\_{A}^{+} \phi = 0 &    \end{cases} \\]
 Here \\((\phi^{\* } \phi)\_{0}: \psi \to \langle \psi, \phi> \cdot \phi - \frac{\abs{\phi}^{2}}{2} \psi\\). We have \\(((\phi^{\* } \phi)\_{0})^{\* } = (\phi^{\* } \phi)\_{0}\\) and \\(\tr (\phi^{\* } \phi)\_{0} = 0\\).
 
 
@@ -4796,6 +4950,53 @@ Then we can find \\(S\\) with \\(g(S \cap D^{4}) = \frac{m - n + 1}{2}\\), and t
 Cf. [Quasi-positive](#quasi-positive), [Slice genus](#slice-genus).
 
 For [Positive](#positive) knot, we have \\(U\_{K} = g\_{S}(K)\\) which is not true for quasi-positive knot.
+
+
+### <span class="org-todo todo TODO">TODO</span> Fintushel-Stern knot surgery {#fintushel-stern-knot-surgery}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 15:02]</span></span>
+The following theorem by Fintushel-Stern gives many exotic smooth structures.
+
+{{% theorem %}}
+Suppose \\([T^{2}] \neq 0 \in H\_{2}(X ; \RR)\\), let \\(X\_{K}\\) be the knot surgery along \\(T^{2}\\). Then
+\\[SW\_{X\_{K}} = SW\_{X} \cdot \Delta\_{K}(e^{2[T]^{2}})\\]
+where \\(SW\_{X} = \sum\_{v \in \Char(X)} SW\_{X}(v) e^{v}\\) and \\(\Delta\\) is the [Alexander polynomial](#alexander-polynomial)
+{{% /theorem %}}
+
+{{% corollary %}}
+Given any smooth \\(4\\)-manifold \\(X\\) with
+
+-   \\(b^{+}(X) \neq 0\\), \\(\pi\_{1}(X) = 1\\).
+-   \\(SW\_{X} \neq 0\\).
+-   There exists \\(T^{2} \to X\\) embedding such that \\([T^{2}] \neq 0\\) and \\(T^{2} \cdot T^{2} = 0\\), \\(\pi\_{1}(X \backslash T^{2}) = 1\\).
+
+Then \\(X\\) has infinitely many smooth structure. In particular, all knonw symplectic \\(4\\)-manifold with \\(b^{+} > 1\\) satisfies this conditions.
+{{% /corollary %}}
+
+{{% conjecture %}}
+Suppose \\([T^{2}] \neq 0\\) then \\(X\_{K} \cong X\_{L}\\) if and only if \\(\pi\_{1}(S^{3} \backslash K) \cong \pi\_{1}(S^{3} \backslash L)\\).
+{{% /conjecture %}}
+
+{{% remark %}}
+The conjecture is related to the open question, given \\(K, L\\) with \\(\Delta\_{K} = \Delta\_{L}\\) can \\(X\_{K} \not \cong\_{diff} X\_{L}\\). Since there exists many knots with same Alexander polynomial, the question is important. However, we don't have any tool to detect smooth structure other than [Seiberg-Witten invariant](#seiberg-witten-invariant).
+{{% /remark %}}
+
+
+### <span class="org-todo todo TODO">TODO</span> Alexander polynomial {#alexander-polynomial}
+
+
+### <span class="org-todo todo TODO">TODO</span> Exotic surfaces {#exotic-surfaces}
+
+
+### Gabai's lightbulb theorem {#gabai-s-lightbulb-theorem}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 15:13]</span></span>
+Given \\(F \hookrightarrow X\\), we say an embedded sphere \\(\Sigma \hookrightarrow X\\) is a **geometric dual** of \\(F\\) if \\(\Sigma \cdot \Sigma = 0\\) and \\(F \pitchfork \Sigma = \\{pt\\}\\). And \\(F\\) is \*\\(\Sigma\\)-essential\* if \\(\pi\_{1}(F \backslash \Sigma) \to \pi\_{1}(X \backslash \Sigma)\\) is trivial. The **Gabai's lightbulb theorem** states
+
+{{% theorem %}}
+1.  Given any \\(S^{2} \hookrightarrow S^{2} \times S^{2}\\) with \\(S^{2} \pitchfork (\* \times S^{2}) = \\{pt\\}\\). Then \\(S^{2} \cong\_{diff} S^{2} \times \\{\*\\}\\).
+2.  Given any \\(F\_{1}, F\_{2} \hookrightarrow X\\) with \\(\pi\_{1}(X)\\) no \\(2\\)-torsion. Suppose there exists a common geometric dual for \\(F\_{i}\\) and \\(F\_{1}, F\_{2}\\) both \\(\Sigma\\)-essential. Then \\(F\_{1} \cong\_{diff} F\_{2}\\).
+{{% /theorem %}}
 
 
 ## Quantum Fields and Strings {#quantum-fields-and-strings}
