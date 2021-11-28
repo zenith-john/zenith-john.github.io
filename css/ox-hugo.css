@@ -39,13 +39,13 @@
     font-weight: bold;
 }
 
-.proof, .example {
+.proof, .example .def {
     background-color: #F2FBF6;
     border: 1px solid #00A652;
     font-style: normal;
 }
 
-.proof-header, .example-header {
+.proof-header, .example-header .def-header {
     background-color: #00A652;
     font-weight: bold;
 }
