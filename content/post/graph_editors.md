@@ -2,7 +2,7 @@
 title = "Compare Scapple, CmapTools and yEd Graph Editor"
 author = ["Zenith John"]
 publishDate = 2021-08-19
-categories = ["Essay"]
+tags = ["Essay"]
 draft = false
 +++
 

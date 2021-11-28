@@ -2,7 +2,7 @@
 title = "关于笔记的一些思考"
 author = ["Zenith John"]
 publishDate = 2021-09-25
-categories = ["Essay"]
+tags = ["Essay"]
 draft = false
 +++
 

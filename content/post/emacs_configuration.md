@@ -2,7 +2,7 @@
 title = "Emacs"
 author = ["Zenith John"]
 publishDate = 2021-08-19
-categories = ["computer"]
+tags = ["Computer"]
 draft = false
 showtoc = true
 +++
@@ -12,7 +12,7 @@ showtoc = true
 Emacs 是我最常用的编码工具。我使用的是 Emacs 27 版本，自己编译，编译选项为
 
 ```bash
-./configure --with-modules --with-xwidgets --with-mailutils --with-imagemagick
+./configure --with-dbus --with-gif --with-jpeg --with-png --with-rsvg --with-tiff --with-xft --with-xpm --with-xml2 --with-xwidgets --with-modules --with-native-compilation --with-pgtk --with-json --with-mailutils CFLAGS="-O3 -mtune=native -march=native -fomit-frame-pointer"
 ```
 
 

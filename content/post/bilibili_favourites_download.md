@@ -2,7 +2,7 @@
 title = "半自动化下载B站收藏夹视频"
 author = ["Zenith John"]
 publishDate = 2021-08-19
-categories = ["computer"]
+tags = ["Computer"]
 draft = false
 +++
 

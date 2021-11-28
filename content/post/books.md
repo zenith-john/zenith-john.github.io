@@ -2,7 +2,7 @@
 title = "我读过的一些书"
 author = ["Zenith John"]
 publishDate = 2021-09-03
-categories = ["Essay"]
+tags = ["Essay"]
 draft = false
 +++
 

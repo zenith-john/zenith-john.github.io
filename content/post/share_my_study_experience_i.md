@@ -2,7 +2,7 @@
 title = "我的一些学习经验"
 author = ["Zenith John"]
 publishDate = 2021-09-25
-categories = ["Essay"]
+tags = ["Essay"]
 draft = false
 +++
 

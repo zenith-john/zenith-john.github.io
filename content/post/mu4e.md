@@ -2,7 +2,7 @@
 title = "Emacs mu4e 配置"
 author = ["Zenith John"]
 publishDate = 2021-08-19
-categories = ["computer"]
+tags = ["Computer"]
 draft = false
 +++
 

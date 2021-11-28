@@ -2,7 +2,7 @@
 title = "Mathematics Notes"
 author = ["Zenith John"]
 date = 2021-08-31
-categories = ["Mathematics"]
+tags = ["Mathematics"]
 draft = false
 lastmod = 2021-11-14
 showtoc = true
@@ -46,6 +46,8 @@ One kind of the importance theorem in mathematics is the existence theorem which
 
 
 
+Referenced: [Continuous](#continuous).
+
 
 #### Continuous {#continuous}
 
@@ -58,6 +60,8 @@ Consider \\(f: X \to Y\\) continuous map, then \\(f^{-1}: \cat{Op}(Y) \to \cat{O
 
 Given a functor \\(f: C' \to C\\), we have a functor of presheaves: \\(f\_{\* }: \hat{C} \to \hat{C}'\\). That is \\((f\_{\* }F)(T) := F(f(X))\\). When functor is continuous, then \\(f\_{\* }\\)  sends sheaves to sheaves.
 
+Referenced: [Sheaf](#sheaf).
+
 
 ### Tensor category {#tensor-category}
 
@@ -67,6 +71,8 @@ A **tensor category** is data \\((\mathscr{C}, \otimes, \phi, \psi)\\) where \\(
 The **identity object** in tensor cateogry is a pair \\((U, u)\\) where \\(U \in \mathscr{C}\\) with \\(u: U \ito U \otimes U\\) such that \\(U \otimes -\\) is an equivalence.
 
 The object \\(L\\) is called **invertible** if \\(L \otimes -\\) is an equivalence. If \\(L\\) is invertible, then \\(L\\) has inverse with \\(\delta: L \otimes L^{-1} \ito U\\).
+
+Referenced: [Rigid](#rigid), [Tensor functor](#tensor-functor), [Invertible](#invertible), [Identity object](#identity-object), [Internal Hom](#internal-hom), [Internal adjunction](#internal-adjunction), [Dual](#dual), [Reflexive](#reflexive), [Fibre functor](#fibre-functor), [Monoidal category](#monoidal-category), [Criterion for category being representation category](#criterion-for-category-being-representation-category).
 
 
 #### Rigid {#rigid}
@@ -96,6 +102,8 @@ Then \\((C, \otimes)\\) is abelian rigid tensor category.
 
 Cf. [Associativity constraint](#associativity-constraint), [Commutativity constraint](#commutativity-constraint), [Tensor category](#tensor-category).
 
+Referenced: [Pivotal](#pivotal), [Rigid braided monoidal category](#rigid-braided-monoidal-category), [Criterion for category being representation category](#criterion-for-category-being-representation-category).
+
 
 ### Tensor functor {#tensor-functor}
 
@@ -116,6 +124,8 @@ See [Tensor category](#tensor-category).
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 14:06]</span></span>
 See [Tensor category](#tensor-category).
 
+Referenced: [Dual](#dual).
+
 
 ### Internal Hom {#internal-hom}
 
@@ -123,6 +133,8 @@ See [Tensor category](#tensor-category).
 If \\(\mathscr{C}^{op} \to \cat{Set}\\), \\(T \to \Hom(T \otimes X, Y)\\) is representable, then write the representing object \\(\ihom(X,Y)\\) called **internal Hom**. \\(\ihom(T \otimes X, Y) \cong \Hom(T, \ihom(X,Y))\\). So we have \\({\rm ev}\_{X,Y}: \ihom(X, Y) \otimes X \to Y\\) isomorphic to \\({\rm id}\_{\ihom(X,Y)}\\).
 
 Cf. [Tensor category](#tensor-category).
+
+Referenced: [Internal adjunction](#internal-adjunction).
 
 
 ### Internal adjunction {#internal-adjunction}
@@ -140,6 +152,8 @@ We define the **dual** to be \\(X^{\vee} = \ihom(X, U)\\), where \\(U\\) is the 
 
 Cf. [Tensor category.](#tensor-category)
 
+Referenced: [Reflexive](#reflexive).
+
 
 ### Reflexive {#reflexive}
 
@@ -147,6 +161,8 @@ Cf. [Tensor category.](#tensor-category)
 An object \\(X\\) is called **reflexive** if \\(i\_{X}: X \ito X^{\vee \vee}\\).
 
 Cf. [Dual](#dual), [Tensor category](#tensor-category).
+
+Referenced: [Rigid](#rigid).
 
 
 ### Fibre functor {#fibre-functor}
@@ -164,6 +180,8 @@ satisfying pentagon identity.
 
 {{< figure src="/img/2021-09-30_13-57-58_screenshot.png" >}}
 
+Referenced: [Tensor category](#tensor-category), [Rigid](#rigid), [Tensor functor](#tensor-functor), [Monoidal category](#monoidal-category).
+
 
 ### Commutativity constraint {#commutativity-constraint}
 
@@ -174,8 +192,14 @@ with some compatibility condition.
 
 {{< figure src="/img/2021-09-30_14-02-04_screenshot.png" >}}
 
+Referenced: [Tensor category](#tensor-category), [Rigid](#rigid), [Tensor functor](#tensor-functor).
+
 
 ### <span class="org-todo todo TODO">TODO</span> Groupoid {#groupoid}
+
+
+
+Referenced: [Seifert-Van Kampen theorem](#seifert-van-kampen-theorem).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Limit {#limit}
@@ -187,7 +211,15 @@ with some compatibility condition.
 ### <span class="org-todo todo TODO">TODO</span> Complete {#complete}
 
 
+
+Referenced: [Category CGWH](#category-cgwh).
+
+
 ### <span class="org-todo todo TODO">TODO</span> Cocomplete {#cocomplete}
+
+
+
+Referenced: [Category CGWH](#category-cgwh).
 
 
 ### Hopf algebra {#hopf-algebra}
@@ -197,6 +229,8 @@ A bialgebra \\((A, \Delta, \epsilon)\\) equipped with an antiautomorphism \\(S: 
 
 {{< figure src="/img/2021-11-04_17-56-31_screenshot.png" >}}
 
+Referenced: [Dual pair](#dual-pair), [Quasitriangular](#quasitriangular), [Ribbon](#ribbon), [Drinfeld double](#drinfeld-double), [Comodule](#comodule).
+
 
 #### Dual pair {#dual-pair}
 
@@ -204,6 +238,8 @@ A bialgebra \\((A, \Delta, \epsilon)\\) equipped with an antiautomorphism \\(S: 
 \\((H\_{1}, H\_{2}, \langle \rangle: H\_{1} \otimes H\_{2} \to k)\\) is a **dual pair** of [Hopf algebra](#hopf-algebra) if \\(\langle, \rangle\\) is nondegerate and \\[\langle lm, a \rangle = \langle l \otimes m , \Delta\_{H\_{2}}(a) \rangle\\] \\[\langle e, ab \rangle = \langle \Delta\_{H\_{1}}(e), a \otimes b \rangle\\] \\[\langle S\_{H\_{1}}(e), a \rangle = \langle e, S\_{H\_{2}}(a) \rangle\\] \\[\langle 1\_{H\_{1}}, a \rangle = \epsilon\_{H\_{2}}(a)\\] \\[\langle e, 1\_{H\_{2}} \rangle = \epsilon\_{H\_{1}}(e)\\]
 
 However, the dual pair is not unique.
+
+Referenced: [Drinfeld double](#drinfeld-double).
 
 
 #### Quasitriangular {#quasitriangular}
@@ -256,6 +292,10 @@ A **monoid** is a group without inverse. In other words, a group is a monoid wit
 ### <span class="org-todo todo TODO">TODO</span> Triangulated category {#triangulated-category}
 
 
+
+Referenced: [t-structure](#t-structure).
+
+
 ### t-structure {#t-structure}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-19 Tue 18:33]</span></span>
@@ -265,6 +305,8 @@ Let \\(D\\) be a [Triangulated category](#triangulated-category) and \\(D^{\leq 
 2.  \\(\Hom\_{D}(X, Y) = 0\\) for \\(X \in D^{\leq 0}, Y \in D^{\geq 1}\\).
 3.  For \\(X \in D\\), there exists distinguished triangle
     \\[X\_{0} \in D^{\leq 0} \to X \to X\_{1} \in D^{\geq 1} \to X\_{0}[1]\\]
+
+Referenced: [Bounded](#bounded), [t-exact](#t-exact), [Heart](#heart), [Perverse sheaf](#perverse-sheaf).
 
 
 #### Bounded {#bounded}
@@ -284,6 +326,8 @@ A functor is called **t-exact** if it is compatible with the [t-structure](#t-st
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-19 Tue 18:33]</span></span>
 Let \\((D^{\leq 0}, D^{\geq 0})\\) be [t-structure](#t-structure) for category \\(D\\), then \\(C = D^{\leq 0} \cap D^{\geq 0}\\) is called **heart** of t-structure.
 
+Referenced: [Perverse sheaf](#perverse-sheaf).
+
 
 ### <span class="org-todo todo TODO">TODO</span> Torsion pair {#torsion-pair}
 
@@ -296,6 +340,8 @@ A **monoidal category** is a category \\(C\\) with \\(\otimes\\) which has [Asso
 A **monoidal functor** is a functor respect the monoid structure.
 
 Cf. [Tensor category](#tensor-category). In fact, I don't know their differences.
+
+Referenced: [Strict](#strict), [Pivotal](#pivotal), [Braided](#braided), [Rigid braided monoidal category](#rigid-braided-monoidal-category).
 
 
 #### Strict {#strict}
@@ -315,6 +361,8 @@ A [Rigid](#rigid) [Monoidal category](#monoidal-category) is called **pivotal** 
 \\[\mu = \\{\mu\_{X}: X \to X^{\*\*}\\}\\] such that
 \\[\mu\_{X \otimes Y} = \mu\_{X} \otimes \mu\_{Y}\\]
 
+Referenced: [Spherical](#spherical).
+
 
 #### Trace {#trace}
 
@@ -326,6 +374,8 @@ Similarly, we can define the right trace \\(\tr\_{f}^{R}\\).
 We have following properties similar to classical trace
 \\(\tr^{L,R}(fg) = \tr^{L,R}(gf)\\) and \\(\tr^{L,R}(f \otimes g) = \tr^{L,R}(f) \otimes \tr^{L,R}(g)\\).
 
+Referenced: [Spherical](#spherical), [Dimension](#dimension).
+
 
 #### Spherical {#spherical}
 
@@ -333,6 +383,8 @@ We have following properties similar to classical trace
 A [Pivotal](#pivotal) category is **spherical** if for any \\(V\\) and \\(f: V \to V\\), we have \\(\tr^{L}(f) = \tr^{R}(f)\\).
 
 Cf. [Trace](#trace).
+
+Referenced: [Dimension](#dimension).
 
 
 #### Dimension {#dimension}
@@ -346,6 +398,8 @@ In [Spherical](#spherical) category we can define the **categorical dimension** 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:09]</span></span>
 A [Monoidal category](#monoidal-category) is **braided** if there exists \\(c = \\{c\_{V,W}\\}\\), \\(c\_{V,W}: V \otimes W \to W \otimes V\\) with some compatibility conditions.
 
+Referenced: [Rigid braided monoidal category](#rigid-braided-monoidal-category).
+
 
 ### Rigid braided monoidal category {#rigid-braided-monoidal-category}
 
@@ -353,12 +407,16 @@ A [Monoidal category](#monoidal-category) is **braided** if there exists \\(c = 
 A **rigid braided monoidal category** is a [Rigid](#rigid) [Braided](#braided) [Monoidal category](#monoidal-category) such that
 \\[c\_{A^{\*}B^{\*}} = (c\_{B,A})^{\*}\\]
 
+Referenced: [Ribbon category](#ribbon-category).
+
 
 ### Ribbon category {#ribbon-category}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 14:19]</span></span>
 A **ribbon category** is a [Rigid braided monoidal category](#rigid-braided-monoidal-category) with \\(v = \\{v\_{X}\\}\\) such that
 \\[v\_{X \otimes Y} = (v\_{X} \otimes v\_{Y}) c\_{XY}^{-1}c\_{YX}^{-1}\\]
+
+Referenced: [Ribbon](#ribbon).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Bialgebra {#bialgebra}
@@ -400,6 +458,8 @@ is an exact sequence of \\(R\\)-modules and \\(P\_{i}\\)'s are free. Then we def
 and the **Tor group**
 \\[\Tor^{R}\_{k}(M, N) = H\_{k}(P\_{\bullet} \otimes\_{R} N)\\]
 
+Referenced: [Tor group](#tor-group).
+
 
 ### Tor group {#tor-group}
 
@@ -424,6 +484,10 @@ See [Ext group](#ext-group).
 ### <span class="org-todo todo TODO">TODO</span> Simple {#simple}
 
 
+
+Referenced: [Semisimple](#semisimple).
+
+
 ### Semisimple {#semisimple}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-30 Sat 16:19]</span></span>
@@ -431,6 +495,9 @@ An object in a category is called **semisimple** if it is the direct sum of the 
 
 
 ### <span class="org-todo todo TODO">TODO</span> Finite length {#finite-length}
+
+
+### <span class="org-todo todo TODO">TODO</span> Commutative Frobenius algebra {#commutative-frobenius-algebra}
 
 
 ## Sheaf Theory {#sheaf-theory}
@@ -480,11 +547,15 @@ For perverse sheaf category, we have functor \\(^{p}F\\).
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-23 Sat 14:19]</span></span>
 We define **dual complex** to be \\(D\_{X} = w\_{X}[n]\\), where \\(n = \dim X\\). and \\(w\_{X}(U) = \Hom(H\_{c}^{n}(U), k)\\).
 
+Referenced: [Verdier duality](#verdier-duality).
+
 
 ### <span class="org-todo todo TODO">TODO</span> Local system {#local-system}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 19:00]</span></span>
 The local system also has its dual.
+
+Referenced: [Constructible sheaf](#constructible-sheaf), [Verdier duality](#verdier-duality).
 
 
 ### Stratification {#stratification}
@@ -494,6 +565,8 @@ A **stratification** of \\(X\\) is a decomposition
 \\[X = \coprod\_{\alpha \in A} X\_{\alpha}\\]
 which is locally finite, \\(X\_{\alpha}\\) locally closed and smooth and satisfies
 \\[\bar{X}\_{\alpha} = \coprod\_{\beta \in B} X\_{\beta}\\]
+
+Referenced: [Constructible sheaf](#constructible-sheaf).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Whitney stratification {#whitney-stratification}
@@ -523,6 +596,8 @@ Also, we have
 As a speical case, when \\(\mathcal{L}\\) is [Local system](#local-system) and \\(X\\) is smooth, we have
 \\[\mathbb{D} \mathcal{L} \cong \mathcal{L}^{\vee}[2 d\_{X}]\\]
 
+Referenced: [Six functors](#six-functors).
+
 
 ### <span class="org-todo todo TODO">TODO</span> Equivariant sheaf {#equivariant-sheaf}
 
@@ -537,15 +612,14 @@ Equivariant pullback
 
 The reference includes [<span id="19580479584332ed50a4af7bf7f3f201"><a href="#steinberg2012" title="Steinberg, Representation Theory of Finite Groups: An Introductory Approach, {Springer} (2012).">steinberg2012</a></span>] Chapter 1-6.
 
+Referenced: [Representation category](#representation-category).
+
 
 ### Representation of finite groups {#representation-of-finite-groups}
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 A representation of a group \\(G\\) is homomorphism \\(\phi: G \to GL(V)\\) for some (finite-dimensional) vector space \\(V\\). The dimension of \\(V\\) is called the degree of \\(\phi\\).
-
-</div>
+{{% /definition %}}
 
 equivalence; G-invariant subspace; irreducible representation; completely reducible representation; indecomposable representation; unitary representation
 
@@ -583,6 +657,8 @@ Suppose that \\(\phi,\rho: G \to U\_{n}( C)\\) are inequivalent irreducible unit
 
 \begin{equation} \langle \phi\_{ij}, \phi\_{kl} \rangle =  \begin{cases} 1/n & \text{if } i = k \text{ and } j = l \\\\\\ 0 & \text{else} \end{cases} \end{equation}
 {{% /theorem %}}
+
+Referenced: [Characters and class functions](#characters-and-class-functions).
 
 
 ### Characters and class functions {#characters-and-class-functions}
@@ -652,12 +728,9 @@ Let \\(G\\) be a group of order \\(p^{a}q^{b}\\) with \\(p\\), \\(q\\) primes. T
 
 ### 点群 {#点群}
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 A finite subgroup of O(3) is called a point group.
-
-</div>
+{{% /definition %}}
 
 
 ### 有限群表示的总结 {#有限群表示的总结}
@@ -671,6 +744,8 @@ A finite subgroup of O(3) is called a point group.
 For a group \\(G\\), we may define the category \\(\cat{Rep}(G)\\) for finite dimensional representation of \\(G\\) with morphisms of representations.
 
 Cf. [Representation of finite groups](#representation-of-groups), [Algebraic group](#algebraic-group).
+
+Referenced: [Reconstruction theorem](#reconstruction-theorem).
 
 
 ### Reconstruction theorem {#reconstruction-theorem}
@@ -742,10 +817,16 @@ For two linear endomorphism \\(A, B\\), if \\([A,B] = 0\\), then \\(A, B\\) can 
 ### <span class="org-todo todo TODO">TODO</span> Root system {#root-system}
 
 
+
+Referenced: [Positive root](#positive-root), [Base](#base), [Fundamental weight](#fundamental-weight), [Dominant](#dominant).
+
+
 ### Positive root {#positive-root}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 18:53]</span></span>
 Let \\((G, T)\\) split [Reductive](#reductive), there exists [Borel](#borel) \\(B \supset T\\), and therefore \\(\mathfrak{b} \supset \mathfrak{t}\\). Let \\(\phi\\) be the [Root system](#root-system) of \\(G\\), we define the **positive root** to by \\(\phi^{+ }(B) = \\{\alpha \in \phi \mid \mathfrak{g}\_{\alpha} \subset \mathfrak{b}\\}\\).
+
+Referenced: [Base](#base).
 
 
 ### Base {#base}
@@ -755,6 +836,8 @@ A **base** of a [Root system](#root-system) \\(\Delta \in \phi\\) is a basis for
 
 For a base \\(\Delta\\) we have \\(\NN \Delta \cap \phi\\) system of [Positive roots](#positive-root). And positive roots can give a bases by [simple roots](#simple-root).
 
+Referenced: [Fundamental weight](#fundamental-weight).
+
 
 ### Fundamental weight {#fundamental-weight}
 
@@ -762,6 +845,8 @@ For a base \\(\Delta\\) we have \\(\NN \Delta \cap \phi\\) system of [Positive r
 For \\(\Delta = \\{\alpha\_{1}, \cdots, \alpha\_{n}\\}\\) [Base](#base) for \\(\phi\\), we define the **fundamental weights** \\(\\{\lambda\_{1}, \cdots, \lambda\_{n}\\}\\) basis for \\(V\\) dual to \\(\Delta^{\vee}\\) so that \\(\langle \lambda\_{i}, \alpha\_{j}^{\vee}\rangle = \delta\_{ij}\\).
 
 Cf. [Root system](#root-system).
+
+Referenced: [Dominant](#dominant).
 
 
 ### Dominant {#dominant}
@@ -775,6 +860,10 @@ Cf. [Root system](#root-system).
 ### <span class="org-todo todo TODO">TODO</span> simple root {#simple-root}
 
 
+
+Referenced: [Base](#base).
+
+
 ## Differential Geometry {#differential-geometry}
 
 
@@ -782,40 +871,37 @@ Cf. [Root system](#root-system).
 
 
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 An \\(n\\)-dimensional **manifold** is an \\(n\\)-dimensional locally Euclidean Hausdorff space with countable basis for its topology.
-
-</div>
+{{% /definition %}}
 
 The definition has three requirements, where the countable basis is hardly used.
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 A **differential structure**  on the \\(n\\)-manifold \\(M\\) is a maximal smooth atlas \\(\mathscr{D}\\) for \\(M\\). The pair \\((M, \mathscr{D})\\) is called a **smooth manifold** or **differentiable manifold**.
-
-</div>
+{{% /definition %}}
 
 We call a compact manifold without boundary a **closed manifold**.
+
+Referenced: [Lie group](#lie-group), [Tangent space](#tangent-space), [Orientation](#orientation), [Whitney embedding theorem](#whitney-embedding-theorem), [Collar](#collar), [Connected sum](#connected-sum), [Holonomy group](#holonomy-group), [Riemannian metric](#riemannian-metric), [Invariant formula for the exterior derivative](#invariant-formula-for-the-exterior-derivative), [Local homology group](#local-homology-group), [Fundamental class](#fundamental-class), [Poincaré duality](#poincaré-duality), [Symplectic manifold](#symplectic-manifold), [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold), [Spin structure](#spin-structure), [Rokhlin Theorem](#rokhlin-theorem).
 
 
 ### Lie group {#lie-group}
 
 
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 A **Lie group** is a smooth manifold with a group structure, where the group multiplication and inverse are smooth maps.
-
-</div>
+{{% /definition %}}
 
 Cf. [Manifold](#manifold).
 
 
 #### <span class="org-todo todo TODO">TODO</span> E8 {#e8}
+
+
+
+Referenced: [Intersection forms](#intersection-forms).
 
 
 ### Tangent space {#tangent-space}
@@ -825,11 +911,15 @@ We denote the **tangent space** at point \\(p\\) by \\(T\_{p}(M)\\), and to each
 \\[T\_{p}(gf) = T\_{f(p)} g \circ T\_{p}f\\]
 The elements of \\(T\_{p}(M)\\) are the **tangent vectors** of \\(M\\) at \\(p\\). Cf. [Manifold](#manifold).
 
+Referenced: [Immersion](#immersion), [Regular point](#regular-point), [Tangent bundle](#tangent-bundle), [Predeformation functor](#predeformation-functor).
+
 
 ### Immersion {#immersion}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-26 Thu 19:17]</span></span>
 A smooth map \\(f\\) is an **immersion** if each \\(T\_{x}f\\) is injective and **submersion** if each \\(T\_{x}f\\) is surjective. Cf. [Tangent space](#tangent-space).
+
+Referenced: [Submersion](#submersion), [Normal bundle](#normal-bundle), [Knot](#knot), [Link](#link).
 
 
 ### Submersion {#submersion}
@@ -842,6 +932,8 @@ See [Immersion](#immersion).
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-26 Thu 19:20]</span></span>
 For a smooth map \\(f: M \to N\\), a point \\(x \in M\\) is called a **regular point** if \\(T\_{x}f\\) is surjective and a point \\(y \in N\\) is called a **regular value** if each \\(x \in f^{-1}(y)\\) is a regular point, otherwise is called a **singular value**. Cf. [Tangent space](#tangent-space).
+
+Referenced: [Sard theorem](#sard-theorem), [Degree](#degree), [Critical point](#critical-point).
 
 
 ### Sard theorem {#sard-theorem}
@@ -858,15 +950,19 @@ Cf. [Regular point](#regular-point).
 In most applications, the dense property implies the existence, as in the case of Whitney embedding theorem.
 {{% /remark %}}
 
+Referenced: [Whitney embedding theorem](#whitney-embedding-theorem), [Seiberg-Witten moduli space](#seiberg-witten-moduli-space).
+
 
 ### Orientation {#orientation}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-26 Thu 19:38]</span></span>
 An atlas is called **orienting** if any two charts are positively related, that is every two charts has the same orientation as a subset of \\(\RR^{n}\\). If a [Manifold](#manifold) \\(M\\) has an orienting atlas, we call \\(M\\) **orientable**. Notice that if a manifold is orientable, it naturally has two orientation.
 
-Given [Local homology group](#local-homology-group), a generator of the homology group \\(H\_{n}(M, M \backslash x; R) \cong R\\) is called a **local \\(R\\)-orientation**. Let \\(M\\) be a \\(n\\)-manifold and \\(A \subset M\\). An \\(R\\)-orientation of \\(M\\) along \\(A\\) is a section \\(s \subset \Gamma(A; R)\\) of \\(\omega: H\_{n}(M, M \backslash \bullet; R) \to M\\) such that \\(s(a) \in H\_{n}(M, M \backslash a; R) \cong R\\) is a generator for each \\(a \in A\\). For \\(A = M\\), we called it \*\\(R\\)-orientation\* and for \\(R = \ZZ\\), it is called **orientation**.
+Given [Local homology group](#local-homology-group), a generator of the homology group \\(H\_{n}(M, M \backslash x; R) \cong R\\) is called a **local \\(R\\)-orientation**. Let \\(M\\) be a \\(n\\)-manifold and \\(A \subset M\\). An \\(R\\)-orientation of \\(M\\) along \\(A\\) is a section \\(s \subset \Gamma(A; R)\\) of \\(\omega: H\_{n}(M, M \backslash \bullet; R) \to M\\) such that \\(s(a) \in H\_{n}(M, M \backslash a; R) \cong R\\) is a generator for each \\(a \in A\\). For \\(A = M\\), we called it **\\(R\\)-orientation** and for \\(R = \ZZ\\), it is called **orientation**.
 
 By characteristic class theory, a manifold is orientable if the first [Stiefel-Whitney class](#stiefel-whitney-class) vanishes that is \\(w\_{1}(E) = 0\\).
+
+Referenced: [Oriented](#oriented), [Orientable](#orientable), [Degree](#degree), [Fundamental class](#fundamental-class), [Poincaré duality](#poincaré-duality), [Euler class](#euler-class), [Lickorish-Wallace theorem](#lickorish-wallace-theorem).
 
 
 ### Oriented {#oriented}
@@ -874,17 +970,23 @@ By characteristic class theory, a manifold is orientable if the first [Stiefel-W
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 13:36]</span></span>
 See [Orientation](#orientation).
 
+Referenced: [Seifert surface](#seifert-surface), [Linking number](#linking-number), [Trisection](#trisection), [Seiberg-Witten moduli space](#seiberg-witten-moduli-space).
+
 
 ### Orientable {#orientable}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 13:36]</span></span>
 See [Orientation](#orientation).
 
+Referenced: [Heegaard diagram](#heegaard-diagram), [Trisection](#trisection).
+
 
 ### Tangent bundle {#tangent-bundle}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-26 Thu 19:45]</span></span>
 The [Tangent space](#tangent-space) at each point constitutes a [Vector bundle](#vector-bundle) called the **tangent bundle**.
+
+Referenced: [Normal bundle](#normal-bundle), [Differential form](#differential-form), [Distribution](#distribution).
 
 
 ### Normal bundle {#normal-bundle}
@@ -893,6 +995,8 @@ The [Tangent space](#tangent-space) at each point constitutes a [Vector bundle](
 Let \\(f: M \to N\\) be an [Immersion](#immersion). We define the quotient bundle of the bundle morphism \\(i: TM \to f^{\* }TN|\_{M}\\) to be the **normal bundle**. There exists a neighborhood of the zero section of normal bundle diffeomorphic to the neighborhood of \\(N\\) in \\(M\\). The diffeomorphic map is called **tubular map** and the target is called **tubular neighborhood**.
 
 Cf. [Vector bundle](#vector-bundle), [Tangent bundle](#tangent-bundle).
+
+Referenced: [Collar](#collar).
 
 
 ### Whitney embedding theorem {#whitney-embedding-theorem}
@@ -933,6 +1037,8 @@ Given a smooth covariant tensor field \\(A\\) on \\(M\\), we define the **Lie de
 \\[(\mathscr{L}\_{V}A)\_{p} = \frac{\dif}{\dif t} \mid\_{t = 0} (\theta\_{t}^{\* }A)\_{p}\\]
 Here \\(V\\) is a smooth vector field on \\(M\\), and \\(\theta\\) is its flow. \\(\theta\_{t}\\) is locally an isomorphism.
 
+Referenced: [Liouville vector field](#liouville-vector-field).
+
 
 ### Connection {#connection}
 
@@ -940,6 +1046,8 @@ Here \\(V\\) is a smooth vector field on \\(M\\), and \\(\theta\\) is its flow. 
 A **connection** on a [Vector bundle](#vector-bundle) \\(E \to M\\) is a linear map \\(\nabla^{E} : C^{\infty}(E) \to C^{\infty}(E \otimes T^{ \*}M)\\) satisfying the condition
 \\[\nabla^{E}(\alpha e) = \alpha \nabla^{E} e + e \otimes \dif \alpha\\]
 whenever \\(e \in C^{\infty}\\) is a smooth section of \\(E\\) and \\(\alpha\\) is a smooth function on \\(M\\).
+
+Referenced: [Curvature](#curvature), [Holonomy group](#holonomy-group), [Chern class](#chern-class).
 
 
 ### Curvature {#curvature}
@@ -951,6 +1059,8 @@ for all \\(v,w \in C^{\infty}( TM)\\) and \\(e \in C^{\infty}(E)\\).
 
 In fact, there exists a section \\(F\_{E} \in \Omega^{2}(X; \End(X))\\) such that \\(R(\nabla^{E})s = F\_{E} \cap S\\).
 
+Referenced: [Chern class](#chern-class).
+
 
 ### Holonomy group {#holonomy-group}
 
@@ -958,6 +1068,8 @@ In fact, there exists a section \\(F\_{E} \in \Omega^{2}(X; \End(X))\\) such tha
 Let \\(M\\) be a [Manifold](#manifold), \\(E\\) a [Vector bundle](#vector-bundle) over \\(M\\), and \\(\nabla^{E}\\) a [Connection](#connection) on \\(E\\). Suppose \\(\gamma: [0,1] \to M\\) is smooth, with \\(\gamma(0) = x\\) and \\(\gamma(1) = y\\), where \\(x,y \in M\\). Then for each \\(e \in E\_{x}\\) there exists a unique smooth section \\(s\\) of \\(\gamma^{\* }(E)\\) satisfying \\(\nabla\_{\dot{\gamma}(t)}^{E} s(t) = 0\\) for \\(t \in [0,1]\\) with \\(s(0) = e\\). Define \\(P\_{\gamma}(e) = s(1)\\). Then \\(P\_{\gamma}: E\_{x} \to E\_{y}\\) is a well-defined linear map called the **parallel transport map**.
 
 Fix a point \\(x \in M\\), we define the **holonomy group** \\(\hol\_{x}(\nabla^{E}) = \\{P\_{\gamma}: \gamma \text{ is a loop based at } x\\} \subset \GL(E\_{x})\\).
+
+Referenced: [Kähler manifold with holomorphic symplectic structure](#kähler-manifold-with-holomorphic-symplectic-structure).
 
 
 #### Berger classification theorem {#berger-classification-theorem}
@@ -1001,6 +1113,8 @@ Every smooth manifold admits a Riemannian metric.
 By [Numerable](#numerable) property of the smooth manifold.
 {{% /proof %}}
 
+Referenced: [Spin^C connection](#spin-c-connection).
+
 
 ### Wedge product {#wedge-product}
 
@@ -1015,6 +1129,8 @@ For \\(w \in \Lambda^{k}(V^{\* })\\) and \\(\eta \in \Lambda^{l}(V^{\* })\\), we
 A section of \\(\Lambda^{k}T^{\* }M\\) is called a **differential \\(k\\)-form**. The integer \\(k\\) is called the **degree** of the form.
 
 Cf. [Tangent bundle](#tangent-bundle).
+
+Referenced: [Invariant formula for the exterior derivative](#invariant-formula-for-the-exterior-derivative), [Exterior derivative](#exterior-derivative), [Stokes's theorem](#stokes-s-theorem).
 
 
 ### Invariant formula for the exterior derivative {#invariant-formula-for-the-exterior-derivative}
@@ -1032,6 +1148,8 @@ Cf. [Differential form](#differential-form), [Exterior derivative](#exterior-der
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-09 Thu 20:02]</span></span>
 We define the **exterior differential** of [Differential form](#differential-form)
 \\[\dif (\sum\_{J} \omega\_{J} \dif x^{J}) = \sum\_{J} \dif \omega\_{J} \wedge \dif x^{J}\\]
+
+Referenced: [Invariant formula for the exterior derivative](#invariant-formula-for-the-exterior-derivative), [Stokes's theorem](#stokes-s-theorem).
 
 
 ### Cartan's magic formula {#cartan-s-magic-formula}
@@ -1067,6 +1185,8 @@ where \\(Z^{p}(M)\\) is the closed \\(p\\)-forms on \\(M\\). then \\(B^{p}(M)\\)
 The de Rham cohomology is homotopy invariants. If \\(M\\) and \\(N\\) is homotopy equivalent manifolds, then \\(H\_{dR}^{n}(M) \cong H^{p}\_{dR}(N)\\) for each \\(p\\). The isomorphisms are induced by any smooth homotopy equivalence \\(F: M \to N\\).
 {{% /proposition %}}
 
+Referenced: [de Rham theorem](#de-rham-theorem), [Cohomology](#cohomology).
+
 
 ### de Rham theorem {#de-rham-theorem}
 
@@ -1098,17 +1218,23 @@ Cf. [Tangent bundle](#tangent-bundle).
 
 A **distribution** on \\(M\\) of rank \\(k\\) is a rank \\(k\\) subbundle of \\(TM\\). It is called a **smooth** distribution if it is a smooth subbundle.
 
+Referenced: [Integral distribution](#integral-distribution), [Involutive distribution](#involutive-distribution), [Complete integral distribution](#complete-integral-distribution).
+
 
 ### Integral distribution {#integral-distribution}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-09 Thu 20:31]</span></span>
 A nonempty immersed submanifold \\(N \subset M\\) is called an **integral manifold** of \\(D\\) if \\(T\_{p}N = D\_{p}\\) at each point \\(p \in N\\). And a [Distribution](#distribution) is called **integral** if every point of \\(M\\) is contained in an integral manifold.
 
+Referenced: [Frobenius theorem](#frobenius-theorem).
+
 
 ### Involutive distribution {#involutive-distribution}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-09 Thu 20:32]</span></span>
 The [Distribution](#distribution) \\(D\\) is **involutive** if given a pair of smooth local sections of \\(D\\), their Lie bracket is also local section of \\(D\\).
+
+Referenced: [Frobenius theorem](#frobenius-theorem).
 
 
 ### Complete integral distribution {#complete-integral-distribution}
@@ -1117,6 +1243,8 @@ The [Distribution](#distribution) \\(D\\) is **involutive** if given a pair of s
 Given a rank \\(k\\) [Distribution](#distribution) \\(D \subset TM\\), let us say that a smooth coordinate chart \\((U, \phi)\\) on \\(M\\) is **flat** for \\(D\\) if \\(\phi(U)\\) is a cube in \\(\RR^{n}\\) and at points of \\(U\\), \\(D\\) is spanned by the first \\(k\\) coordinate vector fields \\(\partial/ \partial x^{1}, \cdots, \partial/ \partial x^{k}\\).
 
 A distribution \\(D \subset TM\\) is **completely integrable** if there exists a flat chart for \\(D\\) in a neighborhood of each point of \\(M\\).
+
+Referenced: [Frobenius theorem](#frobenius-theorem).
 
 
 ### Frobenius theorem {#frobenius-theorem}
@@ -1136,12 +1264,9 @@ Every involutive distribution is completely integrable.
 
 
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 The **Whitney sum** of two vector bundle \\(\xi: E(\xi) \to B\\) and \\(\eta: E(\eta) \to B\\) is \\(d^{\* }(\xi \times \eta) = \xi \oplus \eta\\), where \\(d: B \to B \times B\\) is the diagonal map. A bundle \\(\eta\\) is called an **inverse** of \\(\xi\\), if \\(\xi \oplus \eta\\) is isomorphic to a trivial bundle.
-
-</div>
+{{% /definition %}}
 
 {{% theorem %}}
 A numerable vector bundle has a **Riemann metric**.
@@ -1154,6 +1279,8 @@ A bundle has an inverse if and only if it is numerable of finite type.
 {{% /theorem %}}
 
 The real vector bundles and complex vector bundles have monoid structure and can be transformed into [Grothendieck ring](#grothendieck-ring) denoted by \\(KO(X)\\) and \\(K(X) = KU(X)\\).
+
+Referenced: [Tangent bundle](#tangent-bundle), [Normal bundle](#normal-bundle), [Connection](#connection), [Holonomy group](#holonomy-group), [Bott periodicity](#bott-periodicity), [Complex line bundle over CP^1](#complex-line-bundle-over-cp-1), [Numerable](#numerable), [Euler class](#euler-class), [Poincaré-Hopf thereom](#poincaré-hopf-thereom), [Chern class](#chern-class), [Stiefel-Whitney class](#stiefel-whitney-class), [Fibre bundle](#fibre-bundle), [Elliptic fibration](#elliptic-fibration).
 
 
 ### Bott periodicity {#bott-periodicity}
@@ -1186,46 +1313,43 @@ This is a simple but non-trivial fact, leading naturally to the problems of comp
 
 Cf. [Vector bundle](#vector-bundle)
 
+Referenced: [Bott periodicity](#bott-periodicity).
+
 
 ### Grothendieck ring {#grothendieck-ring}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-24 Tue 10:55]</span></span>
 Given a commutative monoid \\(M\\) which is a set together with an associative and commutative composition law \\(+\\) with zero element. We have a group \\(K(M) = M \times M / D(M)\\). That is elements of \\(K(M)\\) are of the form \\((a,b) \in M \times M\\), with equivalence relation \\((a, b) \sim (c, d)\\) if \\((a + n, b + n) = (c + m, d + m)\\) for some \\(m,n \in M\\). Such group is called **Grothendieck group**. If the monoid is given with a multiplicative structure, which can by inherited by Grothendieck group, the group becomes **Grothendieck ring**.
 
+Referenced: [Vector bundle](#vector-bundle), [Bott periodicity](#bott-periodicity).
+
 
 ### Numerable {#numerable}
 
 
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 An open covering is called **numerable** if it admits a subordinate partition of unity.
-
-</div>
+{{% /definition %}}
 
 Partition of unity is one of the important properties of the covering which deserves its own definition.
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 A vector bundle (locally trivial bundle) \\(\xi: E(\xi) \to B\\) is called **numerable** if there exists a numerable covering on which the vector bundle is trivial.
-
-</div>
+{{% /definition %}}
 
 Cf. [Vector bundle](#vector-bundle)
+
+Referenced: [Riemannian metric](#riemannian-metric), [Vector bundle](#vector-bundle), [Classifying Space](#classifying-space).
 
 
 ### Eilenberg-Mac Lane space {#eilenberg-mac-lane-space}
 
 
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 The **Eilenberg-Mac Lane space** \\(K(G, n)\\) is the space with homotopy group \\(\pi\_{i}(K(G,n)) = 0\\) for \\(i \neq n\\) and \\(G\\) if \\(i = n\\).
-
-</div>
+{{% /definition %}}
 
 {{% theorem %}}
 The Eilenberg-Mac Lane spaces exist.
@@ -1243,6 +1367,8 @@ Cf. [CW complex](#cw-complex).
 {{% exam %}}
 \\[\CC P^{\infty} = K(\ZZ, 2)\\]
 {{% /exam %}}
+
+Referenced: [Classifying Space](#classifying-space).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Postnikov tower {#postnikov-tower}
@@ -1276,8 +1402,14 @@ For a discrete group, \\(BG\\) is an [Eilenberg-Mac Lane space](#eilenberg-mac-l
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-29 Sun 15:25]</span></span>
 Compared with classical cohomology theory, the equivariant cohomology is more general and simpler.
 
+Referenced: [Geometric representation theory](#geometric-representation-theory).
+
 
 ### <span class="org-todo todo TODO">TODO</span> Equivariant K-theory {#equivariant-k-theory}
+
+
+
+Referenced: [Geometric representation theory](#geometric-representation-theory).
 
 
 ### Local homology group {#local-homology-group}
@@ -1288,6 +1420,8 @@ Let \\(h\_{\* }(-)\\) be a homology theory and \\(M\\) an \\(n\\)-dimensional [M
 By excision theorem, we have that \\(h\_{k}(M, M \backslash x)\\) is \\(h\_{k}(D^{n}, D^{n} \backslash x)\\). For [Singular homology](#singular-homology) theory, we have \\(H\_{n}(M, M \backslash x; G) \cong G\\) and other homology groups are all \\(0\\).
 
 For \\(K \subset L \subset M\\), we have homomorphism \\(r\_{K}^{L}: h\_{k}(M, M \backslash L) \to h\_{k}(M, M \backslash K)\\).
+
+Referenced: [Orientation](#orientation), [Fundamental class](#fundamental-class).
 
 
 ### Fundamental class {#fundamental-class}
@@ -1315,6 +1449,8 @@ Let \\(M\\) be a compact connected \\(n\\)-manifold with non-empty boundary. The
 -   \\(H\_{n}(M, \partial M) = 0\\), and \\(M \backslash \partial M\\) is not orientable.
 {{% /theorem %}}
 
+Referenced: [Poincaré duality](#poincaré-duality), [Virtual fundamental class](#virtual-fundamental-class).
+
 
 ### Cohomology {#cohomology}
 
@@ -1322,17 +1458,14 @@ Let \\(M\\) be a compact connected \\(n\\)-manifold with non-empty boundary. The
 
 There are various **cohomology** theories. The can be defined by common axioms.
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 A **cohomology theory** for pairs of spaces with values in the category of \\(R\\)-modules consists of a family \\((h^{n} \mid n \in \ZZ)\\) of contravariant functors \\(h^{n}: TOP(2) \to R-MOD\\) and natural transformations \\(\delta^{n}: h^{n - 1} \circ \kappa \to h^{n}\\) such that
 
 -   Homotopy invariance. Homotopic maps \\(f\_{0}\\) and \\(f\_{1}\\) between pairs of space induces the same homomorphism \\(h^{n}(f\_{0}) = h^{n}(f\_{1})\\).
 -   Exact sequence. For each pair \\((X, A)\\), we have exact sequence
     \\[\cdots \to h^{n - 1}(A, \emptyset) \stackrel{\delta}{\to} h^{n}(X, A) \to h^{n}(X, \emptyset) \to h^{n}(A) \to \cdots \\]
 -   Excision. Let \\((X, A)\\) be a pair and \\(U \subset A\\) such that \\(\bar{U} \subset A^{\circ}\\). Then the inclusion \\((X \backslash U, A \backslash U) \to (X,A)\\) induces an isomorphism \\(h^{n}(X, A) \cong h^{n}(X \backslash U, A \backslash U)\\).
-
-</div>
+{{% /definition %}}
 
 Cf. [Excision theorem](#excision-theorem), [Mayer-Vietoris sequence](#mayer-vietoris-sequence).
 
@@ -1349,6 +1482,8 @@ Also, we have triple exact sequence
 
 Cf. [de Rham cohomology](#de-rham-cohomology).
 
+Referenced: [Eilenberg-Mac Lane space](#eilenberg-mac-lane-space), [Cap product](#cap-product), [Reduced cohomology](#reduced-cohomology), [Mayer-Vietoris sequence](#mayer-vietoris-sequence), [Excision theorem](#excision-theorem), [Category of modules](#category-of-modules).
+
 
 #### Singular cohomology {#singular-cohomology}
 
@@ -1356,6 +1491,8 @@ Cf. [de Rham cohomology](#de-rham-cohomology).
 Cf. [Singular homology](#singular-homology).
 
 We consider the cochain complex \\(S^{n}(X; G) = \Hom(S\_{n}(X), G)\\) and define the i-th **singular cohomology** by the i-th cohomology group of the cochain complex.
+
+Referenced: [de Rham theorem](#de-rham-theorem).
 
 
 #### Relative singular cohomology {#relative-singular-cohomology}
@@ -1372,6 +1509,8 @@ Let \\(\mathscr{K}\\) denote the set of compact subspaces of \\(X\\). We define 
 In particular if \\(X\\) is compact, we have \\(H\_{c}^{k}(X) = H^{k}(X)\\).
 
 The compactly supported cohomology also satisfies [Mayer-Vietoris sequence](#mayer-vietoris-sequence).
+
+Referenced: [Poincaré duality](#poincaré-duality).
 
 
 #### Cup product {#cup-product}
@@ -1441,6 +1580,8 @@ Cf. [Cohomology](#cohomology).
 There are **Mayer-Vietoris sequence** for homology and [Cohomology](#cohomology) theory. For \\((A; A\_{0}, A\_{1}) \subset (X; X\_{0}, X\_{1})\\) be excisive triads that is \\(A = A\_{0}^{\circ} \cap A\_{1}^{\circ}\\) and \\(X = X\_{0}^{\circ} \cap X\_{1}^{\circ}\\). Set \\(X\_{01} = X\_{0} \cap X\_{1}\\) and \\(A\_{01} = A\_{0} \cap A\_{1}\\). Then we have exact sequence
 \\[\cdots \to h^{n - 1}(X\_{01}, A\_{01}) \to h^{n}(X, A) \to h^{n}(X\_{0}, A\_{0}) \oplus h^{n}(X\_{1}, A\_{1}) \to h^{n}(X\_{01}, A\_{01}) \to \cdots\\]
 
+Referenced: [Cohomology](#cohomology), [Compactly supported cohomology](#compactly-supported-cohomology), [Excision theorem](#excision-theorem).
+
 
 ### Excision theorem {#excision-theorem}
 
@@ -1453,6 +1594,8 @@ Let \\(U \subset A \subset X\\) be subspaces such that \\(\bar{U} \subset A^{\ci
 {{% /theorem %}}
 
 Cf. [Homology](#homology) and [Cohomology](#cohomology).
+
+Referenced: [Cohomology](#cohomology).
 
 
 ### Hurewicz theorem {#hurewicz-theorem}
@@ -1485,6 +1628,8 @@ and the Hurewicz map
 \\[\pi\_{n}(X,A) \to H\_{n}(X, A)\\]
 is an isomorphism.
 {{% /theorem %}}
+
+Referenced: [Whitehead theorem](#whitehead-theorem).
 
 
 ### Whitehead theorem {#whitehead-theorem}
@@ -1523,11 +1668,15 @@ By Eilenberg-Zilber theorem, the above map is a chain homotopy equivalence.
 
 Cf. [Homology](#homology).
 
+Referenced: [Alexander-Whitney map](#alexander-whitney-map).
+
 
 ### Alexander-Whitney map {#alexander-whitney-map}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-26 Sun 21:25]</span></span>
 See [Eilenberg-Zilber theorem](#eilenberg-zilber-theorem).
+
+Referenced: [Cup product](#cup-product).
 
 
 ### Künneth formula {#künneth-formula}
@@ -1562,6 +1711,8 @@ is an isomorphism. In particular, if \\(X\\) is compact, then \\(H^{p}(X) \cong 
 
 Cf. [Orientation](#orientation), [Manifold](#manifold), [Compactly supported cohomology](#compactly-supported-cohomology), [Singular homology](#singular-homology), [Fundamental class](#fundamental-class).
 
+Referenced: [Lefschetz fixed point theorem](#lefschetz-fixed-point-theorem).
+
 
 ### Lefschetz fixed point theorem {#lefschetz-fixed-point-theorem}
 
@@ -1594,6 +1745,8 @@ Let \\(f: D^{2} \to D^{2}\\). Then there exists \\(x \in D^{2}\\) such that \\(f
 
 The Brouwer fixed point theorem can give a proof of the fundamental theorem of algebra.
 
+Referenced: [Existence proof](#existence-proof).
+
 
 ### Borsuk-Ulam theorem {#borsuk-ulam-theorem}
 
@@ -1610,6 +1763,8 @@ Cf. [Degree](#degree).
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-22 Wed 20:34]</span></span>
 Let \\(p: E \to X\\) be a real [Oriented](#orientation) [Vector bundle](#vector-bundle) of dimension \\(n\\), we want to find a nowhere vanishing section \\(s: X \to E\\), the primary obstruction is defined as the **Euler class** \\(e(E) \in H^{n}(X; \ZZ)\\). A geometric definition is taht we consider a generic section \\(s: X \to E\\) which is transverse to zero section, then \\(s^{-1}(0)\\) is a submanifold of \\(X\\) of codimension \\(n\\) and \\(e(E)\\) can be taken as Poincaré dual of \\([s^{-1}(0)]\\).
+
+Referenced: [Poincaré-Hopf thereom](#poincaré-hopf-thereom).
 
 
 ### Poincaré-Hopf thereom {#poincaré-hopf-thereom}
@@ -1639,17 +1794,23 @@ where \\(F\_{A}\\) is the curvature with respect to connection \\(\nabla\_{A}\\)
 
 Cf. [Curvature](#curvature).
 
+Referenced: [Pontryagin class](#pontryagin-class).
+
 
 ### Stiefel-Whitney class {#stiefel-whitney-class}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-22 Wed 20:44]</span></span>
 For \\(p: E \to X\\) real [Vector bundle](#vector-bundle), we want to find sections linear independent. And we define the **Stiefel-Whitney class** \\(w\_{\* }(E)\\) as the obstruction in \\(H^{\* }(X; \ZZ/2)\\). It is universal for characteristic class in \\(\ZZ/2\\) coeffecients.
 
+Referenced: [Orientation](#orientation), [Characteristic class for 4-manifold](#characteristic-class-for-4-manifold), [Spin^C structure](#spin-c-structure).
+
 
 ### Pontryagin class {#pontryagin-class}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-22 Wed 20:46]</span></span>
 The **Pontryagin class** is defined as \\(P\_{i}(E) = (-1)^{i}c\_{2i}(E \otimes\_{\RR} \CC)\\), where \\(c\_{i}\\) is the [Chern class](#chern-class).
+
+Referenced: [Characteristic class for 4-manifold](#characteristic-class-for-4-manifold).
 
 
 ### Degree {#degree}
@@ -1660,8 +1821,14 @@ For degree of isogeny, see [Isogeny](#isogeny).
 
 For degree of a map \\(f: S^{n} \to S^{n}\\), the **degree** its image in the [Homotopy group](#homotopy-group) \\(\pi\_{n}(S^{n}) \cong \ZZ\\).
 
+Referenced: [Borsuk-Ulam theorem](#borsuk-ulam-theorem).
+
 
 ### <span class="org-todo todo TODO">TODO</span> Homotopy {#homotopy}
+
+
+
+Referenced: [Hurewicz theorem](#hurewicz-theorem), [Cellular homotopy](#cellular-homotopy).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Homotopy group {#homotopy-group}
@@ -1674,16 +1841,22 @@ Unlike the [Fundamental group](#fundamental-group), the higher homotopy group is
 \\(\pi\_{n}(X)\\) is abelian if \\(n \geq 2\\).
 {{% /proposition %}}
 
+Referenced: [Degree](#degree), [Smash product](#smash-product), [Exact Puppe sequence](#exact-puppe-sequence).
+
 
 ### Standard n-simplex {#standard-n-simplex}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-12 Tue 16:03]</span></span>
 We denote the **standard n-simplex** by \\(\Delta^{n} = \\{(t\_{0}, \cdots, t\_{n}) \in \RR^{n + 1} \mid \sum\_{i = 0}^{n} t\_{i} = 1, t\_{i} \geq 0\\}\\).
 
+Referenced: [Singular homology](#singular-homology).
+
 
 ### <span class="org-todo todo TODO">TODO</span> Homology {#homology}
 
 
+
+Referenced: [Cap product](#cap-product), [Excision theorem](#excision-theorem), [Hurewicz theorem](#hurewicz-theorem), [Whitehead theorem](#whitehead-theorem), [Eilenberg-Zilber theorem](#eilenberg-zilber-theorem).
 
 
 #### Singular homology {#singular-homology}
@@ -1701,6 +1874,8 @@ If \\(X\\) is contractible, then
 
 \begin{equation} H\_{n}(X) =   \begin{cases}     0 & n > 0 \\\\\\     \ZZ & n = 0   \end{cases} \end{equation}
 {{% /theorem %}}
+
+Referenced: [Local homology group](#local-homology-group), [Singular cohomology](#singular-cohomology), [Eilenberg-Zilber theorem](#eilenberg-zilber-theorem), [Künneth formula](#künneth-formula), [Poincaré duality](#poincaré-duality).
 
 
 #### Relative singular homology {#relative-singular-homology}
@@ -1728,6 +1903,10 @@ Cf. [Suspension](#suspension).
 ### <span class="org-todo todo TODO">TODO</span> Contractible {#contractible}
 
 
+
+Referenced: [Integer homology 3-sphere](#integer-homology-3-sphere).
+
+
 ### <span class="org-todo todo TODO">TODO</span> Fundamental group {#fundamental-group}
 
 
@@ -1747,11 +1926,21 @@ That is \\(\pi\_{1}(E, e)\\) is a normal subgroup of \\(\pi\_{1}(B, b)\\).
 
 Cf. [G-principal covering](#g-principal-covering) and above theorem.
 
+Referenced: [Homotopy group](#homotopy-group), [Semi-locally simply connected](#semi-locally-simply-connected), [Seifert-Van Kampen theorem](#seifert-van-kampen-theorem), [Braid group](#braid-group).
+
 
 ### <span class="org-todo todo TODO">TODO</span> Fundamental groupoid {#fundamental-groupoid}
 
 
+
+Referenced: [Seifert-Van Kampen theorem](#seifert-van-kampen-theorem).
+
+
 ### <span class="org-todo todo TODO">TODO</span> Path connected {#path-connected}
+
+
+
+Referenced: [Covering](#covering), [Deck transformation](#deck-transformation), [Universal covering](#universal-covering), [Lifting](#lifting), [Seifert-Van Kampen theorem](#seifert-van-kampen-theorem), [Homotopy fiber](#homotopy-fiber).
 
 
 ### Fibre bundle {#fibre-bundle}
@@ -1769,11 +1958,15 @@ Cf. [Vector bundle](#vector-bundle).
 \\[S^{1} \to S^{2n + 1} \to \CC P^{n}\\]
 {{% /exam %}}
 
+Referenced: [Fibre](#fibre), [Base](#base), [Trvialization](#trvialization), [Local trivial](#local-trivial), [Covering](#covering), [Fibration](#fibration), [Homotopy fiber](#homotopy-fiber).
+
 
 ### Fibre {#fibre}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 15:12]</span></span>
 See [Fibre bundle](#fibre-bundle).
+
+Referenced: [Covering](#covering).
 
 
 ### Base {#base}
@@ -1792,6 +1985,8 @@ See [Fibre bundle](#fibre-bundle).
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 15:13]</span></span>
 See [Fibre bundle](#fibre-bundle).
+
+Referenced: [Covering](#covering).
 
 
 ### Covering {#covering}
@@ -1814,6 +2009,8 @@ Assume \\(B\\) is path connected, locally path connected and semi-locally simply
 
 Cf. [Path connected](#path-connected), [Semi-locally simply connected](#semi-locally-simply-connected).
 
+Referenced: [Fundamental group](#fundamental-group), [Deck transformation](#deck-transformation), [Universal covering](#universal-covering), [Lifting](#lifting), [Fibration](#fibration), [G-principal covering](#g-principal-covering).
+
 
 ### Deck transformation {#deck-transformation}
 
@@ -1822,6 +2019,10 @@ Let \\(B\\) be a [Path connected](#path-connected) and \\(p: E \to B\\) be a con
 
 
 ### <span class="org-todo todo TODO">TODO</span> Simply connected {#simply-connected}
+
+
+
+Referenced: [Universal covering](#universal-covering), [Semi-locally simply connected](#semi-locally-simply-connected).
 
 
 ### Universal covering {#universal-covering}
@@ -1842,6 +2043,8 @@ Cf. [Path connected](#path-connected), [Semi-locally simply connected](#semi-loc
 A space is **semi-locally simply connected** if for any \\(x\_{0} \in X\\), there is a neighborhood \\(U\_{0}\\) such that the image of the map \\(i\_{\* }: \pi\_{1}(U\_{0}, x\_{0}) \to \pi\_{1}(X, x\_{0})\\) is trivial.
 
 Cf. [Simply connected](#simply-connected), [Fundamental group](#fundamental-group).
+
+Referenced: [Covering](#covering), [Universal covering](#universal-covering).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Lifting {#lifting}
@@ -1865,6 +2068,8 @@ A map \\(p: E \to B\\) is said to have the **homotopy lifting property** with re
 
 {{< figure src="/img/2021-10-07_15-44-54_screenshot.png" >}}
 
+Referenced: [Fibration](#fibration).
+
 
 ### Fibration {#fibration}
 
@@ -1883,6 +2088,8 @@ By the corollary in [Homotopy fiber](#homotopy-fiber), we see that fibration is 
 Let \\(p:E \to B\\) be a fiber bundle with \\(B\\) paracompact Hausdorff. Then \\(p\\) is a fibration.
 {{% /theorem %}}
 
+Referenced: [Homotopy fiber](#homotopy-fiber), [Exact Puppe sequence](#exact-puppe-sequence).
+
 
 ### <span class="org-todo todo TODO">TODO</span> Transport functor {#transport-functor}
 
@@ -1890,14 +2097,20 @@ Let \\(p:E \to B\\) be a fiber bundle with \\(B\\) paracompact Hausdorff. Then \
 ### <span class="org-todo todo TODO">TODO</span> Properly discontinuous {#properly-discontinuous}
 
 
+
+Referenced: [G-principal covering](#g-principal-covering).
+
+
 ### G-principal covering {#g-principal-covering}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 15:54]</span></span>
-A left \*\\(G\\)-principal covering\* is a [Covering](#covering) \\(p: E \to B\\) with a left [Properly discontinuous](#properly-discontinuous) \\(G\\)-action on \\(E\\) over \\(B\\) commutes with the covering map.
+A left **\\(G\\)-principal covering** is a [Covering](#covering) \\(p: E \to B\\) with a left [Properly discontinuous](#properly-discontinuous) \\(G\\)-action on \\(E\\) over \\(B\\) commutes with the covering map.
 
 {{% exam %}}
 The map \\(\RR^{1} \to S^{1}\\) is a \\(\ZZ\\)-principal covering for action \\(n: t \to t + n\\).
 {{% /exam %}}
+
+Referenced: [Fundamental group](#fundamental-group).
 
 
 ### Deformation retract {#deformation-retract}
@@ -1905,17 +2118,23 @@ The map \\(\RR^{1} \to S^{1}\\) is a \\(\ZZ\\)-principal covering for action \\(
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 16:19]</span></span>
 See [Retraction](#retraction).
 
+Referenced: [Neighborhood deformation retract](#neighborhood-deformation-retract).
+
 
 ### Retraction {#retraction}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 16:01]</span></span>
 Let \\(i: A \subset X\\) be an inclusion. A continuous map \\(r: X \to A\\) is called a **retraction** if \\(r \circ i = 1\_{A}\\). \\(r\\) is called a **deformation retraction** if furthermore we have a homotopy \\(i  \circ r \cong 1\_{X} \text{ rel } A\\).
 
+Referenced: [Deformation retract](#deformation-retract).
+
 
 ### Wedge product {#wedge-product}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-07 Thu 16:42]</span></span>
 We define the **wedge product** \\(\vee\\) by \\(X \vee Y = X \coprod Y / \sim\\), where \\(\sim\\) identifies \\(x\_{0} \in X\\) and \\(y\_{0} \in Y\\).
+
+Referenced: [Smash product](#smash-product).
 
 
 ### Smash product {#smash-product}
@@ -1930,6 +2149,8 @@ Cf. [Wedge product](#wedge-product).
 {{% /exam %}}
 
 The above example will be used in the computation of [Homotopy group](#homotopy-group) of \\(S^{n}\\).
+
+Referenced: [Suspension](#suspension), [Cone](#cone).
 
 
 ### Seifert-Van Kampen theorem {#seifert-van-kampen-theorem}
@@ -1959,7 +2180,7 @@ Cf. [Path connected](#path-connected), [Fundamental group](#fundamental-group).
 ### Compactly generated {#compactly-generated}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 15:43]</span></span>
-A subset \\(Y \subset X\\) is called **compactly closed** or \*\\(k\\)-closed\* if \\(f^{-1}(Y)\\) is closed in \\(K\\) for every continuous map \\(f: K \to X\\) with \\(K\\) compact Hausdorff. We define a new topology on \\(X\\) denoted by \\(X\\), where close subsets of \\(kX\\) are compactly closed subsets of \\(X\\). The map \\(kX \to X\\) is a continuous map. \\(X\\) is called **compactly generated** if \\(kX = X\\). The full subcategory of \\(\cat{Top}\\) consisting of compactly generated space is denoted by \\(\cat{CG}\\).
+A subset \\(Y \subset X\\) is called **compactly closed** or **\\(k\\)-closed** if \\(f^{-1}(Y)\\) is closed in \\(K\\) for every continuous map \\(f: K \to X\\) with \\(K\\) compact Hausdorff. We define a new topology on \\(X\\) denoted by \\(X\\), where close subsets of \\(kX\\) are compactly closed subsets of \\(X\\). The map \\(kX \to X\\) is a continuous map. \\(X\\) is called **compactly generated** if \\(kX = X\\). The full subcategory of \\(\cat{Top}\\) consisting of compactly generated space is denoted by \\(\cat{CG}\\).
 
 {{% proposition %}}
 Every locally compact Hausdorff space is compact generated.
@@ -1972,11 +2193,15 @@ Let \\(X,Y,Z \in \cat{CG}\\). Then we have homeomorphism
 \\[{\rm Map}(X \times Y, Z) \to {\rm Map}(X, {\rm Map}(Y,Z))\\]
 {{% /theorem %}}
 
+Referenced: [Category CGWH](#category-cgwh).
+
 
 ### Weak Hausdorff {#weak-hausdorff}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 15:48]</span></span>
 A space \\(X\\) is **weak Hausdorff** if for every compact Hausdorff \\(K\\) and every continuous map \\(f:K \to X\\), the image \\(f(K)\\) is closed in \\(X\\). We denote the full subcategory of weak Hausdorff space by \\(\cat{WH}\\).
+
+Referenced: [Category CGWH](#category-cgwh).
 
 
 ### Category CGWH {#category-cgwh}
@@ -1994,6 +2219,8 @@ Also, we have for \\(X, Y \in \cat{CGWH}\\),
 \\[{\rm Map}(X, Y) \in \cat{CGWH}\\]
 and the exponential law holds.
 
+Referenced: [Loop space](#loop-space).
+
 
 ### Loop space {#loop-space}
 
@@ -2005,6 +2232,8 @@ And we define the **free loop space**
 
 Cf. [Category CGWH](#category-cgwh).
 
+Referenced: [Arc space](#arc-space).
+
 
 ### Suspension {#suspension}
 
@@ -2012,6 +2241,8 @@ Cf. [Category CGWH](#category-cgwh).
 We define the **suspension** of the space \\(X\\) by \\(\Sigma X = X \wedge S^{1}\\).
 
 Cf. [Smash product](#smash-product).
+
+Referenced: [Reduced homology](#reduced-homology).
 
 
 ### Path space {#path-space}
@@ -2053,6 +2284,8 @@ Let \\(f:X \to Y\\) be a fibration and \\(Y\\) path connected. Then all fibers o
 
 Therefore, [Fibration](#fibration) is similar to [Fibre bundle](#fibre-bundle).
 
+Referenced: [Fibration](#fibration), [Exact Puppe sequence](#exact-puppe-sequence), [Homotopy cofiber](#homotopy-cofiber).
+
 
 ### Exact Puppe sequence {#exact-puppe-sequence}
 
@@ -2089,6 +2322,8 @@ Let \\(p: E \to B\\) be a fibration whose fiber over the base point is \\(F\\). 
 
 Cf. [Fibration](#fibration), [Homotopy group](#homotopy-group).
 
+Referenced: [Cofiber exact sequence](#cofiber-exact-sequence).
+
 
 ### Homotopy extension property {#homotopy-extension-property}
 
@@ -2096,6 +2331,8 @@ Cf. [Fibration](#fibration), [Homotopy group](#homotopy-group).
 A map \\(i: A \to X\\) is said to have the **homotopy extension property** (HEP) with respect to \\(Y\\) if for any map \\(f:X \to Y\\) and any homotopy \\(F:A \times I \to Y\\), we have following commutative diagram.
 
 {{< figure src="/img/2021-10-09_15-04-49_screenshot.png" >}}
+
+Referenced: [Cofibration](#cofibration).
 
 
 ### Cofibration {#cofibration}
@@ -2116,6 +2353,8 @@ Let \\(i: A \to X\\) be a cofibration. Then \\(i\\) is a homeomorphism to its im
 {{% exam %}}
 The inclusion \\(S^{n - 1} \to D^{n}\\) is a cofibration.
 {{% /exam %}}
+
+Referenced: [Cofibered](#cofibered), [Well-pointed](#well-pointed).
 
 
 ### Cofibered {#cofibered}
@@ -2165,6 +2404,8 @@ Let \\((X, x\_{0}) \in \cat{CGWH\*}\\). We define its **cone** by
 \\[C\_{\* }X = X \wedge I = X \times I / (X \times \\{0\\} \cap \\{x\_{0}\\} \times I)\\]
 Cf. [Smash product](#smash-product).
 
+Referenced: [Cofiber exact sequence](#cofiber-exact-sequence), [Homotopy cofiber](#homotopy-cofiber).
+
 
 ### Homotopy cofiber {#homotopy-cofiber}
 
@@ -2178,7 +2419,15 @@ Cf. [Cone](#cone).
 ### <span class="org-todo todo TODO">TODO</span> CW complex {#cw-complex}
 
 
+
+Referenced: [Eilenberg-Mac Lane space](#eilenberg-mac-lane-space), [Whitehead theorem](#whitehead-theorem), [Cellular](#cellular), [CW approximation](#cw-approximation).
+
+
 ### <span class="org-todo todo TODO">TODO</span> Relative CW complex {#relative-cw-complex}
+
+
+
+Referenced: [Cellular approxiamtion theorem](#cellular-approxiamtion-theorem), [Homotopy excision theorem](#homotopy-excision-theorem).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Relative homotopy group {#relative-homotopy-group}
@@ -2192,11 +2441,15 @@ A pair \\((X, A)\\) is called **n-connected** if \\(\pi\_{0}(A) \to \pi\_{0}(X)\
 
 Let \\(X\\) be obtained from \\(A\\) by attaching \\(n\\)-cells \\((n \geq 1)\\), then \\((X, A)\\) is \\((n - 1)\\)-connected.
 
+Referenced: [Homotopy excision theorem](#homotopy-excision-theorem).
+
 
 ### n-equivalence {#n-equivalence}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-11 Mon 20:38]</span></span>
 A map \\(f: X \to Y\\) is called an **n-equivalence** if for any \\(x\_{0} \in X\\) we have \\(f\_{\* }: \pi\_{r}(X,x\_{0}) \to \pi\_{r}(Y, f(x\_{0}))\\) bijective for \\(r < n\\) and \\(f\_{\* }: \pi\_{n}(X, x\_{0}) \to \pi\_{n}(Y, f(x\_{0}))\\) is surjective.
+
+Referenced: [Weak homotopy equivalence](#weak-homotopy-equivalence).
 
 
 ### Weak homotopy equivalence {#weak-homotopy-equivalence}
@@ -2204,17 +2457,23 @@ A map \\(f: X \to Y\\) is called an **n-equivalence** if for any \\(x\_{0} \in X
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-11 Mon 20:41]</span></span>
 \\(f\\) is called **weak homotopy equivalence** if \\(f\\) is [n-equivalence](#n-equivalence) for any \\(n \geq 0\\).
 
+Referenced: [Whitehead theorem](#whitehead-theorem), [CW approximation](#cw-approximation).
+
 
 ### Cellular {#cellular}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-11 Mon 20:52]</span></span>
 Let \\((X, Y)\\) be [CW complexes](#cw-complex). A map \\(f: X \to Y\\) is called **cellular** if \\(f(X^{n}) \subset Y^{n}\\) for any \\(n\\). We define the category \\((cat{CW})\\) whose objects are CW complexes and morphisms are cellular maps.
 
+Referenced: [Cellular homotopy](#cellular-homotopy), [Cellular approxiamtion theorem](#cellular-approxiamtion-theorem).
+
 
 ### Cellular homotopy {#cellular-homotopy}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-11 Mon 20:54]</span></span>
 A **cellular homotopy** between two [Cellular](#cellular) maps \\(X \to Y\\) is a [Homotopy](#homotopy) \\(X \times I \to Y\\) that itself a cellular map. The quotient category is called \\(\cat{hCW}\\).
+
+Referenced: [Cellular approxiamtion theorem](#cellular-approxiamtion-theorem).
 
 
 ### Cellular approxiamtion theorem {#cellular-approxiamtion-theorem}
@@ -2286,6 +2545,8 @@ The following are the themes in Algebraic Geometry Salt Lake 2015 seminar <https
 
 
 
+Referenced: [Toric](#toric).
+
 
 #### Toric {#toric}
 
@@ -2308,6 +2569,8 @@ There are several aspects of enumerative geometry, beyond the numbers.
 -   Hall algebras and their refined versions (cohomological, K-theoretic, derived categories)
 -   Enumerative geometry of Nakajima quiver variety and the representation of quantum groups (symplectic resolution, etc)
 
+Referenced: [Gromov-Witten theory](#gromov-witten-theory), [Donaldson-Thomas theory](#donaldson-thomas-theory).
+
 
 #### MNOP conjecture {#mnop-conjecture}
 
@@ -2325,33 +2588,28 @@ Based on GW/PT correspondence, in toric variety, [Virasoro constraint](#virasoro
 
 
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 Let \\(X\\) be a non-singular projective variety. A morphism \\(f\\) from a pointed nodal curve to \\(X\\) is a **stable map** if every genus \\(0\\) contracted component of \\(\Sigma\\) has at least three special points, and every genus \\(1\\) contracted component has at least one special point.
+{{% /definition %}}
 
-</div>
-
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 A stable map represents a homology class \\(\beta \in H\_{2}(X, \mathbb{Z})\\) if \\(f\_{\*}[C] = \beta\\).
+{{% /definition %}}
 
-</div>
-
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 The moduli space of stable maps from \\(n\\)-pointed genus \\(g\\) nodal curves to \\(X\\) representing the class \\(\beta\\) is denoted \\(\bar{M}\_{g,n}(X, \beta)\\). The subscript \\(n\\) may be omitted if \\(n = 0\\).
-
-</div>
+{{% /definition %}}
 
 The moduli space \\(\overline{M}\_{g,n}(X, \beta)\\) is a Deligne-Mumford stack. And the moduli    space admits [Virtual fundamental class](#virtual-fundamental-class).
+
+Referenced: [Gromov-Witten theory](#gromov-witten-theory).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Moduli space of curves {#moduli-space-of-curves}
 
 
+
+Referenced: [Canonical line bundle](#canonical-line-bundle).
 
 
 #### Canonical line bundle {#canonical-line-bundle}
@@ -2375,6 +2633,8 @@ we define \\(k\_{r} = \pi\_{\* } \psi\_{n + 1}^{r + 1} \in H^{2r}(\bar{M}\_{g,n}
 \\(H^{2}(M\_{g,n}, \mathbb{Q}) \cong \pic(M\_{g,n}, \mathbb{Q})\\) is generated by \\(k\_{1}, \psi\_{1}, \cdots, \psi\_{n}\\).
 {{% /proposition %}}
 
+Referenced: [Descent integral](#descent-integral).
+
 
 #### Descent integral {#descent-integral}
 
@@ -2382,6 +2642,8 @@ we define \\(k\_{r} = \pi\_{\* } \psi\_{n + 1}^{r + 1} \in H^{2r}(\bar{M}\_{g,n}
 Following the terminology in [Canonical line bundle](#canonical-line-bundle). We define
 \\[\langle \tau\_{1}^{k\_{1}} \cdots \tau\_{n}^{k\_{n}} \rangle\_{g,n} = \int\_{\bar{M}\_{g,n}} \psi\_{1}^{k\_{1}} \cdots \psi\_{n}^{k\_{n}}\\]
 Here, we must make sure \\(\sum k\_{i} = 3g - 3 + n\\) and \\(2g - 2 + n \leq 0\\). Or by simplify notation, we make \\(n = \sum\_{k\_{i}} - 3g + 3\\). These integrals are called **descent integral**.
+
+Referenced: [Witten's Conjecture](#witten-s-conjecture).
 
 
 #### Witten's Conjecture {#witten-s-conjecture}
@@ -2406,6 +2668,8 @@ For \\(n \geq 1\\), we have
 By taking \\(U = \frac{\partial^{2} F}{\partial t\_{0}^{2}}\\) and setting \\(n = 1\\), we have KdV equation
 \\[\frac{\partial U}{\partial t\_{1}} = U \frac{\partial U}{\partial t\_{0}} + \frac{1}{12} \frac{\partial^{3} U}{\partial t\_{0}^{3}}\\]
 
+Referenced: [Virasoro constraint](#virasoro-constraint).
+
 
 #### <span class="org-todo todo TODO">TODO</span> String equation {#string-equation}
 
@@ -2422,12 +2686,16 @@ Then we have that
 \\[L\_{n}(Z) = 0\\]
 for \\(n \geq -1\\), which is called **Virasoro constraint**.
 
+Referenced: [MNOP conjecture](#mnop-conjecture).
+
 
 ### Virasoro bracket {#virasoro-bracket}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-13 Mon 21:32]</span></span>
 **Virasoro bracket** is a set of commutator relation for operators \\(L\_{n}\\) such that
 \\[[L\_{n}, L\_{m}] = (n - m) L\_{n + m}\\]
+
+Referenced: [Virasoro constraint](#virasoro-constraint).
 
 
 ### Gromov-Witten theory {#gromov-witten-theory}
@@ -2447,6 +2715,8 @@ Also we have **Gromov-Witten invariant**
 The Gromov-Witten invariants has natural enumerative geometric interpretation. \\(\langle I\_{g,n,\beta}(\alpha\_{1}, \cdots, \alpha\_{n}) \rangle\\) equals the number of stable curves in \\((C, p\_{1}, \cdots, p\_{n}) \in \overline{M}\_{g,n}\\) for which we can find \\(f\\) such that \\(f(p\_{i}) \in Z\_{i} = \alpha\_{i}^{\vee}\\) and \\(f\_{\*}( C) = \beta\\).
 
 By above interpretation we have natural axioms about Gromov-Witten invariants.
+
+Referenced: [Linear axiom](#linear-axiom), [Effectivity axiom](#effectivity-axiom), [Degree axiom](#degree-axiom), [Equivariant axiom](#equivariant-axiom), [Fundamental class axiom](#fundamental-class-axiom), [Divisor axiom](#divisor-axiom), [Point mapping axiom](#point-mapping-axiom), [Splitting axiom](#splitting-axiom), [Reduction axiom](#reduction-axiom), [Deformation axiom](#deformation-axiom), [Kontsevich recursion formula](#kontsevich-recursion-formula), [Donaldson-Thomas theory](#donaldson-thomas-theory).
 
 
 #### Linear axiom {#linear-axiom}
@@ -2543,14 +2813,13 @@ For \\(X = \mathbb{P}^{2}\\), we denote that \\(N\_{d} = \langle I\_{0, 3d - 1, 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-29 Sun 15:24]</span></span>
 We fix a class \\(\beta \in H\_{2}(X, \ZZ)\\) and fix an integer \\(\chi \in \ZZ\\).
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 The **Hilbert scheme** \\({\rm Hilb}\_{\chi}(X, \beta)\\) parametrizes \\(1\\) dimensional subscheme \\(Z \subset X\\) whose irreducible components are at most \\(1\\)-dimension with numerical invariants \\(\beta = [Z] \in H\_{2}(X, \ZZ)\\) and \\(\chi(\mathscr{O}\_{Z}) = \chi\\).
-
-</div>
+{{% /definition %}}
 
 In [<span id="24e67c8afe5163064e4018cb5a5cbd8a"><a href="#nakajima1999" title="Nakajima, Lectures on {{Hilbert}} Schemes of Points on Surfaces, {American Mathematical Society} (1999).">nakajima1999</a></span>], there is another notation of Hilbert schemes, where in \\(\hilb(X, p)\\), the \\(p\\) denote the Hilbert polynomial. And we write \\(X^{ [n]}\\) for \\(\hilb(X, n)\\) for Hilbert scheme of points.
+
+Referenced: [Donaldson-Thomas theory](#donaldson-thomas-theory), [Hilbert-Chow morphism](#hilbert-chow-morphism), [Hilb(A^2,n)](#hilb--a-2-n), [Smoothness of Hilbert scheme](#smoothness-of-hilbert-scheme), [Symplectic structure of Hilbert scheme](#symplectic-structure-of-hilbert-scheme), [Simple resolution](#simple-resolution).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Symplectic resolution {#symplectic-resolution}
@@ -2561,8 +2830,14 @@ In [<span id="24e67c8afe5163064e4018cb5a5cbd8a"><a href="#nakajima1999" title="N
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-01 Wed 16:57]</span></span>
 The analog of [Fundamental class](#fundamental-class) for stacks and orbifold.
 
+Referenced: [Moduli space of Stable Maps](#moduli-space-of-stable-maps), [Donaldson-Thomas theory](#donaldson-thomas-theory).
+
 
 ### Calabi-Yau variety {#calabi-yau-variety}
+
+
+
+Referenced: [Donaldson-Thomas theory](#donaldson-thomas-theory), [Kähler manifold with holomorphic symplectic structure](#kähler-manifold-with-holomorphic-symplectic-structure).
 
 
 ### Donaldson-Thomas theory {#donaldson-thomas-theory}
@@ -2607,11 +2882,15 @@ Let \\(f: T \to X\\) be a \\(T\\)-valued point. We have morphism \\(\phi\_{f} = 
 
 {{< figure src="/img/2021-09-07_20-58-55_screenshot.png" >}}
 
+Referenced: [Reconstruction theorem](#reconstruction-theorem), [Criterion for category being representation category](#criterion-for-category-being-representation-category), [Algebraic group](#algebraic-group).
+
 
 ### Algebraic group {#algebraic-group}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-07 Tue 20:45]</span></span>
 An **algebraic group** \\(G\\) over a field \\(k\\) is a [Group scheme](#group-scheme) \\(G/k\\) which is separated and smooth.
+
+Referenced: [Representation category](#representation-category), [Radical](#radical), [Unipotent](#unipotent), [Unipotent radical](#unipotent-radical), [Semisimple](#semisimple), [Reductive](#reductive), [Parabolic](#parabolic), [Isogeny](#isogeny), [Affine grassmannian](#affine-grassmannian), [Langlands dual pair](#langlands-dual-pair).
 
 
 #### Radical {#radical}
@@ -2620,6 +2899,8 @@ An **algebraic group** \\(G\\) over a field \\(k\\) is a [Group scheme](#group-s
 [<span id="868cb56e509be613430cca58b1ead9f3"><a href="#milne2017" title="Milne, Algebraic {{Groups}}: The {{Theory}} of {{Group Schemes}} of {{Finite Type}} over a {{Field}}, {Cambridge University Press} (2017).">milne2017</a></span>] p.135
 
 Let \\(G\\) be a connected [Algebraic group](#algebraic-group) over \\(k\\). \\(G\\) contains a largest connected solvable normal subgroup called the **radical**, \\(R(G)\\) of \\(G\\).
+
+Referenced: [Unipotent radical](#unipotent-radical), [Semisimple](#semisimple).
 
 
 #### Unipotent {#unipotent}
@@ -2638,6 +2919,8 @@ An [Algebraic group](#algebraic-group) \\(G\\) is said to be **unipotent** if ev
 The **unipotent radical** of \\(G\\) is the largest connected normal unipotent sub-[Algebraic group](#algebraic-group) of \\(G\\), denoted by \\(R\_{u}(G)\\).
 
 Cf. [Radical](#radical).
+
+Referenced: [Reductive](#reductive).
 
 
 #### Semisimple {#semisimple}
@@ -2659,6 +2942,8 @@ An [Algebraic group](#algebraic-group) is called **reductive** if \\(R\_{u}(G\_{
 
 Cf. [Unipotent radical](#unipotent-radical).
 
+Referenced: [Positive root](#positive-root).
+
 
 #### Parabolic {#parabolic}
 
@@ -2671,11 +2956,15 @@ For \\(k\\) algebraic closed, a smooth connected algebraic group \\(B \subset G\
 
 Cf. [Algebraic group](#algebraic-group).
 
+Referenced: [Borel](#borel).
+
 
 #### Borel {#borel}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 18:51]</span></span>
 A algebraic subgroup \\(B\\) is called **Borel** if it is [Parabolic](#parabolic), smooth, connected and solvable.
+
+Referenced: [Positive root](#positive-root).
 
 
 ### Categorical quotient {#categorical-quotient}
@@ -2687,6 +2976,8 @@ Given an action \\(\sigma\\) of \\(G/S\\) on \\(X/S\\), a pair \\((Y, \phi: X \t
 commutes and universal property that for any \\((Z, \psi)\\) satisfying the above diagram, there exists a unique morphism \\(\chi: Y \to Z\\) such that \\(\psi = \chi \circ \phi\\).
 
 A categorical quotient is called **universal** if it is stable under base change, and is called **uniform** if it is stable under flat base change.
+
+Referenced: [Geometric quotient](#geometric-quotient).
 
 
 ### Geometric quotient {#geometric-quotient}
@@ -2715,6 +3006,8 @@ The geometric quotient is related to [Categorical quotient](#categorical-quotien
 Given an action \\(\sigma\\) of \\(G/S\\) over \\(X/S\\), and \\((Y, \phi)\\) is a geometric quotient. Then \\((Y, \phi)\\) is also a categorical quotient and hence unique. If \\((Y, \phi)\\) is the universal geometric quotient, then it is also a universal categorical quotient.
 {{% /proposition %}}
 
+Referenced: [Affine toric variety](#affine-toric-variety), [Framed moduli space](#framed-moduli-space).
+
 
 ### Character (of a torus) {#character--of-a-torus}
 
@@ -2739,6 +3032,8 @@ A group subvariety of a torus is a torus.
 If \\(H \subset T\\) is an irreducible group subvariety of \\(T\\). Then \\(H\\) is a torus.
 {{% /proposition %}}
 
+Referenced: [Character (of a torus)](#character--of-a-torus), [Splitting torus](#splitting-torus), [Affine toric variety](#affine-toric-variety).
+
 
 ### Splitting torus {#splitting-torus}
 
@@ -2755,17 +3050,16 @@ The toric variety is a field connecting algebraic geometry, combinatorial and ma
 
 Cf. [Affine toric variety](#affine-toric-variety)
 
+Referenced: [Non-normal toric variety](#non-normal-toric-variety).
+
 
 ### Affine toric variety {#affine-toric-variety}
 
 
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 An **affine toric variety** is an irreducible affine variety \\(V\\) containing a [Torus](#torus) \\(T\_{N} \cong (\CC^{\* })^{n}\\) as a Zariski open subset such that the action of \\(T\_{N}\\) on itself extends to an action on \\(V\\).
-
-</div>
+{{% /definition %}}
 
 There are several ways of constructing toric varieties. First, consider a finite subset \\(\mathscr{A} = \\{\chi^{1}, \cdots, \chi^{l}\\} \subset \ZZ^{n}\\) a lattice equivalent to the character of a torus \\((\CC^{\* })^{n}\\). Then we may consider a map \\(\Phi\_{\mathscr{A}}(t) = (\chi^{1}(t), \cdots, \chi^{l}(t)), T\_{N} \to \CC^{s}\\). The Zariski closure of the image is a toric variety denoted by \\(Y\_{\mathscr{A}}\\). The ideal of the affine toric variety is a [Toric ideal](#toric-ideal). Detailed construction can see [<span id="8a8485591c9ae40ab7e9a4d136fca3d2"><a href="#cox2011" title="Cox, Little \&amp; Schenck, Toric Varieties, {American Mathematical Society} (2011).">cox2011</a></span>] p.14-15.
 
@@ -2800,6 +3094,8 @@ We consider the relation between sublattice variety and original variety. ([<spa
 
 That is the original variety is [Geometric quotient](#geometric-quotient) of the sublattice varieties.
 
+Referenced: [Toric](#toric), [Toric variety](#toric-variety), [Pointed](#pointed), [Saturated](#saturated), [Face](#face).
+
 
 ### Different characters may give same toric variety {#different-characters-may-give-same-toric-variety}
 
@@ -2820,6 +3116,8 @@ We can show that \\(\Phi\_{1}\\) and \\(\Phi\_{2}\\) gives same affine toric var
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-08 Wed 20:03]</span></span>
 A **lattice** is a free abelian group of finite rank.
 
+Referenced: [Lattice ideal](#lattice-ideal), [Affine semigroup](#affine-semigroup), [Rational](#rational).
+
 
 ### Lattice ideal {#lattice-ideal}
 
@@ -2827,6 +3125,8 @@ A **lattice** is a free abelian group of finite rank.
 Let \\(L \subset \ZZ^{s}\\) be a sublattice. Then we call the ideal \\(I\_{L} = \langle x^{\alpha} - x^{\beta} \mid \alpha, \beta \in \NN^{s} \text{ and } \alpha - \beta \in L \rangle\\) **lattice ideal**.
 
 Cf. [Lattice](#lattice).
+
+Referenced: [Toric ideal](#toric-ideal).
 
 
 ### Toric ideal {#toric-ideal}
@@ -2840,16 +3140,22 @@ We have following criterion for toric ideal.
 An ideal \\(I \subset \CC[x\_{1}, \cdots, x\_{s}]\\) is toric if and only if it is prime and generated by binomials.
 {{% /proposition %}}
 
+Referenced: [Affine toric variety](#affine-toric-variety).
+
 
 ### Semigroup {#semigroup}
 
 
+
+Referenced: [Toric](#toric), [Affine semigroup](#affine-semigroup), [Irreducible](#irreducible).
 
 
 #### Affine semigroup {#affine-semigroup}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-08 Wed 20:17]</span></span>
 An **affine semigroup** is a [Semigroup](#semigroup) where the binary operation is commutative, finite generated, and can be embedded in a [Lattice](#lattice) \\(M\\).
+
+Referenced: [Affine toric variety](#affine-toric-variety), [Pointed](#pointed), [Saturated](#saturated).
 
 
 #### Irreducible {#irreducible}
@@ -2892,6 +3198,8 @@ Let \\(V\\) be an affine toric variety with torus \\(T\_{N}\\). Then \\(V\\) is 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-08 Wed 20:29]</span></span>
 \\(E\\) is **pure of dimension** \\(d\\) if \\(\dim F = d\\) for all non-trivial coherent subsheaves \\(F \subset E\\).
 
+Referenced: [Stable](#stable).
+
 
 ### Torsion filtration {#torsion-filtration}
 
@@ -2906,19 +3214,25 @@ where \\(d = \dim(E)\\) and \\(T\_{i}(E)\\) is the maximal subsheaf of \\(E\\) o
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-08 Wed 20:29]</span></span>
 Let \\(M\\) be a module of a local ring \\(A\\). The **homological dimension** denoted by \\(\dimh(M)\\) is defined as the minimal length of a projective resolution of \\(M\\). It is also the length of free resolution of \\(M\\).
 
+Referenced: [Auslander-Buchsbaum formula](#auslander-buchsbaum-formula).
+
 
 ### Regular sequence {#regular-sequence}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-08 Wed 20:47]</span></span>
-Let \\(M\\) be a module over a local ring \\(A\\). An element \\(a \in \mathfrak{m}\\) of \\(A\\) is called \*\\(M\\)-regular\* if \\(m \to am\\) is injective morphism. A sequence \\(a\_{1}, \cdots, a\_{l} \in \mathfrak{m}\\) is a \*\\(M\\)-regular sequence\* if \\(a\_{i}\\) is \\(M/(a\_{1}, \cdots, a\_{i - 1}) M\\) regular for all \\(i\\).
+Let \\(M\\) be a module over a local ring \\(A\\). An element \\(a \in \mathfrak{m}\\) of \\(A\\) is called **\\(M\\)-regular** if \\(m \to am\\) is injective morphism. A sequence \\(a\_{1}, \cdots, a\_{l} \in \mathfrak{m}\\) is a **\\(M\\)-regular sequence** if \\(a\_{i}\\) is \\(M/(a\_{1}, \cdots, a\_{i - 1}) M\\) regular for all \\(i\\).
 
-The definition can be generalized to sheaf theoretic language. Let \\(X\\) be a Noetherian scheme, let \\(E\\) be a coherent sheaf on \\(X\\) and \\(L\\) a line bundle on \\(X\\). A section \\(s \in H^{0}(X, L)\\) is called \*\\(E\\)-regular\* if and only if \\(E \otimes L^{\vee} \stackrel{\cdot s}{\to} E\\) is injective. A sequence \\(s\_{1}, \cdots, s\_{l} \in H^{0}(X, L)\\) is called \*\\(E\\)-regular\* similarly in the module theoretic language.
+The definition can be generalized to sheaf theoretic language. Let \\(X\\) be a Noetherian scheme, let \\(E\\) be a coherent sheaf on \\(X\\) and \\(L\\) a line bundle on \\(X\\). A section \\(s \in H^{0}(X, L)\\) is called **\\(E\\)-regular** if and only if \\(E \otimes L^{\vee} \stackrel{\cdot s}{\to} E\\) is injective. A sequence \\(s\_{1}, \cdots, s\_{l} \in H^{0}(X, L)\\) is called **\\(E\\)-regular** similarly in the module theoretic language.
+
+Referenced: [Depth](#depth).
 
 
 ### Depth {#depth}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-08 Wed 20:34]</span></span>
 The maximal length of an \\(M\\)-[Regular sequence](#regular-sequence) is called the **depth** of \\(M\\).
+
+Referenced: [Auslander-Buchsbaum formula](#auslander-buchsbaum-formula).
 
 
 ### Auslander-Buchsbaum formula {#auslander-buchsbaum-formula}
@@ -2940,6 +3254,8 @@ We define the **generalized Serre's condition** \\(S\_{k,c}\\) as
 
 
 
+Referenced: [Eilenberg-Zilber theorem](#eilenberg-zilber-theorem).
+
 
 #### <span class="org-todo todo TODO">TODO</span> Beilison spectral sequence {#beilison-spectral-sequence}
 
@@ -2948,6 +3264,8 @@ We define the **generalized Serre's condition** \\(S\_{k,c}\\) as
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-08 Wed 20:39]</span></span>
 Let \\(E\\) be a coherent sheaf of codimension \\(c\\). The **dual sheaf** is defined as \\(E^{D} = \sext^{c}\_{X} (E, \omega\_{X})\\).
+
+Referenced: [Reflexive](#reflexive).
 
 
 ### Reflexive {#reflexive}
@@ -2983,6 +3301,8 @@ where \\(S \subset N\_{\RR}\\) is finite. And we say that \\(\sigma\\) is genera
 
 The **dimension** of polyhedral cone is the dimension of the minimal linear space containing the cone.
 
+Referenced: [Affine toric variety](#affine-toric-variety), [Saturated](#saturated), [Polytope](#polytope), [Dual cone](#dual-cone), [Supporting hyperplane](#supporting-hyperplane), [Face](#face), [Dual face](#dual-face), [Relative interior space](#relative-interior-space), [Strongly convex](#strongly-convex), [Separation lemma](#separation-lemma), [Rational](#rational), [Smooth](#smooth), [Simplicial](#simplicial).
+
 
 #### Polytope {#polytope}
 
@@ -3008,6 +3328,8 @@ Obviously, we have \\((\sigma^{\vee})^{\vee} = \sigma\\).
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-11 Sat 20:01]</span></span>
 For \\(m \in M\_{\RR}\\), the dual space of \\(N\_{\RR}\\), We define \\(H\_{m} = \\{u \in N\_{\RR} \mid \langle m,n \rangle = 0\\}\\), and \\(H\_{m}^{+ } = \\{u \in N\_{\RR} \mid \langle m, n \rangle \geq 0\\}\\). We call \\(H\_{m}\\) a **supporting hyperplane** of a [Polyhedral cone](#polyhedral-cone) \\(\sigma\\) if we have \\(\sigma \subset H\_{m}^{+}\\) and \\(H\_{m}^{ +}\\) is then called supporting half-space.
 
+Referenced: [Face](#face), [Separation lemma](#separation-lemma).
+
 
 #### Face {#face}
 
@@ -3020,6 +3342,8 @@ The faces of the [Strongly convex](#strongly-convex) [Rational](#rational) [Poly
 Let \\(\tau\\) be a face of strongly convex rational polyhedral cone \\(\sigma\\) and \\(\tau = H\_{m} \cap \sigma\\) for some \\(m \in \sigma^{\vee} \cap M\\). Then we have
 \\[\CC[S\_{\tau}] = \CC[S\_{\sigma}]\_{\chi^{m}}\\]
 {{% /proposition %}}
+
+Referenced: [Dual face](#dual-face).
 
 
 #### Dual face {#dual-face}
@@ -3044,6 +3368,8 @@ The **relative interior space** of a [Polyhedral cone](#polyhedral-cone) \\(\sig
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-11 Sat 20:13]</span></span>
 A [Polyhedral cone](#polyhedral-cone) is called **strongly convex** if the origin is a face of the cone. Or equivalently speaking we have \\(\sigma \cap (- \sigma) = \\{0\\}\\).
 
+Referenced: [Affine toric variety](#affine-toric-variety), [Saturated](#saturated), [Face](#face), [Smooth](#smooth), [Simplicial](#simplicial).
+
 
 #### Separation lemma {#separation-lemma}
 
@@ -3064,6 +3390,8 @@ Cf. [Supporting hyperplane](#supporting-hyperplane), [Polyhedral cone](#polyhedr
 A [Polyhedral cone](#polyhedral-cone) is called **rational** if by equating \\(N\_{\RR} = N \otimes\_{\ZZ} \RR\\), where \\(N\\) is a [Lattice](#lattice), we have \\(\sigma = \cone(S)\\) for \\(S \in N\\).
 
 For rational cone, \\(\rho \subset \sigma\\) an edge, the generator of \\(\rho \cap N\\) is called **ray generator** of \\(\rho\\).
+
+Referenced: [Affine toric variety](#affine-toric-variety), [Saturated](#saturated), [Face](#face), [Smooth](#smooth), [Simplicial](#simplicial).
 
 
 #### Smooth {#smooth}
@@ -3107,6 +3435,8 @@ For \\(f: C' \to C\\) functor between small categories, we have functor \\(f\_{\
 
 If finite limits in \\(C'\\) are representable and that \\(f\\) commutes with all finite limits in \\(C'\\). Then \\(f^{\*}\\) commutes with finite limits and hence \\(f\\) defines a morphism of topoi.
 
+Referenced: [Framed moduli space](#framed-moduli-space), [Sheafification](#sheafification), [Topos](#topos).
+
 
 #### Euler characteristic {#euler-characteristic}
 
@@ -3124,6 +3454,8 @@ The **Hilbert polynomial** is the function
 For Hilbert polynomial \\(P(E, m) = \sum\_{i = 0}^{\dim(E)} \alpha\_{i}(E) \frac{m^{i}}{i!}\\), we
 define **reduced Hilbert polynomial** as
 \\[p(E)= P(E)/ \alpha\_{d}(E) \\]
+
+Referenced: [Multiplicity](#multiplicity), [Rank](#rank), [Stable](#stable), [&mu;-stable](#and-mu-stable).
 
 
 #### Multiplicity {#multiplicity}
@@ -3154,6 +3486,8 @@ Let \\(F\\) and \\(G\\) be semistable purely \\(d\\)-dimensional sheaves. If \\(
 If \\(E\\) is a stable sheaf, then \\(\End(E)\\) is a finite dimensional division algebra over \\(k\\). In particular if \\(k\\) is algebraically closed, then \\(\End(E) \cong k\\).
 {{% /corollary %}}
 
+Referenced: [Geometrically stable](#geometrically-stable).
+
 
 #### Geometrically stable {#geometrically-stable}
 
@@ -3169,7 +3503,7 @@ Let \\(E\\) a coherent sheaf of dimension \\(d = \dim X\\) with [Hilbert polynom
 and its **slope** by
 \\[\mu(E) := \frac{\deg(E)}{\rk(E)}\\]
 
-A coherent sheaf \\(E\\) of dimension \\(d\\) is \*\\(\mu\\)-(semi)stable\* if \\(T\_{d - 2}(E) = T\_{d - 1}E\\) and \\(\mu(F)(\leq)\mu(E)\\) for all subsheaves \\(F \subset E\\) with \\(0 < \rk(F) < \rk(E)\\).
+A coherent sheaf \\(E\\) of dimension \\(d\\) is **\\(\mu\\)-(semi)stable** if \\(T\_{d - 2}(E) = T\_{d - 1}E\\) and \\(\mu(F)(\leq)\mu(E)\\) for all subsheaves \\(F \subset E\\) with \\(0 < \rk(F) < \rk(E)\\).
 
 {{% lemma %}}
 \\(E\\) is \\(\mu\\)-stable \\(\Rightarrow\\) \\(E\\) is stable \\(\Rightarrow\\) \\(E\\) is semistable \\(\Rightarrow\\) \\(E\\) is \\(\mu\\)-semistable.
@@ -3211,6 +3545,8 @@ to
 \\[c\_{\mathscr{E}}: 0 \to \mathscr{I} \to (\Omega^{1}\_{X'/S})|\_{X} \to \Omega^{1}\_{X/S} \to 0\\]
 {{% /theorem %}}
 
+Referenced: [Ex\_A(R,I)](#ex-a--r-i), [Versal extension](#versal-extension).
+
 
 ### Ex\_A(R,I) {#ex-a--r-i}
 
@@ -3230,6 +3566,8 @@ Now we are ready to define the \\(R\\)-module structure on \\(\ex\_{A}(R, I)\\).
 
 By above construction, \\(\ex\_{A}(R, -)\\) is a covariant functor from \\(R\\)-modules to \\(R\\)-modules.
 
+Referenced: [Extension](#extension), [First cotangent module](#first-cotangent-module).
+
 
 ### <span class="org-todo todo TODO">TODO</span> Exact sequence about extensions {#exact-sequence-about-extensions}
 
@@ -3239,6 +3577,8 @@ See [<span id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="S
 {{% remark %}}
 The proof in my mind is straightforward but a little tricky when manipulate the objects, since sometimes we need to consider the \\(R\\)-module structure and sometimes as \\(A\\)-algebra.
 {{% /remark %}}
+
+Referenced: [Extension](#extension).
 
 
 ### First cotangent module {#first-cotangent-module}
@@ -3276,6 +3616,8 @@ For [Hilbert scheme](#hilbert-scheme) of points, we have a well define map
 \\[\pi:X^{ [n]}\_{red} \to S^{n}X\\]
 by \\(\pi(Z) = \sum\_{x \in X}l(Z\_{x})[x]\\), here \\(l\\) denote the length.
 
+Referenced: [Smoothness of Hilbert scheme](#smoothness-of-hilbert-scheme).
+
 
 ### Symmetric power of P^1 {#symmetric-power-of-p-1}
 
@@ -3298,6 +3640,8 @@ The triple \\((B\_{1}, B\_{2}, i)\\) is called stable if there exists no proper 
 Cf. [Hilbert scheme](#hilbert-scheme).
 
 The manifold \\(\hilb(\mathbb{A}^{2}, n)\\) admits a hyper-Kähler metric.
+
+Referenced: [Framed moduli space](#framed-moduli-space).
 
 
 ### Smoothness of Hilbert scheme {#smoothness-of-hilbert-scheme}
@@ -3344,6 +3688,10 @@ Cf. [Calabi-Yau variety](#calabi-yau-variety), [Holonomy group](#holonomy-group)
 ### <span class="org-todo todo TODO">TODO</span> K3 surfaces {#k3-surfaces}
 
 
+
+Referenced: [Intersection forms](#intersection-forms).
+
+
 ### Framed moduli space {#framed-moduli-space}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 19:28]</span></span>
@@ -3388,13 +3736,23 @@ Let \\(X\\) be a locally Noetherian scheme over a field \\(k\\), having dimensio
 #### <span class="org-todo todo TODO">TODO</span> Local ring {#local-ring}
 
 
+
+Referenced: [Complete](#complete), [Hull](#hull).
+
+
 #### Complete {#complete}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 20:14]</span></span>
 A [Local ring](#local-ring) is called **complete** if it is complete with respect to the \\(\mathfrak{m}\\)-adic topology.
 
+Referenced: [Hull](#hull).
+
 
 #### <span class="org-todo todo TODO">TODO</span> Noetherian {#noetherian}
+
+
+
+Referenced: [Hull](#hull).
 
 
 ### Predeformation functor {#predeformation-functor}
@@ -3403,6 +3761,8 @@ A [Local ring](#local-ring) is called **complete** if it is complete with respec
 A **predeformation functor** is a covariant functor \\(F: \cat{Art}(\Lambda, k) \to \cat{Set}\\) such that \\(F(k)\\) is the one-element set. The **tangent space** \\(T\_{F}\\) is defined to be \\(F(k[\epsilon]/(\epsilon^{2}))\\). The objects of \\(\cat{Art}(\Lambda, k)\\) are local Artin \\(\Lambda\\)-algebra with residue field \\(k\\).
 
 Cf. [Tangent space](#tangent-space).
+
+Referenced: [Hull](#hull), [Schlessinger's theorem](#schlessinger-s-theorem), [Deformation functor](#deformation-functor).
 
 
 ### Flat {#flat}
@@ -3415,6 +3775,8 @@ A \\(R\\)-module \\(M\\) is called **flat** if tensoring with \\(M\\) is an exac
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 20:23]</span></span>
 Let \\(\widehat{\cat{Art}(\Lambda, k)}\\) be the category of complete Noetherian local \\(\Lambda\\)-algebra with residue field \\(k\\). Set \\(\hat{F} := \varprojlim\_{n} F(R/ \mathfrak{m}^{n})\\). We say that \\(F\\) is **propresentable** if and only if \\(\hat{F}\\) is representable.
+
+Referenced: [Schlessinger's theorem](#schlessinger-s-theorem).
 
 
 ### Smooth {#smooth}
@@ -3430,11 +3792,15 @@ is surjective.
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 20:23]</span></span>
 Let \\(F\\) be a [Predeformation functor](#predeformation-functor) and \\(\hat{F}\\) its completeion. We say a pair \\((R, \eta)\\) with \\(R\\) a [Noetherian](#noetherian) [Complete](#complete) [Local ring](#local-ring), and \\(\eta \in \hat{F}( R)\\), is a **hull** for \\(F\\) if the induced map \\(\bar{h}\_{R} \to F\\) is smooth, and induces a bijection \\(T\_{\bar{h}\_{R}} \ito T\_{F}\\) on tangent spaces.
 
+Referenced: [Schlessinger's theorem](#schlessinger-s-theorem).
+
 
 ### Small thickening {#small-thickening}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-19 Sun 20:23]</span></span>
 A surjective map \\(f: A \to B\\) in \\(\cat{Art}(\Lambda, k)\\) is a **small thickening** if \\(\ker f \mathfrak{m}\_{A} = 0\\) and \\(\ker f\\) is principal.
+
+Referenced: [Schlessinger's theorem](#schlessinger-s-theorem).
 
 
 ### Schlessinger's theorem {#schlessinger-s-theorem}
@@ -3454,6 +3820,8 @@ Let \\(F\\) be a predoformation functor. Then \\(F\\) has a hull if and only if 
 {{% /theorem %}}
 
 Cf. [Predeformation functor](#predeformation-functor), [Small thickening](#small-thickening).
+
+Referenced: [Deformation functor](#deformation-functor).
 
 
 ### Deformation functor {#deformation-functor}
@@ -3487,6 +3855,8 @@ The following theorem construct the simple resolution by [Hilbert scheme](#hilbe
 Consider the Hilbert scheme \\((\CC^{2})^{ [N]}\\) where \\(N\\) is the order of \\(\Gamma\\). The \\(\Gamma\\) orbit of a point \\(p\\) in \\(\CC\backslash \\{0\\}\\) defines a \\(0\\) dimensional subscheme \\(Z \in (\CC^{2})^{ [N]}\\). Let \\(X\\) be the component of \\(\Gamma\\) fixed point set which contains the set of \\(\Gamma\\)-orbits \\(\Gamma \cdot (\CC \backslash \\{0\\})\\). Then we have that the restriction of the Hilbert-Chow morphism to \\(X\\) is the minimal resolution of singularities of \\(\CC^{2} \backslash \Gamma \cong (S^{N}(\CC^{2}))^{\Gamma}\\).
 {{% /theorem %}}
 
+Referenced: [Simple singularity](#simple-singularity).
+
 
 ### <span class="org-todo todo TODO">TODO</span> Dykin diagram {#dykin-diagram}
 
@@ -3517,8 +3887,14 @@ An **isogeny** is a surjective homomorphism between smooth connected [Algebraic 
 
 See also [Isogeny](#isogeny).
 
+Referenced: [Degree](#degree).
+
 
 ### <span class="org-todo todo TODO">TODO</span> Minimal model {#minimal-model}
+
+
+
+Referenced: [Castelnuovo theorem](#castelnuovo-theorem).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Riemann-Roch theorem {#riemann-roch-theorem}
@@ -3545,6 +3921,8 @@ Let \\(C\\) be a category. A **Grothendieck topology** on \\(C\\) consists of a 
 
 The Grothendieck topology is also called a **pre-topology**.
 
+Referenced: [Site](#site).
+
 
 ### Site {#site}
 
@@ -3562,6 +3940,8 @@ is surjective. It is called **big étale site**.
 {{% /exam %}}
 
 Similarly, we can define **fppf site** (flat and locally of finite presentation) and **smooth site**.
+
+Referenced: [Continuous](#continuous), [Sheaf](#sheaf), [Étale site](#étale-site), [Fppf site](#fppf-site), [Smooth site](#smooth-site), [Topos](#topos).
 
 
 ### Étale site {#étale-site}
@@ -3593,6 +3973,8 @@ See [Site](#site).
 A **presheaf** on a category \\(C\\) is a functor
 \\[F: C^{op} \to \cat{Set}\\]
 We usually write \\(\hat{C}\\) for teh category of presheaves on \\(C\\).
+
+Referenced: [Sheaf](#sheaf), [Separated](#separated).
 
 
 #### Separated {#separated}
@@ -3627,6 +4009,8 @@ where
 are functors and \\(\phi\\) is an isomorphism
 \\[\phi: \Hom\_{T}(f^{\* }(-), -) \to \Hom\_{T'}(-, f\_{\* }(-))\\]
 of bifunctors and \\(f^{\* }\\) commutes with finite limits.
+
+Referenced: [Continuous](#continuous), [Sheaf](#sheaf), [Ringed](#ringed), [Point](#point), [Category of modules](#category-of-modules).
 
 
 #### Ringed {#ringed}
@@ -3684,6 +4068,8 @@ An **ind-scheme** is object in \\(\cat{Fun}(\cat{k-algebra}, \cat{Set})\\) which
 \\[X = \varinjlim\_{I} X\_{i}\\]
 such that \\(I\\) is a direct diagram, \\(X\_{i}\\) is a scheme, all maps \\(X\_{i} \to X\_{j}\\) are closed embedding. We call **ind-affine**, **ind-projective**, **ind-finite type** if all \\(X\_{i}\\) are affine, projective, finite type.
 
+Referenced: [Loop space](#loop-space).
+
 
 ### Arc space {#arc-space}
 
@@ -3695,6 +4081,8 @@ Cf. [Loop space](#loop-space).
 {{% proposition %}}
 Arc spaces and \\(Y[k[t]/t^{n}]\\) are schemes. Moreover, if \\(Y\\) is affine then they are also affine.
 {{% /proposition %}}
+
+Referenced: [Loop space](#loop-space), [Affine grassmannian](#affine-grassmannian).
 
 
 ### Loop space {#loop-space}
@@ -3709,6 +4097,8 @@ The loop space is ind-scheme if \\(Y\\) is affine.
 {{% /proposition %}}
 
 Cf. [Ind-scheme](#ind-scheme).
+
+Referenced: [Affine grassmannian](#affine-grassmannian).
 
 
 ### Affine grassmannian {#affine-grassmannian}
@@ -3729,7 +4119,7 @@ We have Cartan decomposition for \\(G(K)\\).
 The above theorem gives a stratification of \\({\rm Gr}\_{G}\\)
 
 {{% corollary %}}
-\\[{\rm Gr}\_{G} = \coprod\_{\mu \in X\_{\*}(T)^{+}G(\mathcal{O})t^{\mu} G(\mathcal{O})/ G(\mathcal{O}) = \coprod\_{\mu} {\rm Gr}\_{\mu}\\]
+\\[{\rm Gr}\_{G} = \coprod\_{\mu \in X\_{\*}(T)^{+}}G(\mathcal{O})t^{\mu} G(\mathcal{O})/ G(\mathcal{O}) = \coprod\_{\mu} {\rm Gr}\_{\mu}\\]
 {{% /corollary %}}
 
 And we have following inclusion properties
@@ -3748,6 +4138,19 @@ A coweight \\(\mu\\) is **minuscule** if
 for all \\(\alpha\\) positive. For minuscule \\(\mu\\), we have \\({\rm Gr}\_{\mu} = \overline{{\rm Gr}\_{\mu}} = G/P\_{\mu}\\), where \\(P\_{\mu}\\) is a partial flag.
 
 
+### <span class="org-todo todo TODO">TODO</span> Semismall map {#semismall-map}
+
+
+
+Referenced: [Small map](#small-map).
+
+
+### <span class="org-todo todo TODO">TODO</span> Small map {#small-map}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-20 Sat 21:44]</span></span>
+See [Semismall map](#semismall-map).
+
+
 ## Symplectic Geometry {#symplectic-geometry}
 
 
@@ -3758,6 +4161,8 @@ for all \\(\alpha\\) positive. For minuscule \\(\mu\\), we have \\({\rm Gr}\_{\m
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-02 Thu 10:43]</span></span>
 A **symplectic manifold** is a [smooth Manifold](#manifold) \\(X\\) of even dimension \\(\dim X = 2n\\), equipped with a **symplectic form** a closed smooth \\(2\\)-form \\(\omega \in \Omega\_{cl}^{2}(X)\\) such that \\(\omega\\) is non-degenerate. That is \\(\omega^{n}\\) has the maximal rank at every point \\(p\\), or equivalently that \\((\wedge^{2} T\_{p}^{\* }X, \omega\_{p})\\) symplectic vector space for every \\(p\\).
 
+Referenced: [Symplectic structure of Hilbert scheme](#symplectic-structure-of-hilbert-scheme), [Liouville vector field](#liouville-vector-field), [Weinstein manifold](#weinstein-manifold).
+
 
 ### Liouville vector field {#liouville-vector-field}
 
@@ -3766,6 +4171,8 @@ Let \\((M, \omega)\\) is a [Symplectic manifold](#symplectic-manifold). A vector
 Cf. [Lie derivative](#lie-derivative).
 
 The existence of a Liouville vector field implies that \\((M, \omega)\\) is exact as the one-form \\(\lambda = i\_{V} \omega\\) satisfies that \\(\dif \lambda = \omega\\).
+
+Referenced: [Weinstein manifold](#weinstein-manifold).
 
 
 ### Weinstein manifold {#weinstein-manifold}
@@ -3788,6 +4195,8 @@ In geometric representation theory, we tries to encode the algebra operation in 
 For a general symplectic resolution
 \\[\pi: X \to X\_{0}\\]
 we have the **Steinerg variety** \\(X \times\_{X\_{0}} X\\).
+
+Referenced: [Algebraic Geometry](#algebraic-geometry).
 
 
 ### Langlands dual pair {#langlands-dual-pair}
@@ -3825,6 +4234,8 @@ The function can be extend as a meromorphic function on \\(\CC\\).
 
 The similarity over number fields, function fields, algebraic curves over \\(\CC\\).
 
+Referenced: [Personal Thoughts]({{<relref "Notes_Mathematics.md#personal-thoughts" >}}).
+
 
 ## Knot Theory {#knot-theory}
 
@@ -3834,6 +4245,8 @@ The similarity over number fields, function fields, algebraic curves over \\(\CC
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-13 Mon 18:13]</span></span>
 A **knot** (in \\(S^{3}\\)) is an isotopy class of an [Immersion](#immersion) \\(\hat{K}: S^{1} \to S^{3}\\), \\(K = [\hat{K}]\\).
 
+Referenced: [Link](#link), [Positive](#positive), [Linking number](#linking-number), [Unknot number](#unknot-number), [Knots bounds algebraic surface](#knots-bounds-algebraic-surface).
+
 
 ### Link {#link}
 
@@ -3842,16 +4255,22 @@ A **link** is an isotopy class of an [Immersion](#immersion) \\(\hat{L}: (S^{1})
 
 Cf. [Knot](#knot).
 
+Referenced: [Framing](#framing), [Diagram](#diagram), [Skein relations](#skein-relations), [HOMFLY invariant](#homfly-invariant), [Jones-Markov trace](#jones-markov-trace), [Lickorish-Wallace theorem](#lickorish-wallace-theorem), [Seifert surface](#seifert-surface).
+
 
 ### Framed {#framed}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 16:01]</span></span>
 See [Framing](#framing).
 
+Referenced: [Jones-Markov trace](#jones-markov-trace).
+
 
 ### Framing {#framing}
 
 **Framing** of a [Link](#link) in \\(\RR^{3}\\) is an isotopy class of a continuous section of a normal bundle to \\(L \subset \RR^{3}\\).
+
+Referenced: [Framed](#framed), [Diagram](#diagram).
 
 
 ### Diagram {#diagram}
@@ -3870,6 +4289,8 @@ We can also consider the diagram of [Framed](#framing) links in \\(\RR^{3}\\). A
 
 {{< figure src="/img/2021-09-13_18-30-56_test.png" >}}
 
+Referenced: [Skein relations](#skein-relations), [Unknot number](#unknot-number).
+
 
 ### Skein relations {#skein-relations}
 
@@ -3885,6 +4306,8 @@ Also, we Skein is related to Reidemeister moves.
 Skein relations are compatible with Reidemeister moves.
 {{% /theorem %}}
 
+Referenced: [HOMFLY invariant](#homfly-invariant).
+
 
 ### HOMFLY invariant {#homfly-invariant}
 
@@ -3899,6 +4322,8 @@ For unframed links, we also have **HOMFLY invariants** by consider \\(L = L\_{1}
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:38]</span></span>
 A **geometric braid** in \\(\RR^{2} \times [0,1]\\) is an embedding \\(\hat{\beta} : [0,1]^{\coprod n} \to \RR^{2} \times [0,1]\\) connecting \\(\\{x\_{0}, \cdots, x\_{n}\\} \times \\{0\\}\\) and \\(\\{x\_{0}, \cdots, x\_{n}\\} \times \\{1\\}\\) componentwise.
 
+Referenced: [Braid](#braid).
+
 
 ### Braid {#braid}
 
@@ -3911,11 +4336,15 @@ The braids are in bijection with Redemeister classes of diagrams.
 {{< figure src="/img/2021-09-21_15-46-24_screenshot.png" >}}
 {{% /theorem %}}
 
+Referenced: [Pure](#pure), [Positive](#positive), [Braid group](#braid-group).
+
 
 #### Pure {#pure}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:46]</span></span>
 A [Braid](#braid) is called **pure** if it connects \\(\\{x\_{0}\\} \times \\{0\\}\\) to \\(\\{x\_{i}\\} \times \\{1\\}\\).
+
+Referenced: [Braid group](#braid-group).
 
 
 #### Positive {#positive}
@@ -3923,11 +4352,15 @@ A [Braid](#braid) is called **pure** if it connects \\(\\{x\_{0}\\} \times \\{0\
 <span class="timestamp-wrapper"><span class="timestamp">[2021-11-04 Thu 18:43]</span></span>
 A [Braid](#braid) is called **positive** if it is a product of \\(\sigma\_{i}\\) and not \\(\sigma\_{i}^{-1}\\) in braid group. And a braid is **quasi-positive** if it has the form \\(\prod\_{k = 1}^{m} w\_{k} \sigma\_{ik} w\_{k}^{-1}\\) where \\(w\_{k}\\) is any word in the braid group. A [Knot](#knot) **positive** (resp. **quasi-positive**) if it is a completion of a positive (resp. quasi-positive) braid.
 
+Referenced: [Quasi-positive](#quasi-positive), [Knots bounds algebraic surface](#knots-bounds-algebraic-surface).
+
 
 #### Quasi-positive {#quasi-positive}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-11-04 Thu 18:44]</span></span>
 See [Positive](#positive).
+
+Referenced: [Knots bounds algebraic surface](#knots-bounds-algebraic-surface).
 
 
 ### Braid diagram {#braid-diagram}
@@ -3954,6 +4387,8 @@ with defining relations
 {{% /theorem %}}
 
 The braid group can be realized as a [Fundamental group](#fundamental-group) of a manifold. Define \\(C\_{n} = \\{x\_{1}, \cdots, x\_{n} \in \RR^{2} \mid x\_{i} \neq x\_{j}\\}\\). Then we have \\(\pi\_{1}(C\_{n}) = P\_{n}\\). By considering the \\(S\_{n}\\) action on \\(C\_{n}\\), we have that \\(B\_{n} = \pi\_{1}(C\_{n}/ S\_{n})\\).
+
+Referenced: [Hecke-Iwahori algebra](#hecke-iwahori-algebra), [Affine braid group](#affine-braid-group), [Representation of braids](#representation-of-braids).
 
 
 ### Hecke-Iwahori algebra {#hecke-iwahori-algebra}
@@ -4000,22 +4435,23 @@ We define the **Writhe number** of \\(\beta\\) to be
 
 {{< figure src="/img/2021-09-21_16-02-43_screenshot.png" >}}
 
+Referenced: [Jones-Markov trace](#jones-markov-trace).
+
 
 ### Yang-Baxter equation {#yang-baxter-equation}
 
 
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 A morphism \\(R: V \otimes V \to V \otimes V\\) satisfies the **Yang-Baxter equation** if
 \\[R\_{12}R\_{13}R\_{23} = R\_{23}R\_{13}R\_{12} \in \End(V^{\otimes 3})\\]
 where \\(R\_{12} = R \otimes 1\\) and so on.
-
-</div>
+{{% /definition %}}
 
 An solution is given by
 \\[R(e\_{i} \otimes e\_{j}) =  \begin{cases}     q e\_{i} \otimes e\_{i} & i = j \\\\\\     e\_{i} \otimes e\_{j} & i < j \\\\\\     e\_{i} \otimes e\_{j} + (q - q^{-1})e\_{j} \otimes e\_{i} & i > j   \end{cases} \\]
+
+Referenced: [Representation of braids](#representation-of-braids).
 
 
 ### Representation of braids {#representation-of-braids}
@@ -4042,6 +4478,10 @@ A map \\(\mu: V \to V\\) is called **Jones twist** if
 ### <span class="org-todo todo TODO">TODO</span> Jones polynomial {#jones-polynomial}
 
 
+
+Referenced: [Jones-Markov trace](#jones-markov-trace).
+
+
 ## Geometric Topology {#geometric-topology}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 18:20]</span></span>
@@ -4064,11 +4504,20 @@ There does not exist an algorithm that tells whether a given presentation yields
 {{% /theorem %}}
 
 
+### Corbordism {#corbordism}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-20 Sat 21:38]</span></span>
+Let \\(\mathscr{C}\\) denote one of the following categories: smooth / topological / piecewise linear category. Let \\(M\_{0}, M\_{1}\\) be oriented \\(\mathscr{C}\\)-manifold. A **cobordism** \\(W\\) form \\(M\_{0}\\) to \\(M\_{1}\\) is a \\(n + 1\\) dimensional \\(\mathscr{C}\\)-manifold such that \\(\partial W = \bar{M\_{0}} \coprod M\_{1}\\).
+
+We can define the **cobordism category** \\(\cat{Cob}\_{n}\\), where the objects are closed \\(n\\) dimensional manifolds and the morphisms are isotopic classes of cobordisms.
+
+Referenced: [h-Cobordism](#h-cobordism).
+
+
 ### h-Cobordism {#h-cobordism}
 
-
-
-Let \\(\mathscr{C}\\) denote one of the following categories: smooth / topological / piecewise linear category. Let \\(M\_{0}, M\_{1}\\) be oriented \\(\mathscr{C}\\)-manifold. A **cobordism** \\(W\\) form \\(M\_{0}\\) to \\(M\_{1}\\) is a \\(n + 1\\) dimensional \\(\mathscr{C}\\)-manifold such that \\(\partial W = \bar{M\_{0}} \coprod M\_{1}\\). We say that \\(W\\) is **h-cobordism** if \\(M\_{0} \hookrightarrow W\\) and \\(M\_{1} \hookrightarrow M\\) are all homotopy equivalences.
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 18:42]</span></span>
+With the same notation as in [Corbordism](#corbordism), we say that \\(W\\) is **h-cobordism** if \\(M\_{0} \hookrightarrow W\\) and \\(M\_{1} \hookrightarrow M\\) are all homotopy equivalences.
 
 The following theorem by Smale, Kirby-Siebenmann show that h-cobordism is powerful classification tool in high dimensional topology.
 
@@ -4090,6 +4539,8 @@ Then we can isotope \\(F\_{0}, F\_{1}\\) such that they intersect transversely a
 {{% remark %}}
 The key of the previous lemma is that all the intersection number gives positive or negative intersection sign. The transversity can be done in any dimension.
 {{% /remark %}}
+
+Referenced: [Poincarè conjecutre](#poincarè-conjecutre), [Wall Theorem](#wall-theorem), [Botany problem of 4-manifold](#botany-problem-of-4-manifold).
 
 
 ### Poincarè conjecutre {#poincarè-conjecutre}
@@ -4160,11 +4611,15 @@ For a manifold with boundary, the intersection form is still nondegenerate but n
 Given any symmetric \\(Q\\) with \\(\det(Q) \neq 0\\), there exists a simply connected \\(4\\)-manifold \\(X\\) such that \\(Q\_{X} = Q\\) and \\(\abs{\det(Q)} = \abs{H\_{1}(\partial X)}\\).
 {{% /proposition %}}
 
+Referenced: [Lefschetz fixed point theorem](#lefschetz-fixed-point-theorem), [Signature](#signature), [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold), [Donaldson diagonalizable theorem](#donaldson-diagonalizable-theorem).
+
 
 ### Signature {#signature}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-17 Fri 21:50]</span></span>
 For [Intersection forms](#intersection-forms) \\(Q\_{X}\\), we have \\(b^{+ }(X)/b^{- }(X)\\) denote the number of the positive and negative eigenvalues of \\(Q\_{X}\\). And we define the **signature** to be \\(\sigma(X) = b^{+ }(X) - b\_{2}^{-}(X)\\).
+
+Referenced: [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold), [Rokhlin Theorem](#rokhlin-theorem), [Characteristic class for 4-manifold](#characteristic-class-for-4-manifold).
 
 
 ### Whitehead theorem {#whitehead-theorem}
@@ -4184,6 +4639,8 @@ The proof relies on the following lemma of Hopf.
 The left hand side has \\(n\\) copies of \\(S^{2}\\) and the isomorphism is group homomorphism.
 {{% /lemma %}}
 
+Referenced: [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold).
+
 
 ### Freedman's classification of topological 4-manifold {#freedman-s-classification-of-topological-4-manifold}
 
@@ -4199,6 +4656,8 @@ The left hand side has \\(n\\) copies of \\(S^{2}\\) and the isomorphism is grou
 Cf. [Manifold](#manifold), [Kirby-Sieberman invariant](#kirby-sieberman-invariant), [Whitehead theorem](#whitehead-theorem), [Intersection forms](#intersection-forms), [Signature](#signature).
 
 By Freedman's result, the Chern number \\(c(X) = 2 \chi(X) + 3 \sigma(X)\\), and [Holomorphic Euler number](#holomorphic-euler-number) \\(\chi\_{h}\\) and \\(t(X) = \begin{cases} 0 & Q\_{X} \text{ is even.} \\ 1 & Q\_{X} \text{ is odd.} \end{cases}\\).
+
+Referenced: [Geography of 4-manifold](#geography-of-4-manifold), [Geometric Topology](#geometric-topology), [Characteristic class for 4-manifold](#characteristic-class-for-4-manifold).
 
 
 ### Geography of 4-manifold {#geography-of-4-manifold}
@@ -4287,6 +4746,8 @@ Let \\(X\\) be a smooth spin \\(4\\)-[Manifold](#manifold). Then \\(16 | \sigma(
 
 Cf. [Signature](#signature).
 
+Referenced: [Geometric Topology](#geometric-topology).
+
 
 ### Donaldson diagonalizable theorem {#donaldson-diagonalizable-theorem}
 
@@ -4303,6 +4764,8 @@ One of the proofs is given by [Seiberg-Witten invariant](#seiberg-witten-invaria
 {{% theorem %}}
 Let \\(Q: \ZZ^{m} \otimes \ZZ^{m} \to \ZZ\\) be a negative definite, unimodular form and let \\(\Char(Q) = \\{v \in \ZZ^{m} \mid Q(v, w) \equiv Q(w,w) \pmod 2\\}\\). Suppose that \\(Q(v, v) + m \leq 0, \quad \forall v \in \Char(Q)\\). Then \\(Q \cong -I\\).
 {{% /theorem %}}
+
+Referenced: [Geometric Topology](#geometric-topology), [Characteristic class for 4-manifold](#characteristic-class-for-4-manifold).
 
 
 ### 11/8 conjecture {#11-8-conjecture}
@@ -4331,6 +4794,10 @@ The current status (2021 Sep.) of the conjecture is that \\(k \leq 1\\) case is 
 ### <span class="org-todo todo TODO">TODO</span> Bauer-Furuta invariant {#bauer-furuta-invariant}
 
 
+
+Referenced: [Geometric Topology](#geometric-topology).
+
+
 ### Kirby-Sieberman invariant {#kirby-sieberman-invariant}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-17 Fri 22:00]</span></span>
@@ -4347,6 +4814,8 @@ So to have PL structure on \\(X\\), \\(\dim X \geq 5\\) we need to overcome the 
 {{% remark %}}
 For \\(\dim X \leq 7\\), we have existence of piecewise linear structure equivalent to existence of smooth structure.
 {{% /remark %}}
+
+Referenced: [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold).
 
 
 ### Characteristic class for 4-manifold {#characteristic-class-for-4-manifold}
@@ -4405,6 +4874,8 @@ Cf. [Vector bundle](#vector-bundle).
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:21]</span></span>
 The **Hessian** is the well-defined map \\({\rm Hess} f\_{p}: T\_{p}X \otimes T\_{p}X \to \RR\\) defined by \\(\left(\frac{\partial^{2}f}{\partial x\_{i} \partial x\_{j}}\right)\\).
 
+Referenced: [Non-degenerate](#non-degenerate).
+
 
 ### Critical point {#critical-point}
 
@@ -4413,11 +4884,15 @@ The **critical point** of \\(f: X \to \RR\\) is the map \\(\dif f\_{p}: T\_{p}X 
 
 Cf. [Regular point](#regular-point).
 
+Referenced: [Non-degenerate](#non-degenerate), [Critical value](#critical-value), [Morse inequality](#morse-inequality).
+
 
 #### Non-degenerate {#non-degenerate}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:19]</span></span>
 We say \\(p\\) [Critical point](#critical-point) **non-degenerate** if \\(\det({\rm Hess} f\_{p}) \neq q\\). The **index** of the \\(p\\) is the number of negative eigenvalues of [Hessian](#hessian) of \\(f\\) at \\(p\\).
+
+Referenced: [Index](#index).
 
 
 ### Index {#index}
@@ -4425,11 +4900,15 @@ We say \\(p\\) [Critical point](#critical-point) **non-degenerate** if \\(\det({
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:54]</span></span>
 See [Non-degenerate](#non-degenerate).
 
+Referenced: [Morse inequality](#morse-inequality).
+
 
 ### Critical value {#critical-value}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:18]</span></span>
 See [Critical point](#critical-point).
+
+Referenced: [Regular value](#regular-value).
 
 
 ### Regular value {#regular-value}
@@ -4443,11 +4922,15 @@ See [Critical value](#critical-value).
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:39]</span></span>
 A **Morse function** is a funciton if all critical points are non-degenerate. If the origin manifold \\(X\\) has boundary, then \\(f^{-1}(\max f) = \partial X\\).
 
+Referenced: [Self-indexed](#self-indexed), [Monotone](#monotone).
+
 
 #### Self-indexed {#self-indexed}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 15:54]</span></span>
 A [Morse function](#morse-function) is called **self-indexed** if for all \\(x \in {\rm crit}(f)\\), we have \\(f(x) = {\rm index}(x)\\).
+
+Referenced: [Monotone](#monotone).
 
 
 ### Morse theory {#morse-theory}
@@ -4500,6 +4983,8 @@ We have that \\(\dif^{2} = 0\\).
 
 Cf. [Handle decomposition](#handle-decomposition).
 
+Referenced: [Morse inequality](#morse-inequality).
+
 
 ### Morse inequality {#morse-inequality}
 
@@ -4531,6 +5016,8 @@ Any two [Monotone](#monotone) [Handle decomposition](#handle-decomposition) of \
 
 
 
+Referenced: [Morse theory](#morse-theory), [Morse complex](#morse-complex), [Handle move](#handle-move), [Monotone](#monotone).
+
 
 #### Monotone {#monotone}
 
@@ -4546,6 +5033,8 @@ Every manifold has a self-indexed Morse function.
 {{% /corollary %}}
 
 Cf. [Self-indexed](#self-indexed) [Morse function](#morse-function).
+
+Referenced: [Morse complex](#morse-complex), [Handle move](#handle-move).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Kirby calculus {#kirby-calculus}
@@ -4564,6 +5053,10 @@ Cf. [Self-indexed](#self-indexed) [Morse function](#morse-function).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Surgery {#surgery}
+
+
+
+Referenced: [Lickorish-Wallace theorem](#lickorish-wallace-theorem).
 
 
 ### Lickorish-Wallace theorem {#lickorish-wallace-theorem}
@@ -4586,17 +5079,23 @@ The **Seifert genus** \\(g(K)\\) is the minimal genus of Seifert surface. The **
 
 Obviously, we have \\(g\_{S}(K) \leq g(K)\\).
 
+Referenced: [Seifert genus](#seifert-genus), [Slice genus](#slice-genus), [Linking number](#linking-number).
+
 
 ### Seifert genus {#seifert-genus}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 13:37]</span></span>
 See [Seifert surface](#seifert-surface).
 
+Referenced: [Thom conjecture (theorem)](#thom-conjecture--theorem).
+
 
 ### Slice genus {#slice-genus}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-08 Fri 13:40]</span></span>
 See [Seifert surface](#seifert-surface).
+
+Referenced: [Slice ribbon conjecture](#slice-ribbon-conjecture), [Clasp number](#clasp-number), [Knots bounds algebraic surface](#knots-bounds-algebraic-surface).
 
 
 ### Linking number {#linking-number}
@@ -4633,6 +5132,8 @@ Cf. [Contractible](#contractible).
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 19:03]</span></span>
 A genus \\(g\\) **Heegaard splitting** of \\(3\\)-manifold is a decomposition of \\(Y\\) into two genus \\(g\\) handle bodies.
 
+Referenced: [Heegaard diagram](#heegaard-diagram).
+
 
 ### Heegaard diagram {#heegaard-diagram}
 
@@ -4640,6 +5141,8 @@ A genus \\(g\\) **Heegaard splitting** of \\(3\\)-manifold is a decomposition of
 A genus \\(g\\) **Heegaard diagram** is \\((\Sigma\_{g}, \alpha\_{1}, \cdots, \alpha\_{g}, \beta\_{1}, \cdots, \beta\_{g})\\) consists of a genus \\(g\\) [Orientable](#orientable) surface \\(\Sigma\_{g}\\), two families of simple closed curves \\(\alpha\_{\* }\\), \\(\beta\_{\* }\\) such that \\(\alpha\_{i} \cap \alpha\_{j} = \beta\_{i} \cap \beta\_{j} = 0 \\) for \\(i \neq j\\) and \\(\Sigma\_{g} - \coprod \alpha\_{i}, \Sigma\_{g} - \coprod \beta\_{i}\\) are both connected.
 
 Cf. [Heegaard splitting](#heegaard-splitting).
+
+Referenced: [Trisection diagram](#trisection-diagram).
 
 
 ### Trisection {#trisection}
@@ -4673,17 +5176,23 @@ A **trisection diagram** is a set of three curves \\(\\{\alpha\_{i}\\}, \\{\beta
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 19:22]</span></span>
 A simply connected, closed, oriented \\(4\\)-manifold \\(X\\) is **irreducible** if \\(X \not \cong\_{diff} X\_{0} \shar X\_{1}\\) with \\(X\_{0}, X\_{1} \not \cong S^{4}\\).
 
+Referenced: [Geography of 4-manifold](#geography-of-4-manifold), [Seiberg-Witten invariant](#seiberg-witten-invariant).
+
 
 ### Holomorphic Euler number {#holomorphic-euler-number}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 19:26]</span></span>
 We define the **holomorphic Euler number** by \\(\chi\_{h}(X) = \frac{\chi(X) + \sigma(X)}{4}\\).
 
+Referenced: [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold), [Geography of 4-manifold](#geography-of-4-manifold).
+
 
 ### Clifford algebra {#clifford-algebra}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 19:56]</span></span>
 Let \\(H\\) be a real vector space. The tensor algebra \\(T(H)\\) modulo ideal generated by \\(\\{v \otimes v + \norm{v}^{2}\\}\\) is called the **Clifford algebra**.
+
+Referenced: [Clifford module](#clifford-module).
 
 
 ### Clifford module {#clifford-module}
@@ -4704,6 +5213,8 @@ If \\(n = 2k\\), then there exists a unique finite dimensional irreducible Cliff
 
 If \\(n = 2k + 1\\), there are exactly two clifford modules \\((S, \gamma), (S, - \gamma)\\) up to isomoprhism and \\(\dim\_{\CC} S = 2^{k}\\).
 {{% /theorem %}}
+
+Referenced: [Dirac operator](#dirac-operator), [Spin^C structure](#spin-c-structure).
 
 
 ### Dirac operator {#dirac-operator}
@@ -4750,6 +5261,8 @@ A **unitary** connection \\(A\\) on \\(S\\) is **spin\\(^{\CC}\\) connection** i
 \\[\nabla\_{A}(\rho(v) \cdot s) = \rho(v) \cdot \nabla\_{A} s + \rho(\nabla\_{LC} v) \cdot s\\]
 for every \\(v \in \Gamma(T\_{\* }X), s \in \Gamma(s)\\). Here \\(\nabla\_{LC}\\) is the Levi-Civita connection which relies on [Riemannian metric](#riemannian-metric).
 
+Referenced: [Dirac operator](#dirac-operator), [Seiberg-Witten moduli space](#seiberg-witten-moduli-space).
+
 
 ### Self-dual {#self-dual}
 
@@ -4758,12 +5271,16 @@ A \\(n\\)-form \\(w\\) on \\(2n\\) manifold is called **self-dual** if \\(\* w =
 
 Any \\(n\\)-form can be decomposed to a sum of self-dual part and [Anti-self-dual](#anti-self-dual) part.
 
+Referenced: [Dirac operator](#dirac-operator), [Anti-self-dual](#anti-self-dual).
+
 
 ### Anti-self-dual {#anti-self-dual}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 20:21]</span></span>
 A \\(n\\)-form \\(w\\) on \\(2n\\) manifold is called **self-dual** if \\(\* w = -w\\).
 Cf. [Self-dual](#self-dual).
+
+Referenced: [Self-dual](#self-dual).
 
 
 ### Seiberg-Witten equation {#seiberg-witten-equation}
@@ -4772,6 +5289,8 @@ Cf. [Self-dual](#self-dual).
 The **Seiberg-Witten equation** is the following equations for \\((A, \phi \in \Gamma^{S^{+}})\\)
 \\[ \begin{cases}      F\_{A^{\tau}}^{+} - \rho^{-1}(\phi^{\*} \phi)\_{0} = 0 & \\\\\\      \dirac\_{A}^{+} \phi = 0 &    \end{cases} \\]
 Here \\((\phi^{\* } \phi)\_{0}: \psi \to \langle \psi, \phi> \cdot \phi - \frac{\abs{\phi}^{2}}{2} \psi\\). We have \\(((\phi^{\* } \phi)\_{0})^{\* } = (\phi^{\* } \phi)\_{0}\\) and \\(\tr (\phi^{\* } \phi)\_{0} = 0\\).
+
+Referenced: [Seiberg-Witten moduli space](#seiberg-witten-moduli-space).
 
 
 ### Seiberg-Witten moduli space {#seiberg-witten-moduli-space}
@@ -4794,6 +5313,8 @@ The following result is important and <span class="underline">magic</span> by Cl
 The proof relies on the estimate of the \\(\abs{\phi}\\) and elliptic boosting technique for elliptic partial differential equations.
 
 However, in general the moduli space is not a manifold, but in \\(b^{+ }\_{2} > 0\\) case, by perturbing the equation a little, we can get an [Oriented](#oriented) manifold of dimension \\(\frac{c\_{1}(S)^{2} - \sigma(X)}{4} + b^{1}(X) - b\_{2}^{+}(X)\\). The result depend on Sard-Smale theorem which is an analog of [Sard theorem](#sard-theorem) in infinite dimensional case. For \\(b^{ +} > 1\\), all such moduli space is equivalent, but in \\(b\_{2}^{ +} = 1\\) case, we have \\(2\\) choices.
+
+Referenced: [Seiberg-Witten invariant](#seiberg-witten-invariant).
 
 
 ### Seiberg-Witten invariant {#seiberg-witten-invariant}
@@ -4862,11 +5383,15 @@ Let \\((X, \omega)\\) be a symplectic \\(4\\)-manifold. Let \\(\Sigma \stackrel{
 To apply the above theorem, we have a priori known a symplectic surface. Because not all homology class can be represented by a simplectic surface. There are two major obstructions: first, the symplectic area; second, the adjunction formula in Seiberg-Witten theory. However, you can always find immersed symplectic surface representing a homology class if the symplectic area is positive; and if \\(\dim X \geq 6\\), then you can make the surface embedded. Again, \\(4\\) is the critical dimension.
 {{% /remark %}}
 
+Referenced: [Donaldson diagonalizable theorem](#donaldson-diagonalizable-theorem), [Geometric Topology](#geometric-topology), [Thom conjecture (theorem)](#thom-conjecture--theorem), [Knots bounds algebraic surface](#knots-bounds-algebraic-surface), [Fintushel-Stern knot surgery](#fintushel-stern-knot-surgery).
+
 
 ### Tangle {#tangle}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-19 Tue 18:02]</span></span>
 A **tangle** is the regular isotopy class of a standardized [Tangle](#tangle) with respect to deformation of endpoints.
+
+Referenced: [Tangle](#tangle).
 
 
 ### Geometric tangle {#geometric-tangle}
@@ -4898,6 +5423,8 @@ The following corolloary called **local Thom conjecture** is useful.
 Let \\(\Sigma \hookrightarrow \CC^{2}\\) be an affine, smooth algebraic curve. Then \\(\Sigma\\) is locally genus miminizing, that is, for all \\(D^{4} \in \CC^{2}, S \hookrightarrow D^{4}\\) such that \\(\partial D^{4} \pitchfork \Sigma = K\\) and \\(\partial S = K\\), we have \\(g(S) \geq g(\Sigma \cap D^{4})\\).
 {{% /corollary %}}
 
+Referenced: [Milnor conjecture (theorem)](#milnor-conjecture--theorem).
+
 
 ### Slice ribbon conjecture {#slice-ribbon-conjecture}
 
@@ -4926,6 +5453,8 @@ One can use [local Thom conjecture (theorem)](#thom-conjecture--theorem) to prov
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-11-04 Thu 18:38]</span></span>
 Given a [Knot](#knot) \\(K\\), we define the **unknotting number** \\(U(K)\\) the minimal number that a knot [Diagram](#diagram) of \\(K\\) can be made into an unknot.
+
+Referenced: [Clasp number](#clasp-number).
 
 
 ### Clasp number {#clasp-number}
@@ -4985,18 +5514,28 @@ The conjecture is related to the open question, given \\(K, L\\) with \\(\Delta\
 ### <span class="org-todo todo TODO">TODO</span> Alexander polynomial {#alexander-polynomial}
 
 
+
+Referenced: [Fintushel-Stern knot surgery](#fintushel-stern-knot-surgery).
+
+
 ### <span class="org-todo todo TODO">TODO</span> Exotic surfaces {#exotic-surfaces}
 
 
 ### Gabai's lightbulb theorem {#gabai-s-lightbulb-theorem}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-11-14 Sun 15:13]</span></span>
-Given \\(F \hookrightarrow X\\), we say an embedded sphere \\(\Sigma \hookrightarrow X\\) is a **geometric dual** of \\(F\\) if \\(\Sigma \cdot \Sigma = 0\\) and \\(F \pitchfork \Sigma = \\{pt\\}\\). And \\(F\\) is \*\\(\Sigma\\)-essential\* if \\(\pi\_{1}(F \backslash \Sigma) \to \pi\_{1}(X \backslash \Sigma)\\) is trivial. The **Gabai's lightbulb theorem** states
+Given \\(F \hookrightarrow X\\), we say an embedded sphere \\(\Sigma \hookrightarrow X\\) is a **geometric dual** of \\(F\\) if \\(\Sigma \cdot \Sigma = 0\\) and \\(F \pitchfork \Sigma = \\{pt\\}\\). And \\(F\\) is **\\(\Sigma\\)-essential** if \\(\pi\_{1}(F \backslash \Sigma) \to \pi\_{1}(X \backslash \Sigma)\\) is trivial. The **Gabai's lightbulb theorem** states
 
 {{% theorem %}}
 1.  Given any \\(S^{2} \hookrightarrow S^{2} \times S^{2}\\) with \\(S^{2} \pitchfork (\* \times S^{2}) = \\{pt\\}\\). Then \\(S^{2} \cong\_{diff} S^{2} \times \\{\*\\}\\).
 2.  Given any \\(F\_{1}, F\_{2} \hookrightarrow X\\) with \\(\pi\_{1}(X)\\) no \\(2\\)-torsion. Suppose there exists a common geometric dual for \\(F\_{i}\\) and \\(F\_{1}, F\_{2}\\) both \\(\Sigma\\)-essential. Then \\(F\_{1} \cong\_{diff} F\_{2}\\).
 {{% /theorem %}}
+
+
+### <span class="org-todo todo TODO">TODO</span> Jones polynomial {#jones-polynomial}
+
+
+### <span class="org-todo todo TODO">TODO</span> Khovanov homology {#khovanov-homology}
 
 
 ## Quantum Fields and Strings {#quantum-fields-and-strings}
@@ -5008,14 +5547,11 @@ Given \\(F \hookrightarrow X\\), we say an embedded sphere \\(\Sigma \hookrighta
 
 
 
-<div class="definition">
-  <div></div>
-
+{{% definition %}}
 A **super vector space** is a \\(\ZZ/2 \ZZ\\) graded vector space
 \\[V = V\_{0} \oplus V\_{1}\\]
 An element \\(v\\) of \\(V\_{0}\\) (resp. \\(V\_{1}\\)) is said to be **even** (resp. **odd**). Its parity in \\(\ZZ / 2 \ZZ\\) is denoted \\(p(a)\\). And **morphism** between super vector spaces is degree presevering linear map.
-
-</div>
+{{% /definition %}}
 
 We have **parity reversing functor** \\(\Pi\\) such that \\((\Pi V)\_{0} = V\_{1}\\) and \\((\Pi V)\_{1} = V\_{0}\\). Also we use the notation \\(m\_{0} \mid m\_{1}\\) to denote the dimension of \\(V\\) with \\(\dim V\_{0} = m\_{0}\\) and \\(\dim V\_{1} = m\_{1}\\).
 
@@ -5024,6 +5560,8 @@ The **tensor product** is defined by \\((V \otimes W)\_{k} = \oplus\_{i + j = k}
 By above definition, we have the following diagram commutes.
 
 {{< figure src="/img/2021-09-15_19-00-07_screenshot.png" >}}
+
+Referenced: [Super algebra](#super-algebra).
 
 
 ### Super algebra {#super-algebra}
@@ -5041,6 +5579,9 @@ We also have **opposite algebra** \\(A^{o}\\) of \\(A\\) by product
 \\[x \cdot\_{opp} y = (-1)^{p(x)p(y)}y \cdot x\\]
 
 We can define the tensor product of modules and algebras naturely.
+
+
+### <span class="org-todo todo TODO">TODO</span> Topological quantum field theory {#topological-quantum-field-theory}
 
 
 ## Arithmetic Geometry {#arithmetic-geometry}
@@ -5061,6 +5602,8 @@ with the following properties
 
 The absolute value is said to be **nonarchimedean** if it satisfies
 \\[\abs{x + y} \leq \max \\{ \abs{x}, \abs{y}\\}\\]
+
+Referenced: [Nonarchimedean](#nonarchimedean), [Degree formula](#degree-formula), [Local degree](#local-degree), [Normalized absolute value](#normalized-absolute-value).
 
 
 ### Nonarchimedean {#nonarchimedean}
@@ -5093,6 +5636,8 @@ Let \\(v \in M\_{k}\\) be an [Absolute value](#absolute-value) on number field \
 For normalized absolute value, we have the **product formula**, for \\(x \in k^{\* }\\), we have
 \\[\prod\_{v \in M\_{k}} \norm{x}\_{v} = 1\\]
 
+Referenced: [Height](#height).
+
 
 ### S-integer {#s-integer}
 
@@ -5101,6 +5646,8 @@ The ring of **S-integers** of \\(k\\) is defined to be
 \\[R\_{S} = \\{x \in k \mid \abs{x}\_{v} \leq 1 \text{ for all } v \in M\_{k}, v \not \in S\\}\\]
 
 We can also characterize the rings of integers of \\(k\\) by \\(M\_{k}^{\infty}\\)-integers of \\(k\\).
+
+Referenced: [Finiteness of unit group](#finiteness-of-unit-group).
 
 
 ### Height {#height}
@@ -5128,6 +5675,8 @@ We can extend the definition of height to varieties. Let \\(\phi: V \to \PP^{n}\
 \\[h\_{\phi}(P) = h(\phi(P))\\]
 The definition of this height is dependent on the choice of the morphism \\(\phi\\).
 
+Referenced: [Absolute height](#absolute-height).
+
 
 ### Absolute height {#absolute-height}
 
@@ -5136,6 +5685,10 @@ See [Height](#height).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Ideal class {#ideal-class}
+
+
+
+Referenced: [Finiteness of class group](#finiteness-of-class-group).
 
 
 ### Finiteness of point under height {#finiteness-of-point-under-height}
@@ -5191,6 +5744,8 @@ Let \\(E/K\\) be an elliptic curve. Then \\(E\\) is isomorphic to a plane cubic 
 for some \\(a\_{1}, \cdots, a\_{4}, a\_{6} \in K\\) such that the above equation has no singularities.
 {{% /theorem %}}
 
+Referenced: [Origin](#origin), [Group law](#group-law), [Isogeny](#isogeny).
+
 
 #### Origin {#origin}
 
@@ -5224,6 +5779,8 @@ The group is defined by \\(P + Q = R\\), where \\((P) + (Q) = ( R) + (O)\\).
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-22 Fri 21:16]</span></span>
 An **isogeny** is a morphism between [Elliptic curves](#elliptic-curve) which is finite.
 
+Referenced: [Isogeny](#isogeny).
+
 
 #### Riemann hypothesis {#riemann-hypothesis}
 
@@ -5240,6 +5797,8 @@ Let \\(E/ \mathbb{F}\_{q}\\) be an elliptic curve, and define \\(a(E) = q + 1 - 
 Let \\(l\\) be a prime number unequal to the characteristic of \\(K\\). The **Tate module** of \\(E\\) is the inverse limit
 \\[T\_{l}E = \varprojlim E(\bar{K})[l^{n}]\\]
 A free \\(\ZZ\_{l}\\)-module of rank \\(2\\). The **rational Tate module** is \\(V\_{l}E = T\_{l}E \otimes\_{\ZZ\_{l}} \QQ\_{l}\\). Here \\(E(\bar{K})[m]\\) denote the number of \\(m\\) torsion points of \\(E(\bar{K})\\).
+
+Referenced: [Tate's isogeny theorem](#tate-s-isogeny-theorem).
 
 
 #### Tate's isogeny theorem {#tate-s-isogeny-theorem}
@@ -5278,6 +5837,10 @@ The weak Mordell-Weil theorem do not implies Mordell-Weil theorem, for it doesn'
 ### <span class="org-todo todo TODO">TODO</span> Jacobian variety {#jacobian-variety}
 
 
+
+Referenced: [Group law](#group-law).
+
+
 ### Dirichlet theorem {#dirichlet-theorem}
 
 
@@ -5287,7 +5850,9 @@ Let \\(\alpha \in \RR\\) with \\(\alpha \not \in \QQ\\). Then there are infinite
 \\[\abs{\alpha - \frac{p}{q}} < \frac{1}{q^{2}}\\]
 {{% /theorem %}}
 
-The constant on the right hand side can be refined to \\(\frac{1}{\sqrt{5}q^{2}}\\), which can not be further required for \\(\alpha = \frac{-1 + \sqrt{5}}{2}\\)
+The constant on the right hand side can be refined to \\(\frac{1}{\sqrt{5}q^{2}}\\), which can not be further required for \\(\alpha = \frac{-1 + \sqrt{5}}{2}\\).
+
+Referenced: [Roth's theorem](#roth-s-theorem).
 
 
 ### Roth's theorem {#roth-s-theorem}
