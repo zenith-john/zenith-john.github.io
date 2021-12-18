@@ -29,7 +29,7 @@ draft = false
 
 -  Algebraic Varieties
 
-    J. N. Looijenga 著。**推荐**
+    J. N. Looijenga 著。\*推荐\*
 
     首先推荐一下我们学校的老师写的讲义，这本书的内容对于弄懂 Variety 是非常充足的，读起来比起下面那本 GTM 52 的第一章要容易不少。里面的练习难度也比较适中，可以比较好的巩固课程中学习到的概念。
 
@@ -37,7 +37,7 @@ draft = false
 
 -  Algebraic Curves, an Introduction
 
-    William Fulton 著。**推荐**
+    William Fulton 著。\*推荐\*
 
     Fulton 也是著名的 Intersection Theory 的作者。这本书也非常适合代数几何的初学者进行入门。其介绍的各个概念都被应用到了代数曲线这一特殊的例子上。如果对于黎曼曲面比较了解的话能够将其中的代数语言和复几何的语言进行一定程度上的连接，对于培养代数几何的几何直观有一些帮助。
 
@@ -45,7 +45,7 @@ draft = false
 
 -  Algebraic Geometry
 
-    Hartshorne 著。**推荐第2和3章**
+    Hartshorne 著。\*推荐第2和3章\*
 
     大名鼎鼎的 GTM 52，即使以今天的视角来看也是一本合格的教科书。在清华大学的课程中《代数几何 2》的教材就是这本书。这本书的优点是内容精炼，而且包括了代数几何的基本内容，因此其第二、第三章能够在一个学期的课程中讲完。有人评价这本书是 EGA 的缩略本，由于我没有读过 EGA 因此也就不做比较了。这本书的缺点也很明显，由于比较精炼，很多重要的结果直接就扔到练习中去了。（我粗略地翻了一下 Hartshorne 的另一本书 Deformation Theory 似乎也是如此。）同时里面的例子非常少，总让人感觉几何味不够。虽然最后两章将前面构建的体系用到了曲线和曲面之上，但读完之后还是感觉只是学了一种新的语言，却还不会如何应用。关于代数曲面的分类建议看别的书。
 
@@ -61,7 +61,7 @@ draft = false
 
 -  Algebraic Geometry and Arithmetic Curves
 
-    Qing Liu 著。**推荐**
+    Qing Liu 著。\*推荐\*
 
     这本书也能够作为 Hartshorne 的补充。这本书相较于 Vakil 的书更薄一些，主要关注的是代数几何在数论方面的应用（最后一章讨论了代数曲线的约化），因此对于学习数论的同学可以考虑学习这一本书。这本书也给了交换代数的定理的证明，读起来也比 Hartshorne 容易一些。这本书的 Sheaves of differentials 以及 Divisors 可以作为 Hartshorne 的比较好的补充。
 
@@ -69,7 +69,7 @@ draft = false
 
 -  Algebraic Geometry I, Schemes With Examples and Exercises
 
-    Ulrich Görtz, Torsten Wedhorn 著。**推荐附录**
+    Ulrich Görtz, Torsten Wedhorn 著。\*推荐附录\*
 
     这本书我只看了附录，几个附录都是很有价值的，对于理清代数几何的各个概念之间的关系非常有价值，可以作为复习的材料来用。
 

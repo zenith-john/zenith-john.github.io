@@ -3,8 +3,8 @@ title = "Mathematics Notes"
 author = ["Zenith John"]
 date = 2021-08-31
 tags = ["Mathematics"]
-draft = true
-lastmod = 2021-11-14
+draft = false
+lastmod = 2021-12-18
 showtoc = true
 +++
 
@@ -250,7 +250,7 @@ Maps \\(f,g\\) are a **homotopic** which is both [Left homotopic](#left-homotopy
 ### Homotopy category {#homotopy-category}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-12-18 Sat 18:11]</span></span>
-Suppose \\(\mathcal{C}\\) is a category with a subcategory of weak equivalence \\(\mathcal{W}\\). Define the **homotopy category** \\(\cat{Ho}(\mathcal{C})\\) as follows. Form the free category \\(F(\mathcal{C}, \mathcal{W}^{-1})\\) on the arrows of \\(\mathcal{C}\\) and reversals of the arrows of \\(W\\). \\(\cat{Ho}(\mathcalC)\\) is the quotient category of \\(F(\mathcal{C}, \mathcal{W}^{-1})\\) by the relations \\(1\_{A} = (1\_{A})\\) for all objects \\(A\\), \\((f, g) = (g \circ f)\\) for all composable arrows \\(f,g\\) and \\(1\_{\text{dom } w} = (w, w^{-1})\\) and \\(1\_{\text{codom } w} = (w^{-1}, w)\\).
+Suppose \\(\mathcal{C}\\) is a category with a subcategory of weak equivalence \\(\mathcal{W}\\). Define the **homotopy category** \\(\cat{Ho}(\mathcal{C})\\) as follows. Form the free category \\(F(\mathcal{C}, \mathcal{W}^{-1})\\) on the arrows of \\(\mathcal{C}\\) and reversals of the arrows of \\(W\\). \\(\cat{Ho}(\mathcal{C})\\) is the quotient category of \\(F(\mathcal{C}, \mathcal{W}^{-1})\\) by the relations \\(1\_{A} = (1\_{A})\\) for all objects \\(A\\), \\((f, g) = (g \circ f)\\) for all composable arrows \\(f,g\\) and \\(1\_{\text{dom } w} = (w, w^{-1})\\) and \\(1\_{\text{codom } w} = (w^{-1}, w)\\).
 
 Let \\(\mathcal{C}\_{cf}\\) denote the full subcategory of [Cofibrant](#cofibrant) and [Fibrant](#fibrant) objects of \\(\mathcal{C}\\). Then we have
 
@@ -693,7 +693,7 @@ Cf. [Homotopy group](#homotopy-group).
 Let \\(\bm{\Delta}\\) be the category of finite ordianl numbers with order preserving maps between them. The object of \\(\bm{\Delta}\\) is denoted by \\(\bm{n}\\) which is a category denoted by \\(0 \to 1 \to 2 \to \cdots \to n\\), where identity and composition morphism is omitted. \\(\bm{\Delta}\\) is called **ordinal number category**. A **simplicial set** is a contravariant [Functor](#functor) \\(X: \bm{\Delta^{op}} \to \cat{Sets}\\).
 
 One of the important example is standard covarinat functor \\(\bm{\Delta} \to \cat{Top}\\) mapping \\(\bm{n}\\) to **standard n-simplex** \\(\abs{\Delta^{n}}\\) with
-\\[\abs{\Delta^{n}} = \\{(t\_{0}, \cdots, t\_{n}) \in \RR^{n + 1} \mdi \sum\_{i = 0}^{n}t\_{i} = 1, t\_{i} \geq 0\\}\\]
+\\[\abs{\Delta^{n}} = \\{(t\_{0}, \cdots, t\_{n}) \in \RR^{n + 1} \mid \sum\_{i = 0}^{n}t\_{i} = 1, t\_{i} \geq 0\\}\\]
 
 In this language, the [Singular homology](#singular-homology) can be describe by **singular set** \\(S(T)\\)
 \\[\bm{n} \to \hom(\abs{\Delta^{n}, T})\\]
@@ -3475,7 +3475,7 @@ Referenced: [Extension](#extension), [First cotangent module](#first-cotangent-m
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 20:28]</span></span>
 See [<span id="7cd3e01b28c2ede526fee96d60981f02"><a href="#sernesi2006" title="Sernesi, Deformations of {{Algebraic Schemes}}, {Springer Berlin Heidelberg} (2006).">sernesi2006</a></span>] p.9.
 
-Let \\(A \to R\\) be a ring homomorphism. An \\(A\\)-\*extension\* of \\(R\\) by \\(I\\) is an exact sequence
+Let \\(A \to R\\) be a ring homomorphism. An \\(A\\)-**extension** of \\(R\\) by \\(I\\) is an exact sequence
 \\[(R', \phi) : 0 \to I \to R' \stackrel{\phi}{\to} R \to 0\\]
 where \\(R'\\) is an \\(A\\)-algebra and \\(\phi\\) is a homomorphism of \\(A\\)-algebras whose kernel \\(I\\) is an ideal of \\(R'\\) satisfying \\(I^{2} = (0)\\) which makes \\(I\\) a \\(R\\)-module.
 
