@@ -4,7 +4,7 @@ author = ["Zenith John"]
 date = 2021-08-31
 tags = ["Mathematics"]
 draft = false
-lastmod = 2021-12-18
+lastmod = 2021-12-23
 showtoc = true
 +++
 
@@ -48,6 +48,31 @@ In my opinion, the proof of Fermat's last theorem by Wiles of kind 1; Langlands 
 ### <span class="org-todo todo TODO">TODO</span> A\_&infin; category {#a-and-infin-category}
 
 
+### Abelian {#abelian}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 20:59]</span></span>
+A category is **abelian** if it is [Exact](#exact) and [Additive](#additive).
+
+
+### Additive {#additive}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 20:53]</span></span>
+A category \\(\mathcal{C}\\) is called **additive** if the following conditions hold.
+
+1.  For any two object \\(\Hom(X,Y)\\) has an abelian group structure and compositions are bilinear.
+2.  There is a zero object, denoted by \\(0\_{\mathcal{C}}\\).
+3.  For any two objects \\(X, Y\\), the direct sum \\(X \oplus Y\\) exists in \\(\mathcal{C}\\).
+
+A functor is called **additive** if it induces group homomorphism on homomorphisms.
+
+
+### Adjoint {#adjoint}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 20:57]</span></span>
+Let \\(F: \mathcal{C} \to \mathcal{D}\\) and \\(G: \mathcal{D} \to \mathcal{C}\\) two functors. We say that \\(G\\) is **right adjoint** to \\(F\\) and \\(F\\) is **left adjoint** to \\(G\\) if there is an isomorphism
+\\[\Hom\_{\mathcal{D}}(F(X), Y) \cong \Hom\_{\mathcal{C}}(X, G(Y))\\]
+
+
 ### Anodyne extension {#anodyne-extension}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-12-17 Fri 20:09]</span></span>
@@ -69,6 +94,22 @@ Referenced: [Monoidal category](#monoidal-category), [Tensor category](#tensor-c
 
 
 ### <span class="org-todo todo TODO">TODO</span> Bialgebra {#bialgebra}
+
+
+### Category {#category}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 18:49]</span></span>
+A **category** \\(\mathcal{C}\\) consists of the following data
+
+1.  A collection of **objects**.
+2.  For every pair of objects \\(X, Y \in \mathcal{C}\\), a set \\(\Hom\_{\mathcal{C}}(X,Y)\\) of **morphisms** from \\(X\\) to \\(Y\\).
+3.  For every object \\(X \in \mathcal{C}\\), an **identity morphism** \\(\id\_{X} \in \Hom\_{\mathcal{C}}(X, X)\\).
+4.  For every triple of objects, a composition map
+    \\[\Hom\_{\mathcal{C}}(X, Y) \times \Hom\_{\mathcal{C}}(Y,Z) \to \Hom\_{\mathcal{C}}(X, Z)\\]
+5.  We have for every morphism \\(f: X \to Y\\), \\(\id\_{Y} \circ f = f = f \circ \id\_{X}\\).
+6.  The composition satisfies the associativity condition.
+
+I will use symbol like \\(\cat{Cat}\\) to denote categories.
 
 
 ### Classifying space {#classifying-space}
@@ -133,6 +174,51 @@ A category is called **complete** if all [Limits](#limit) exist.
 Referenced: [Category CGWH](#category-cgwh).
 
 
+### Complex {#complex}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 21:00]</span></span>
+A **complex** of [Abelian](#abelian) category \\(\mathcal{A}\\) is a chain
+\\[A^{\bullet}: \cdots \to A^{-1} \xrightarrow{d^{-1}} A^{0} \xrightarrow{d^{0}} A^{1} \to \cdots\\]
+where the differential satisfies \\(d^{k+1} \circ d^{k} = 0\\). A morphism between \\(A^{\bullet}\\) and \\(B^{\bullet}\\) is a set of morphisms between \\(A^{k}\\) and \\(B^{k}\\) commutes with differential map. The category of complexes is denoted by \\(C(\mathcal{A})\\).
+
+The **cohomology** of the complex id \\(H^{k}(A^{\bullet}) = \frac{\ker d^{k}}{\im d^{k - 1}}\\).
+
+We introduce the following **associated truncated complexes** by
+\\[\tau\_{\leq m}A^{\bullet}: \to A^{m -1} \xrightarrow{d^{m - 1}} \ker d^{m} \to 0 \to \\]
+\\[\tau^{\leq m}A^{\bullet}: \to A^{m -1} \xrightarrow{d^{m - 1}} A^{m} \xrightarrow{d^{m}} \im d^{m} \to 0 \to\\]
+We also define
+\\[\tau\_{\geq m}A^{\bullet} = A^{\bullet}/ \tau\_{m -1} A^{\bullet}\\]
+\\[\tau^{\geq m}A^{\bullet} = A^{\bullet}/ \tau^{m -1} A^{\bullet}\\]
+
+We have shift functor \\(X[1]^{i} = X^{i + 1}\\).
+
+
+#### Acyclic {#acyclic}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 21:03]</span></span>
+A complex \\(A^{\bullet}\\) is called **acyclic** if \\(H^{k}(A^{\bullet}) = 0\\) for all \\(k \in \ZZ\\).
+
+
+#### Mapping cone {#mapping-cone}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 21:12]</span></span>
+Let \\(u: X^{\bullet} \to Y^{\bullet}\\) be a morphism. The **mapping cone** is the complex given by \\(C\_{u}^{\bullet} = Y^{\bullet} \oplus (X^{\bullet}[1])\\), where \\(d\_{u}(y, x) = (\dif y + u(x), - \dif x)\\). It also denoted by \\({\rm Cone}(u)\\).
+
+
+#### Quasi-isomorphism {#quasi-isomorphism}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 21:04]</span></span>
+A morphism \\(u: X^{\bullet} \to Y^{\bullet}\\) is a **quasi-isomorphism** if it induces isomorphism on cohomology groups.
+
+
+#### Homotopy {#homotopy}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 21:05]</span></span>
+Two complex morphism \\(u,v: X^{\bullet} \to Y^{\bullet}\\) is called **homotopic** if there exists a **homotopy** \\(h \in \Hom^{-1}(X^{\bullet}, Y^{\bullet})\\) such that \\(u - v = \dif\_{Y} h + h \dif\_{X}\\).
+
+Two complexes are **homotopy equivalent** if there exists \\(f: X \to Y\\) and \\(g: Y \to X\\) such that \\(v \circ u \sim \id\_{X}\\) and \\(u \circ v \sim \id\_{Y}\\).
+
+
 ### Cylinder object {#cylinder-object}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-12-18 Sat 17:34]</span></span>
@@ -144,10 +230,22 @@ where \\(\nabla\\) is the canonical fold map identity on each component.
 Referenced: [Left homotopy](#left-homotopy), [Path object](#path-object).
 
 
-### <span class="org-todo todo TODO">TODO</span> Derived category {#derived-category}
+### Derived category {#derived-category}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 20:20]</span></span>
+The **derived category** of the [Abelian](#abelian) category \\(\mathcal{A}\\) is the [Triangulated category](#triangulated-category) \\(D(\mathcal{A})\\) obtained from the [Homotopical category](#homotopical-category) \\(K(\mathcal{A})\\) by localization with respect to the multiplicative system formed by all the quasi-isomorphisms in \\(K(\mathcal{A})\\).
+
+We have category \\(D^{b}(\mathcal{A})\\) (resp. \\(D^{+}(\mathcal{A}), D^{-}(\mathcal{A})\\)) equivalent to the full triangulated subcategory of \\(D(\mathcal{A})\\) consisting of objects \\(X\\) such that \\(H^{n}(X) = 0\\) for all \\(\abs{n} \gg 0\\) (resp. \\(n \ll 0, n \gg 0\\)).
 
 
-### <span class="org-todo todo TODO">TODO</span> Derived functor {#derived-functor}
+### Derived functor {#derived-functor}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 20:20]</span></span>
+If \\(F\\) is left exact, we define the **right derived functor** to be \\(RF\\) making the diagram commutes and satisfying the universality property.
+
+{{< figure src="/img/2021-12-19_21-40-54_screenshot.png" >}}
+
+Similarly, we have **left derived functor**.
 
 
 ### Drinfeld double {#drinfeld-double}
@@ -168,22 +266,25 @@ Cf. [Tensor category.](#tensor-category)
 Referenced: [Reflexive](#reflexive).
 
 
-### <span class="org-todo todo TODO">TODO</span> Fiber {#fiber}
+### Exact {#exact}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 20:52]</span></span>
+A category is **exact** if there are [Zero object](#zero-object), all the morphisms have kernels and cokernels, and \\({\rm Coim}(f) \to {\rm Im}(f)\\) is an isomorphism.
+
+
+### F-acyclic {#f-acyclic}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 21:42]</span></span>
+Let \\(F: \mathcal{A} \to \mathcal{B}\\) be a left [Derived functor](#derived-functor). An object \\(X\\) in \\(\mathcal{A}\\) is **F-acyclic** if \\(R^{i}F = 0\\) for all \\(i > 0\\).
+
+
+### Fiber {#fiber}
 
 
 ### Fibre functor {#fibre-functor}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 19:09]</span></span>
 For [Tensor category](#tensor-category) \\((\mathscr{C}, \otimes)\\), a **fibre functor** \\(F\\) is a functor \\(\mathscr{C} \to \cat{Vec}\\) satisfies that \\(F(V\_{1} \otimes V\_{2}) \cong F(V\_{1}) \otimes F(V\_{2})\\).
-
-
-### Fork {#fork}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-12-17 Fri 20:16]</span></span>
-The **fork** \\(\Lambda^{n}\_{k}\\) is defined by
-
-![](/img/2021-12-17_20-16-49_screenshot.png)
-as coequalizer in \\(\bm{S}\\).
 
 
 ### Function complex {#function-complex}
@@ -193,7 +294,7 @@ The **function complex** \\(\bm{Hom}(X,Y)\\) is the simplicial set defined by
 \\[\bm{Hom}(X,Y)\_{n} = \hom\_{\bm{S}}(X \times \Delta^{n}, Y)\\]
 
 
-### <span class="org-todo todo TODO">TODO</span> Functor {#functor}
+### Functor {#functor}
 
 
 
@@ -210,8 +311,15 @@ Consider \\(f: X \to Y\\) continuous map, then \\(f^{-1}: \cat{Op}(Y) \to \cat{O
 {{% /exam %}}
 
 Given a functor \\(f: C' \to C\\), we have a functor of presheaves: \\(f\_{\* }: \hat{C} \to \hat{C}'\\). That is \\((f\_{\* }F)(T) := F(f(X))\\). When functor is continuous, then \\(f\_{\* }\\)  sends sheaves to sheaves.
+A **functor** \\(F\\) between two categories \\(\mathcal{C}\\) and \\(\mathcal{D}\\) is a collection of data, for \\(X \in \mathcal{C}\\), \\(X \to F(X)\\) and for \\(f \in \Hom\_{\mathcal{C}}(X,Y) \to F(f) \in \Hom\_{\mathcal{D}}(F(X), F(Y))\\) satisfying the associativity and identity condition.
 
 Referenced: [Sheaf](#sheaf).
+
+
+#### Fully faithful {#fully-faithful}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 20:56]</span></span>
+A functor \\(F\\) is called **fully faithful** if \\(\Hom(X,Y) \to \Hom(F(X), F(Y))\\) is a bijection.
 
 
 ### Functorial factorization {#functorial-factorization}
@@ -247,6 +355,14 @@ Referenced: [Perverse sheaf](#perverse-sheaf).
 Maps \\(f,g\\) are a **homotopic** which is both [Left homotopic](#left-homotopy) and right homotopic, denoted by \\(f \sim g\\).
 
 
+### Homotopical category {#homotopical-category}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 21:22]</span></span>
+We can define the **homotopical category** of complexes \\(K(\mathcal{A})\\) with the same object as \\(C(\mathcal{A})\\) but \\(\Hom\_{K(\mathcal{A})}(X, Y) = \Hom(X^{\bullet}, Y^{\bullet})/ \sim = H^{0}(\Hom^{\bullet}(X,Y))\\).
+
+The family of triangles in \\(K(\mathcal{A})\\) which are isomorphic to a standard triangle ([Mapping cone](#mapping-cone)) is called **distinguished triangle**.
+
+
 ### Homotopy category {#homotopy-category}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-12-18 Sat 18:11]</span></span>
@@ -276,6 +392,8 @@ Suppose \\(\mathcal{C}\\) is a model category. Let \\(\gamma: \mathcal{C} \to \c
 {{% /theorem %}}
 
 Cf. [Cofibrant replacement](#cofibrant-replacement), [Fibrant replacement](#fibrant-replacement).
+
+The **homotopy category** can also be defined for [Topological category](#topological-category) \\(\mathcal{C}\\). It is then defined to have the same object \\(\mathcal{C}\\) and morphism is defined to be \\(\Hom\_{h \mathcal{C}}(X,Y) = \pi\_{0} {\rm Map}\_{\mathcal{C}}(X,Y)\\), or \\({\rm Map}\_{h \mathcal{C}}(X,Y) = [{\rm Map}\_{\mathcal{C}}(X,Y)]\\). The latter denote the equivalence class in [Category CGWH](#category-cgwh) by inverting all [Weak homotopy equivalence](#weak-homotopy-equivalence), category \\(\mathcal{H}\\).
 
 
 ### Homotopy equivalence {#homotopy-equivalence}
@@ -324,6 +442,15 @@ A [Hopf algebra](#hopf-algebra) is called **ribbon** if \\(v \in Z(A)\\) such th
 Cf. [Ribbon category](#ribbon-category).
 
 
+### Horn {#horn}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-17 Fri 20:16]</span></span>
+The **horn** \\(\Lambda^{n}\_{k}\\) is defined by
+
+![](/img/2021-12-17_20-16-49_screenshot.png)
+as coequalizer in \\(\bm{S}\\).
+
+
 ### Identity object {#identity-object}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-30 Thu 14:06]</span></span>
@@ -332,7 +459,36 @@ See [Tensor category](#tensor-category).
 Referenced: [Dual](#dual).
 
 
-### <span class="org-todo todo TODO">TODO</span> &infin;-category {#and-infin-category}
+### Injective {#injective}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 21:32]</span></span>
+An object \\(I\\) in an abelian category \\(\mathcal{A}\\) is **injective** if the functor \\(\Hom(-, I)\\) is exact. A complex \\(I^{\bullet}\\) is **injective** if all the term \\(I^{k}\\) are injective.
+
+An abelian category **has enough injective objects** if any object \\(X\\) in \\(\mathcal{C}\\) is a suboject of an injective object \\(I\\) in \\(\mathcal{C}\\).
+
+
+### &infin;-category {#and-infin-category}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-19 Tue 18:32]</span></span>
+We follow Jacob Lurie's terminology. Joyal call then **quasi-categories**.
+
+One of the possible candidate for **\\(\infty\\)-category** is [Topological category](#topological-category), but it is quite hard to work with.
+
+{{% definition %}}
+An **\\(\infty\\)-category** is a simplicial set \\(K\\) which has the following property: for any \\(0 < i < n\\), any map \\(f\_{0}: \Lambda\_{i}^{n} \to K\\) admits an extension \\(f: \Delta^{n} \to K\\).
+{{% /definition %}}
+
+Cf. [Horn](#horn).
+
+It is also called **weak Kan complexes**. (Cf. [Kan complex](#kan-complex))
+
+The weak Kan complexes approach is equivalent to topological category approach.
+
+
+### (\infinity-n)-category {#infinity-n--category}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 19:01]</span></span>
+A **\\(\infty,n\\)-category** is a [\\(\infty\\)-category](#and-infin-category) with \\(k\\)-morphisms are invertible for \\(k > n\\).
 
 
 ### Internal adjunction {#internal-adjunction}
@@ -538,6 +694,34 @@ A [Monoidal category](#monoidal-category) is **braided** if there exists \\(c = 
 Referenced: [Rigid braided monoidal category](#rigid-braided-monoidal-category).
 
 
+### Natural transformation {#natural-transformation}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 18:56]</span></span>
+A **natural transformation** \\(\alpha\\) between two [Functors](#functor) \\(F,G: \mathcal{C} \to \mathcal{D}\\) is a collection of morphisms \\(\\{\alpha\_{C}: F( C) \to G( C)\\}\_{C \in \mathcal{C}}\\) satisfying the commutative diagram
+
+{{< figure src="/img/2021-12-19_18-57-36_screenshot.png" >}}
+
+
+### Nerve {#nerve}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 19:35]</span></span>
+To any category \\(\mathcal{C}\\), we can associate a [Simplicial set](#simplicial-set) \\(N(\mathcal{C})\\) called **nerve** of \\(\mathcal{C}\\). For each \\(n \geq 0\\), we let \\(N(\mathcal{C})\_{n} = {\rm Map}\_{\cat{Set}\_{\Delta}}(\Delta^{n}, N(\mathcal{C}))\\) denote the set of all functors \\([n] \to \mathcal{C}\\).
+
+The objects of \\(\mathcal{C}\\) are simply the **vertices** of \\(N(\mathcal{C})\\).
+
+There exists a useful characterisation of the nerve.
+
+{{% proposition %}}
+Let \\(K\\) be a simplicial set. Then the following conditions are equivalent:
+
+1.  There exists a small category \\(\mathcal{C}\\) and an isomorphism \\(K \cong N(\mathcal{C})\\).
+2.  For each \\(0 < i < n\\) and each diagram
+
+    ![](/img/2021-12-19_19-58-04_screenshot.png)
+    there exists a unique dotted arrow rendering the diagram commutative.
+{{% /proposition %}}
+
+
 ### Ordinal number category {#ordinal-number-category}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-12-12 Sun 21:29]</span></span>
@@ -704,7 +888,7 @@ We have morphism in \\(\bm{\Delta}\\) \\(d\_{i}: \bm{n - 1} \to \bm{n}\\) (**cof
 
 We have **cosimplicial identities**
 
-\begin{align\*} \begin{cases} d^{j}d^{i} = d^{i}d^{j - 1} & \text{if } i < j \\\\\\ s^{j}d^{i} = d^{i}s^{j - 1} & \text{if } i < j \\\\\\ s^{j}d^{j} =1 = s^{j}d^{j+1} &\\\\\\ s^{j}d^{i} = d^{i - 1} s^{j} & \text{if } i > j + 1 \\\\\\ s^{j}d^{i} = s^{i}s^{j+1} & \text{if } i \leq j \\\\\\ \end{cases} \end{align\*}
+\begin{align\*} \begin{cases} d^{j}d^{i} = d^{i}d^{j - 1} & \text{if } i < j \\\\ s^{j}d^{i} = d^{i}s^{j - 1} & \text{if } i < j \\\\ s^{j}d^{j} =1 = s^{j}d^{j+1} &\\\\ s^{j}d^{i} = d^{i - 1} s^{j} & \text{if } i > j + 1 \\\\ s^{j}d^{i} = s^{i}s^{j+1} & \text{if } i \leq j \\\\ \end{cases} \end{align\*}
 
 We have similar simplicial identities for \\(Y\_{n}\\), where \\(Y\\) is a simplicial set.
 
@@ -835,6 +1019,14 @@ functorial in \\(X, Y\\) with compatibility with [Commutativity constraint](#com
 A functor is called **t-exact** if it is compatible with the [t-structure](#t-structure).
 
 
+### Topological category {#topological-category}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 19:19]</span></span>
+A **topological category** is a category which is enriched over \\(\cat{CGWH}\\). The category of topological category will be denoted by \\(\cat{Cat}\_{top}\\).
+
+Cf. [Category CGWH](#category-cgwh).
+
+
 ### Torsion pair {#torsion-pair}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-19 Tue 18:33]</span></span>
@@ -866,9 +1058,22 @@ Referenced: [Total right derived functor](#total-right-derived-functor).
 See [Total left derived functor](#total-left-derived-functor).
 
 
-### <span class="org-todo todo TODO">TODO</span> Triangulated category {#triangulated-category}
+### Triangulated category {#triangulated-category}
 
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 20:20]</span></span>
+An [Additive](#additive) category \\(\mathcal{C}\\) endowed with a shift self-equivalence \\(T\\) and a family of **distinguished triangles** \\(\mathcal{T}\\) is a **triangulated category** if these data satisfying the following axioms, with \\(X[1] = TX\\).
 
+1.  Any triangle isomprhic to a distinguished triangle is distinguished.
+2.  \\(X \to X \to 0 \to \\) is distinguished.
+3.  Any \\(u: X \to Y\\) is part of distinguished triangle \\(X \to Y \to Z \to \\).
+4.  A triangle \\(X \to Y \to Z \to \\) is distinguished if and only if the triangle \\(Y \to Z \to X[1] \to\\) is distinguished.
+5.  Any diagram
+
+    ![](/img/2021-12-19_21-30-02_screenshot.png)
+    can be completed to commutative diagram.
+6.  For any pair of morphism \\(u: X \to Y\\) and \\(v: Y \to Z\\) and triple \\(X \to Y \to A \to \\) \\(Y \to Z \to B \to \\) and \\(X \to Z \to C \to X\\) there are isomorphisms \\(a: A \to C\\), \\(b: C \to B\\) and the triangle \\(A \to C \to B \to A\\) is distinguished.
+
+A full additive subcategory \\(\mathcal{D} \subset \mathcal{C}\\) is called a **triangulated subcategory** if \\(T(\mathcal{D}) \subset \mathcal{D}\\) and if two vertices in a distinguished triangle in \\(\mathcal{T}\\) are in \\(\mathcal{D}\\), then so is the third.
 
 Referenced: [t-structure](#t-structure).
 
@@ -890,6 +1095,14 @@ Referenced: [Heart](#heart), [t-exact](#t-exact), [Bounded](#bounded), [Perverse
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-30 Sat 16:14]</span></span>
 A [t-structure](#t-structure) is called **bounded** if \\(D^{\leq n} = D = D^{\geq m}\\) for \\(m \ll 0\\) and \\(n \gg 0\\).
+
+
+### Weak equivalence {#weak-equivalence}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 20:20]</span></span>
+Let \\(F: \mathcal{C} \to \mathcal{D}\\) be functor between [Topological categories](#topological-category), we say that \\(F\\) is a **weak equivalence** (or **equivalence**) if the induced functor \\(h \mathcal{C} \to h \mathcal{D}\\) is an equivalence of \\(\mathcal{H}\\)-enriched categories.
+
+Cf. [Homotopy category](#homotopy-category).
 
 
 ### <span class="org-todo todo TODO">TODO</span> Zero object {#zero-object}
@@ -1060,11 +1273,9 @@ Referenced: [Six functors](#six-functors).
 ### <span class="org-todo todo TODO">TODO</span> Whitney stratification {#whitney-stratification}
 
 
-## Representation of groups {#representation-of-groups}
+## Representation theory {#representation-theory}
 
-The reference includes [<span id="19580479584332ed50a4af7bf7f3f201"><a href="#steinberg2012" title="Steinberg, Representation Theory of Finite Groups: An Introductory Approach, {Springer} (2012).">steinberg2012</a></span>] Chapter 1-6.
-
-Referenced: [Representation category](#representation-category).
+The reference of representation of finite groups includes [<span id="19580479584332ed50a4af7bf7f3f201"><a href="#steinberg2012" title="Steinberg, Representation Theory of Finite Groups: An Introductory Approach, {Springer} (2012).">steinberg2012</a></span>] Chapter 1-6. The basics of the quivers are from [<span id="df38f5636bec59103a70400bed4764c9"><a href="#kirillov2016" title="Kirillov, Quiver Representations and Quiver Varieties, {American Mathematical Society} (2016).">kirillov2016</a></span>].
 
 
 ### Burnside Theorem {#burnside-theorem}
@@ -1074,7 +1285,7 @@ Let \\(G\\) be a group of order \\(p^{a}q^{b}\\) with \\(p\\), \\(q\\) primes. T
 {{% /theorem %}}
 
 
-### Characters and class functions {#characters-and-class-functions}
+### <span class="org-todo todo TODO">TODO</span> Characters {#characters}
 
 \\(L(G)\\); character; irreducible character; class function; multiplicity; regular representation; character table
 
@@ -1087,22 +1298,24 @@ Characters are class functions.
 {{% /proposition %}}
 
 The irreducible characters of \\(G\\) form an orthonormal set of class functions.
-and \\({\rm dim} Z(L(G)) = |Cl(G)|\\).
-因此有限群的不可约表示数小于等于其共轭类群的数量。之后，进一步地可以证明，有限群不可约表示的数量恰好等于其共轭类群的数量。
+and \\({\rm dim} Z(L(G)) = |Cl(G)|\\). Therefore the number of irreducible representations is smaller than the conjugacy groups. In fact, two numbers are equal.
 
 {{% proposition %}}
 \\(|G| = d\_{1}^{2} + d\_{2}^{2} + \cdots + d\_{s}^{2}\\) holds, where \\(d\_{i}\\) is the degree of the irreducible representation.
 {{% /proposition %}}
 
-正交关系 2(cf. [有限群表示的正交关系](#orthogonal-relations))
+Cf. [Orthogonal relations](#orthogonal-relations).
 
 {{% theorem %}}
 Let \\(C\\), \\(C'\\) be conjugacy classes of \\(G\\), and let \\(g \in C\\) and \\(h \in C'\\). Then
 
-\begin{equation} \sum\_{i = 1}^{s}\chi\_{i}(g) \overline{\chi\_{i}(h)} = \begin{cases} |G|/|C| & C = C' \\\\\\  0 & C \neq C' \end{cases} \end{equation}
+\begin{equation} \sum\_{i = 1}^{s}\chi\_{i}(g) \overline{\chi\_{i}(h)} = \begin{cases} |G|/|C| & C = C' \\\\  0 & C \neq C' \end{cases} \end{equation}
 
 That is the columns of the character table are orthogonal.
 {{% /theorem %}}
+
+
+### <span class="org-todo todo TODO">TODO</span> Class function {#class-function}
 
 
 ### Completely decomposition {#completely-decomposition}
@@ -1163,10 +1376,30 @@ Suppose that \\(\phi,\rho: G \to U\_{n}( C)\\) are inequivalent irreducible unit
 
 \begin{equation} \langle \phi\_{ij}, \rho\_{kl} \rangle = 0 \end{equation}
 
-\begin{equation} \langle \phi\_{ij}, \phi\_{kl} \rangle =  \begin{cases} 1/n & \text{if } i = k \text{ and } j = l \\\\\\ 0 & \text{else} \end{cases} \end{equation}
+\begin{equation} \langle \phi\_{ij}, \phi\_{kl} \rangle =  \begin{cases} 1/n & \text{if } i = k \text{ and } j = l \\\\ 0 & \text{else} \end{cases} \end{equation}
 {{% /theorem %}}
 
-Referenced: [Characters and class functions](#characters-and-class-functions).
+Referenced: [Characters and class functions](#characters).
+
+
+### Point group {#point-group}
+
+{{% definition %}}
+A finite subgroup of O(3) is called a point group.
+{{% /definition %}}
+
+
+### Quivers {#quivers}
+
+quiver; subquiver; oriented cycle; loop; morphism; direct sum; subrepresentation; irreducible representation; indecomposable representation; quivers of finite type; path; product of path; path algebra; one-way path
+
+{{% theorem %}}
+The category of representations of \\(Q\\) over a field \\(k\\) is equivalent to the category of \\(k(Q)\\)-modules.
+{{% /theorem %}}
+
+{{% lemma %}}
+The Jacobson radical of the path algebra \\(k(Q)\\) is the span of all one-way paths of \\(Q\\).
+{{% /lemma %}}
 
 
 ### Reconstruction theorem {#reconstruction-theorem}
@@ -1189,7 +1422,7 @@ The associated morphism of schemes \\(G \to \cat{Aut}^{\otimes}({\rm For})\\) is
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-25 Sat 19:03]</span></span>
 For a group \\(G\\), we may define the category \\(\cat{Rep}(G)\\) for finite dimensional representation of \\(G\\) with morphisms of representations.
 
-Cf. [Representation of finite groups](#representation-of-groups), [Algebraic group](#algebraic-group).
+Cf. [Algebraic group](#algebraic-group).
 
 Referenced: [Reconstruction theorem](#reconstruction-theorem).
 
@@ -1215,36 +1448,6 @@ Let \\(G\\) be an abelian group. Then any irreducible representation of \\(G\\) 
 
 
 ### Tensor product of irreducible representations {#tensor-product-of-irreducible-representations}
-
-
-### 有限群表示的总结 {#有限群表示的总结}
-
-1.  在有限群上的很多操作可以复制到紧群和李群上，如李群表示中的不可约表示以及傅里叶分析。
-
-
-### 点群 {#点群}
-
-{{% definition %}}
-A finite subgroup of O(3) is called a point group.
-{{% /definition %}}
-
-
-## Representation of quivers {#representation-of-quivers}
-
-The basics of the quivers are from [<span id="df38f5636bec59103a70400bed4764c9"><a href="#kirillov2016" title="Kirillov, Quiver Representations and Quiver Varieties, {American Mathematical Society} (2016).">kirillov2016</a></span>].
-
-
-### Definition of Quivers {#definition-of-quivers}
-
-quiver; subquiver; oriented cycle; loop; morphism; direct sum; subrepresentation; irreducible representation; indecomposable representation; quivers of finite type; path; product of path; path algebra; one-way path
-
-{{% theorem %}}
-The category of representations of \\(Q\\) over a field \\(k\\) is equivalent to the category of \\(k(Q)\\)-modules.
-{{% /theorem %}}
-
-{{% lemma %}}
-The Jacobson radical of the path algebra \\(k(Q)\\) is the span of all one-way paths of \\(Q\\).
-{{% /lemma %}}
 
 
 ## Linear Algebra {#linear-algebra}
@@ -1553,7 +1756,7 @@ Referenced: [Frobenius theorem](#frobenius-theorem).
 <span class="timestamp-wrapper"><span class="timestamp">[2021-09-09 Thu 19:44]</span></span>
 Let \\(M\\) be a smooth [Manifold](#manifold), and \\(\omega \in \Omega^{k}(M)\\). For any smooth vector fields \\(X\_{1}, \cdots, X\_{k + 1}\\) on \\(M\\).
 
-\begin{align}\dif \omega (X\_{1}, \cdots, X\_{k + 1}) &= \\\\\\  & \sum\_{1 \leq i \leq k + 1}(-1)^{i - 1}X\_{i}(\omega(X\_{1}, \cdots, \widehat{X\_{i}}, \cdots, X\_{k + 1})) \\\\\\  & + \sum\_{1 \leq i < j \leq k + 1} (-1)^{i + j} \omega([X\_{i}, X\_{j}], X\_{1}, \cdots, \widehat{X}\_{i}, \cdots, \widehat{X\_{j}}, \cdots, X\_{k + 1}) \end{align}
+\begin{align}\dif \omega (X\_{1}, \cdots, X\_{k + 1}) &= \\\\  & \sum\_{1 \leq i \leq k + 1}(-1)^{i - 1}X\_{i}(\omega(X\_{1}, \cdots, \widehat{X\_{i}}, \cdots, X\_{k + 1})) \\\\  & + \sum\_{1 \leq i < j \leq k + 1} (-1)^{i + j} \omega([X\_{i}, X\_{j}], X\_{1}, \cdots, \widehat{X}\_{i}, \cdots, \widehat{X\_{j}}, \cdots, X\_{k + 1}) \end{align}
 
 Cf. [Differential form](#differential-form), [Exterior derivative](#exterior-derivative).
 
@@ -2315,7 +2518,7 @@ The [Mayer-Vietoris sequence](#mayer-vietoris-sequence) has a equivalent descrip
 
 {{% theorem %}}
 Let \\(U \subset A \subset X\\) be subspaces such that \\(\bar{U} \subset A^{\circ}\\). Then the inclusion \\(i:(X - U, A - U) \to (X, A)\\) induces isomorphisms
-\\[i\_{\* }: H\_{n}(X - U, A - U) \cong H\_{n}(X, A), \; \forall n\\]
+\\[i\_{\* }: H\_{n}(X - U, A - U) \cong H\_{n}(X, A), \\; \forall n\\]
 {{% /theorem %}}
 
 Cf. [Homology](#homology) and [Cohomology](#cohomology).
@@ -2476,7 +2679,7 @@ The following theorem is sometimes called **dimension axiom**.
 {{% theorem %}}
 If \\(X\\) is contractible, then
 
-\begin{equation} H\_{n}(X) =   \begin{cases}     0 & n > 0 \\\\\\     \ZZ & n = 0   \end{cases} \end{equation}
+\begin{equation} H\_{n}(X) =   \begin{cases}     0 & n > 0 \\\\     \ZZ & n = 0   \end{cases} \end{equation}
 {{% /theorem %}}
 
 Referenced: [Simplicial set](#simplicial-set), [Singular cohomology](#singular-cohomology), [Eilenberg-Zilber theorem](#eilenberg-zilber-theorem), [Künneth formula](#künneth-formula), [Local homology group](#local-homology-group), [Poincaré duality](#poincaré-duality).
@@ -2728,7 +2931,7 @@ Referenced: [Cohomology](#cohomology), [Compactly supported cohomology](#compact
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-11 Mon 20:36]</span></span>
 A pair \\((X, A)\\) is called **n-connected** if \\(\pi\_{0}(A) \to \pi\_{0}(X)\\) is surjective and
-\\[\pi\_{k}(X, A; x\_{0}) = 0 \; \forall 1 \leq k \leq n, x\_{0} \in A\\]
+\\[\pi\_{k}(X, A; x\_{0}) = 0 \\; \forall 1 \leq k \leq n, x\_{0} \in A\\]
 
 Let \\(X\\) be obtained from \\(A\\) by attaching \\(n\\)-cells \\((n \geq 1)\\), then \\((X, A)\\) is \\((n - 1)\\)-connected.
 
@@ -2740,7 +2943,7 @@ Referenced: [Homotopy excision theorem](#homotopy-excision-theorem).
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-11 Mon 20:02]</span></span>
 Let \\(A\\) be a subspace of \\(X\\). \\(A\\) is called a **neighborhood deformation retract** if there exists a continuous map \\(u: X \to I\\) with \\(A = u^{-1}(0)\\) and a homotopy \\(H: X \times I \to X\\) such that
 
-\begin{equation}   \begin{cases}     H(x, 0) = x & \forall x \in X \\\\\\     H(a, t) = a & \text{if } (a, t) \in A \times I \\\\\\     H(x, 1) \in A & \text{if } u(x) < 1   \end{cases} \end{equation}
+\begin{equation}   \begin{cases}     H(x, 0) = x & \forall x \in X \\\\     H(a, t) = a & \text{if } (a, t) \in A \times I \\\\     H(x, 1) \in A & \text{if } u(x) < 1   \end{cases} \end{equation}
 
 If \\(A\\) is a NDR of \\(X\\), then \\(A\\) is a strong [Deformation retract](#deformation-retract) of the open subset \\(u^{-1}(\rinterval{0}{1})\\).
 
@@ -3382,7 +3585,7 @@ for the purpose of integration. Given \\(\alpha \in H^{\*}(X)\\), we can define 
 \\[\sigma\_{0}(\alpha): \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha) \cap \pi\_{\hilb}^{\*}(-)), H\_{\*}(\hilb(X)) \to H\_{\*}(\hilb(X))\\]
 Then the **Donaldson-Thomas invariants** are defined by
 
-\begin{align}\langle \alpha\_{1}, \cdots, \alpha\_{n} \rangle^{DT}\_{\beta, m} &= \deg \prod\_{k} \sigma\_{0}(\alpha\_{k})[I\_{\chi}(X, \beta)]^{vir} \\\\\\  &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \sigma\_{0}(\alpha\_{k}) \\\\\\  &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha\_{k}) \cap \pi^{\*} \beta)\end{align}
+\begin{align}\langle \alpha\_{1}, \cdots, \alpha\_{n} \rangle^{DT}\_{\beta, m} &= \deg \prod\_{k} \sigma\_{0}(\alpha\_{k})[I\_{\chi}(X, \beta)]^{vir} \\\\  &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \sigma\_{0}(\alpha\_{k}) \\\\  &= \int\_{ [I\_{\chi}(X, \beta)]^{vir}} \prod\_{k} \pi\_{\hilb \*}(- \ch\_{2}(\tilde{J}) \cup \pi\_{X}^{\*}(\alpha\_{k}) \cap \pi^{\*} \beta)\end{align}
 
 Here note \\(-\ch\_{2}(I\_{Z}) = \beta\\) is represented by cycle class \\(Z \subset X\\).
 
@@ -4299,7 +4502,7 @@ The pointed affine semigroup is related to [Affine toric variety](#affine-toric-
 If we write \\(V = \spec(\CC[S])\\), then the torus action has a fixed point if and only if \\(S\\) is pointed. What's more, the fixed point is unique and given by semigroup homomorphism
 \\(\phi:S \to \CC\\) defined by
 
-\begin{equation} m \to \begin{cases} 1 & m = 0 \\\\\\ 0 & m \neq 0 \end{cases} \end{equation}
+\begin{equation} m \to \begin{cases} 1 & m = 0 \\\\ 0 & m \neq 0 \end{cases} \end{equation}
 {{% /proposition %}}
 
 
@@ -4743,39 +4946,33 @@ we have the **Steinerg variety** \\(X \times\_{X\_{0}} X\\).
 Referenced: [Algebraic Geometry](#algebraic-geometry).
 
 
-## Number Theory {#number-theory}
+## Geometric Topology {#geometric-topology}
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-31 Tue 13:34]</span></span>
-There are two main themes in number theory.
-
--   prime number
--   Diophantine equations
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 18:20]</span></span>
+Named geometric topology, this section includes some result in \\(4\\)-manifold and knot theory and higher dimensional topology.
 
 
-### Langlands correspondence {#langlands-correspondence}
+### 11/8 conjecture {#11-8-conjecture}
 
+By [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold), [Rokhlin Theorem](#rokhlin-theorem) and [Donaldson diagonalizable theorem](#donaldson-diagonalizable-theorem), the only remaining case to determine the existence of smooth structure on topological \\(4\\)-manifold are those with \\(Q\_{X}\\) even and indefinite. That is \\(Q\_{X} = mE\_{8} \oplus n \begin{pmatrix} 0 & 1 \\\\ 1 & 0 \end{pmatrix}\\). Since we have K3 surface with \\(Q\_{X} = 2E\_{8} \oplus 3 \begin{pmatrix}0 & 1\\\\ 1 & 0 \end{pmatrix}\\) and \\(S^{2} \times S^{2}\\) with \\(Q\_{X} = \begin{pmatrix} 0 & 1\\\\ 1 & 0 \end{pmatrix}\\), we can show that the for \\(Q\_{X}\\) with \\(m = 2k\\) and \\(n \geq 3k\\) the smooth structure on the manifold exists. The conjecture is that that is the only possibility for the existence of smooth structure.
 
+{{% conjecture %}}
+If \\(X\\) is spin, smooth and \\(Q\_{X} = 2k E\_{8} \oplus n \begin{pmatrix} 0 & 1\\\\ 1 & 0 \end{pmatrix}\\), then \\(n \geq 3k\\). Or equivalently speaking \\(b\_{2}(X) \geq \frac{11}{8} \abs{\sigma(X)}\\).
+{{% /conjecture %}}
 
-{{< figure src="/img/2021-08-31_14-02-53_screenshot.png" >}}
+A theorem by Furuta says
 
+{{% theorem %}}
+Let \\(X\\) be a spin \\(4\\)-manifold, such that \\(b\_{2}(X) \neq 0\\). Then
+\\[b\_{2}(X) \geq \frac{10}{8} \abs{\sigma(X)} + 2\\]
+{{% /theorem %}}
 
-### Riemann zeta function {#riemann-zeta-function}
+The [Seiberg-Witten invariant](#seiberg-witten-invariant) together with spin Dirac operator can give one proof. The proof suggests [Bauer-Furuta invariant](#bauer-furuta-invariant).
 
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-31 Tue 13:37]</span></span>
-\\[\zeta(s) = 1 + \frac{1}{2^{s}} + \frac{1}{3^{s}} + \cdots = \prod\_{p \text{ prime}} \frac{1}{1 - p^{-s}}\\]
-The function can be extend as a meromorphic function on \\(\CC\\).
-
-
-### Rosseta stone in mathematics {#rosseta-stone-in-mathematics}
-
-The similarity over number fields, function fields, algebraic curves over \\(\CC\\).
-
-Referenced: [Personal Thoughts]({{<relref "Notes_Mathematics.md#personal-thoughts" >}}).
-
-
-## Knot Theory {#knot-theory}
-
-Referenced: [Exotic R^4](#exotic-r-4).
+{{% remark %}}
+The current status (2021 Sep.) of the conjecture is that \\(k \leq 1\\) case is proved. For \\(k > 1\\), we have
+\\[n \geq 2k + \begin{cases} 2 & k = 1,2,5,6 \\\\ 3 & k = 3,4,7 \\\\ 4 & 0 \end{cases} \mod 8 \\]
+{{% /remark %}}
 
 
 ### Affine braid group {#affine-braid-group}
@@ -4785,6 +4982,50 @@ We define the **affine braid group** to be
 \\[\tilde{B\_{n}} = \langle s\_{1}, \cdots, s\_{n -1}, t\_{1}, \cdots, t\_{n}\rangle\\]
 with the same condition as [Braid group](#braid-group) with addition
 \\[s\_{i}t\_{i + 1} = t\_{i} s\_{i}\\]
+
+
+### <span class="org-todo todo TODO">TODO</span> Alexander duality {#alexander-duality}
+
+
+### <span class="org-todo todo TODO">TODO</span> Alexander polynomial {#alexander-polynomial}
+
+
+
+Referenced: [Fintushel-Stern knot surgery](#fintushel-stern-knot-surgery).
+
+
+### Anti-self-dual {#anti-self-dual}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 20:21]</span></span>
+A \\(n\\)-form \\(w\\) on \\(2n\\) manifold is called **self-dual** if \\(\* w = -w\\).
+Cf. [Self-dual](#self-dual).
+
+Referenced: [Self-dual](#self-dual).
+
+
+### <span class="org-todo todo TODO">TODO</span> Bauer-Furuta invariant {#bauer-furuta-invariant}
+
+
+
+Referenced: [Geometric Topology](#geometric-topology).
+
+
+### Botany problem of 4-manifold {#botany-problem-of-4-manifold}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 19:52]</span></span>
+For \\(b^{+} > 1\\), \\(\pi\_{1} = 1\\) irrducible case, by theorem of Fintushel-Stern, any such \\(X\\) admits \\(\infty\\) smooth structure.
+
+For \\(b^{+} = 1\\), then \\(\CC P^{2} \shar n \overline{\CC P}^{2}\\) for \\(n \geq 2\\) has \\(\infty\\) smooth structure. \\(S^{2} \times S^{2}\\) and \\(n < 2\\) case is unknown.
+
+\\(b^{+} = 0\\) case is completely unknown.
+
+{{% remark %}}
+In each case, we have no method to determine whether all the smooth structures have been found. That is if a manifold is known to have some smooth structure, we don't know whether they are all of the possible smooth structures.
+{{% /remark %}}
+
+{{% remark %}}
+It is well known that \\(S^{7}\\) has 28 different differential structures. And those structures are only smooth structures possible. The proof requires [h-Cobordism](#h-cobordism) theorem, so the similar methods can not be applied to \\(4\\)-manifold.
+{{% /remark %}}
 
 
 ### Braid {#braid}
@@ -4844,253 +5085,13 @@ The [Braids](#braid) form a group called **braid group** where the composition i
 {{< figure src="/img/2021-09-21_15-49-51_screenshot.png" >}}
 
 with defining relations
-\\[s\_{i}s\_{i+1}s\_{i} = s\_{i + 1}s\_{i}s\_{i + 1},\; i = 1, \cdots, n - 1\\]
-\\[s\_{i}s\_{j} = s\_{j}s\_{i}, \; \abs{i - j} > 1\\]
+\\[s\_{i}s\_{i+1}s\_{i} = s\_{i + 1}s\_{i}s\_{i + 1},\\; i = 1, \cdots, n - 1\\]
+\\[s\_{i}s\_{j} = s\_{j}s\_{i}, \\; \abs{i - j} > 1\\]
 {{% /theorem %}}
 
 The braid group can be realized as a [Fundamental group](#fundamental-group) of a manifold. Define \\(C\_{n} = \\{x\_{1}, \cdots, x\_{n} \in \RR^{2} \mid x\_{i} \neq x\_{j}\\}\\). Then we have \\(\pi\_{1}(C\_{n}) = P\_{n}\\). By considering the \\(S\_{n}\\) action on \\(C\_{n}\\), we have that \\(B\_{n} = \pi\_{1}(C\_{n}/ S\_{n})\\).
 
 Referenced: [Affine braid group](#affine-braid-group), [Hecke-Iwahori algebra](#hecke-iwahori-algebra), [Representation of braids](#representation-of-braids).
-
-
-### Diagram {#diagram}
-
-The image of a generic geometric representative \\(\hat{L}\\) of [Link](#link) \\(L\\) from \\(\RR^{3}\\) to \\(\RR^{2}\\) is a **diagram** of \\(L\\).
-
-For equivalent class of diagrams, we have the following theorem by Reidemeister.
-
-{{% theorem %}}
-Equivalence class of diagrams with respect to the local moves
-
-{{< figure src="/img/2021-09-13_18-22-18_screenshot.png" >}}
-{{% /theorem %}}
-
-We can also consider the diagram of [Framed](#framing) links in \\(\RR^{3}\\). And we have equivalence class of regular isotopy class of framed diagrams on \\(\RR^{2}\\) is given by
-
-{{< figure src="/img/2021-09-13_18-30-56_test.png" >}}
-
-Referenced: [Skein relations](#skein-relations), [Unknot number](#unknot-number).
-
-
-### Framed {#framed}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 16:01]</span></span>
-See [Framing](#framing).
-
-Referenced: [Jones-Markov trace](#jones-markov-trace).
-
-
-### Framing {#framing}
-
-**Framing** of a [Link](#link) in \\(\RR^{3}\\) is an isotopy class of a continuous section of a normal bundle to \\(L \subset \RR^{3}\\).
-
-Referenced: [Diagram](#diagram), [Framed](#framed).
-
-
-### Geometric braid {#geometric-braid}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:38]</span></span>
-A **geometric braid** in \\(\RR^{2} \times [0,1]\\) is an embedding \\(\hat{\beta} : [0,1]^{\coprod n} \to \RR^{2} \times [0,1]\\) connecting \\(\\{x\_{0}, \cdots, x\_{n}\\} \times \\{0\\}\\) and \\(\\{x\_{0}, \cdots, x\_{n}\\} \times \\{1\\}\\) componentwise.
-
-Referenced: [Braid](#braid).
-
-
-### Hecke-Iwahori algebra {#hecke-iwahori-algebra}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:53]</span></span>
-For [Braid group](#braid-group) \\(B\_{n}\\), the elements \\((s\_{i} - q)(s\_{i} + q^{-1})\\) generates an ideal in the group algebra \\(\CC[B\_{n}]\\). The **Hecke-Iwahori algebra** is the quotient algebra with respect to the ideal, i.e.,
-\\[H\_{n}(q) = \langle s\_{1}, \cdots, s\_{n} \rangle\\]
-such that
-\\[s\_{i}s\_{i+1}s\_{i} = s\_{i + 1}s\_{i}s\_{i + 1},\; i = 1, \cdots, n - 1\\]
-\\[s\_{i}s\_{j} = s\_{j}s\_{i}, \; \abs{i - j} > 1\\]
-\\[(s\_{i} - q)(s\_{i} + q^{-1}) = 0\\]
-The interesting case is that \\(q\\) be the root of \\(1\\).
-
-\\(H\_{n}(q)\\) is a deformation of \\(\CC[S\_{n}]\\).
-
-
-### HOMFLY invariant {#homfly-invariant}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-13 Mon 18:37]</span></span>
-Since [Skein relations](#skein-relations) are compatible with Reidemeister moves, for every [Link](#link), we may consider its diagram \\(D\_{L}\\) and we define \\([D\_{L}] = \langle L \rangle [O]\\). Here \\(O\\) is one loop and \\(\langle L \rangle \in \ZZ[A, B^{\pm 1}, C]\\). \\(\langle L \rangle\\) depends only on \\(L\\) but not on representative diagram \\(D\_{L}\\). \\(\langle L \rangle\\) is the **HOMFLY** invariant of framed links.
-
-For unframed links, we also have **HOMFLY invariants** by consider \\(L = L\_{1} \coprod \cdots \coprod L\_{n}\\) as framed links and consider \\(\langle \langle L \rangle \rangle = B^{- \sum\_{i} w(L\_{i})} \langle L \rangle\\) where \\(w(L\_{i})\\) is the winding number.
-
-
-### Jones-Markov trace {#jones-markov-trace}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:58]</span></span>
-There exists a **Jones-Markov** trace \\(\tr: \tilde{B}\_{n} \to k = \ZZ[q, q^{-1}][\frac{1}{(q - q^{-1})}]\\) such that
-\\[\tr(\beta \gamma \beta^{-1}) = \tr(\gamma)\\]
-\\[\tr(\beta s\_{n}) = \tr(\beta t\_{n}) = z \tr(\beta)\\]
-
-It defines invariants of [Framed](#framed) [Links](#link). To get a invariant of links, we consider [Writhe number](#writhe-number), \\(\omega(\beta)\\). We have \\(\tr(\beta)z^{w(\beta)}\\) is an invarinat of links.
-
-{{% remark %}}
-For \\(z = q^{2}\\) the polynomial is the [Jones polynomial](#jones-polynomial).
-{{% /remark %}}
-
-
-### <span class="org-todo todo TODO">TODO</span> Jones polynomial {#jones-polynomial}
-
-
-
-Referenced: [Jones-Markov trace](#jones-markov-trace).
-
-
-### Jones twist {#jones-twist}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 16:15]</span></span>
-A map \\(\mu: V \to V\\) is called **Jones twist** if
-\\[(\mu \otimes \mu) R = R(\mu \otimes \mu)\\]
-\\[(\id \otimes \tr)(\id \otimes \mu) PR = z \id\_{V}\\]
-
-
-### Knot {#knot}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-13 Mon 18:13]</span></span>
-A **knot** (in \\(S^{3}\\)) is an isotopy class of an [Immersion](#immersion) \\(\hat{K}: S^{1} \to S^{3}\\), \\(K = [\hat{K}]\\).
-
-Referenced: [Positive](#positive), [Link](#link), [Homotopic slice](#homotopic-slice), [Knots bounds algebraic surface](#knots-bounds-algebraic-surface), [Linking number](#linking-number), [Poincarè conjecutre](#poincarè-conjecutre), [Unknot number](#unknot-number).
-
-
-### Link {#link}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-13 Mon 18:13]</span></span>
-A **link** is an isotopy class of an [Immersion](#immersion) \\(\hat{L}: (S^{1})^{\times K} \to S^{3}\\), \\(L = \hat{L}\\).
-
-Cf. [Knot](#knot).
-
-Referenced: [Diagram](#diagram), [Framing](#framing), [HOMFLY invariant](#homfly-invariant), [Jones-Markov trace](#jones-markov-trace), [Skein relations](#skein-relations), [Lickorish-Wallace theorem](#lickorish-wallace-theorem), [Seifert surface](#seifert-surface).
-
-
-### Representation of braids {#representation-of-braids}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 16:10]</span></span>
-The following proposition relates the representation of [Braid group](#braid-group) to [Yang-Baxter equation](#yang-baxter-equation).
-
-{{% proposition %}}
-If \\(R\\) satisfies the Yang-Baxter equation, the mapping
-\\[\rho: B\_{n} \to \aut(V^{\otimes n})\\]
-\\[\rho(s\_{i}) = 1 \otimes \cdots \otimes PR \otimes \cdots \otimes 1\\]
-where \\(P(x \otimes y) = y \otimes 1\\) extends uniquely to a representation of \\(B\_{n}\\) in \\(V^{\otimes n}\\).
-{{% /proposition %}}
-
-
-### Skein relations {#skein-relations}
-
-We now consider a vector space \\(V\\) of formal \\(\ZZ\\) linear combinations of [Diagrams](#diagram) of [Links](#link) modulo Reidemeister moves. The **Skein relations** are defined by
-
-![](/img/2021-09-13_18-34-45_2021-09-13_18-33.png)
-where \\(A, B, C\\) are formal variables and \\(B\\) is invertible. We have
-\\[C = \frac{B - B^{-1}}{A}\\]
-
-Also, we Skein is related to Reidemeister moves.
-
-{{% theorem %}}
-Skein relations are compatible with Reidemeister moves.
-{{% /theorem %}}
-
-Referenced: [HOMFLY invariant](#homfly-invariant).
-
-
-### Writhe number {#writhe-number}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 16:02]</span></span>
-We define the **Writhe number** of \\(\beta\\) to be
-
-{{< figure src="/img/2021-09-21_16-02-43_screenshot.png" >}}
-
-Referenced: [Jones-Markov trace](#jones-markov-trace).
-
-
-### Yang-Baxter equation {#yang-baxter-equation}
-
-
-
-{{% definition %}}
-A morphism \\(R: V \otimes V \to V \otimes V\\) satisfies the **Yang-Baxter equation** if
-\\[R\_{12}R\_{13}R\_{23} = R\_{23}R\_{13}R\_{12} \in \End(V^{\otimes 3})\\]
-where \\(R\_{12} = R \otimes 1\\) and so on.
-{{% /definition %}}
-
-An solution is given by
-\\[R(e\_{i} \otimes e\_{j}) =  \begin{cases}     q e\_{i} \otimes e\_{i} & i = j \\\\\\     e\_{i} \otimes e\_{j} & i < j \\\\\\     e\_{i} \otimes e\_{j} + (q - q^{-1})e\_{j} \otimes e\_{i} & i > j   \end{cases} \\]
-
-Referenced: [Representation of braids](#representation-of-braids).
-
-
-## Geometric Topology {#geometric-topology}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-09-15 Wed 18:20]</span></span>
-Named geometric topology, this section includes some result in \\(4\\)-manifold and knot theory and higher dimensional topology.
-
-
-### 11/8 conjecture {#11-8-conjecture}
-
-By [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold), [Rokhlin Theorem](#rokhlin-theorem) and [Donaldson diagonalizable theorem](#donaldson-diagonalizable-theorem), the only remaining case to determine the existence of smooth structure on topological \\(4\\)-manifold are those with \\(Q\_{X}\\) even and indefinite. That is \\(Q\_{X} = mE\_{8} \oplus n \begin{pmatrix} 0 & 1 \\\\\\ 1 & 0 \end{pmatrix}\\). Since we have K3 surface with \\(Q\_{X} = 2E\_{8} \oplus 3 \begin{pmatrix}0 & 1\\\\\\ 1 & 0 \end{pmatrix}\\) and \\(S^{2} \times S^{2}\\) with \\(Q\_{X} = \begin{pmatrix} 0 & 1\\\\\\ 1 & 0 \end{pmatrix}\\), we can show that the for \\(Q\_{X}\\) with \\(m = 2k\\) and \\(n \geq 3k\\) the smooth structure on the manifold exists. The conjecture is that that is the only possibility for the existence of smooth structure.
-
-{{% conjecture %}}
-If \\(X\\) is spin, smooth and \\(Q\_{X} = 2k E\_{8} \oplus n \begin{pmatrix} 0 & 1\\\\\\ 1 & 0 \end{pmatrix}\\), then \\(n \geq 3k\\). Or equivalently speaking \\(b\_{2}(X) \geq \frac{11}{8} \abs{\sigma(X)}\\).
-{{% /conjecture %}}
-
-A theorem by Furuta says
-
-{{% theorem %}}
-Let \\(X\\) be a spin \\(4\\)-manifold, such that \\(b\_{2}(X) \neq 0\\). Then
-\\[b\_{2}(X) \geq \frac{10}{8} \abs{\sigma(X)} + 2\\]
-{{% /theorem %}}
-
-The [Seiberg-Witten invariant](#seiberg-witten-invariant) together with spin Dirac operator can give one proof. The proof suggests [Bauer-Furuta invariant](#bauer-furuta-invariant).
-
-{{% remark %}}
-The current status (2021 Sep.) of the conjecture is that \\(k \leq 1\\) case is proved. For \\(k > 1\\), we have
-\\[n \geq 2k + \begin{cases} 2 & k = 1,2,5,6 \\\\\\ 3 & k = 3,4,7 \\\\\\ 4 & 0 \end{cases} \mod 8 \\]
-{{% /remark %}}
-
-
-### <span class="org-todo todo TODO">TODO</span> Alexander duality {#alexander-duality}
-
-
-### <span class="org-todo todo TODO">TODO</span> Alexander polynomial {#alexander-polynomial}
-
-
-
-Referenced: [Fintushel-Stern knot surgery](#fintushel-stern-knot-surgery).
-
-
-### Anti-self-dual {#anti-self-dual}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 20:21]</span></span>
-A \\(n\\)-form \\(w\\) on \\(2n\\) manifold is called **self-dual** if \\(\* w = -w\\).
-Cf. [Self-dual](#self-dual).
-
-Referenced: [Self-dual](#self-dual).
-
-
-### <span class="org-todo todo TODO">TODO</span> Bauer-Furuta invariant {#bauer-furuta-invariant}
-
-
-
-Referenced: [Geometric Topology](#geometric-topology).
-
-
-### Botany problem of 4-manifold {#botany-problem-of-4-manifold}
-
-<span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 19:52]</span></span>
-For \\(b^{+} > 1\\), \\(\pi\_{1} = 1\\) irrducible case, by theorem of Fintushel-Stern, any such \\(X\\) admits \\(\infty\\) smooth structure.
-
-For \\(b^{+} = 1\\), then \\(\CC P^{2} \shar n \overline{\CC P}^{2}\\) for \\(n \geq 2\\) has \\(\infty\\) smooth structure. \\(S^{2} \times S^{2}\\) and \\(n < 2\\) case is unknown.
-
-\\(b^{+} = 0\\) case is completely unknown.
-
-{{% remark %}}
-In each case, we have no method to determine whether all the smooth structures have been found. That is if a manifold is known to have some smooth structure, we don't know whether they are all of the possible smooth structures.
-{{% /remark %}}
-
-{{% remark %}}
-It is well known that \\(S^{7}\\) has 28 different differential structures. And those structures are only smooth structures possible. The proof requires [h-Cobordism](#h-cobordism) theorem, so the similar methods can not be applied to \\(4\\)-manifold.
-{{% /remark %}}
 
 
 ### Characteristic class for 4-manifold {#characteristic-class-for-4-manifold}
@@ -5200,6 +5201,25 @@ See [Critical point](#critical-point).
 Referenced: [Regular value](#regular-value).
 
 
+### Diagram {#diagram}
+
+The image of a generic geometric representative \\(\hat{L}\\) of [Link](#link) \\(L\\) from \\(\RR^{3}\\) to \\(\RR^{2}\\) is a **diagram** of \\(L\\).
+
+For equivalent class of diagrams, we have the following theorem by Reidemeister.
+
+{{% theorem %}}
+Equivalence class of diagrams with respect to the local moves
+
+{{< figure src="/img/2021-09-13_18-22-18_screenshot.png" >}}
+{{% /theorem %}}
+
+We can also consider the diagram of [Framed](#framing) links in \\(\RR^{3}\\). And we have equivalence class of regular isotopy class of framed diagrams on \\(\RR^{2}\\) is given by
+
+{{< figure src="/img/2021-09-13_18-30-56_test.png" >}}
+
+Referenced: [Skein relations](#skein-relations), [Unknot number](#unknot-number).
+
+
 ### Dirac operator {#dirac-operator}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 20:05]</span></span>
@@ -5222,7 +5242,7 @@ where \\(\Delta\\) is the usual Laplacian and \\(F\_{A^{\tau}}^{+}\\) is the [Se
 
 
 {{% theorem %}}
-Let \\(X\\) be a smooth \\(4\\)-manifold. Suppose \\(Q\_{X}\\) is definite that is the matrix \\(Q\_{X}\\) is postive or negative definite, we have \\(Q\_{X} \cong \pm \begin{pmatrix} 1 & \cdots & 0 \\\\\\ \vdots & \ddots & \vdots \\\\\\ 0 & \cdots & 1 \end{pmatrix} \\).
+Let \\(X\\) be a smooth \\(4\\)-manifold. Suppose \\(Q\_{X}\\) is definite that is the matrix \\(Q\_{X}\\) is postive or negative definite, we have \\(Q\_{X} \cong \pm \begin{pmatrix} 1 & \cdots & 0 \\\\ \vdots & \ddots & \vdots \\\\ 0 & \cdots & 1 \end{pmatrix} \\).
 {{% /theorem %}}
 
 Cf. [Intersection forms](#intersection-forms).
@@ -5258,7 +5278,7 @@ Cf. [Vector bundle](#vector-bundle).
 
 The construction follows from the oberservation for \\(X = \CC P^{2} \shar 9 \overline{\CC P}^{2}\\), we have \\(Q\_{X} \cong (-E\_{8}) \oplus (-1) \oplus (1)\\). Then if all \\(\RR^{4}\\) has same smooth structure, some kind of surgery gives impossible \\(4\\)-manifolds. By examing the construction carefully, one shows that there exists a parameter such that every two construction gives different smooth structures.
 
-Exotic \\(R^{4}\\) can also be constructed using [Knot Theory](#knot-theory).
+Exotic \\(R^{4}\\) can also be constructed using [Knot](#knot) theory.
 
 
 ### <span class="org-todo todo TODO">TODO</span> Exotic surfaces {#exotic-surfaces}
@@ -5294,6 +5314,21 @@ The conjecture is related to the open question, given \\(K, L\\) with \\(\Delta\
 {{% /remark %}}
 
 
+### Framed {#framed}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 16:01]</span></span>
+See [Framing](#framing).
+
+Referenced: [Jones-Markov trace](#jones-markov-trace).
+
+
+### Framing {#framing}
+
+**Framing** of a [Link](#link) in \\(\RR^{3}\\) is an isotopy class of a continuous section of a normal bundle to \\(L \subset \RR^{3}\\).
+
+Referenced: [Diagram](#diagram), [Framed](#framed).
+
+
 ### Freedman's classification of topological 4-manifold {#freedman-s-classification-of-topological-4-manifold}
 
 
@@ -5307,7 +5342,7 @@ The conjecture is related to the open question, given \\(K, L\\) with \\(\Delta\
 
 Cf. [Manifold](#manifold), [Kirby-Sieberman invariant](#kirby-sieberman-invariant), [Whitehead theorem](#whitehead-theorem), [Intersection forms](#intersection-forms), [Signature](#signature).
 
-By Freedman's result, the Chern number \\(c(X) = 2 \chi(X) + 3 \sigma(X)\\), and [Holomorphic Euler number](#holomorphic-euler-number) \\(\chi\_{h}\\) and \\(t(X) = \begin{cases} 0 & Q\_{X} \text{ is even.} \\ 1 & Q\_{X} \text{ is odd.} \end{cases}\\).
+By Freedman's result, the Chern number \\(c(X) = 2 \chi(X) + 3 \sigma(X)\\), and [Holomorphic Euler number](#holomorphic-euler-number) \\(\chi\_{h}\\) and \\(t(X) = \begin{cases} 0 & Q\_{X} \text{ is even.} \\\ 1 & Q\_{X} \text{ is odd.} \end{cases}\\).
 
 Referenced: [Geometric Topology](#geometric-topology), [Characteristic class for 4-manifold](#characteristic-class-for-4-manifold), [Geography of 4-manifold](#geography-of-4-manifold).
 
@@ -5367,6 +5402,14 @@ There exists symplectic BMY conjecture.
 {{% conjecture %}}
 Let \\(X\\) be a simply connected, symplectic \\(4\\)-manifold, then \\(c(X) \leq 9 \chi\_{h}(X)\\).
 {{% /conjecture %}}
+
+
+### Geometric braid {#geometric-braid}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:38]</span></span>
+A **geometric braid** in \\(\RR^{2} \times [0,1]\\) is an embedding \\(\hat{\beta} : [0,1]^{\coprod n} \to \RR^{2} \times [0,1]\\) connecting \\(\\{x\_{0}, \cdots, x\_{n}\\} \times \\{0\\}\\) and \\(\\{x\_{0}, \cdots, x\_{n}\\} \times \\{1\\}\\) componentwise.
+
+Referenced: [Braid](#braid).
 
 
 ### Geometric tangle {#geometric-tangle}
@@ -5440,6 +5483,20 @@ The key of the previous lemma is that all the intersection number gives positive
 Referenced: [Botany problem of 4-manifold](#botany-problem-of-4-manifold), [Poincarè conjecutre](#poincarè-conjecutre), [Wall Theorem](#wall-theorem).
 
 
+### Hecke-Iwahori algebra {#hecke-iwahori-algebra}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:53]</span></span>
+For [Braid group](#braid-group) \\(B\_{n}\\), the elements \\((s\_{i} - q)(s\_{i} + q^{-1})\\) generates an ideal in the group algebra \\(\CC[B\_{n}]\\). The **Hecke-Iwahori algebra** is the quotient algebra with respect to the ideal, i.e.,
+\\[H\_{n}(q) = \langle s\_{1}, \cdots, s\_{n} \rangle\\]
+such that
+\\[s\_{i}s\_{i+1}s\_{i} = s\_{i + 1}s\_{i}s\_{i + 1},\\; i = 1, \cdots, n - 1\\]
+\\[s\_{i}s\_{j} = s\_{j}s\_{i}, \\; \abs{i - j} > 1\\]
+\\[(s\_{i} - q)(s\_{i} + q^{-1}) = 0\\]
+The interesting case is that \\(q\\) be the root of \\(1\\).
+
+\\(H\_{n}(q)\\) is a deformation of \\(\CC[S\_{n}]\\).
+
+
 ### Heegaard diagram {#heegaard-diagram}
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-15 Fri 19:03]</span></span>
@@ -5472,6 +5529,14 @@ Referenced: [Non-degenerate](#non-degenerate).
 We define the **holomorphic Euler number** by \\(\chi\_{h}(X) = \frac{\chi(X) + \sigma(X)}{4}\\).
 
 Referenced: [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold), [Geography of 4-manifold](#geography-of-4-manifold).
+
+
+### HOMFLY invariant {#homfly-invariant}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-13 Mon 18:37]</span></span>
+Since [Skein relations](#skein-relations) are compatible with Reidemeister moves, for every [Link](#link), we may consider its diagram \\(D\_{L}\\) and we define \\([D\_{L}] = \langle L \rangle [O]\\). Here \\(O\\) is one loop and \\(\langle L \rangle \in \ZZ[A, B^{\pm 1}, C]\\). \\(\langle L \rangle\\) depends only on \\(L\\) but not on representative diagram \\(D\_{L}\\). \\(\langle L \rangle\\) is the **HOMFLY** invariant of framed links.
+
+For unframed links, we also have **HOMFLY invariants** by consider \\(L = L\_{1} \coprod \cdots \coprod L\_{n}\\) as framed links and consider \\(\langle \langle L \rangle \rangle = B^{- \sum\_{i} w(L\_{i})} \langle L \rangle\\) where \\(w(L\_{i})\\) is the winding number.
 
 
 ### Homotopic slice {#homotopic-slice}
@@ -5519,7 +5584,7 @@ For \\(4\\)-manifold, we have nondegenerated bilinear form
 \\[Q\_{X}: H^{2}(X; \ZZ)/(tors) \times H^{2}(X; \ZZ)/(tors) \to \ZZ\\]
 defined by \\((\alpha \cup \beta)[X]\\) called **intersection form**. It is a symmetric, unimodular form.
 
-As an example of the intersection form, we have the intersection form of K3 surfaces \\(Q\_{X} = 2E\_{8} \oplus 3 \begin{pmatrix} 0 & 1 \\\\\\ 1 & 0 \end{pmatrix}\\)
+As an example of the intersection form, we have the intersection form of K3 surfaces \\(Q\_{X} = 2E\_{8} \oplus 3 \begin{pmatrix} 0 & 1 \\\\ 1 & 0 \end{pmatrix}\\)
 
 Cf. [K3 surfaces](#k3-surfaces), [E8](#e8).
 
@@ -5542,7 +5607,36 @@ A simply connected, closed, oriented \\(4\\)-manifold \\(X\\) is **irreducible**
 Referenced: [Geography of 4-manifold](#geography-of-4-manifold), [Seiberg-Witten invariant](#seiberg-witten-invariant).
 
 
+### Jones-Markov trace {#jones-markov-trace}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 15:58]</span></span>
+There exists a **Jones-Markov** trace \\(\tr: \tilde{B}\_{n} \to k = \ZZ[q, q^{-1}][\frac{1}{(q - q^{-1})}]\\) such that
+\\[\tr(\beta \gamma \beta^{-1}) = \tr(\gamma)\\]
+\\[\tr(\beta s\_{n}) = \tr(\beta t\_{n}) = z \tr(\beta)\\]
+
+It defines invariants of [Framed](#framed) [Links](#link). To get a invariant of links, we consider [Writhe number](#writhe-number), \\(\omega(\beta)\\). We have \\(\tr(\beta)z^{w(\beta)}\\) is an invarinat of links.
+
+{{% remark %}}
+For \\(z = q^{2}\\) the polynomial is the [Jones polynomial](#jones-polynomial).
+{{% /remark %}}
+
+
 ### <span class="org-todo todo TODO">TODO</span> Jones polynomial {#jones-polynomial}
+
+
+
+Referenced: [Jones-Markov trace](#jones-markov-trace).
+
+
+### <span class="org-todo todo TODO">TODO</span> Jones polynomial {#jones-polynomial}
+
+
+### Jones twist {#jones-twist}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 16:15]</span></span>
+A map \\(\mu: V \to V\\) is called **Jones twist** if
+\\[(\mu \otimes \mu) R = R(\mu \otimes \mu)\\]
+\\[(\id \otimes \tr)(\id \otimes \mu) PR = z \id\_{V}\\]
 
 
 ### <span class="org-todo todo TODO">TODO</span> Khovanov homology {#khovanov-homology}
@@ -5566,7 +5660,7 @@ We define the set \\({\rm Top}\_{m} = \\{\text{ homomorphism } f: \RR^{m} \to \R
 The Kirby and Sieberman has following deep and mysterious theorem.
 
 {{% theorem %}}
-For \\(m \geq 5\\), \\(k < m\\). Then \\(\pi\_{k}({\rm Top}\_{m}/ {\rm PL}\_{m}) = \begin{cases} 0 & k \neq 3 \\\\\\ \ZZ/2 & k = 3 \end{cases}\\).
+For \\(m \geq 5\\), \\(k < m\\). Then \\(\pi\_{k}({\rm Top}\_{m}/ {\rm PL}\_{m}) = \begin{cases} 0 & k \neq 3 \\\\ \ZZ/2 & k = 3 \end{cases}\\).
 {{% /theorem %}}
 
 So to have PL structure on \\(X\\), \\(\dim X \geq 5\\) we need to overcome the obstruction called **Kirby-Sieberman** invariant \\(KS(X) \in H^{4}(X; \ZZ/2)\\). So \\(X\\) has a PL-structure then \\(\ks(X) = 0\\). And for \\(\dim X = 4\\), \\(\ks(X) = 0\\) if and only \\(X \times \RR\\) has a PL-structure.
@@ -5579,6 +5673,14 @@ Referenced: [Freedman's classification of topological 4-manifold](#freedman-s-cl
 
 
 ### <span class="org-todo todo TODO">TODO</span> Knizhnik–Zamolodchikov equation {#knizhnik-zamolodchikov-equation}
+
+
+### Knot {#knot}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-13 Mon 18:13]</span></span>
+A **knot** (in \\(S^{3}\\)) is an isotopy class of an [Immersion](#immersion) \\(\hat{K}: S^{1} \to S^{3}\\), \\(K = [\hat{K}]\\).
+
+Referenced: [Positive](#positive), [Link](#link), [Homotopic slice](#homotopic-slice), [Knots bounds algebraic surface](#knots-bounds-algebraic-surface), [Linking number](#linking-number), [Poincarè conjecutre](#poincarè-conjecutre), [Unknot number](#unknot-number).
 
 
 ### Knots bounds algebraic surface {#knots-bounds-algebraic-surface}
@@ -5627,6 +5729,16 @@ Every closed orientable connected \\(3\\)-manifold can be obtained from a surger
 {{% /theorem %}}
 
 Cf. [Link](#link), [Orientation](#orientation), [Surgery](#surgery).
+
+
+### Link {#link}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-13 Mon 18:13]</span></span>
+A **link** is an isotopy class of an [Immersion](#immersion) \\(\hat{L}: (S^{1})^{\times K} \to S^{3}\\), \\(L = \hat{L}\\).
+
+Cf. [Knot](#knot).
+
+Referenced: [Diagram](#diagram), [Framing](#framing), [HOMFLY invariant](#homfly-invariant), [Jones-Markov trace](#jones-markov-trace), [Skein relations](#skein-relations), [Lickorish-Wallace theorem](#lickorish-wallace-theorem), [Seifert surface](#seifert-surface).
 
 
 ### Linking number {#linking-number}
@@ -5726,7 +5838,7 @@ equivalence \\(k:X \cup\_{\phi\_{0}} e^{\lambda} \to X \cap\_{\phi\_{1}} e^{\lam
 {{% /theorem %}}
 
 {{% proof %}}
-\begin{align} k(x) = x && x \in X \\\\\\ k(tu) = 2tu && 0 \leq t \leq 1/2 \\\\\\ k(tu) = \phi\_{2-2t}(u) && 1/2 \leq t \leq 1 \end{align}
+\begin{align} k(x) = x && x \in X \\\\ k(tu) = 2tu && 0 \leq t \leq 1/2 \\\\ k(tu) = \phi\_{2-2t}(u) && 1/2 \leq t \leq 1 \end{align}
 {{% /proof %}}
 
 {{% lemma %}}
@@ -5793,6 +5905,19 @@ There does not exist an algorithm that tells whether a given presentation yields
 See [Critical value](#critical-value).
 
 
+### Representation of braids {#representation-of-braids}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 16:10]</span></span>
+The following proposition relates the representation of [Braid group](#braid-group) to [Yang-Baxter equation](#yang-baxter-equation).
+
+{{% proposition %}}
+If \\(R\\) satisfies the Yang-Baxter equation, the mapping
+\\[\rho: B\_{n} \to \aut(V^{\otimes n})\\]
+\\[\rho(s\_{i}) = 1 \otimes \cdots \otimes PR \otimes \cdots \otimes 1\\]
+where \\(P(x \otimes y) = y \otimes 1\\) extends uniquely to a representation of \\(B\_{n}\\) in \\(V^{\otimes n}\\).
+{{% /proposition %}}
+
+
 ### Rokhlin Theorem {#rokhlin-theorem}
 
 
@@ -5810,7 +5935,7 @@ Referenced: [Geometric Topology](#geometric-topology).
 
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-23 Sat 15:28]</span></span>
 The **Seiberg-Witten equation** is the following equations for \\((A, \phi \in \Gamma^{S^{+}})\\)
-\\[ \begin{cases}      F\_{A^{\tau}}^{+} - \rho^{-1}(\phi^{\*} \phi)\_{0} = 0 & \\\\\\      \dirac\_{A}^{+} \phi = 0 &    \end{cases} \\]
+\\[ \begin{cases}      F\_{A^{\tau}}^{+} - \rho^{-1}(\phi^{\*} \phi)\_{0} = 0 & \\\\      \dirac\_{A}^{+} \phi = 0 &    \end{cases} \\]
 Here \\((\phi^{\* } \phi)\_{0}: \psi \to \langle \psi, \phi> \cdot \phi - \frac{\abs{\phi}^{2}}{2} \psi\\). We have \\(((\phi^{\* } \phi)\_{0})^{\* } = (\phi^{\* } \phi)\_{0}\\) and \\(\tr (\phi^{\* } \phi)\_{0} = 0\\).
 
 Referenced: [Seiberg-Witten moduli space](#seiberg-witten-moduli-space).
@@ -5945,6 +6070,23 @@ Referenced: [Anti-self-dual](#anti-self-dual), [Dirac operator](#dirac-operator)
 For [Intersection forms](#intersection-forms) \\(Q\_{X}\\), we have \\(b^{+ }(X)/b^{- }(X)\\) denote the number of the positive and negative eigenvalues of \\(Q\_{X}\\). And we define the **signature** to be \\(\sigma(X) = b^{+ }(X) - b\_{2}^{-}(X)\\).
 
 Referenced: [Characteristic class for 4-manifold](#characteristic-class-for-4-manifold), [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold), [Rokhlin Theorem](#rokhlin-theorem).
+
+
+### Skein relations {#skein-relations}
+
+We now consider a vector space \\(V\\) of formal \\(\ZZ\\) linear combinations of [Diagrams](#diagram) of [Links](#link) modulo Reidemeister moves. The **Skein relations** are defined by
+
+![](/img/2021-09-13_18-34-45_2021-09-13_18-33.png)
+where \\(A, B, C\\) are formal variables and \\(B\\) is invertible. We have
+\\[C = \frac{B - B^{-1}}{A}\\]
+
+Also, we Skein is related to Reidemeister moves.
+
+{{% theorem %}}
+Skein relations are compatible with Reidemeister moves.
+{{% /theorem %}}
+
+Referenced: [HOMFLY invariant](#homfly-invariant).
 
 
 ### Slice genus {#slice-genus}
@@ -6128,6 +6270,32 @@ The left hand side has \\(n\\) copies of \\(S^{2}\\) and the isomorphism is grou
 Referenced: [Freedman's classification of topological 4-manifold](#freedman-s-classification-of-topological-4-manifold).
 
 
+### Writhe number {#writhe-number}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-09-21 Tue 16:02]</span></span>
+We define the **Writhe number** of \\(\beta\\) to be
+
+{{< figure src="/img/2021-09-21_16-02-43_screenshot.png" >}}
+
+Referenced: [Jones-Markov trace](#jones-markov-trace).
+
+
+### Yang-Baxter equation {#yang-baxter-equation}
+
+
+
+{{% definition %}}
+A morphism \\(R: V \otimes V \to V \otimes V\\) satisfies the **Yang-Baxter equation** if
+\\[R\_{12}R\_{13}R\_{23} = R\_{23}R\_{13}R\_{12} \in \End(V^{\otimes 3})\\]
+where \\(R\_{12} = R \otimes 1\\) and so on.
+{{% /definition %}}
+
+An solution is given by
+\\[R(e\_{i} \otimes e\_{j}) =  \begin{cases}     q e\_{i} \otimes e\_{i} & i = j \\\\     e\_{i} \otimes e\_{j} & i < j \\\\     e\_{i} \otimes e\_{j} + (q - q^{-1})e\_{j} \otimes e\_{i} & i > j   \end{cases} \\]
+
+Referenced: [Representation of braids](#representation-of-braids).
+
+
 ## Quantum Fields and Strings {#quantum-fields-and-strings}
 
 
@@ -6208,9 +6376,643 @@ Let \\(P\\) be a \\(SU(2)\\) bundle over \\(4\\)-manifold \\(M\\), then we call
 \\[YM(A) = \int\_{M} \abs{F\_{A}}^{2}\\]
 Critical point of Yang-Mills functional is given by **Yang-Mills equation**
 
-\begin{equation\*} \begin{cases} d^{\*}\_{A}F\_{A} = 0 & \\\\\\ d\_{A} F\_{A} = 0 & \end{cases} \end{equation\*}
+\begin{equation\*} \begin{cases} d^{\*}\_{A}F\_{A} = 0 & \\\\ d\_{A} F\_{A} = 0 & \end{cases} \end{equation\*}
 
 The second equation is Bianchi identity (Cf. [Curvature](#curvature)) and is automatically satisfied. In fact, solutions of anti-self-dual equation is a special solutions of the Yang-Mills equation, because it takes globally minimal value.
+
+
+## Algebraic Number Theory {#algebraic-number-theory}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 14:37]</span></span>
+Apart from algebraic **number** theory, the theory of cohomology of groups is also put here. The main reference is [<span id="b4a5092d5be50d9bf5c61da5a15def18"><a href="#milne2020a" title="Milne, Algebraic {{Number Theory}} (v3.0.8), (2020).">milne2020a</a></span>] and [<span id="b71f719ac1b346d4c039df59c580b69c"><a href="#kedlaya2021" title="Kedlaya, Note on Class Field Theory, (2021).">kedlaya2021</a></span>], for detailed proof see these and references there.
+
+
+### <span class="org-todo todo TODO">TODO</span> Adele {#adele}
+
+
+### <span class="org-todo todo TODO">TODO</span> Admissible {#admissible}
+
+
+### <span class="org-todo todo TODO">TODO</span> Approximation theorem {#approximation-theorem}
+
+
+### Artin's reciprocity law {#artin-s-reciprocity-law}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 16:18]</span></span>
+Let \\(L/K\\) be a finite abelian extension of number fields. For each prime \\(\mathfrak{p}\\) of \\(K\\) that does not [Ramify](#ramified) in \\(L\\), let \\(\mathfrak{q}\\) be a prime of \\(L\\) over \\(K\\), and put \\(\kappa = \mathfrak{o}\_{K} / \mathfrak{p}\\) and \\(\lambda = \mathfrak{o}\_{L}/ \mathfrak{q}\\). Then the residue field extension \\(\lambda/ \kappa\\) is an extension of finite fields, so it has a canonical generator \\(\sigma\\), the [Frobenius element](#frobenius-element), which acts by rasing to \\(q\\)-th power. Since \\(\mathfrak{p}\\) does not ramify, the decomposition group \\(G\_{\mathfrak{q}}\\) is isomorphic to \\(\Gal(\lambda/ \kappa)\\), so we get a canonical element of \\(G\_{\mathfrak{q}}\\). We say it to be **Frobenius** of \\(\mathfrak{p}\\) since in abelian Galois group the conjugaton has no effect.
+
+Now for \\(\mathfrak{m}\\) divisible by all primes of \\(K\\) which ramify in \\(L\\), define the homomorphism called **Artin map**
+\\[J^{\mathfrak{m}}\_{K} \to \Gal(L/K), \\; \mathfrak{p} \to {\rm Frob}\_{\mathfrak{p}}\\]
+
+The **Artin's reciprocity law** is the following theorem
+
+{{% theorem %}}
+There exists a formal product \\(\mathfrak{m}\\) of places of \\(K\\), including all places over which \\(L\\) ramifies, such that \\(P^{\mathfrak{m}}\_{K}\\) belongs to the kernel of the Artin map.
+{{% /theorem %}}
+
+
+### Augmentation ideal {#augmentation-ideal}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-22 Wed 20:39]</span></span>
+Let \\(M\_{G}\\) denote the maximal quotient of \\(M\\) on which \\(G\\) acts trivially. Then we have \\(M\_{G} = M / M I\_{G}\\), where \\(I\_{G}\\) is the **augmentation ideal** of \\(\ZZ[G]\\)
+\\[I\_{G} = \\{ \sum\_{g \in G} z\_{g} [g] \mid \sum\_{g} z\_{g} = 0\\}\\]
+We call \\(M\_{G}\\) the group of **\\(G\\)-coinvariants**. \\(M \to M\_{G}\\) is right exact but not left exact.
+
+
+### <span class="org-todo todo TODO">TODO</span> Brauer group {#brauer-group}
+
+
+
+{{% theorem %}}
+\\[H^{2}(K\_{nr}/K) = Br(K)\\]
+{{% /theorem %}}
+
+Cf. [Brauer group](#brauer-group).
+
+{{% theorem %}}
+The valuation map \\(v: K\_{nr}^{\*} \to \ZZ\\) defines an isomorphism \\(H^{2}(K\_{nr}/ K) \to H^{2}(\hat{\ZZ}, \ZZ)\\).
+{{% /theorem %}}
+
+We consider the map \\({\rm inv}\\) we have isomorphism
+\\[H^{2}(K\_{nr}/K) \xrightarrow{v} H^{2}(\hat{\ZZ}, \ZZ) \xrightarrow{\delta^{-1}} \Hom(\hat{\ZZ}, \QQ/\ZZ) \xrightarrow{\gamma} \QQ/\ZZ\\]
+
+{{% theorem %}}
+Let \\(L/K\\) be a finite extension of degree \\(n\\). Then
+\\[{\rm inv}\_{L} \circ {\rm Res}\_{K/L} = n . {\rm inv}\_{K}\\]
+{{% /theorem %}}
+
+Referenced: [Brauer group](#brauer-group).
+
+
+### Chebotarëv density theorem {#chebotarëv-density-theorem}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-21 Tue 18:57]</span></span>
+The **Caebotarëv density theorem** is the following.
+
+{{% theorem %}}
+Let \\(L/K\\) be a Galois extension of number fields with Galois group \\(G\\). Then for any \\(g \in G\\) there exist infinity many primes \\(\mathfrak{p}\\) of \\(K\\) such that there is a prime \\(\mathfrak{q}\\) of \\(L\\) over \\(\mathfrak{p}\\) with Frobenius \\(g\\). In fact, the Dirichlet density of such primes \\(\mathfrak{p}\\) is the order of the conjugacy class of \\(G\\) divided by \\(\shar G\\).
+{{% /theorem %}}
+
+Cf. [Dirichlet density](#dirichlet-density).
+
+{{% corollary %}}
+Let \\(L/K\\) be a nontrivial extension of number fields. Then there exist infinitely many primes of \\(K\\) which do not split completely in \\(L\\).
+{{% /corollary %}}
+
+
+### <span class="org-todo todo TODO">TODO</span> Cohomologically trivial {#cohomologically-trivial}
+
+
+### Cohomology of group {#cohomology-of-group}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 14:39]</span></span>
+We define the **cohomology** of the group to be \\(H^{i}(G, M)\\) the derived functor of \\((\bullet)^{G}\\). To compute it, we can use either [Injective](#injective) resolution or [F-acyclic](#f-acyclic) resolution.
+
+Given a \\(G\\)-module \\(M\\), we can define \\(G\\)-module \\(N^{i}\\) for \\(i \geq 0\\) as the set of functions \\(\phi: G^{i + 1} \to M\\) with \\(G\\)-action
+\\[(\phi^{g})(g\_{0}, \cdots, g\_{i}) = \phi(g\_{0}g^{-1}, \cdots, g\_{i}g^{-1})^{g}\\]
+We have \\(N^{i} = \Ind\_{1}^{G} N\_{0}^{i}\\) for \\(N\_{0}^{i}\\) consists of \\(\phi(g\_{0}, \cdots, g\_{i}) = 0\\) when \\(g\_{0} \neq e\\). So \\(N^{i}\\) is [Induced](#induced). Also we define the map \\(\dif^{i}: N^{i} \to N^{i + 1}\\) by
+\\[(\dif^{i} \phi)(g\_{0}, \cdots, g\_{i + 1}) = \sum\_{j = 0}^{i + 1} (-1)^{j} \phi(g\_{0}, \cdots, \hat{g\_{j}}, \cdots, g\_{i + 1})\\]
+With above definition, we have \\(0 \to M \to N^{0} \to N^{1} \to \cdots\\) exact, which is in fact acyclic resolution by [Shapiro's lemma](#shapiro-s-lemma).
+
+There are some functoriality of group cohomology.
+
+1.  Cohomology group has no nontrivial \\(G\\)-action.
+2.  If \\(H\\) is a subgroup of \\(G\\), \\(M\\) a \\(G\\)-module, \\(M'\\) is \\(M\\) with \\(H\\)-action only, we have **restriction homomorphism**
+    \\[{\rm Res}:H^{i}(G, M) \to H^{i}(H, M')\\]
+3.  Let \\(M\\) be Ga \\(\\)-module, then we have **corestriction map**
+    \\[{\rm Cor}:H^{i}(H, M) \con H^{i}(G, \Ind\_{H}^{G} M) \to H^{i}(G, M)\\]
+4.  \\({\rm Cor} \circ {\rm Res}\\) acts as multiplication by \\([G:H]\\) on each cohomology group.
+5.  Let \\(H\\) be a normal subgroup of \\(G\\). We have \\(G/H\\) acts on \\(M^{H}\\), and therefore **inflation homomorphisms**
+    \\[{\rm Inf}: H^{i}(G/H, M^{H}) \to H^{i}(G, M)\\]
+
+{{% proposition %}}
+The group \\(H^{i}(G, M)\\) is the direct limit of \\(H^{i}(G/H, M^{H})\\) using the inflation homomorphisms.
+{{% /proposition %}}
+
+Cf. [G-module](#g-module).
+
+
+### Coinvariant {#coinvariant}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-22 Wed 20:41]</span></span>
+See [Augmentation ideal](#augmentation-ideal).
+
+
+### Conductor {#conductor}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 14:26]</span></span>
+In [Kronecker-Weber theorem](#kronecker-weber-theorem), the smallest number \\(K \subset \QQ(\zeta\_{n})\\) is called the **conductor** of \\(K/ \QQ\\).
+
+In [Artin's reciprocity law](#artin-s-reciprocity-law), the **conductor** of \\(L/K\\) is the smallest formal product \\(\mathfrak{m}\\) for which the reciprocity law holds.
+
+
+### Corestriction {#corestriction}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-22 Wed 21:02]</span></span>
+See [Cohomology of group](#cohomology-of-group).
+
+
+### <span class="org-todo todo TODO">TODO</span> Dedekind domain {#dedekind-domain}
+
+
+
+Referenced: [Fractional ideal](#fractional-ideal).
+
+
+### Decomposition group {#decomposition-group}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-21 Tue 19:25]</span></span>
+Let \\(L/K\\) be field extension \\(G\\) the Galois group. Let \\(\mathfrak{p}\\) prime ideal of \\(K\\) and \\(\tau\\) prime ideal of \\(L\\) over \\(\mathfrak{p}\\). Then the **decomposition group** is the group \\(G\_{\tau} \subset G\\) which consists of the stabilizer of \\(\tau\\) under the action of \\(G\\) on the primes above \\(\mathfrak{p}\\).
+
+
+### Dirichlet density {#dirichlet-density}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-21 Tue 19:13]</span></span>
+A set of primes \\(S\\) in a number field \\(K\\) has **Dirichlet density** \\(d\\) if
+\\[\lim\_{s \to 1^{+}} \frac{\sum\_{\mathfrak{p} \in S} \nm(\mathfrak{p})^{-s}}{\log \frac{1}{s - 1}} = d\\]
+This persumes the existence of the limit; otherwise, we have **lower Dirichlet density** and **upper Dirichlet density**.
+
+Cf. [Norm](#norm).
+
+
+### Discrete valuation {#discrete-valuation}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 14:37]</span></span>
+The [Valuation](#valuation) is a **discrete valuation** if there is a \\(\delta > 0\\) such that \\(1 - \delta < \abs{\alpha} < 1 + \delta\\) implies \\(\abs{\alpha} = 1\\). After taking log and do some normalization, we get a morphism
+\\[v: k^{\times} \to \ZZ\\]
+
+
+### <span class="org-todo todo TODO">TODO</span> Discriminant {#discriminant}
+
+
+### Fractional ideal {#fractional-ideal}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 16:53]</span></span>
+A **fractional ideal** of a [Dedekind domain](#dedekind-domain) \\(A\\) is a nonzero \\(A\\)-submodule \\(\mathfrak{a}\\) \\(K\\) such that
+\\[d \mathfrak{a} \subset A\\]
+for some nonzero \\(d \in A\\). With product, all the fractional ideal of \\(A\\) form a group called **fractional ideal group**.
+
+Referenced: [Norm](#norm).
+
+
+### Frobenius element {#frobenius-element}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 16:40]</span></span>
+Let \\(L\\) be a finite [Unramified](#unramified) extension of \\(K\\). Then \\(L\\) is Galois over \\(K\\) and \\(\Gal(L/K)\\) on \\(\mathscr{O}\_{L}\\) defines an isomorphism \\(\Gal(L/K) = \Gal(l/k)\\) where \\(l/k\\) are the residue field. Therefore \\(\Gal(L/K)\\) is a cyclic group and generated by \\(\sigma\\) with \\(\sigma \alpha \equiv \alpha^{q} \pmod{\mathfrak{m}\_{L}}\\) for \\(\alpha \in \mathscr{O}\_{L}\\). \\(\sigma\\) is called **Frobenius element** and denoted by \\(\Frob\_{L/K}\\).
+
+In general, we have to choose a prime \\(\mathfrak{p}\\) of \\(K\\)and \\(\mathfrak{q}\\) prime above \\(\mathfrak{p}\\), then the element of the [Decomposition group](#decomposition-group) \\(G\_{\mathfrak{p}}\\) such that \\(gx \equiv x^{\shar(\mathfrak{o}\_{K}/ \mathfrak{p})} \pmod{\mathfrak{q}}\\). In general, Frobenius element only defined up to conjugation.
+
+
+### Frobenius reciprocity law {#frobenius-reciprocity-law}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-22 Wed 19:56]</span></span>
+The following is **Frobenius reciprocity law**.
+
+{{% proposition %}}
+Let \\(H\\) be the a subgroup of \\(G\\), let \\(M\\) be a \\(G\\)-module and \\(N\\) be an \\(H\\)-module. Then there are natural isomorphisms
+\\[\Hom\_{G}(M, \Ind\_{H}^{G} N) \cong \Hom\_{H}(M,N)\\]
+\\[\Hom\_{G}(\Ind\_{H}^{G} N, M) \cong \Hom\_{H}(N, M)\\]
+{{% /proposition %}}
+
+Cf. [Induction](#induction).
+
+
+### Generalized ideal class group {#generalized-ideal-class-group}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-20 Mon 19:31]</span></span>
+Let \\(\mathfrak{m}\\) be a formal product of places of \\(K\\). Let \\(J^{\mathfrak{m}}\_{K}\\) be the group of [Fractional ideals](#fractional-ideal) of \\(K\\) which are coprime to each finite place of \\(K\\) occuring in \\(\mathfrak{m}\\). Let \\(P\_{K}^{\mathfrak{m}}\\) be the group of principal fractiona ideals generated by elements \\(\alpha \in K\\) such that
+
+1.  for \\(\mathfrak{p}^{e} \mid \mathfrak{m}\\) finite, \\(\alpha \equiv 1 \pmod \mathfrak{p}^{e}\\).
+2.  For every real place \\(\tau\\) in \\(\mathfrak{m}\\), \\(\tau(\alpha) > 0\\).
+
+Then the **ray class group** \\({\rm Cl}^{\mathfrak{m}}(K)\\) is defined as the quotient \\(J^{\mathfrak{m}}\_{K} / P^{\mathfrak{m}}\_{K}\\). A quotient of a ray class group is called a **generalized ideal class group**.
+
+Cf. [Ideal class](#ideal-class).
+
+
+### G-extension {#g-extension}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 14:32]</span></span>
+If \\(G\\) a group, a **G-extension** of a field \\(K\\) is a Galois extension of \\(K\\) with Galois group \\(G\\).
+
+
+### G-module {#g-module}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-21 Tue 19:54]</span></span>
+Let \\(G\\) be a finite group. A (right) **G-module** is an abelian group \\(A\\) equipped with a right \\(G\\)-action.
+
+Given a \\(G\\)-module \\(M\\), we denote by \\(M^{G}\\) the abelian group of \\(G\\)-invariant elements of \\(G\\). The functor \\(M \to M^{G}\\) is left exact.
+
+{{% exam %}}
+Consider exact sequence \\(0 \to \ZZ / p \ZZ \to \ZZ/ p^{2} \ZZ \to \ZZ / p \ZZ \to 0\\), for \\(G = \ZZ / p \ZZ\\), which acts on the middle by \\(a^{g} = a(1 + pg)\\). After applying \\((\bullet)^{G}\\), the sequence is not right exact.
+{{% /exam %}}
+
+For \\(G\\)-module of [Profinite group](#profinite-group) \\(G\\), we require that \\(M\\) is topological group and the action \\(G \times M \to M\\) is continuous.
+
+
+#### Induced {#induced}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-22 Wed 20:11]</span></span>
+A \\(G\\)-module is called **induced** if it is of this form \\(\Ind\_{1}^{G} N\\). for some \\(N\\).
+
+The following is a corollary for [Shapiro's lemma](#shapiro-s-lemma).
+
+{{% corollary %}}
+if \\(M\\) is an induced \\(G\\)-module, then \\(M\\) is acyclic.
+{{% /corollary %}}
+
+
+### Herbrand quotient {#herbrand-quotient}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 14:40]</span></span>
+Let \\(G\\) be a finite cyclic group and let \\(M\\) be a \\(G\\)-module. If the group \\(H\_{T}^{i}(G, M)\\) are finite, we define the **Herbrand quotient** as the ratio
+\\[h(M) = \shar H^{0}\_{T}(G, M) / \shar H\_{T}^{-1}(G, M)\\]
+
+By periodicity theorem of [Tate cohomology group](#tate-cohomology-group), for exact sequence \\(0 \to M' \to M \to M'' \to 0\\), we have \\(h(M) = h(M') h(M'')\\).
+
+A interesting fact is the following.
+
+{{% proposition %}}
+If \\(M\\) is finite, then \\(h(M) = 1\\).
+{{% /proposition %}}
+
+
+### Hilbert class fields {#hilbert-class-fields}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 15:10]</span></span>
+Let \\(L\\) be the maximal [Unramified](#unramified) abelian extension of a number field \\(K\\). Then \\(L/K\\) is finite, and its Galois group is isomorphic to the ideal class group \\({\rm Cl}(K)\\) of \\(K\\). The field \\(L\\) is called **Hilbert class field** of \\(K\\).
+
+
+### Homology of group {#homology-of-group}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-22 Wed 20:44]</span></span>
+We define the **homology** of groups to be the left derived functor of [Coinvariant](#coinvariant).
+
+Cf. [Cohomology of group](#cohomology-of-group).
+
+
+### <span class="org-todo todo TODO">TODO</span> Ideal class {#ideal-class}
+
+
+
+Referenced: [Finiteness of class group](#finiteness-of-class-group).
+
+
+### <span class="org-todo todo TODO">TODO</span> Idele {#idele}
+
+
+### Induction {#induction}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-22 Wed 19:49]</span></span>
+If \\(H\\) is a subgroup of \\(G\\) and \\(M\\) is an \\(H\\)-module, we define the **induction** of \\(M\\) from \\(H\\) to \\(G\\) to be \\(\Ind\_{H}^{G} M = M \otimes\_{\ZZ[H]} \ZZ[G]\\). We may also identify \\(\Ind\_{H}^{G} M\\) with the set of functions \\(\phi: G \to M\\) such that \\(\phi(gh) = \phi(g)^{h}\\) for \\(h \in H\\).
+
+
+### Inflation map {#inflation-map}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-22 Wed 21:02]</span></span>
+See [Cohomology of group](#cohomology-of-group).
+
+
+### <span class="org-todo todo TODO">TODO</span> Inertia subgroup {#inertia-subgroup}
+
+
+### Kronecker-Weber theorem {#kronecker-weber-theorem}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 14:22]</span></span>
+The **Kronecker-Weber theorem** is the following
+
+{{% theorem %}}
+If \\(K/ \QQ\\) is a finite ableian extension, then \\(K \subset \QQ(\zeta\_{n})\\) for some positive integer \\(n\\).
+{{% /theorem %}}
+
+We also have a local version, called **local Kronecker-Weber theorem**.
+
+{{% theorem %}}
+If \\(K/ \QQ\_{p}\\) is a finite ableian extension, then \\(K \subset \QQ\_{p}(\zeta\_{n})\\) for some positive integer \\(n\\), where \\(\zeta\_{n}\\) is a primitive \\(n\\)-th root of unity.
+{{% /theorem %}}
+
+
+### Kummer theory {#kummer-theory}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 14:30]</span></span>
+The following theorem is key in **Kummer theory** of ableian extensions.
+
+{{% theorem %}}
+If \\(\zeta\_{n} \in K\\), then every \\(\ZZ/n \ZZ\\) extension of \\(K\\) is of the form \\(K(\alpha^{1/n})\\) for some \\(\alpha \in K^{\*}\\) with the property that \\(\alpha^{1/d} \not \in K\\) for any proper divisor \\(d\\) of \\(n\\) and vice versa.
+{{% /theorem %}}
+
+
+### L-function {#l-function}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-21 Tue 19:06]</span></span>
+Let \\(\K\\) be a number field \\(\mathfrak{m}\\) formal product of [Places](#place) of \\(K\\). Let \\(\chi\_{\mathfrak{m}}: {\rm Cl}^{\mathfrak{m}}(K) \to \CC^{\*}\\) be a character. Then we can extend \\(\chi\_{\mathfrak{m}}\\) to a function on all ideal of \\(K\\) by declaring its value to be \\(0\\) on ideals not coprime to \\(\mathfrak{m}\\). Then we define the **L-function**
+\\[L(s, \chi\_{\mathfrak{m}}) = \prod\_{\mathfrak{p} \not \div \mathfrak{m}}(1 - \chi(\mathfrak{p}) \nm(\mathfrak{p})^{-1})^{-1}\\]
+which convergent absolutely for \\({\rm Re}(s) > 1\\). In fact, we have the following theorem
+
+{{% theorem %}}
+If \\(\chi\_{\mathfrak{m}}\\) is not trivial, then \\(L(s, \chi\_{\mathfrak{m}})\\) extends to an analytic function on \\(\CC\\).
+{{% /theorem %}}
+
+We also have nonvanishing theorem
+
+{{% theorem %}}
+If \\(\chi\_{\mathfrak{m}}\\) is not the trivial character, then \\(L(1, \chi\_{\mathfrak{m}}) \neq 0\\).
+{{% /theorem %}}
+
+Cf. [Norm](#norm).
+
+
+### Langlands correspondence {#langlands-correspondence}
+
+
+
+{{< figure src="/img/2021-08-31_14-02-53_screenshot.png" >}}
+
+
+### Langlands prgram {#langlands-prgram}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 17:36]</span></span>
+As far as I know there are several parts of Langlands program, namely reciprocity conjecture and functoriality conjecture. The following is the reciprocity conjecture
+
+{{% conjecture %}}
+Suppose \\(E\\) is a finite Galois extension of \\(F\\) with Galois group \\(G = \Gal(E/F)\\), and \\(\sigma: G \to \GL\_{n}(\CC)\\) is an irreducible representation of \\(G\\). Then there exists an automorphic cuspidal representation \\(\pi\_{\sigma}\\) on \\(\GL\_{n}\\) over \\(F\\) such that \\(L(s, \pi\_{\sigma}) = L(s, \sigma)\\).
+{{% /conjecture %}}
+
+And the functoriality conjecture
+
+{{% conjecture %}}
+Suppose \\(G\\) and \\(G'\\) are reductive groups, and \\(\rho: ^{L}G \to ^{L}G'\\) is an \\(L\\)-homomorphism. Then to each automorphic representation \\(\pi = \otimes \pi\_{v}\\) of \\(G\\), there is an automorphic representation \\(\pi' = \otimes \pi'\_{v}\\) of \\(G'\\) such that for unramified \\(v\\), \\(t(\pi'\_{v})\\) is the conjugacy class in \\(^{L}G'\\) which contains \\(t(\pi\_{v})\\). Moreover, for any finite dimensional representation \\(r'\\) of \\(^{L}G'\\), we have
+\\[L(s, \pi', r') = L(s, \pi, r' \circ \rho)\\]
+Here \\(^{L}G\\) denote the Langlands dual group.
+{{% /conjecture %}}
+
+{{% remark %}}
+The functoriality conjecture implies reciprocity conjecture.
+{{% /remark %}}
+
+
+### Local existence theorem {#local-existence-theorem}
+
+
+
+{{% theorem %}}
+The norm groups in \\(K^{\times}\\) are exactly the open subgroups of finite index.
+{{% /theorem %}}
+
+Cf. [Norm group](#norm-group).
+
+
+### Local reciprocity map {#local-reciprocity-map}
+
+
+
+{{% theorem %}}
+For every nonarchimedian local field \\(K\\), there exists a unique homomorphism
+\\[\phi\_{K}: K^{\times} \to \Gal(K^{ab}/K)\\]
+with following properties
+a. For every prime element \\(\pi\\) of \\(K\\) and every finite unramified extension \\(L\\) of \\(K\\), \\(\phi\_{K}(\pi)\\) acts on \\(L\\) as \\(\Frob\_{L/K}\\).
+b. For every finite ableian extension \\(L\\) of \\(K\\), the \\(\nm\_{L/K}(L^{\times})\\) is contained in the kernel of \\(a \to \phi\_{K}(a)|\_{L}\\) and \\(\phi\_{K}\\) induces an isomorphism
+\\[\phi\_{L/K}:K^{\times}/\nm\_{L/K}(L^{\times}) \to \Gal(L/K)\\]
+In particular, \\((K^{\times}: \nm\_{L/K}(L^{\times})) = [L : K]\\).
+{{% /theorem %}}
+
+Here \\(\phi\_{K}\\) and \\(\phi\_{L/K}\\) are called **local Artin maps** or **local reciporicity maps** and \\(\phi\_{L/K}\\) is also called **norm residue map** or **symbol**.
+
+By local existence theorem, we have **local existence theorem**
+
+{{% theorem %}}
+For every finite (not necessarily abelian) extension \\(L\\) of \\(K\\), \\(\nm\_{L/K}(L^{\*})\\) is an open subgroup of \\(K^{\*}\\) of finite index. Conversely, for every (open) subgroup \\(U\\) of \\(K^{\*}\\) of finite index, there exists a finite abelian extension \\(L\\) of \\(K\\) such that \\(U = \nm\_{L/K} L^{\*}\\).
+{{% /theorem %}}
+
+To see \\(\nm\_{L/K} L^{\*}\\) is norms of which abelian extension, we have **norm limitation theorem**.
+
+{{% theorem %}}
+Let \\(M\\) be the maximal abelian subextension of \\(L/K\\). Then \\(\nm\_{L/K} L^{\*} = \nm\_{M/K} M^{\*}\\).
+{{% /theorem %}}
+
+
+### Maximal abelian extension {#maximal-abelian-extension}
+
+
+
+{{% theorem %}}
+Let \\(\QQ\_{p}^{cycl}\\) be the field generated over \\(\QQ\\) by all roots of unity. Then \\(\QQ\_{p}^{cycl}\\) is the maximal abelian extension of \\(\QQ\_{p}\\).
+{{% /theorem %}}
+
+on p. 172
+
+
+### Norm {#norm}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 14:37]</span></span>
+Let \\(L/K\\) be finite field extension, for \\(\alpha \in L\\), we have **norm** \\(\nm(\alpha)\\) in \\(K\\) defined as \\(\det(a\_{ij})\\), where \\(\alpha e\_{i} = \sum a\_{ij}e\_{j}\\) and \\(\\{e\_{1}, \cdots, e\_{n}\\}\\) is a basis for \\(L\\) over \\(K\\).
+
+We can also consider the norm map \\(\nm: \id(B) \to \id(A)\\), where \\(\id\\) denote the [Fractional ideal](#fractional-ideal) group.
+
+In group theory, we define **norm** to be
+\\[\nm\_{G}(m) = \sum\_{g \in G} m^{g}\\]
+which induces a homomorphism
+\\[\nm\_{G}: H\_{0}(G, M) \to H^{0}(G, M)\\]
+
+
+### Norm group {#norm-group}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 18:06]</span></span>
+A subgroup of \\(K^{\times}\\) is called a **norm group** if it is of the form \\(\nm(L^{\times})\\) for some finite abelian extension \\(L\\).
+
+Referenced: [Local existence theorem](#local-existence-theorem).
+
+
+### Place {#place}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 15:06]</span></span>
+A **place** of a number field \\(K\\) is a equivalence class of nontrivial [Absolute values](#absolute-value) on \\(K\\).
+
+
+### Principal ideal theorem {#principal-ideal-theorem}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-20 Mon 19:59]</span></span>
+**Principal ideal theorem** concerns the ideals of [Hilbert class fields](#hilbert-class-fields).
+
+{{% theorem %}}
+Let \\(L\\) be the Hilbert class field of the number field \\(K\\). Then every ideal of \\(K\\) becomes principal in \\(L\\).
+{{% /theorem %}}
+
+
+### Profinite group {#profinite-group}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 14:40]</span></span>
+A **profinite group** is a topological group which is Hausdorff and compact, and which admits a basis of neighborhoods of the identity consisting of normal groups. More explicitly, a profinite group is a group \\(G\\) plus a collection of subgroups of \\(G\\) of finite index as **open subgroups**, such that the intersection of two open subgroups is open, but the intersection of all of the open subgroup is trivial.
+
+The **profinite group** can also be defined as limits. Suppose we are given a partially ordered set \\(I\\), a family \\(\\{G\_{i}\\}\_{i \in I}\\) of finite groups and a map \\(f\_{ij}: G\_{i} \to G\_{j}\\) for each pair \\((i, j) \in I \times I\\) such that \\(i > j\\). Then there exists a profinite group \\(G\\) with open subgroups \\(H\_{i}\\) for \\(i \in I\\) such that \\(G/H\_{i} \cong G\_{i}\\) in a manner compatible with the \\(f\_{ij}\\), the limit of system.
+
+So if \\(L/K\\) Galois extension but not necessarily finite, we make \\(G = \Gal(L/K)\\) into a profinite group by declaring that the open subgroups of \\(G\\) are precisely \\(\Gal(L/M)\\) for all finite extensions \\(M\\) of \\(K\\). In fact, we have following **Galois correspondence**
+
+{{% theorem %}}
+Let \\(L/K\\) be a Galois extension. Then there is a correspondence between (Galois) subextension of \\(M\\) of \\(L\\) and (normal) closed subgroups \\(H\\) of \\(\Gal(L/K)\\), given by
+\\[H \to {\rm fix} H, \\; M \to \Gal(L/M)\\]
+{{% /theorem %}}
+
+
+### Ramification index {#ramification-index}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 14:38]</span></span>
+Let \\(L/K\\) be an extension of number fields. Let \\(\mathfrak{p}\\) be a nonzero prime ideal in the integer of rings \\(\mathfrak{o}\_{K}\\) of \\(K\\), and
+\\[\mathfrak{p} \mathfrak{o}\_{L} = \prod\_{i=1}^{n} \mathfrak{P}\_{i}^{e\_{i}}\\]
+for some prime ideal \\(\mathfrak{P}\_{i} \in \mathfrak{o}\_{L}\\). Then the natural number \\(e\_{i}\\) is called the **ramification index** of \\(\mathfrak{P}\_{i}\\) over \\(\mathfrak{p}\\), denoted by \\(e(\mathfrak{P}\_{i}/ \mathfrak{p})\\). If \\(e\_{i} > 1\\), we say that ideal \\(\mathfrak{p}\\) is **ramified** in \\(L\\).
+
+Ramification index can be generalized to local fields.
+
+
+### Ramified {#ramified}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 14:38]</span></span>
+See [Ramification index](#ramification-index).
+
+
+### Ray class field {#ray-class-field}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-20 Mon 19:46]</span></span>
+We say \\(L/K\\) is the **ray class field** corresponding to the product \\(\mathfrak{m}\\) if \\(L/K\\) has [Conductor](#conductor) dividing \\(\mathfrak{m}\\) and the map \\(J\_{K}/J\_{K}^{\mathfrak{m}} \to \Gal(L/K)\\) is an isomorphism.
+
+There is the existence theorem for ray class field.
+
+{{% theorem %}}
+Every formal product \\(\mathfrak{m}\\) of \\(K\\) has a ray class field.
+{{% /theorem %}}
+
+Cf. [Ray class group](#ray-class-group).
+
+
+### Ray class group {#ray-class-group}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-20 Mon 19:46]</span></span>
+See [Generalized ideal class group](#generalized-ideal-class-group).
+
+
+### <span class="org-todo todo TODO">TODO</span> Residue class degree {#residue-class-degree}
+
+
+### <span class="org-todo todo TODO">TODO</span> Restricted topological product {#restricted-topological-product}
+
+
+### Restriction {#restriction}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 14:39]</span></span>
+See [Cohomology of group](#cohomology-of-group).
+
+
+### Riemann zeta function {#riemann-zeta-function}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-08-31 Tue 13:37]</span></span>
+\\[\zeta(s) = 1 + \frac{1}{2^{s}} + \frac{1}{3^{s}} + \cdots = \prod\_{p \text{ prime}} \frac{1}{1 - p^{-s}}\\]
+The function can be extend as a meromorphic function on \\(\CC\\).
+
+
+### Rosseta stone in mathematics {#rosseta-stone-in-mathematics}
+
+The similarity over number fields, function fields, algebraic curves over \\(\CC\\).
+
+Referenced: [Personal Thoughts]({{<relref "Notes_Mathematics.md#personal-thoughts" >}}).
+
+
+### Shapiro's lemma {#shapiro-s-lemma}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-22 Wed 19:54]</span></span>
+The following is **Shapiro's lemma**.
+
+{{% lemma %}}
+If \\(H\\) is a subgroup of \\(G\\) and \\(N\\) is an \\(H\\)-module, then there is a canonical isomorphism \\(H^{i}(G, \Ind\_{H}^{G} N) \to H^{i}(H, N)\\). In particular, \\(N\\) is an acyclic \\(H\\)-module if and only if \\(\Ind\_{H}^{G}(N)\\) is an acyclic \\(G\\)-module.
+{{% /lemma %}}
+
+Cf. [Induction](#induction).
+
+
+### <span class="org-todo todo TODO">TODO</span> S-unit {#s-unit}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 14:39]</span></span>
+Cf. [S-integer](#s-integer).
+
+
+### Tamely ramified {#tamely-ramified}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 15:09]</span></span>
+See [Unramified](#unramified).
+
+
+### Tate cohomology group {#tate-cohomology-group}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-22 Wed 20:51]</span></span>
+We define the **Tate cohomology groups** to be
+\\[H^{i}\_{T} = \begin{cases} H^{i}(G, M) & i > 0 \\\\ M^{g} / \nm\_{G}(M) & i = 0 \\\\ \ker(\nm\_{G})/M I\_{G} & i = -1 \\\\ H\_{-i - 1}(g, M) & i < -1 \end{cases} \\]
+
+It is called cohomology group because it induces long exact sequence.
+
+We have **periodicity theorem** for cohomology of cyclic groups.
+
+{{% theorem %}}
+Let \\(G\\) be a finite cyclic group and \\(M\\) a \\(G\\)-module. Then there is a functorial isomorphism \\(H\_{T}^{i}(G, M) \to H\_{T}^{i + 2}(G, M)\\) for all \\(i \in \ZZ\\); moreover, these isomorphisms are all determined by the choice of generator of \\(G\\).
+{{% /theorem %}}
+
+
+### Totally ramified {#totally-ramified}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 15:06]</span></span>
+See [Unramified](#unramified).
+
+
+### Transfer map {#transfer-map}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-20 Mon 20:22]</span></span>
+Let \\(G\\) be a finite group and \\(H\\) subgroup (not necessarily normal). Let \\(g\_{1}, \cdots, g\_{n}\\) be left coset representatives of \\(H\\) in \\(G\\). Let \\(\phi(g) = g\_{i}\\) if \\(g \in g\_{i}H\\). Then we define \\(V(g) = \pord\_{i = 1}^{n} \phi(g g\_{i})^{-1}(g g\_{i})\\). The induced map \\(V: G^{ab} \to H^{ab}\\) is called the **tranfer map**.
+
+
+### Unramified {#unramified}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-19 Sun 15:02]</span></span>
+Let \\(L/K\\) be an extension of finite extensions of \\(\QQ\_{p}\\). Let \\(\mathfrak{o}\_{L}, \mathfrak{o}\_{K}\\) be the integral closure of \\(\ZZ\_{p}\\) in \\(K, L\\). We say \\(L/K\\) is **unramified** if the maximal ideal of \\(\mathfrak{o}\_{K}\\) generates the maximal ideal of \\(\mathfrak{o}\_{L}\\).
+
+For every extension \\(L/K\\) there exists a maximal subextension of \\(L/K\\) which is unramified, denoted by \\(U\\). If this is \\(K\\), we say \\(L/K\\) is **totally ramified**.
+
+If \\([L:U]\\) is not divisible by \\(p\\), then \\(L/K\\) is **tamely ramified**.
+
+The above definition can be generalized to global fields by specifiying the prime ideal.
+
+In class field theory, the phrase \\(L/K\\) is **unramified** means that \\(L/K\\) is unramified over all finite places and every real embedding of \\(K\\) extends to a real embeddings of \\(L\\).
+
+{{% remark %}}
+An unramified extension can be nonabelian. It is related to class field tower over \\(K\\).
+{{% /remark %}}
+
+
+### Valuation {#valuation}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-11-28 Sun 14:38]</span></span>
+A **valuation** \\(\abs{\cdot}\\) on a field \\(k\\) is a function defined on \\(k\\) with values in the non-negative real numbers satisfying the following axioms.
+
+1.  \\(\abs{\alpha} = 0\\) if and only if \\(\alpha = 0\\).
+2.  \\(\abs{\alpha \beta} = \abs{\alpha} \abs{\beta}\\).
+3.  There is a constant \\(C\\) such that \\(\abs{1 + \alpha} \leq C\\) whenever \\(\alpha \leq 1\\).
+
+There always exists **trival valuation** that \\(\abs{\alpha} = 1\\) for all \\(\alpha \neq 0\\).
+
+Two valuations are called **equivalent** if there \\(c > 0\\) such that \\(\abs{\alpha}\_{2} = \abs{\alpha}\_{1}^{c}\\).
+
+Referenced: [Discrete valuation](#discrete-valuation).
+
+
+### Zeta functions {#zeta-functions}
+
+<span class="timestamp-wrapper"><span class="timestamp">[2021-12-21 Tue 18:58]</span></span>
+Let \\(K\\) be a number field. The **Dedekind zeta function** \\(\zeta\_{K}(s)\\) is defined for \\({\rm Re}(s) >1\\)
+\\[\zeta\_{K}(s) = \prod\_{\mathfrak{p}}(1 - \nm(\mathfrak{p})^{-s})^{-1}\\]
+where \\(\mathfrak{p}\\) runs over the nonzero prime ideals of \\(\mathfrak{o}\_{K}\\).
+
+{{% theorem %}}
+The function \\(\zeta\_{K}(s)\\) extends to a meromorphic function on \\(\CC\\) whose only pole is a simple pole at \\(s = 1\\).
+{{% /theorem %}}
+
+Cf. [Riemann zeta function](#riemann-zeta-function), [Norm](#norm).
 
 
 ## Arithmetic Geometry {#arithmetic-geometry}
@@ -6434,13 +7236,6 @@ The definition of this height is dependent on the choice of the morphism \\(\phi
 Referenced: [Absolute height](#absolute-height).
 
 
-### <span class="org-todo todo TODO">TODO</span> Ideal class {#ideal-class}
-
-
-
-Referenced: [Finiteness of class group](#finiteness-of-class-group).
-
-
 ### <span class="org-todo todo TODO">TODO</span> Jacobian variety {#jacobian-variety}
 
 
@@ -6494,7 +7289,7 @@ The ring of **S-integers** of \\(k\\) is defined to be
 
 We can also characterize the rings of integers of \\(k\\) by \\(M\_{k}^{\infty}\\)-integers of \\(k\\).
 
-Referenced: [S-unit]({{<relref "Notes_Mathematics.md#algebraic-number-theory" >}}), [Finiteness of unit group](#finiteness-of-unit-group).
+Referenced: [S-unit](#s-unit), [Finiteness of unit group](#finiteness-of-unit-group).
 
 
 ## Bibliography {#bibliography}
@@ -6530,3 +7325,7 @@ Referenced: [S-unit]({{<relref "Notes_Mathematics.md#algebraic-number-theory" >}
 <a id="sernesi2006"></a>[sernesi2006] Sernesi, Deformations of Algebraic Schemes, Springer Berlin Heidelberg (2006). [↩](#7cd3e01b28c2ede526fee96d60981f02)
 
 <a id="nakajima1999"></a>[nakajima1999] Nakajima, Lectures on Hilbert Schemes of Points on Surfaces, American Mathematical Society (1999). [↩](#24e67c8afe5163064e4018cb5a5cbd8a)
+
+<a id="milne2020a"></a>[milne2020a] Milne, Algebraic Number Theory (v3.0.8), (2020). [↩](#b4a5092d5be50d9bf5c61da5a15def18)
+
+<a id="kedlaya2021"></a>[kedlaya2021] Kedlaya, Note on Class Field Theory, (2021). [↩](#b71f719ac1b346d4c039df59c580b69c)

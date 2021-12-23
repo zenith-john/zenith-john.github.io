@@ -47,7 +47,7 @@
 
   <title>{{ if .Title }}{{ .Title }}{{ end }}</title>
 
-  <link rel="canonical" href="{{ .URL | relURL }}">
+  <link rel="canonical" href="{{ .RelPermalink | relURL }}">
 
   <link rel="stylesheet" href="{{ "css/iDisqus.min.css" | relURL }}"/>
 
@@ -159,6 +159,7 @@
 
                 "\\Gal": "\\operatorname{Gal}",
                 "\\Frob": "\\operatorname{Frob}",
+                "\\Ind": "\\operatorname{Ind}",
                 "\\nm": "\\operatorname{Nm}"
             },
             // • rendering keys, e.g.:
