@@ -8,7 +8,7 @@
                 col-xs-12
                 post-container
                 ">
-      {{ $pages := (where .Site.Pages "Type" "post")}}
+      {{ $pages := (where .Site.RegularPages "Type" "post")}}
       {{ range ($pages.GroupByDate "2006-01") }}
       <h2>{{ .Key }}</h2>
       <ul class="archive-list">
