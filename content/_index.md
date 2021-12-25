@@ -1,17 +1,31 @@
-我叫张南涛，是一名清华大学数学系的研究生。我也是一名 Emacser，Linuxer，开源爱好者，Vocaloid 爱好者。我个人的 Linux 相关配置可参考[我的工具]({{< relref "my_tools">}})以及[Ubuntu 安装后]({{< relref "ubuntu">}})。我的 Emacs 配置经验可见[Emacs]({{< relref "emacs_configuration">}})，[Emacs mu4e 配置]({{< relref "mu4e">}}), 代码可见 <https://github.com/zenith-john/zenith-emacs>。
+# About Me
+My name is Zhang Nantao(张南涛), born in Ningbo, Zhejiang, China. I am current a graduate student at Tsinghua University. 
 
-我本科就读于清华大学生命科学系，并于2021年毕业。目前，我是清华大学数学系的研究生。我感兴趣的研究方向包括镜像对称，计数几何和几何表示论。[这里]({{< relref "notes_mathematics">}})是我的数学笔记。在数学学习之余，我对马克思主义、中西方哲学（孔孟老庄、尼采、福柯以及语言哲学）和文学（主要是中国古代诗词歌赋和一些近代的中外小说）比较感兴趣。
+# Education
+- 2021.9-now, PhD student, Mathematics, Tsinghua University, Advisor: [Will Donovan](https://w-donovan.github.io/)
+- 2017.9-2021.6, Bachelor, Biology, Tsinghua University, Advisor: [Yinqing Li](http://web.mit.edu/yinqingl/www/)
 
-首页的图片来自 Andrei Okounkov 在 ICM 2018 上演讲的 [slides](http://www.math.columbia.edu/%7Eokounkov/icm.pdf)。
+# Research Interset
+My research focuses on **enumerative geometry**, mainly **Donaldson-Thomas theory** and related topics, including Hall algebra, Bridgeland stability space for Calabi-Yau 3-fold, MNOP conjecture, special holonomy, and BPS states. I am also interested in homological mirror symmetry, low dimensional topology, derived algebraic geometry, geometric Langlands, symplectic duality, and p-adic geometry.
 
-可以通过邮件联系我：[zenith-john@foxmail.com](mailto:zenith-john/foxmail.com)
+# Teaching
+2020.9-2021.1, Teaching assistant, Linear Algebra 1
 
-My name is Zhang Nantao, a grauduate in mathematics at Tsinghua University. I am also an Emacser, a Linuxer, an open source amateur and a Vocaloid fan. My personal Linux configuration can be found at [My tools]({{< relref "my_tools">}}) and [After installation of Ubuntu]({{< relref "ubuntu">}})。My emacs configuration can be found at [Emacs]({{< relref "emacs_configuration">}})，[Emacs mu4e configuration]({{< relref "mu4e">}}). The complete code of my emacs configuration can be found at <https://github.com/zenith-john/zenith-emacs>. 
+# Activities
+I'm currently organizing two seminars:
+- Enumerative Geometry Learning Seminar at Tsinghua, 2021.2-2022.6, joint with Lan Zhuoming (兰倬铭), Topic: Homological Mirror Symmetry: Fukaya Category and Derived Category of Coherent Sheaves
+- Enumerative Geometry Learning Seminar ([Website](https://yau-msc-events.github.io/seminars.html), joint with Hao Zhang(张昊), Topics: TBD
 
-In 2021, I graduated from Tsinghua University with a bachelor degree in life science. Currently, I am a graduate student of mathematics department at Tsinghua University. My research interest includes mirror symmetry, enumerative geometry and geometric representation theory. [Here]({{< relref "notes_mathematics">}}) is my note of mathematics. Apart from mathematics, I am a fan of Marxism, philosophy (Confucius, Mencius, Lao, Zhuangzi, Nietzsche, Foucault and language philosophy) and literature (the Chinese poems and modern novels).
+# Other Interest
+Apart from mathematics, I am a fan of Marxism, philosophy (Confucius, Mencius, Laozi, Zhuangzi, Nietzsche, Foucault and language philosophy) and literature (the Chinese poems and modern novels). I also like Vocaloid, [白石溪](https://www.bilibili.com/video/BV1Ws411X7BJ) is one of my favourite songs.
 
-The picture on the home page is from the
-[slides](http://www.math.columbia.edu/%7Eokounkov/icm.pdf) of Andrei Okounkov on ICM 2018.
+I am also an open source amateur and have some experience in programming. My personal Linux configuration can be found at [My tools]({{< relref "my_tools">}}) and [After installation of Ubuntu]({{< relref "ubuntu">}})。My emacs configuration can be found at [Emacs]({{< relref "emacs_configuration">}})，[Emacs mu4e configuration]({{< relref "mu4e">}}). The complete code of my emacs configuration can be found at <https://github.com/zenith-john/zenith-emacs>. A toy QT program and python script can be found in my github repositories.
 
+# Contact
 You may contact me by E-mail: [zenith-john@foxmail.com](mailto:zenith-john/foxmail.com)
 
+# Miscellaneous
+- I use Zenith John as Nickname, because of similar spelling of ZeNiTh and Zhang NanTao, and similar pronunciation of Zhang(张) in Chinese and John in English.
+- The picture on the home page is from the
+[slides](http://www.math.columbia.edu/%7Eokounkov/icm.pdf) of Andrei Okounkov on ICM 2018.
+- The photo was taken at 2021.6 before old Tsinghua library.
