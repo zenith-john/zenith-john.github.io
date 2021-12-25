@@ -7,7 +7,7 @@ preserveTaxonomyNames = true
 paginate = 10
 
 [params]
-    header_image = "img/header.png"
+    header_image = "img/header.jpg"
     sidebar_avatar = "img/avatar.jpg"
     sidebar_about_description = "Graduate Student in Mathematics, Emacser, Linuxer"
     about_me = true
@@ -21,6 +21,13 @@ paginate = 10
     [params.social]
     email = "zenith-john@foxmail.com"
     github = "https://github.com/zenith-john/"
+
+    [[params.additional_menus]]
+    title = "Posts"
+    href = "top/archive/"
+    [[params.additional_menus]]
+    title = "Tags"
+    href = "top/tags/"
 
 
 [markup]

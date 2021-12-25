@@ -29,7 +29,7 @@
                         {{ end }}
                     {{ end }}
                     
-		    {{ range .Site.Params.addtional_menus }}
+		    {{ range .Site.Params.additional_menus }}
                         <li><a href="{{.href | relLangURL}}">{{.title}}</a></li>
                     {{ end }}
 
@@ -39,9 +39,6 @@
 		    </li>
                     {{ end }}
 
-                    <li>
-                        <a href="{{ "/top/about" | relLangURL }}">About Me</a>
-                    </li>
                     <li>
                         <a href="{{ "/" | relLangURL }}">Home</a>
                     </li>

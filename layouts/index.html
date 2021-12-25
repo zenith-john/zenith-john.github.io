@@ -1,0 +1,79 @@
+{{ define "main" }}
+<div class="container">
+  <div class="row">
+    <div class="
+                col-lg-7
+                col-md-7
+                col-sm-12
+                col-xs-12
+                post-container">
+      {{ .Content }}
+    </div>
+    <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container">
+        <div class="about">
+        {{ with .Site.Params.sidebar_avatar }}
+        <img src="{{ . | relURL }}" alt="avatar" />
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+                ">
+      <h1> Last Updated Posts: </h1>
+      {{ $byLastMod := .Site.RegularPages.ByLastmod }}
+      {{ $recent := ($byLastMod | last 3).Reverse }}
+      {{ range $recent }}
+      <div class="post-preview">
+        <a href="{{ .Permalink }}">
+          <h2 class="post-title">
+            {{ .Title }}
+          </h2>
+          {{with .Params.subtitle }}
+          <h3 class="post-subtitle">
+            {{ . }}
+          </h3>
+          {{ end }}
+          <div class="post-content-preview">
+            {{ with .Description }}
+            {{ . }}
+            {{ else }}
+            {{ .Summary}}
+            {{ end }}
+          </div>
+        </a>
+        <p class="post-meta">
+          {{ if .Params.metadata }}
+          {{ range $index, $element := .Params.metadata }}
+          {{ if .link }}
+          <a href="{{ .link }}">{{ .text }}</a>
+          {{ else }}
+          {{ .text }}
+          {{ end }}
+          {{ end }}
+          {{ else }}
+          Posted by{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}  {{ .Date.Format "Monday, January 2, 2006" }}
+          <!-- Don't show "Last Modified on" if update happened on the same day. -->
+          {{ if (and (not .Lastmod.IsZero) (not (eq (dateFormat "2006-01-02" .Lastmod) (dateFormat "2006-01-02" .Date)))) }}
+          <br>Last Modified on {{ dateFormat "Monday, January 2, 2006" .Params.LastMod }}
+          {{ end }}
+          {{ end }}
+        </p>
+
+      </div>
+      <hr>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}
