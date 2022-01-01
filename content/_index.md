@@ -18,7 +18,7 @@ My name is Zhang Nantao(张南涛), born in Ningbo, Zhejiang, China. I am curren
 
 ## Research Interset {#research-interset}
 
-My research focuses on **enumerative geometry**, mainly **Donaldson-Thomas theory** and related topics, including Hall algebra, Bridgeland stability space for Calabi-Yau 3-fold, MNOP conjecture, special holonomy, and BPS states. I am also interested in homological mirror symmetry, low dimensional topology, derived algebraic geometry, geometric Langlands, symplectic duality, and p-adic geometry. See [more](./post/questions_of_interest).
+My research focuses on **enumerative geometry**, mainly **Donaldson-Thomas theory** and related topics, including (motivic) Hall algebra, Bridgeland stability space for Calabi-Yau 3-fold, MNOP conjecture, special holonomy, and BPS states. I am also interested in homological mirror symmetry, low dimensional topology, and p-adic geometry. See [more](./post/questions_of_interest).
 
 
 ## Teaching {#teaching}
@@ -32,6 +32,8 @@ I'm currently organizing two seminars:
 
 -   Enumerative Geometry Learning Seminar at Tsinghua, 2022.2-2022.6, joint with Lan Zhuoming (兰倬铭), Topic: Homological Mirror Symmetry: Fukaya Category and Derived Category of Coherent Sheaves ([Website](./post/enumerative_geometry_seminar_2022/))
 -   Enumerative Geometry Learning Seminar ([Website](https://yau-msc-events.github.io/seminars.html)), joint with Hao Zhang(张昊), Topics: TBD
+
+I'm willing to learn [more]({{< relref "questions_of_interest#d12bb13c-52fd-46aa-9b77-e3d9c90afc19" >}}).
 
 
 ## Other Interest {#other-interest}

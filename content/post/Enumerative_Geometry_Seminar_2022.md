@@ -9,7 +9,7 @@ draft = false
 ## Aim {#aim}
 
 Provide attendees enough information of Fukaya category and derived category of coherent sheaves to understand the main statement of homological mirror symmetry.
-\\[{\rm Fuk}(X) \cong D^{b}{\rm Coh}(X^{\vee})\\]
+\\[D^{b}{\rm Fuk}(X) \cong D^{b}{\rm Coh}(X^{\vee})\\]
 Also, I hope this learning seminar will give us a good chance to communicate with others in Tsinghua University, so feel free to invite others!
 
 
