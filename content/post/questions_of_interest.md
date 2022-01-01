@@ -96,6 +96,7 @@ Also, there are many other things I want to learn but doesn't have time yet. I w
 -   Derived algebraic geometry
 -   Cluster algebra (next semester, Tsinghua will have a course about it)
 -   Quiver variety
+-   Mixed Hodge theory
 -   Special holonomy
 -   D-modules
 -   Symplectic duality (next semester, Tsinghua will have a course about it)
