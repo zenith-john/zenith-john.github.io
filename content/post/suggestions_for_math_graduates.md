@@ -15,7 +15,7 @@ draft = false
 -   Ravi Vakil
     <http://math.stanford.edu/~vakil/potentialstudents.html>
 -   Bjorn Poonen
-    <http://math.stanford.edu/~vakil/potentialstudents.html>
+    <https://klein.mit.edu/~poonen/advice.html>
 -   最后附上一个伟大物理学家 Steven Weinberg 的讲稿
     <https://www.nature.com/articles/426389a>
     中文翻译 <https://zhuanlan.zhihu.com/p/379092835>

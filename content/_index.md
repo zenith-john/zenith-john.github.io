@@ -7,7 +7,7 @@ draft = false
 
 ## About Me {#about-me}
 
-My name is Zhang Nantao(张南涛), born in Ningbo, Zhejiang, China. I am current a graduate student at Tsinghua University.
+My name is Zhang Nantao(张南涛), born in Ningbo, Zhejiang, China. I am currently a graduate student at Tsinghua University.
 
 
 ## Education {#education}
@@ -33,7 +33,7 @@ I'm currently organizing two seminars:
 -   Enumerative Geometry Learning Seminar at Tsinghua, 2022.2-2022.6, joint with Lan Zhuoming (兰倬铭), Topic: Homological Mirror Symmetry: Fukaya Category and Derived Category of Coherent Sheaves ([Website](./post/enumerative_geometry_seminar_2022/))
 -   Enumerative Geometry Learning Seminar ([Website](https://yau-msc-events.github.io/seminars.html)), joint with Hao Zhang(张昊), Topics: TBD
 
-I'm willing to learn [more]({{< relref "questions_of_interest#d12bb13c-52fd-46aa-9b77-e3d9c90afc19" >}}).
+I'm willing to learn [more]({{< relref "questions_of_interest#i-want-to-learn-dot-dot-dot" >}}).
 
 
 ## Other Interest {#other-interest}
