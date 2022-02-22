@@ -16,9 +16,11 @@ Also, I hope this learning seminar will give us a good chance to communicate wit
 
 ## Time and Place {#time-and-place}
 
-2022.2-2022.6
+Start from 2022.02.27.
 
-More specific time and place **to be determined**. Maybe in Jinchunyuan West Building.
+Every Sunday, 09:30-11:00
+
+Jinchunyuan West Building, Conference Room 1. (近春园西楼，第一会议室)
 
 
 ## Prerequisite {#prerequisite}
