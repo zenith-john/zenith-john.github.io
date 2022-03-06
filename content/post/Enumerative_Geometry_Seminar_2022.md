@@ -10,7 +10,7 @@ lastmod = 2022-01-04
 ## Aim {#aim}
 
 Provide attendees enough information of Fukaya category and derived category of coherent sheaves to understand the main statement of homological mirror symmetry.
-\\[D^{b}{\rm Fuk}(X) \cong D^{b}{\rm Coh}(X^{\vee})\\]
+\\[D^{\pi}{\rm Fuk}(X) \cong D^{b}{\rm Coh}(X^{\vee})\\]
 Also, I hope this learning seminar will give us a good chance to communicate with others in Tsinghua University, so feel free to invite others!
 
 
@@ -39,6 +39,13 @@ Currently, there are three speakers, Su Weilin(苏蔚琳) will talk about part 1
 5.  Homological mirror symmetry for elliptic curve
 
 We choose this order because the history serves as the introduction and backgroud of the topic. The derived category is a natural sucessor of the course "Commutative algebra and homological algebra". In case somebody doesn't know much about algebraic geometry, we tend to put the derived category of coherent sheaves later and deal with symplectic geometry side first. You can know more about algebraic geometry from the course taught by Professor Sun Shenghao. As an example, we will prove the homological mirror symmetry for elliptic curve at last.
+
+
+## Notes {#notes}
+
+Below is a working draft of the lecture notes which will be continually edited and expanded during the seminar. Any comments/suggestions are welcomed.
+
+[Seminar Notes](https://zenith-john.github.io/file/HMS.pdf)
 
 
 ## References {#references}
@@ -118,6 +125,8 @@ Examples of HMS
 ## Notes {#notes}
 
 If I have time to write the notes, the notes will be added here.
+
+<https://zenith-john.github.io/file/HMS.pdf>
 
 
 ## Organizer {#organizer}
