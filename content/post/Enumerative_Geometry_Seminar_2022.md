@@ -122,13 +122,6 @@ Examples of HMS
 <a id="AA2021"></a>[AA2021] Abouzaid & Auroux, Homological Mirror Symmetry for Hypersurfaces in \\((\\mathbb{C}^*)\^n\\), <i>arXiv:2111.06543 [math]</i>,  (2021). [↩](#a41de229420274ff2a3f034ff5389f0e)
 
 
-## Notes {#notes}
-
-If I have time to write the notes, the notes will be added here.
-
-<https://zenith-john.github.io/file/HMS.pdf>
-
-
 ## Organizer {#organizer}
 
 Zhang Nantao (张南涛), Lan Zhuoming (兰倬铭)
