@@ -31,7 +31,7 @@ My research focuses on **enumerative geometry**, mainly **Donaldson-Thomas theor
 I'm currently organizing two seminars:
 
 -   Enumerative Geometry Learning Seminar at Tsinghua, 2022.2-2022.6, joint with Lan Zhuoming (兰倬铭), Topic: Homological Mirror Symmetry: Fukaya Category and Derived Category of Coherent Sheaves ([Website](./post/enumerative_geometry_seminar_2022/))
--   Enumerative Geometry Learning Seminar ([Website](https://yau-msc-events.github.io/seminars.html)), joint with Hao Zhang(张昊), Topics: TBD
+-   Enumerative Geometry Seminar ([Website](https://yau-msc-events.github.io/seminars.html)), joint with Will Donovan, Hao Zhang(张昊)
 
 I'm willing to learn [more]({{< relref "questions_of_interest#i-want-to-learn-dot-dot-dot" >}}).
 

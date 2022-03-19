@@ -2,6 +2,7 @@
 title = "一些大佬对数学研究生的建议"
 author = ["Zenith John"]
 publishDate = 2022-01-01
+tags = ["Mathematics"]
 draft = false
 +++
 
