@@ -22,6 +22,16 @@ Every Sunday, 09:30-11:00
 
 Jinchunyuan West Building, Conference Room 1. (近春园西楼，第一会议室)
 
+1.  Introduction to mirror symmetry, 02.27, Weilin Su
+2.  Derived category and triangulated category, 03.06, Nantao Zhang
+3.  Derived functors and some example of derived category of coherent sheaves, 03.13, Nantao Zhang
+4.  Fukaya category, 03.27 &amp; 04.03, Zhuoming Lan
+5.  HMS for elliptic curves, 04.10 &amp; 04.17, Nantao Zhang
+6.  Constructible sheaves and Fukaya category, 04.24, Jiawei Zhou
+7.  Introduction to toric varieties, 05.08, Jinghao Yu
+8.  A categorification of Morelli’s theorem, 5.22 &amp; 6.5, Luyu Zheng
+9.  T-duality and homological mirror symmetry for toric varieties, 6.12, Nantao Zhang
+
 
 ## Prerequisite {#prerequisite}
 
@@ -45,7 +55,12 @@ We choose this order because the history serves as the introduction and backgrou
 
 Below is a working draft of the lecture notes which will be continually edited and expanded during the seminar. Any comments/suggestions are welcomed.
 
-[Seminar Notes](https://zenith-john.github.io/file/HMS.pdf)
+The notes of first part of the seminar (Until 04-24): [Seminar Notes I](https://zenith-john.github.io/file/HMS.pdf).
+Due to Covid-19, the seminars were then moved online.
+
+-   Notes of Jinghao Yu: [Toric Varieties](https://zenith-john.github.io/file/Toric%5FVarieties.pdf).
+-   Notes of Luyu Zheng: [FLTZ](https://zenith-john.github.io/file/FLTZ.pdf).
+-   Notes of Nantao Zhang: [FLTZ2](https://zenith-john.github.io/file/FLTZ2.pdf).
 
 
 ## References {#references}
@@ -85,7 +100,7 @@ Examples of HMS
 5.  HMS for pairs of pants. [<span id="29101644480f2bf7c079ea4db37580c8"><a href="#Sheridan2011" title="Sheridan, On the Homological Mirror Symmetry Conjecture for Pairs of Pants, {Journal of Differential Geometry}, v(2), 271--367 (2011).">Sheridan2011</a></span>]
 6.  HMS for toric varieties. [<span id="0003931c4f7fc0a9b6b160ba0b7d0edb"><a href="#FLT+2012" title="Fang, Liu, Treumann \&amp; Zaslow, T-Duality and Homological Mirror Symmetry for Toric Varieties, {Advances in Mathematics}, v(3), 1873--1911 (2012).">FLT+2012</a></span>]
 7.  HMS for punctured spheres. [<span id="c26c4997136d06cf1d682436df5ed7d5"><a href="#AAE+2013" title="Abouzaid, Auroux, Efimov, Katzarkov \&amp; Orlov, Homological Mirror Symmetry for Punctured Spheres, {Journal of the American Mathematical Society}, v(4), 1051--1083 (2013).">AAE+2013</a></span>]
-8.  HMS for quartic surface. [<span id="63e8f2244dbb7b985dd7c9624da5c2e3"><a href="#Seidel2015" title="Seidel, Homological Mirror Symmetry for the Quartic Surface, {Memoirs of the American Mathematical Society}, v(1116), 0--0 (2015).">Seidel2015</a></span>]
+8.  HMS for quartic surface. [<span id="63e8f2244dbb7b985dd7c9624da5c2e3"><a href="#Seidel2015" title="Seidel, Homological Mirror Symmetry for the Quartic Surface, {Memoirs of the American Mathematical Society}, v(1116), (2015).">Seidel2015</a></span>]
 9.  HMS for Calabi-Yau hypersurface in projective space. [<span id="698e890b5f7d57ce6774a70124c19b4a"><a href="#Sheridan2015" title="Sheridan, Homological Mirror Symmetry for {{Calabi}}\textendash{{Yau}} Hypersurfaces in Projective Space, {Inventiones mathematicae}, v(1), 1--186 (2015).">Sheridan2015</a></span>]
 10. HMS for Fano hypersurface in projective space. [<span id="a0b75654343fa14027649f7b51333e11"><a href="#Sheridan2016" title="Sheridan, On the {{Fukaya}} Category of a {{Fano}} Hypersurface in Projective Space, {Publications math\'ematiques de l'IH\'ES}, v(1), 165--317 (2016).">Sheridan2016</a></span>]
 11. HMS for higher dimensional pairs of pants. [<span id="5a055c471a811486dd13fa0f27bf5eef"><a href="#LP2020" title="Lekili \&amp; Polishchuk, Homological Mirror Symmetry for Higher-Dimensional Pairs of Pants, {Compositio Mathematica}, v(7), 1310--1347 (2020).">LP2020</a></span>]
@@ -111,7 +126,7 @@ Examples of HMS
 
 <a id="AAE+2013"></a>[AAE+2013] Abouzaid, Auroux, Efimov, Katzarkov & Orlov, Homological Mirror Symmetry for Punctured Spheres, <i>Journal of the American Mathematical Society</i>, <b>26(4)</b>, 1051-1083 (2013). <a href="http://dx.doi.org/10.1090/S0894-0347-2013-00770-5">doi</a>. [↩](#c26c4997136d06cf1d682436df5ed7d5)
 
-<a id="Seidel2015"></a>[Seidel2015] Seidel, Homological Mirror Symmetry for the Quartic Surface, <i>Memoirs of the American Mathematical Society</i>, <b>236(1116)</b>, 0-0 (2015). <a href="http://dx.doi.org/10.1090/memo/1116">doi</a>. [↩](#63e8f2244dbb7b985dd7c9624da5c2e3)
+<a id="Seidel2015"></a>[Seidel2015] Seidel, Homological Mirror Symmetry for the Quartic Surface, <i>Memoirs of the American Mathematical Society</i>, <b>236(1116)</b>, (2015). <a href="http://dx.doi.org/10.1090/memo/1116">doi</a>. [↩](#63e8f2244dbb7b985dd7c9624da5c2e3)
 
 <a id="Sheridan2015"></a>[Sheridan2015] Sheridan, Homological Mirror Symmetry for Calabi\textendashYau Hypersurfaces in Projective Space, <i>Inventiones mathematicae</i>, <b>199(1)</b>, 1-186 (2015). <a href="http://dx.doi.org/10.1007/s00222-014-0507-2">doi</a>. [↩](#698e890b5f7d57ce6774a70124c19b4a)
 
@@ -119,7 +134,11 @@ Examples of HMS
 
 <a id="LP2020"></a>[LP2020] Lekili & Polishchuk, Homological Mirror Symmetry for Higher-Dimensional Pairs of Pants, <i>Compositio Mathematica</i>, <b>156(7)</b>, 1310-1347 (2020). <a href="http://dx.doi.org/10.1112/S0010437X20007150">doi</a>. [↩](#5a055c471a811486dd13fa0f27bf5eef)
 
-<a id="AA2021"></a>[AA2021] Abouzaid & Auroux, Homological Mirror Symmetry for Hypersurfaces in \\((\\mathbb{C}^*)\^n\\), <i>arXiv:2111.06543 [math]</i>,  (2021). [↩](#a41de229420274ff2a3f034ff5389f0e)
+<a id="AA2021"></a>[AA2021] Abouzaid & Auroux, Homological Mirror Symmetry for Hypersurfaces in \$((\textbackslash mathbb\\vphantom\C\vphantom\\\^*)\^n\textbackslash\$, <i>arXiv:2111.06543 [math]</i>,  (2021). [↩](#a41de229420274ff2a3f034ff5389f0e)
+
+<a id="NZ2009"></a>[NZ2009] Nadler & Zaslow, Constructible Sheaves and the Fukaya Category, <i>Journal of the American Mathematical Society</i>, <b>22(1)</b>, 233-286 (2009). <a href="http://dx.doi.org/10.1090/S0894-0347-08-00612-7">doi</a>. [↩](#c0080e63e80909386587ad4d966284fe)
+
+<a id="FLT+2011"></a>[FLT+2011] Fang, Liu, Treumann & Zaslow, A Categorification of Morelli's Theorem, <i>Inventiones mathematicae</i>, <b>186(1)</b>, 79-114 (2011). <a href="http://dx.doi.org/10.1007/s00222-011-0315-x">doi</a>. [↩](#30671e469776a339db1939ac6e128b90)
 
 
 ## Organizer {#organizer}
