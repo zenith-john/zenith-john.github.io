@@ -45,17 +45,19 @@
   <meta name="keyword"  content="{{ .Site.Params.keyword }}">
   <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL }}">
 
-  <title>{{ if .Title }}{{ .Title }}{{ end }}</title>
+  <title>{{ if .Title }}{{ .Title }} | {{ .Site.Params.SEOTitle }}{{ else }}{{ .Site.Params.SEOTitle }}{{ end }}</title>
 
-  <link rel="canonical" href="{{ .RelPermalink | relURL }}">
+  <link rel="canonical" href="{{ .RelPermalink }}">
 
+  {{ if .Site.Params.disqus_proxy }}
   <link rel="stylesheet" href="{{ "css/iDisqus.min.css" | relURL }}"/>
+  {{ end }}
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | relURL }}">
 
-  <!-- Hux CSS -->
-  <link rel="stylesheet" href="{{ "css/hux-blog.min.css" | relURL }}">
+  <!-- Clean White theme CSS -->
+  <link rel="stylesheet" href="{{ "css/hugo-theme-cleanwhite.min.css" | relURL }}">
 
   <!-- zangshang CSS -->
   <link rel="stylesheet" href="{{ "css/zanshang.css" | relURL }}">
@@ -64,12 +66,13 @@
   <link rel="stylesheet" href="{{ "css/ox-hugo.css" | relURL }}">
 
   <!-- Custom Fonts -->
+  <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom Fonts -->
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
 
-  <!--  Custom CSS  -->
-  {{ range .Site.Params.custom_css -}}
-  <link rel="stylesheet" href="{{ . | absURL }}">
-  {{- end }}
+  <!-- jQuery -->
+  <script src="{{ "js/jquery.min.js" | relURL }}"></script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
@@ -78,7 +81,6 @@
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
             // customised options
-            maxExpand: 10000,
             // • auto-render specific keys, e.g.:
             delimiters: [
                 {left: '$$', right: '$$', display: true},
@@ -106,6 +108,12 @@
                 "\\shom": "\\mathcal{H}om",
                 "\\sext": "\\mathcal{E}xt",
                 "\\dirac": "\\cancel{D}",
+                "\\rinterval": "[#1, #2[",
+                "\\linterval": "]#1,#2]",
+                "\\xrightarrow": "\\overset{#1}{\to}",
+                "\\norm": "\\left\\lVert#1\\right\\rVert",
+                "\\abs": "\\left|#1\\right|",
+                "\\cat": "\\underline{\\mathbf{#1}}",
 
                 "\\End": "\\operatorname{End}",
                 "\\Hom": "\\operatorname{Hom}",
@@ -129,7 +137,7 @@
                 "\\pd": "\\operatorname{P.D.}",
                 "\\pl": "\\operatorname{PL}",
                 "\\topo": "\\operatorname{Top}",
-                
+
                 "\\GL": "\\operatorname{GL}",
                 "\\PGL": "\\operatorname{PGL}",
                 "\\SL": "\\operatorname{SL}",
