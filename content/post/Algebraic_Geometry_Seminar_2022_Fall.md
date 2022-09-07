@@ -4,7 +4,7 @@ author = ["Zenith John"]
 publishDate = 2022-09-06
 tags = ["Mathematics", "Activity"]
 draft = false
-lastmod = 2022-09-06
+lastmod = 2022-09-07
 +++
 
 ## Aim {#aim}
@@ -14,7 +14,9 @@ Learning algebraic cycles and intersection theory in algebraic geometry.
 
 ## Time and Place {#time-and-place}
 
-To be determined. About once a week.
+Time: Every Tuesday, 09:50-11:25.
+
+Place: Ning Zhai(宁斋) W11
 
 
 ## Prerequisite {#prerequisite}
@@ -35,8 +37,13 @@ I will take the notes and put it here during the seminar. Any correction or sugg
 ## References {#references}
 
 1.  Intersection Theory, Fulton, 1988
+2.  [Intersection Theory Seminar at Columbia University](http://math.columbia.edu/~syu/f18-intersection.html)
 
 
 ## Organizer {#organizer}
 
 Nantao Zhang(张南涛)
+
+You may join with following QR code or contact me by email znt21 (at) mails.tsinghua.edu.cn.
+
+{{< figure src="/img/2022-09-06_18-12-35_mmqrcode1662458751016.png" width="300px" >}}
