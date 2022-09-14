@@ -18,6 +18,16 @@ Time: Every Tuesday, 09:50-11:25.
 
 Place: Ning Zhai(宁斋) W11
 
+Tentative schedule
+
+| Time       | Speaker      | Content               |
+|------------|--------------|-----------------------|
+| 2022-09-13 | Nantao Zhang | Chapter 1 of Fulton   |
+| 2022-09-20 | Liyuan Ye    | Chapter 2 of Fulton   |
+| 2022-09-27 | Yuting Liu   | Chapter 3 of Fulton   |
+| 2022-10-04 | Yunling Chen | Chapter 4,5 of Fulton |
+| 2022-10-11 | Jinghao Yu   | Chapter 6 of Fulton   |
+
 
 ## Prerequisite {#prerequisite}
 
@@ -32,6 +42,9 @@ We will try to cover the first 6 chapters of Fulton's Intersection Theory, and m
 ## Notes {#notes}
 
 I will take the notes and put it here during the seminar. Any correction or suggestion is welcome.
+
+Notes: (Last update 2022-09-14)
+[Intersection Theory](https://zenith-john.github.io/file/Intersection%5FTheory.pdf)
 
 
 ## References {#references}
