@@ -43,7 +43,7 @@ We will try to cover the first 6 chapters of Fulton's Intersection Theory, and m
 
 I will take the notes and put it here during the seminar. Any correction or suggestion is welcome.
 
-Notes: (Last update 2022-09-14)
+Notes: (Last update 2022-09-23)
 [Intersection Theory](https://zenith-john.github.io/file/Intersection%5FTheory.pdf)
 
 
