@@ -4,7 +4,7 @@ author = ["Zenith John"]
 publishDate = 2022-09-06
 tags = ["Mathematics", "Activity"]
 draft = false
-lastmod = 2022-09-07
+lastmod = 2022-12-09
 +++
 
 ## Aim {#aim}
@@ -20,13 +20,19 @@ Place: Ning Zhai(宁斋) W11
 
 Tentative schedule
 
-| Time       | Speaker      | Content               |
-|------------|--------------|-----------------------|
-| 2022-09-13 | Nantao Zhang | Chapter 1 of Fulton   |
-| 2022-09-20 | Liyuan Ye    | Chapter 2 of Fulton   |
-| 2022-09-27 | Yuting Liu   | Chapter 3 of Fulton   |
-| 2022-10-04 | Yunling Chen | Chapter 4,5 of Fulton |
-| 2022-10-11 | Jinghao Yu   | Chapter 6 of Fulton   |
+| Time       | Speaker                  | Content                         |
+|------------|--------------------------|---------------------------------|
+| 2022-09-13 | Nantao Zhang             | Chapter 1 of Fulton             |
+| 2022-09-20 | Liyuan Ye                | Chapter 2 of Fulton             |
+| 2022-09-27 | Yuting Liu               | Chapter 3 of Fulton             |
+| 2022-10-04 | Yuting Liu, Yunling Chen | continue, Chapter 4,5 of Fulton |
+| 2022-10-11 | Yunling Chen             | continue                        |
+| 2022-10-18 | Nantao Zhang             | Chapter 6 of Fulton             |
+| 2022-10-25 | Nantao Zhang             | Chapter 10 of Fulton            |
+| 2022-11-01 | Nantao Zhang             | Chapter 11 of Fulton            |
+| 2022-11-08 | Yuting Liu               | Chapter 15 of Fulton            |
+| 2022-11-15 | Nantao Zhang             | Chapter 19 of Fulton            |
+| 2022-11-22 | Cancelled                |                                 |
 
 
 ## Prerequisite {#prerequisite}
