@@ -29,6 +29,8 @@ My research interest lies in enumerative geometry and mathematical physics, espe
 
 Current:
 
+-   Enumerative Geometry Seminar, Topic: Aspects of Gromov-Witten Theory ([Website](./post/enumerative_geometry_seminar_2023_spring/))
+
 Past Seminar:
 
 -   Enumerative Geometry Seminar ([Website](https://yau-msc-events.github.io/seminars.html)), joint with Will Donovan, Hao Zhang(张昊)
