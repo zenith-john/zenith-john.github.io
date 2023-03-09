@@ -30,8 +30,8 @@ We will cover following topics in Gromov-Witten theory
 
 1.  Gromov-Witten/Pandharipande-Thomas correspondence (Nantao Zhang)
 2.  Gromov-Witten theory and topological recursion (Jinghao Yu)
-3.  Graph sum formula of \\(\mathbb{C}^{n} / G\\) (Zhuoming Lan)
-4.  The equivariant Gromov-Witten theory of \\(\mathbb{P}^{1}\\) (Weilin Su)
+3.  The equivariant Gromov-Witten theory of \\(\mathbb{P}^{1}\\) (Weilin Su)
+4.  Graph sum formula of \\(\mathbb{C}^{n} / G\\) (Zhuoming Lan)
 
 Four speakers will take turns to discuss the topics.
 
@@ -41,17 +41,17 @@ A tentative schedule
 |-------|--------------|------------------------------|
 | 02-28 | Nantao Zhang | GW/PT correspondence I       |
 | 03-07 | Jinghao Yu   | Topological recursion I      |
-| 03-14 | Zhuoming Lan | Graph sum formula I          |
-| 03-21 | Weilin Su    | Equivariant GW theory I      |
+| 03-14 | Weilin Su    | Equivariant GW theory I      |
+| 03-21 | Zhuoming Lan | Graph sum formula I          |
 | 03-28 | Nantao Zhang | GW/PT correspondence II      |
 | 04-04 | Jinghao Yu   | Topological recursion II     |
-| 04-11 | Zhuoming Lan | Graph sum formula II         |
-| 04-18 | Weilin Su    | Equivariant GW theory II     |
+| 04-11 | Weilin Su    | Equivariant GW theory II     |
+| 04-18 | Zhuoming Lan | Graph sum formula II         |
 | 04-25 | Nantao Zhang | GW/PT correspondence III     |
 | 05-02 |              | Cancelled. Happy Labour Day! |
 | 05-09 | Jinghao Yu   | Topological recursion III    |
-| 05-16 | Zhuoming Lan | Graph sum formula III        |
-| 05-23 | Weilin Su    | Equivariant GW theory III    |
+| 05-16 | Weilin Su    | Equivariant GW theory III    |
+| 05-23 | Zhuoming Lan | Graph sum formula III        |
 | 05-30 | Nantao Zhang | GW/PT correspondence IV      |
 | 06-06 | Jinghao Yu   | Topological recursion IV     |
 
