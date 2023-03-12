@@ -22,7 +22,9 @@ Email: znt21 (at) mails.tsinghua.edu.cn
 
 ## Research Interest {#research-interest}
 
-My research interest lies in enumerative geometry and mathematical physics, especially about Donaldson-Thomas type invariants. These invariants are at the interface of many areas, including mirror symmetry, integrable system, geometric Langlands, Bridgeland stability, low-dimensional topology and supersymmetric gauge theory. Occasionally, I think about transporting geometric ideas to number theory via (enhanced) [Weil's Rosetta stone](http://www.ams.org/notices/200503/fea-weil.pdf). For details, see [here](./post/questions_of_interest).
+My research interest lies in enumerative geometry and mathematical physics, especially about Donaldson-Thomas type invariants. These invariants are at the interface of many areas, including mirror symmetry, integrable system, geometric Langlands, Bridgeland stability, low-dimensional topology and supersymmetric gauge theory. Occasionally, I think about transporting geometric ideas to number theory via (enhanced) [Weil's Rosetta stone](http://www.ams.org/notices/200503/fea-weil.pdf). Some of the ideas are summarized in the following diagram. For details, see [here](./post/questions_of_interest).
+
+{{< figure src="/img/2023-03-12_15-01-54_My_Research.svg" >}}
 
 
 ## Activities {#activities}
@@ -33,13 +35,14 @@ Current:
 
 Past Seminar:
 
--   Enumerative Geometry Seminar ([Website](https://yau-msc-events.github.io/seminars.html)), joint with Will Donovan, Hao Zhang(张昊)
 -   Algebraic Geometry Seminar, 2022.9-2023.1, Topic: Intersection Theory ([Website](./post/algebraic_geometry_seminar_2022_fall/))
+-   Enumerative Geometry Seminar 2022 ([Website](https://yau-msc-events.github.io/seminars.html)), joint with Will Donovan, Hao Zhang(张昊)
 -   Enumerative Geometry Learning Seminar at Tsinghua, 2022.2-2022.6, joint with Lan Zhuoming (兰倬铭), Topic: Homological Mirror Symmetry: Fukaya Category and Derived Category of Coherent Sheaves ([Website](./post/enumerative_geometry_seminar_2022/))
 
 
 ## Teaching {#teaching}
 
+-   2023.2-2023.6, Teaching assistant, Calculus(A) II
 -   2022.9-2023.1, Teaching assistant, Geometry and Symmetry
 -   2022.3-2022.6, Teaching assistant, Advanced Linear Algebra
 -   2021.9-2022.1, Teaching assistant, Linear Algebra 1
