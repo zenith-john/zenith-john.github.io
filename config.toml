@@ -23,11 +23,14 @@ paginate = 10
     github = "https://github.com/zenith-john/"
 
     [[params.additional_menus]]
-    title = "Posts"
-    href = "top/archive/"
+    title = "Math"
+    href = "top/math/"
     [[params.additional_menus]]
-    title = "Tags"
-    href = "top/tags/"
+    title = "Nonsense"
+    href = "top/nonsense/"
+    [[params.additional_menus]]
+    title = "Archives"
+    href = "top/archives/"
 
 
 [markup]
