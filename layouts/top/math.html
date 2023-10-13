@@ -8,47 +8,12 @@
                 col-xs-12
                 post-container
                 ">
-      <h2>Publications and preprints</h2>
-      {{ with .Site.GetPage "top/publications.md" }}{{.Content}}{{end}}
-    </div>
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-                ">
-      <h2>Talks</h2>
-      {{ with .Site.GetPage "top/talks.md" }}{{.Content}}{{end}}
-    </div>
-    {{ $math := slice "Mathematics" }}
-    {{ $act := slice  "Activity" }}
-    {{ $pages := (where .Site.RegularPages  "Params.tags" "intersect" $math)}}
-    {{ $activities := (where $pages "Params.tags" "intersect" $act)}}
-    {{ $essays := complement $activities $pages}}
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-                ">
-      <h2>Activities</h2>
-      <ul>
-        {{ range $activities }}
-        <li>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </li>
-        {{end}}
-      </ul>
-    </div>
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-                ">
+      {{ .Content }}
+      {{ $math := slice "Mathematics" }}
+      {{ $act := slice  "Activity" }}
+      {{ $pages := (where .Site.RegularPages  "Params.tags" "intersect" $math)}}
+      {{ $activities := (where $pages "Params.tags" "intersect" $act)}}
+      {{ $essays := complement $activities $pages}}
       <h2>Essays</h2>
       {{ range $essays.GroupByDate "2006" }}
       <h3>{{ .Key }}</h3>
