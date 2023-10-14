@@ -8,7 +8,7 @@ paginate = 10
 
 [params]
     header_image = "img/header.webp"
-    sidebar_avatar = "img/avatar.jpg"
+    sidebar_avatar = "img/avatar.webp"
     sidebar_about_description = "Graduate Student in Mathematics, Emacser, Linuxer"
     about_me = true
     desription = "张南涛，数学研究生，Emacser, 开源爱好者 | 实迷途其未远，觉今是而昨非"
