@@ -1,0 +1,20 @@
+{{ define "main" }}
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ .Site.Params.image_404 | relURL }}')">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				<div class="site-heading" id="tag-heading">
+                  <h1>Page Not Found</h1>
+                  <h2>方可方不可，方不可方可。——《庄子》</h2>
+                  <h2>Now the admissibility of a thing and now its inadmissibility; now its inadmissibility and now its admissibility. - <i>Zhuangzi</i></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<script>
+	document.body.classList.add('page-fullscreen');
+</script>
+{{ end }}

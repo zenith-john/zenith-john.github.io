@@ -3,7 +3,7 @@ layout: "nonsense"
 title: "Nonsense"
 hidden: true
 ---
-<h1 style="text-align: center;">この文章 were written sans raison.</h1>
+<h1 style="text-align: center;">Amīcī!وسھلا‎ أھلا ‎この文章 were written sans raison.</h1>
 
 - 作为哲学爱好者：我偏爱先秦哲学、德国哲学和法国哲学。列举几个我喜欢的哲学家：孔子、孟子、庄子、康德、马克思、尼采、维特根斯坦、福柯、德里达。目前我正在阅读德里达。
 

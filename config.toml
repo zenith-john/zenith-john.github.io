@@ -7,7 +7,7 @@ preserveTaxonomyNames = true
 paginate = 10
 
 [params]
-    header_image = "img/header.jpg"
+    header_image = "img/header.webp"
     sidebar_avatar = "img/avatar.jpg"
     sidebar_about_description = "Graduate Student in Mathematics, Emacser, Linuxer"
     about_me = true
@@ -15,7 +15,7 @@ paginate = 10
     showtoc = false
     featured_tags = true
 
-    image_404 = "img/header.png"
+    image_404 = "img/header.webp"
     title_404 = "方可方不可，方不可方可"
 
     [params.social]
