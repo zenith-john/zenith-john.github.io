@@ -1,5 +1,5 @@
 +++
-title = "Zenith John's Nonsense"
+title = "忘言阁 Zenith John's Nonsense"
 author = ["Zenith John"]
 publishDate = 2021-12-31
 draft = false

@@ -1,6 +1,6 @@
 baseURL = "https://zenith-john.github.io/"
 languageCode = "zh-cn"
-title = "Zenith John's Nonsense"
+title = "忘言阁 Zenith John's Nonsense"
 theme = "hugo-theme-cleanwhite"
 hasCJKLanguage = true
 preserveTaxonomyNames = true
@@ -23,13 +23,13 @@ paginate = 10
     github = "https://github.com/zenith-john/"
 
     [[params.additional_menus]]
-    title = "Math"
+    title = "数学 Math"
     href = "top/math/"
     [[params.additional_menus]]
-    title = "Nonsense"
+    title = "妄言 Nonsense"
     href = "top/nonsense/"
     [[params.additional_menus]]
-    title = "Archives"
+    title = "归档 Archives"
     href = "top/archives/"
 
 
