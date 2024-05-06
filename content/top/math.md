@@ -13,6 +13,7 @@ TBD
 - 2022.02.24 Motivic degree zero Donaldson-Thomas invariants, Enumerative Geometry Learning Seminar
 
 ## Seminars and Visitings
+- SCMS Workshop on Enumerative Geometry, Shanghai Center for Mathematical Sciences, 2024.03.11-2024.03.15
 - Oslo Stability and Enumerative Geometry Workshop 2023, Oslo University, 2023.12.11-2023.12.15
 - Workshop on Geometric Representation Theory and Applications, YMSC/Tsinghua University, 2023.07.10-2023.07.14
 - Enumerative Geometry Seminar, Topic: Aspects of Gromov-Witten Theory, 2023.02-2023.06 ([Website](./post/enumerative_geometry_seminar_2023_spring/))

@@ -1,7 +1,7 @@
 {{define "main"}}
 <div class="container">
   <div class="row">
-    {{ $lp := slice "Literature" "Philosophy"}}
+    {{ $lp := slice "Literature" "Philosophy" "Language" "Puzzle"}}
     {{ $essay_lp := (where .Site.RegularPages  "Params.tags" "intersect" $lp)}}
     <div class="
                 col-lg-8 col-lg-offset-1
@@ -11,7 +11,7 @@
                 post-container
                 ">
       {{ .Content }}
-    <h2>Philosophy & Literature</h2>
+    <h2>Selected Essays</h2>
     {{ range $essay_lp.GroupByDate "2006" }}
     <h3>{{ .Key }}</h3>
     <ul class="archive-list">
