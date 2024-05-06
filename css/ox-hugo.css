@@ -76,3 +76,12 @@
     border-radius: 5px;
     margin-bottom: 20px;
 }
+
+/* Footnote sytle */
+sup[id^="fnref"] {
+    top: 0em;
+    font-size: 100%;
+}
+
+a[href^="#fn:"]:before{ content: '[' }
+a[href^="#fn:"]:after{ content: '] ' }
