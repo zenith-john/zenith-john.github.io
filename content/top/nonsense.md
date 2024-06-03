@@ -28,9 +28,9 @@ hidden: true
 
 - As a philosophy amateur: I prefer ancient Chinese philosophy (before Qin), German philosophy and French philosophy. To name a few my favourite philosophers: Confucius, Mencius, Zhuangzi, Kant, Marx, Nietzsche, Wittgenstein, Foucault, Derrida.
 
-- As literature amateur: I prefer allegorical, stylish, fluent and imaginative work. To name some my favourite writers: Qu Yuan, Du Fu, Shakespeare, Joyce, Lu Xun, Kafka, Calvino, Márquez, Coetzee, Parmuk. Currently, I focus on Roman-French literature, Arabic-Persian literature, Sanskrit literature and Chinese-Japanese literature and world literature after AD 1919 (the end of World War I and outbreak of May Fourth Movement).
+- As a literature amateur: I prefer allegorical, stylish, fluent and imaginative work. To name some my favourite writers: Qu Yuan, Du Fu, Shakespeare, Joyce, Lu Xun, Kafka, Calvino, Márquez, Coetzee, Parmuk. Currently, I focus on Roman-French literature, Arabic-Persian literature, Sanskrit literature and Chinese-Japanese literature and world literature after AD 1919 (the end of World War I and outbreak of May Fourth Movement).
 
-- As language amateur: I have learned several languages, though mostly in unusable status, including: Chinese(Mandarin and Wu dialect, native, also classical Chinese), English(fluent), French(can read L'Étranger), Japanese(Some simple sentence), Latin(with a dictionary). Currently I'm learning Arabic and German.
+- As a language amateur: I have learned several languages, though mostly in unusable status, including: Chinese(Mandarin and Wu dialect, native, also classical Chinese), English(fluent), French(can read L'Étranger), Japanese(Some simple sentence), Latin(with a dictionary). Currently I'm learning Arabic and German.
 
 - As a puzzle amateur: I have completed(?) three Puzzle Hunts, namely CCBC12，CCBC13(but not 14) and MiaoHunt2023。
 
@@ -47,7 +47,7 @@ hidden: true
 
 - En tant qu'amateur de puzzle: J'ai complété(?) trois chasse au puzzle, comportant CCBC12, CCBC13 (non 14) et MiaoHunt2023.
 
-- En tant qu'amateur de programmation: Je suis un amateur de open source et un utilisateur de emacs. Ma configuration de emacs est décrite à [Emacs](./post/emacs_configuration). Mes plusieurs programmes est à [Github](https://github.com/zenith-john/).
+- En tant qu'amateur de programmation: Je suis un amateur de open source et un utilisateur de emacs. Ma configuration de emacs est décrite à [Emacs](./post/emacs_configuration). Mes programmes sont à [Github](https://github.com/zenith-john/).
 
 </div>
 </div>
