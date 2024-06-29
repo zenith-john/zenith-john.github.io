@@ -22,12 +22,15 @@ Email: znt21 (at) mails.tsinghua.edu.cn
 
 ## Current and Future Activities {#current-and-future-activities}
 
-Not this semester.
+Next semester:
+- Mathematical Physics Seminar, Topic: Quantum Cohomology, 2024.09-2025.01 ([Website](./post/mathematical_physics_seminar_2024_autumn/))
 
 
 ## Research Interest {#research-interest}
 
 My research interest lies in enumerative geometry and mathematical physics, especially about Donaldson-Thomas type invariants. These invariants are at the interface of many areas, including mirror symmetry, integrable system, geometric Langlands, Bridgeland stability, low-dimensional topology and supersymmetric gauge theory. Some of the ideas are summarized in the following diagram. For details, see [here](./post/questions_of_interest).
+
+Currently, I'm working on Bridgeland stability and Bogomolov-type inequalities.
 
 {{< figure src="/img/2023-03-12_15-01-54_My_Research.svg" >}}
 

@@ -39,15 +39,15 @@ hidden: true
 </div>
 <div class="tab-pane" id="fr">
 
-En tant qu'amateur de philosophie : Je préfère les philosophies anciennes chinoises, les philosophies germaniques et les philosophies françaises. Voici une liste de mes philosophes préférés : Confucius, Mencius, Zhuangzi, Kant, Marx, Nietzsche, Wittgenstein, Foucault et Derrida.
+- En tant qu'amateur de philosophie : Je préfère les philosophies anciennes chinoises, les philosophies germaniques et les philosophies françaises. Voici une liste de mes philosophes préférés : Confucius, Mencius, Zhuangzi, Kant, Marx, Nietzsche, Wittgenstein, Foucault et Derrida.
 
-En tant qu'amateur de littérature : J'aime les œuvres allégoriques, élégantes, fluides et imaginatives. Voici une liste de mes auteurs favoris : Qu Yuan, Du Fu, Shakespeare, Joyce, Lu Xun, Kafka, Calvino, Márquez, Coetzee, Pamuk. Actuellement, je lis de la littérature romaine-française, arabo-persane, sanscrite et sino-japonaise, ainsi que de la littérature mondiale postérieure à 1919 (la fin de la Première Guerre mondiale et le déclenchement du Mouvement du 4 Mai).
+- En tant qu'amateur de littérature : J'aime les œuvres allégoriques, élégantes, fluides et imaginatives. Voici une liste de mes auteurs favoris : Qu Yuan, Du Fu, Shakespeare, Joyce, Lu Xun, Kafka, Calvino, Márquez, Coetzee, Pamuk. Actuellement, je lis de la littérature romaine-française, arabo-persane, sanscrite et sino-japonaise, ainsi que de la littérature mondiale postérieure à 1919 (la fin de la Première Guerre mondiale et le déclenchement du Mouvement du 4 Mai).
 
-En tant qu'amateur de langues : J'ai appris quelques langues, mais seulement de manière élémentaire. Le chinois (mandarin et dialecte de Wu, natif, ainsi que le chinois classique), l'anglais (facile), le français (je peux lire L’Étranger), le japonais (phrases simples), le latin (avec un dictionnaire). Actuellement, j'apprends l'arabe et l'allemand.
+- En tant qu'amateur de langues : J'ai appris quelques langues, mais seulement de manière élémentaire. Le chinois (mandarin et dialecte de Wu, natif, ainsi que le chinois classique), l'anglais (facile), le français (je peux lire L’Étranger), le japonais (phrases simples), le latin (avec un dictionnaire). Actuellement, j'apprends l'arabe et l'allemand.
 
-En tant qu'amateur de puzzles : J'ai complété trois chasses au puzzle, incluant CCBC12, CCBC13 (pas la 14) et MiaoHunt2023.
+- En tant qu'amateur de puzzles : J'ai complété trois chasses au puzzle, incluant CCBC12, CCBC13 (pas la 14) et MiaoHunt2023.
 
-En tant qu'amateur de programmation : Je suis un adepte du logiciel libre et un utilisateur d'Emacs. Ma configuration d'Emacs est décrite sur [Emacs](./post/emacs_configuration). Mes programmes sont disponibles sur [Github](https://github.com/zenith-john/).
+- En tant qu'amateur de programmation : Je suis un adepte du logiciel libre et un utilisateur d'Emacs. Ma configuration d'Emacs est décrite sur [Emacs](./post/emacs_configuration). Mes programmes sont disponibles sur [Github](https://github.com/zenith-john/).
 
 </div>
 </div>
