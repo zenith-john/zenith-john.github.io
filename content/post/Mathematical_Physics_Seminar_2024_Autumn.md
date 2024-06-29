@@ -74,4 +74,4 @@ TBA.
 
 Nantao Zhang(张南涛)
 
-You may join with following QR code or contact me by email znt21 (at) mails.tsinghua.edu.cn.
+You may join by contacting me by email znt21 (at) mails.tsinghua.edu.cn.
