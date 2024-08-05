@@ -5,8 +5,8 @@ hidden: true
 ---
 
 
-## Publications
-TBD
+## Preprints and Publications
+- Stability Conditions on $\mathbb{P}^3$ (joint with Dongjian Wu), [arxiv:2408.00519](https://arxiv.org/abs/2408.00519)
 
 ## Talks
 - 2022.11.21 Applications of quasimap theory in enumerative geometry, Tsinghua Preprint Seminar

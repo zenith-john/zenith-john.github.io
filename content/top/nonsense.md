@@ -19,7 +19,7 @@ hidden: true
 
 - 作为语言爱好者：我学习过多门语言，虽然基本上只掌握了一些皮毛，包括：中文（包括文言文、普通话和吴语«宁波方言»，母语）、英文（流利）、法语（能读 L'Étranger）、日语（一些简单句）、拉丁语（在字典的帮助下）。目前我正在学习阿拉伯语、德语。
 
-- 作为谜题爱好者：我在三次大型 Puzzle Hunt 中成功完赛（？），分别是 CCBC12（队名：不识meta为何物队，ID: zenith-john）、CCBC13（不包括 CCBC 14 懂得都懂，队名：Eat Well Sleep Well，ID: zenith-john）和MiaoHunt2023（队名：猫猫鉴赏团，ID: هههههههههه）。
+- 作为谜题爱好者：我在三次大型 Puzzle Hunt 中成功完赛（？），分别是 CCBC12（队名：不识meta为何物队，ID: zenith-john）、CCBC13（不包括 CCBC 14 懂得都懂，队名：Eat Well Sleep Well，ID: zenith-john），MiaoHunt2023（队名：猫猫鉴赏团，ID: هههههههههه）, P&KU3（队名：江南四大才子，ID:Zenith John）。
 
 - 作为编程爱好者：我是一个开源爱好者，重度 Emacs 使用者。我的 Emacs 配置可以参考文章 [Emacs](./post/emacs_configuration)。在 [Github](https://github.com/zenith-john/) 上有一些我写的零散的脚本和程序。
 
@@ -32,7 +32,7 @@ hidden: true
 
 - As a language amateur: I have learned several languages, though mostly in unusable status, including: Chinese(Mandarin and Wu dialect, native, also classical Chinese), English(fluent), French(can read L'Étranger), Japanese(Some simple sentence), Latin(with a dictionary). Currently I'm learning Arabic and German.
 
-- As a puzzle amateur: I have completed(?) three Puzzle Hunts, namely CCBC12，CCBC13(but not 14) and MiaoHunt2023。
+- As a puzzle amateur: I have completed(?) three Puzzle Hunts, namely CCBC12，CCBC13(but not 14), MiaoHunt2023, and P&KU3。
 
 - As a programming amateur: I am a open source amateur and heavy emacs user. My emacs configuration is described in [Emacs](./post/emacs_configuration). And there are several easy script and program on [Github](https://github.com/zenith-john/).
 
@@ -45,7 +45,7 @@ hidden: true
 
 - En tant qu'amateur de langues : J'ai appris quelques langues, mais seulement de manière élémentaire. Le chinois (mandarin et dialecte de Wu, natif, ainsi que le chinois classique), l'anglais (facile), le français (je peux lire L’Étranger), le japonais (phrases simples), le latin (avec un dictionnaire). Actuellement, j'apprends l'arabe et l'allemand.
 
-- En tant qu'amateur de puzzles : J'ai complété trois chasses au puzzle, incluant CCBC12, CCBC13 (pas la 14) et MiaoHunt2023.
+- En tant qu'amateur de puzzles : J'ai complété trois chasses au puzzle, incluant CCBC12, CCBC13 (pas la 14), MiaoHunt2023, et P&KU3.
 
 - En tant qu'amateur de programmation : Je suis un adepte du logiciel libre et un utilisateur d'Emacs. Ma configuration d'Emacs est décrite sur [Emacs](./post/emacs_configuration). Mes programmes sont disponibles sur [Github](https://github.com/zenith-john/).
 
