@@ -14,6 +14,7 @@ hidden: true
 
 ## Seminars and Visitings
 - Mathematical Physics Seminar, Topic: Quantum Cohomology, 2024.09-2025.01 ([Website](/post/mathematical_physics_seminar_2024_autumn/))
+- 2024 Algebra Geometry and Supersymmetry, Yau Mathematics Science Center, Tsinghua University, 204.04.12
 - SCMS Workshop on Enumerative Geometry, Shanghai Center for Mathematical Sciences, 2024.03.11-2024.03.15
 - Oslo Stability and Enumerative Geometry Workshop 2023, Oslo University, 2023.12.11-2023.12.15
 - Workshop on Geometric Representation Theory and Applications, YMSC/Tsinghua University, 2023.07.10-2023.07.14

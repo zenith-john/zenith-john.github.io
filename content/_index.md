@@ -16,28 +16,25 @@ Email: znt21 (at) mails.tsinghua.edu.cn
 
 ## Education {#education}
 
--   2021.9-now, PhD student, Mathematics, Tsinghua University, Supervisor: [Will Donovan](https://w-donovan.github.io/)
--   2017.9-2021.6, Bachelor, Biology, Tsinghua University
+-   2021.09-now, PhD student, Mathematics, Tsinghua University, Supervisor: [Will Donovan](https://w-donovan.github.io/)
+-   2017.09-2021.06, Bachelor, Biology, Tsinghua University
 
 
 ## Current and Future Activities {#current-and-future-activities}
 
-Next semester:
-- Mathematical Physics Seminar, Topic: Quantum Cohomology, 2024.09-2025.01 ([Website](./post/mathematical_physics_seminar_2024_autumn/))
+This semester:
+- Mathematical Physics Seminar, Topic: Quantum Cohomology, 2024.09-2025.12 ([Website](./post/mathematical_physics_seminar_2024_autumn/))
 
 
 ## Research Interest {#research-interest}
 
-My research interest lies in enumerative geometry and mathematical physics, especially about Donaldson-Thomas type invariants. These invariants are at the interface of many areas, including mirror symmetry, integrable system, geometric Langlands, Bridgeland stability, low-dimensional topology and supersymmetric gauge theory. Some of the ideas are summarized in the following diagram. For details, see [here](./post/questions_of_interest).
+My research interest lies in algebraic geometry and mathematical physics around derived category of coherent sheaves, including (homological) mirror symmetry, Donaldson-Thomas type invariants, Bridgeland stability, Hodge theory and quantum cohomology.
 
-Currently, I'm working on Bridgeland stability and Bogomolov-type inequalities.
-
-{{< figure src="/img/2023-03-12_15-01-54_My_Research.svg" >}}
-
+Currently, I'm interested in noncommutative minimal model program and categorical Donaldson-Thomas invariants.
 
 ## Miscellaneous {#miscellaneous}
 
 -   I use Zenith John as Nickname, because of similar spelling of ZeNiTh and Zhang NanTao, and similar pronunciation of Zhang(张) in Chinese and John in English.
 -   I was born in Ningbo, Zhejiang, China.
 -   The picture on the home page is from the [slides](http://www.math.columbia.edu/%7Eokounkov/icm.pdf) of Andrei Okounkov on ICM 2018.
--   The photo was taken at 2021.6 before old Tsinghua library.
+-   The photo was taken at 2021.06 before old Tsinghua library.
