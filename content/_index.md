@@ -30,7 +30,7 @@ This semester:
 
 My research interest lies in algebraic geometry and mathematical physics around derived category of coherent sheaves, including (homological) mirror symmetry, Donaldson-Thomas type invariants, Bridgeland stability, Hodge theory and quantum cohomology.
 
-Currently, I'm interested in noncommutative minimal model program and categorical Donaldson-Thomas invariants.
+Currently, I'm interested in noncommutative minimal model program and categorical Donaldson-Thomas theory.
 
 ## Miscellaneous {#miscellaneous}
 
