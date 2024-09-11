@@ -43,9 +43,9 @@ Tentative schedule:
 | 2024.11.15 | Lite Du      | Quantum cohomology of birational Calabi-Yau I   |
 | 2024.11.22 | Lite Du      | Quantum cohomology of birational Calabi-Yau II  |
 | 2024.11.29 | Lite Du      | Quantum cohomology of birational Calabi-Yau III |
-| 2024.11.06 | Nantao Zhang | Quantum cohomology of blowup I                  |
-| 2024.11.13 | Nantao Zhang | Quantum cohomology of blowup II                 |
-| 2024.11.20 | Nantao Zhang | Quantum cohomology of blowup III                |
+| 2024.12.06 | Nantao Zhang | Quantum cohomology of blowup I                  |
+| 2024.12.13 | Nantao Zhang | Quantum cohomology of blowup II                 |
+| 2024.12.20 | Nantao Zhang | Quantum cohomology of blowup III                |
 
 
 ## References {#references}
