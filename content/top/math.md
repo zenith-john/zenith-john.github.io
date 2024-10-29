@@ -9,10 +9,12 @@ hidden: true
 - Stability Conditions on $\mathbb{P}^3$ (joint with Dongjian Wu), [arxiv:2408.00519](https://arxiv.org/abs/2408.00519)
 
 ## Talks
+- 2024.11.06 Global dimension of geometric stability condition, BIMSA-YMSC Geometry and Dynamics Seminar
 - 2022.11.21 Applications of quasimap theory in enumerative geometry, Tsinghua Preprint Seminar
 - 2022.02.24 Motivic degree zero Donaldson-Thomas invariants, Enumerative Geometry Learning Seminar
 
 ## Seminars and Visitings
+- Topological Strings on Calabi-Yau Manifolds - Math and Physics, BICMR, 2024.09.19-2024.09.21
 - Mathematical Physics Seminar, Topic: Quantum Cohomology, 2024.09-2025.01 ([Website](/post/mathematical_physics_seminar_2024_autumn/))
 - 2024 Algebra Geometry and Supersymmetry, Yau Mathematics Science Center, Tsinghua University, 204.04.12
 - SCMS Workshop on Enumerative Geometry, Shanghai Center for Mathematical Sciences, 2024.03.11-2024.03.15
