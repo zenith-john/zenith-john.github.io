@@ -9,7 +9,7 @@ hidden: true
 - Stability Conditions on $\mathbb{P}^3$ (joint with Dongjian Wu), [arxiv:2408.00519](https://arxiv.org/abs/2408.00519)
 
 ## Talks
-- 2024.11.06 Global dimension of geometric stability condition, BIMSA-YMSC Geometry and Dynamics Seminar
+- 2024.11.27 Global dimension of geometric stability condition, BIMSA-YMSC Geometry and Dynamics Seminar ([Slides](/file/GDSlides.pdf))
 - 2022.11.21 Applications of quasimap theory in enumerative geometry, Tsinghua Preprint Seminar
 - 2022.02.24 Motivic degree zero Donaldson-Thomas invariants, Enumerative Geometry Learning Seminar
 
