@@ -16,7 +16,8 @@ post-container"><p>这是 Lean II-学习 Lean 的第二周（10-28-11-03）。</
 最后我发现我不应该在这里和减法过不去，应该使用加法的结合律，使用下面的等式
 \[n : \mathbb{N}, 1 + 2 * n + n^{2} - 2 * n = 1 + n^{2} + 2 * n - 2 * n\]
 然后 Lean4 就能进行进一步的简化了。这也可以看出，Lean4 的推理系统和人脑之间有着较大的差别。对于人脑来说显然等价的几种描述在 Lean4 中未必是等价的。同样的困难也出现在一些等式的化简过程中，比如在 Section 15 Sheet 4 中我们就需要进行带一个未知数的减法的化简。但是在 Lean4 中你必须明确告诉它目标，这一目标（式子简化的结果）却必须由手工计算得到，因为 Lean4 不是一个（好的）计算器。其次，需要将每一步的结果都清楚的写出来，很多时候，还必须告诉它（在哪里）进行什么样的变换，Lean4 才会承认你的证明。这样的过程是非常让人痛苦而心烦的，因为这一过程中没有任何数学的内容，甚至没有逻辑的内容，完全是一个非常初等的移项、合并等操作，但是 Lean4 却没有好的自动化手段。虽然 Lean4 提供了 exact?，apply?，aesop 等工具，但是这些工具效用相当有限，有的时候连一个简单的 rw 都不能帮我找到。从这些实践的经验来看，Lean 处理抽象的证明远远强于对于具体问题的解决，这也就大大提高了 Lean 的使用难度。</p><p>在 Section 19 中，Buzzard 提到 \(\text{FractionRing} \mathbb{Z} = \mathbb{Q}\) 类似的等式是不能在 Lean4 中被证明的，这是由于两边的类型不同。目前我尚不清楚这一问题对于证明形式化究竟有什么影响。但是这也是采用类型论的方法所必须支付的代价。对于数学家来说 Abuse of notation 是非常常用的手段，但是对于 Lean4，这种数学家所认为的等价性是不正确的。所以，对于数学家来说，类型转换的复杂性是 Lean4 难以应用的另一大痛点。</p><p>经过两周的学习，我对于 Lean4 的基本使用有了了解，但是由于对于 Mathlib4 库的了解还不够，以及对于 tactic 的使用还存在一些疑问的地方，所以证明往往写得曲折而冗长。看了 <a href=https://github.com/ImperialCollegeLondon/formalising-mathematics-2024>formalising-mathematics-2024</a> 之后的内容，觉得有些过于困难，所以暂时不继续学习了。之后有空的时候再考虑要不要做一些代数几何相关的 formalizing 工作吧。</p><hr><ul class=pager><li class=previous><a href=/post/frog_in_well_talking_about_sea_preface_and_lean_i/ data-toggle=tooltip data-placement=top title="【井蛙语海】前言-Lean I">&larr;
-Previous Post</a></li></ul></div><div class="col-lg-11 col-lg-offset-1
+Previous Post</a></li><li class=next><a href=/post/poetry_for_myself_libai_i/ data-toggle=tooltip data-placement=top title=【诗心自用】李白・壹>Next
+Post &rarr;</a></li></ul></div><div class="col-lg-11 col-lg-offset-1
 col-md-10 col-md-offset-1
 sidebar-container"><section><hr class="hidden-sm hidden-xs"><h5><a href=/tags/>FEATURED TAGS</a></h5><div class=tags><a href=/tags/activity title=activity>activity</a>
 <a href=/tags/computer title=computer>computer</a>
