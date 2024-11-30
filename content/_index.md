@@ -23,7 +23,7 @@ Email: znt21 (at) mails.tsinghua.edu.cn
 ## Current and Future Activities {#current-and-future-activities}
 
 This semester:
-- Mathematical Physics Seminar, Topic: Quantum Cohomology, 2024.09-2025.12 ([Website](./post/mathematical_physics_seminar_2024_autumn/))
+- Mathematical Physics Seminar, Topic: Quantum Cohomology, 2024.09-2024.12 ([Website](./post/mathematical_physics_seminar_2024_autumn/))
 
 
 ## Research Interest {#research-interest}

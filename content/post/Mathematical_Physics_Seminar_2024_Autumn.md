@@ -31,21 +31,20 @@ More references will be given during the seminar.
 
 Tentative schedule:
 
-| Time       | Speaker      | Title                                           |
-|------------|--------------|-------------------------------------------------|
-| 2024.09.09 | Nantao Zhang | Introduction to Quantum Cohomology              |
-| 2024.09.27 | Jinghao Yu   | Gamma conjecture I                              |
-| 2024.10.11 | Nantao Zhang | Gamma conjecture II                             |
-| 2024.10.18 | Jinghao Yu   | Gamma conjecture III                            |
-| 2024.10.25 | Linpu Gao    | Quantum groups and quantum cohomology I         |
-| 2024.11.01 | Linpu Gao    | Quantum groups and quantum cohomology II        |
-| 2024.11.08 | Linpu Gao    | Quantum groups and quantum cohomology III       |
-| 2024.11.15 | Lite Du      | Quantum cohomology of birational Calabi-Yau I   |
-| 2024.11.22 | Lite Du      | Quantum cohomology of birational Calabi-Yau II  |
-| 2024.11.29 | Lite Du      | Quantum cohomology of birational Calabi-Yau III |
-| 2024.12.06 | Nantao Zhang | Quantum cohomology of blowup I                  |
-| 2024.12.13 | Nantao Zhang | Quantum cohomology of blowup II                 |
-| 2024.12.20 | Nantao Zhang | Quantum cohomology of blowup III                |
+| Time       | Speaker      | Title                                          |
+|------------|--------------|------------------------------------------------|
+| 2024.09.09 | Nantao Zhang | Introduction to Quantum Cohomology             |
+| 2024.09.27 | Jinghao Yu   | Gamma conjecture I                             |
+| 2024.10.11 | Nantao Zhang | Gamma conjecture II                            |
+| 2024.10.18 | Jinghao Yu   | Gamma conjecture III                           |
+| 2024.10.25 | Linpu Gao    | Quantum groups and quantum cohomology I        |
+| 2024.11.01 | Linpu Gao    | Quantum groups and quantum cohomology II       |
+| 2024.11.08 | Linpu Gao    | Quantum groups and quantum cohomology III      |
+| 2024.11.15 | Lite Du      | Quantum cohomology of birational Calabi-Yau I  |
+| 2024.11.22 | Cancelled    |                                                |
+| 2024.11.29 | Lite Du      | Quantum cohomology of birational Calabi-Yau II |
+| 2024.12.06 | Nantao Zhang | Quantum cohomology of blowup I                 |
+| 2024.12.13 | Nantao Zhang | Quantum cohomology of blowup II                |
 
 
 ## References {#references}
