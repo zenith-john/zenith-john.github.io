@@ -22,14 +22,15 @@ Email: znt21 (at) mails.tsinghua.edu.cn
 
 ## Current and Future Activities {#current-and-future-activities}
 
-This semester:
-- Conference on Algebraic Geometry, 2024.12.23-2024.12.26, Tsinghua Sanya International Mathematics Forum, [Web](https://www.tsimf.cn/meeting/detail?id=390)
+No more this semester.
+
 
 ## Research Interest {#research-interest}
 
 My research interest lies in algebraic geometry and mathematical physics around derived category of coherent sheaves, including (homological) mirror symmetry, Donaldson-Thomas type invariants, Bridgeland stability, Hodge theory and quantum cohomology.
 
 Currently, I'm interested in Bridgeland stability and semiorthogonal decomposition.
+
 
 ## Miscellaneous {#miscellaneous}
 
