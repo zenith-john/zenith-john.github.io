@@ -4,6 +4,8 @@ author = ["Zenith John"]
 publishDate = 2024-11-03
 tags = ["Essay", "Language"]
 draft = false
+series = ["井蛙语海"]
+series_weight = 20
 +++
 
 这是 Lean II-学习 Lean 的第二周（10-28-11-03）。

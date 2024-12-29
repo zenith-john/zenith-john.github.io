@@ -5,6 +5,8 @@ publishDate = 2024-11-30
 tags = ["Essay", "Literature"]
 draft = false
 lastmod = 2024-11-30
+series = ["诗心自用"]
+series_weight = 41
 +++
 
 ## 总论 {#总论}

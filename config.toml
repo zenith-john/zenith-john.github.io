@@ -44,5 +44,5 @@ markup = "md"
 math = "true"
 
 [taxonomies]
-category = 'categories'
 tag = 'tags'
+series = 'series'

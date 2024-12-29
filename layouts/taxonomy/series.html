@@ -1,0 +1,4 @@
+{{ define "main" }}
+  {{ $paginator := .Paginate (where .Data.Pages "Section" "post").ByWeight.Reverse }}
+  {{ partial "posts.html" . }}
+{{ end }}

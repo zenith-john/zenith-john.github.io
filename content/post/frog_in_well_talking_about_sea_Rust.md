@@ -4,6 +4,8 @@ author = ["Zenith John"]
 publishDate = 2024-12-21
 tags = ["Essay", "Language"]
 draft = false
+series = ["井蛙语海"]
+series_weight = 30
 +++
 
 ## 为什么选择 Rust? {#为什么选择-rust}
