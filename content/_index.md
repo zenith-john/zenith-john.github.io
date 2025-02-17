@@ -22,7 +22,8 @@ Email: znt21 (at) mails.tsinghua.edu.cn
 
 ## Current and Future Activities {#current-and-future-activities}
 
-No more this semester.
+-   2025.02.17-2025.06.15, Visiting [Kavli IPMU](https://www.ipmu.jp/)
+-   2025.03.03-2025.03.07, [Enumerative geometry, representation theory, and physics](https://indico.ipmu.jp/event/427/), Kavli IPMU
 
 
 ## Research Interest {#research-interest}
