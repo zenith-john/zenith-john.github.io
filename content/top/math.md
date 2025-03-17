@@ -14,6 +14,7 @@ hidden: true
 - 2022.02.24 Motivic degree zero Donaldson-Thomas invariants, Enumerative Geometry Learning Seminar
 
 ## Seminars and Visitings
+- Enumerative geometry, representation theory, and physics, Kavli IPMU, 2025.03.03-2025.03.07
 - Conference on Algebraic Geometry, Tsinghua Sanya International Mathematics Forum, 2024.12.23-2024.12.26
 - Topological Strings on Calabi-Yau Manifolds - Math and Physics, BICMR, 2024.09.19-2024.09.21
 - Mathematical Physics Seminar, Topic: Quantum Cohomology, 2024.09-2025.01 ([Website](/post/mathematical_physics_seminar_2024_autumn/))
