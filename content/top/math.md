@@ -6,6 +6,7 @@ hidden: true
 
 
 ## Preprints and Publications
+- Stability conditions on blowups [arxiv:2503.23682](https://arxiv.org/abs/2503.23682)
 - Stability Conditions on $\mathbb{P}^3$ (joint with Dongjian Wu), [arxiv:2408.00519](https://arxiv.org/abs/2408.00519)
 
 ## Talks
