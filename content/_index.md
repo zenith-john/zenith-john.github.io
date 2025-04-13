@@ -22,7 +22,6 @@ Email: znt21 (at) mails.tsinghua.edu.cn
 
 ## Current and Future Activities {#current-and-future-activities}
 
--   2025.04.07-2025.04.09, McKay correspondence, Dimer model and Derived category, Nagoya University
 -   2025.02.17-2025.06.15, Visiting [Kavli IPMU](https://www.ipmu.jp/)
 
 
