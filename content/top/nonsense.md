@@ -9,6 +9,7 @@ hidden: true
 <li class="active"><a href="#cn" data-toggle="tab">中文</a></li>
 <li><a href="#en" data-toggle="tab">English</a></li>
 <li><a href="#fr" data-toggle="tab">Français</a></li>
+<li><a href="#jp" data-toggle="tab">日本語</a></li>
 </ul>
 <div class="tab-content">
 <div class="tab-pane active" id="cn">
@@ -50,5 +51,17 @@ hidden: true
 
 - En tant qu'amateur de programmation: Je suis un programmeur amateur, amateur des langages de programmation et un utilisateur d'Emacs. Ma configuration d'Emacs est décrite sur [Emacs](/post/emacs_configuration), et [Lox in Rust](https://github.com/zenith-john/lox-in-rust) est une interprète simple par Rust. Mes programmes sont disponibles sur [Github](https://github.com/zenith-john/).
 
+</div>
+<div class="tab-pane" id="jp">
+
+- 文学愛好者として、寓話のような幻想的で優雅な作品が大好きです。たとえば、好きな作家は、<ruby>屈原<rp>(</rp><rt>くつげん</rt><rp>)</rp></ruby>、ウィリアム・シェイクスピア、<ruby>魯迅<rp>(</rp><rt>ろじん</rt><rp>)</rp></ruby>、フランツ・カフカ、イタロ・カルヴィーノ、ガブリエル・ガルシア＝マルケス、オルハン・パムクなどです。現在の関心は、世界各地の詩に向いています。
+
+- 言語愛好者として、中国語に加えて、英語・フランス語・アラビア語・日本語・ラテン語・ドイツ語を学びました。ただし、英語以外はあまり得意ではありません。
+
+- 哲学愛好者としては、中国古典哲学、ドイツ古典哲学、そして西洋マルクス主義に深い関心があります。特に好きな哲学者は、<ruby>荘子<rp>(</rp><rt>そうし</rt><rp>)</rp></ruby>、カール・マルクス、フリードリヒ・ニーチェ、ミシェル・フーコーです。
+
+- パズル愛好者としては、さまざまなパズルハントを完走してきました。たとえば、CCBC12、CCBC13（14は除く）、MiaoHunt2023、P&KU3、CCBC15、JustHunt などです。
+
+- プログラミング愛好者として、プログラミング言語理論を学び、Rustで作った Lox インタプリタ [Lox in Rust](https://github.com/zenith-john/lox-in-rust) があります。また、毎日 Emacs を使っており、設定については [Emacs](/post/emacs_configuration) にまとめています。
 </div>
 </div>
