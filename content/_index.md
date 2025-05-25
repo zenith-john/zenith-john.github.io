@@ -22,7 +22,8 @@ Email: znt21 (at) mails.tsinghua.edu.cn
 
 ## Current and Future Activities {#current-and-future-activities}
 
--   2025.02.17-2025.06.15, Visiting [Kavli IPMU](https://www.ipmu.jp/)
+-   2025.06.23-2025.06.27, Workshop on Fano Varieties, BICMR
+-   2025.06.30-2025.07.11, 2025 International Summer School of Algebraic Geometry, Shanghai Center for Mathematical Sciences
 
 
 ## Research Interest {#research-interest}

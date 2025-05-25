@@ -10,13 +10,15 @@ hidden: true
 - Stability Conditions on $\mathbb{P}^3$ (joint with Dongjian Wu), [arxiv:2408.00519](https://arxiv.org/abs/2408.00519)
 
 ## Talks
-- 2024.11.27 Global dimension of geometric stability condition, BIMSA-YMSC Geometry and Dynamics Seminar ([Slides](/file/GDSlides.pdf))
-- 2022.11.21 Applications of quasimap theory in enumerative geometry, Tsinghua Preprint Seminar
-- 2022.02.24 Motivic degree zero Donaldson-Thomas invariants, Enumerative Geometry Learning Seminar
+- 2025.05.15, Bogomolov-type inequalities and Bridgeland stability conditions on threefolds, Kavli IPMU GTM Seminar 
+- 2024.11.27, Global dimension of geometric stability condition, BIMSA-YMSC Geometry and Dynamics Seminar ([Slides](/file/GDSlides.pdf))
+- 2022.11.21, Applications of quasimap theory in enumerative geometry, Tsinghua Preprint Seminar
+- 2022.02.24, Motivic degree zero Donaldson-Thomas invariants, Enumerative Geometry Learning Seminar
 
 ## Seminars and Visitings
 - 2025.04.07-2025.04.09, McKay correspondence, Dimer model and Derived category, Nagoya University
 - 2025.03.03-2025.03.07, Enumerative geometry, representation theory, and physics, Kavli IPMU
+- 2025.02.17-2025.06.15, Visiting Kavli IPMU
 - 2024.12.23-2024.12.26, Conference on Algebraic Geometry, Tsinghua Sanya International Mathematics Forum
 - 2024.09.19-2024.09.21, Topological Strings on Calabi-Yau Manifolds - Math and Physics, BICMR
 - 2024.09-2025.01, Mathematical Physics Seminar, Topic: Quantum Cohomology ([Website](/post/mathematical_physics_seminar_2024_autumn/))
