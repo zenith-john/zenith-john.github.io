@@ -16,6 +16,7 @@ hidden: true
 - 2022.02.24, Motivic degree zero Donaldson-Thomas invariants, Enumerative Geometry Learning Seminar
 
 ## Seminars and Visitings
+- 2025.06.23-2025.06.27, Workshop on Fano Varieties, BICMR
 - 2025.04.07-2025.04.09, McKay correspondence, Dimer model and Derived category, Nagoya University
 - 2025.03.03-2025.03.07, Enumerative geometry, representation theory, and physics, Kavli IPMU
 - 2025.02.17-2025.06.15, Visiting Kavli IPMU
