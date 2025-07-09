@@ -20,8 +20,7 @@ hidden: true
 
 - 作为哲学爱好者：我对先秦哲学，德国古典哲学，西方马克思主义比较感兴趣。我喜欢在众多哲学家之中，我喜欢庄子、马克思、尼采、福柯。
 
-- 作为谜题爱好者：我通关过多次 Puzzle Hunt 中，其中包括 CCBC12（队名：不识meta为何物队，ID: zenith-john）、CCBC13（不包括 CCBC 14 懂得都懂，队名：Eat Well Sleep Well，ID: zenith-john），MiaoHunt2023（队名：猫猫鉴赏团，ID: هههههههههه）, P&KU3（队名：江南四大才子，ID:Zenith John），CCBC15（队名：一队好人，ID:zenith-john），JustHunt（队名：LOVES SOLVE
-，ID：zenith-john）。我编写了一些相关工具，发布在 [Potior](https://zenith-john.github.io/potior/) 上。
+- 作为谜题爱好者：我通关过多次 Puzzle Hunt 中，包括 CCBC12，P&KU3，CCBC15 等，具体见 [Puzzle Hunt 参赛历史和计划](/post/puzzle_hunt_history_and_plan/)。我编写了一些相关工具，发布在 [Potior](https://zenith-john.github.io/potior/) 上。
 
 - 作为编程爱好者：我是一个业余程序员，编程语言爱好者，Emacs 使用者。我的 Emacs 配置可以参考文章 [Emacs](/post/emacs_configuration)，[Lox in Rust](https://github.com/zenith-john/lox-in-rust) 是我用 Rust 写的一个解释器。在 [Github](https://github.com/zenith-john/) 上还有一些我写的其他零散的脚本和程序。参考[【井蛙语海】](/series/%E4%BA%95%E8%9B%99%E8%AF%AD%E6%B5%B7/)。
 
@@ -34,7 +33,7 @@ hidden: true
 
 - As a philosophy hobbyist: I'm interested in Chinese philosophy before Qin, classical German philosophy and western Marxism. Among famous philosophers, I like Zhuangzi, Marx, Nietzsche, and Foucault.
 
-- As a puzzle hobbyist: I have completed(?) several Puzzle Hunts, namely CCBC12，CCBC13(but not 14), MiaoHunt2023, P&KU3, CCBC15 and JustHunt。Several puzzle hunt related tools are published on [Potior](https://zenith-john.github.io/potior/).
+- As a puzzle hobbyist: I have completed(?) several Puzzle Hunts, namely CCBC12, P&KU3 and CCBC15, see [Puzzle Hunt history and plan](/post/puzzle_hunt_history_and_plan/) for details。Several puzzle hunt related tools are published on [Potior](https://zenith-john.github.io/potior/).
 
 - As a programming hobbyist: I am an amateur programmer, programming language hobbyist and heavy emacs user. My emacs configuration is described in [Emacs](/post/emacs_configuration). In [Lox in Rust](https://github.com/zenith-john/lox-in-rust), I implement a Lox interpreter in Rust. And there are several other simple scripts and programs on [Github](https://github.com/zenith-john/).
 
@@ -47,7 +46,7 @@ hidden: true
 
 - En tant qu'amateur de philosophie: J'aime la philosophie Chinois avant Qin, la philosophie allemand classique et la marxisme dans l'Ouest. Parmi philosophes notables, Je préfère Zhuangzi, Marx, Nietzsche, et Foucault.
 
-- En tant qu'amateur de puzzles: J'ai complété plusieurs chasses au puzzle, incluant CCBC12, CCBC13 (pas la 14), MiaoHunt2023, P&KU3, CCBC15 et JustHunt. Plusieurs outils sont publiés sur [Potior](https://zenith-john.github.io/potior/).
+- En tant qu'amateur de puzzles: J'ai complété plusieurs chasses au puzzle, incluant CCBC12, P&KU3, et CCBC15, cf. [Histoire et plan de chasses au puzzle](/post/puzzle_hunt_history_and_plan/). Plusieurs outils sont publiés sur [Potior](https://zenith-john.github.io/potior/).
 
 - En tant qu'amateur de programmation: Je suis un programmeur amateur, amateur des langages de programmation et un utilisateur d'Emacs. Ma configuration d'Emacs est décrite sur [Emacs](/post/emacs_configuration), et [Lox in Rust](https://github.com/zenith-john/lox-in-rust) est une interprète simple par Rust. Mes programmes sont disponibles sur [Github](https://github.com/zenith-john/).
 
@@ -60,7 +59,7 @@ hidden: true
 
 - 哲学愛好者としては、中国古典哲学、ドイツ古典哲学、そして西洋マルクス主義に深い関心があります。特に好きな哲学者は、<ruby>荘子<rp>(</rp><rt>そうし</rt><rp>)</rp></ruby>、カール・マルクス、フリードリヒ・ニーチェ、ミシェル・フーコーです。
 
-- パズル愛好者としては、さまざまなパズルハントを完走してきました。たとえば、CCBC12、CCBC13（14は除く）、MiaoHunt2023、P&KU3、CCBC15、JustHunt などです。
+- パズル愛好者としては、さまざまなパズルハントを完走してきました。たとえば、CCBC12、P&KU3、CCBC15 などです。詳細は[「Puzzle Hunt 歴史と計画」](/post/puzzle_hunt_history_and_plan/)を参照してください。関連ツールが [Potior](https://zenith-john.github.io/potior/) で公開された。
 
 - プログラミング愛好者として、プログラミング言語理論を学び、Rustで作った Lox インタプリタ [Lox in Rust](https://github.com/zenith-john/lox-in-rust) があります。また、毎日 Emacs を使っており、設定については [Emacs](/post/emacs_configuration) にまとめています。
 </div>
