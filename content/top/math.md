@@ -16,6 +16,7 @@ hidden: true
 - 2022.02.24, Motivic degree zero Donaldson-Thomas invariants, Enumerative Geometry Learning Seminar
 
 ## Seminars and Visitings
+- 2025.06.30-2025.07.11, 2025 International Summer School of Algebraic Geometry, Shanghai Center for Mathematical Sciences
 - 2025.06.23-2025.06.27, Workshop on Fano Varieties, BICMR
 - 2025.04.07-2025.04.09, McKay correspondence, Dimer model and Derived category, Nagoya University
 - 2025.03.03-2025.03.07, Enumerative geometry, representation theory, and physics, Kavli IPMU

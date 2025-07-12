@@ -22,7 +22,7 @@ Email: znt21 (at) mails.tsinghua.edu.cn
 
 ## Current and Future Activities {#current-and-future-activities}
 
--   2025.06.30-2025.07.11, 2025 International Summer School of Algebraic Geometry, Shanghai Center for Mathematical Sciences
+TBD
 
 
 ## Research Interest {#research-interest}
