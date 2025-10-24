@@ -6,7 +6,7 @@
     display: block;
     margin-bottom: 1em;
     margin-top: 2em;
-    padding: 0 7px;
+    padding: 0 1em;
     border-radius: 5px;
     font-style: italic;
 }
@@ -17,9 +17,13 @@
     border-radius: 5px;
     margin-left: 1em;
     margin-top: -1em;
-    padding: 0 7px;
+    padding: 0 1em;
     color: white;
     font-style: normal;
+}
+
+.thm-body {
+    padding: 0 0.7em;
 }
 
 .thm-block>*:nth-child(2) {
@@ -39,13 +43,13 @@
     font-weight: bold;
 }
 
-.proof, .example, .def {
+.proof, .example, .definition {
     background-color: #F2FBF6;
     border: 1px solid #00A652;
     font-style: normal;
 }
 
-.proof-header, .example-header, .def-header {
+.proof-header, .example-header, .definition-header {
     background-color: #00A652;
     font-weight: bold;
 }

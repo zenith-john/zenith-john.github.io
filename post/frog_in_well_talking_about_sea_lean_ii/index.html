@@ -5,8 +5,10 @@
 <a class=tag href=/tags/language title=Language>Language</a></div><h1>【井蛙语海】Lean II</h1><h2 class=subheading></h2><span class=meta>Posted by
 [Zenith John]
 on
-Sunday, November 3, 2024</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-11 col-lg-offset-1
+Sunday, November 3, 2024</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2
 col-md-10 col-md-offset-1
+col-sm-12
+col-xs-12
 post-container"><p>这是 Lean II-学习 Lean 的第二周（10-28-11-03）。</p><p>这周我写完了 <a href=https://github.com/ImperialCollegeLondon/formalising-mathematics-2024>formalising-mathematics-2024</a> 前 12 个 Section 的内容。然后尝试着做了一些之后的练习。从我个人的体验来看，前 12 个 Section（截至到 Filter）的内容是比较基础，简单的，而且证明的实现也比较简洁。但是从第 13 个 Section 开始，画风就不一样了。在一个子集 \(A \subset X\) 生成的 Measurable space 的可测集是 \(\{\emptyset, A, A^{c}, X\}\) 的证明中，即使是作为专家的 Buzzard 也必须进行繁琐的分类讨论。这种分类讨论在人类的证明中确实是不可缺少的，但是很多部分是简单而可以省略的，但是对于计算机就必须把它写出来。</p><p>在进行数论的几道练习的过程中，我又受到了 Int 和 Nat 之间的转换所带来的诸多问题。Lean4 虽然提供了一些方便的 tactics 比如 push_cast，norm_cast，zify 等来进行相关的操作，但是很多时候奇怪反而会让人抓狂。比如，我最开始尝试得到下面这个式子的证明，Lean4 却不能自动帮我完成这一点
 \[n : \mathbb{N}, (1 + 2 * n + n^{2} - 2 * n):\mathbb{Z} = 1 + 2 * (n:\mathbb{Z})^{2} + n^{2} - 2 * n\]
 后来我尝试进行下面这个式子的证明
