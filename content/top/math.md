@@ -12,12 +12,14 @@ hidden: true
 - Stability Conditions on $\mathbb{P}^3$ (joint with Dongjian Wu), [arxiv:2408.00519](https://arxiv.org/abs/2408.00519)
 
 ## Talks
+- 2026.05.22 $\mathbb T$-stability conditions and application to local Calabi-Yau varieties, Sun Yat-Sen University
 - 2025.05.15, Bogomolov-type inequalities and Bridgeland stability conditions on threefolds, Kavli IPMU GTM Seminar 
 - 2024.11.27, Global dimension of geometric stability condition, BIMSA-YMSC Geometry and Dynamics Seminar ([Slides](/file/GDSlides.pdf))
 - 2022.11.21, Applications of quasimap theory in enumerative geometry, Tsinghua Preprint Seminar
 - 2022.02.24, Motivic degree zero Donaldson-Thomas invariants, Enumerative Geometry Learning Seminar
 
 ## Seminars and Visitings
+- 2026.04.20-2026.04.24, Workshop on Symplectic Varieties and Projective Geometry, Morningside Center of Mathematics, Chinese Academy of Sciences
 - 2025.06.30-2025.07.11, 2025 International Summer School of Algebraic Geometry, Shanghai Center for Mathematical Sciences
 - 2025.06.23-2025.06.27, Workshop on Fano Varieties, BICMR
 - 2025.04.07-2025.04.09, McKay correspondence, Dimer model and Derived category, Nagoya University
