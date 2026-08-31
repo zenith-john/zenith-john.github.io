@@ -6,7 +6,9 @@ hidden: true
 
 
 ## Preprints and Publications
-- The $G$-Noncommutative Minimal Model Program (joint with Dongjian Wu), [arxiv:602.20335](https://arxiv.org/abs/2602.20335)
+- Stability conditions on local $\mathbb{P}^3$ (joint with Dongjian Wu, Tianle Mao), in preparation
+- The Global Dimension Function on Stability Manifolds (joint with Dongjian Wu), [arxiv:2608.28187](https://arxiv.org/abs/2608.28187)
+- The $G$-Noncommutative Minimal Model Program (joint with Dongjian Wu), [arxiv:2602.20335](https://arxiv.org/abs/2602.20335)
 - Non-ruledness via Hodge atoms, [Draft](/file/Non-ruled.pdf)
 - Stability conditions on blowups, [arxiv:2503.23682](https://arxiv.org/abs/2503.23682)
 - Stability Conditions on $\mathbb{P}^3$ (joint with Dongjian Wu), [arxiv:2408.00519](https://arxiv.org/abs/2408.00519)
@@ -19,6 +21,8 @@ hidden: true
 - 2022.02.24, Motivic degree zero Donaldson-Thomas invariants, Enumerative Geometry Learning Seminar
 
 ## Seminars and Visitings
+- 2026.08.02-2026.08.14, 2026 International Summer School of Algebraic Geometry, Shanghai Center for Mathematical Sciences
+- 2026.07.15-2026.07.21, AI4Math Summer School 2026, Zhejiang University
 - 2026.04.20-2026.04.24, Workshop on Symplectic Varieties and Projective Geometry, Morningside Center of Mathematics, Chinese Academy of Sciences
 - 2025.06.30-2025.07.11, 2025 International Summer School of Algebraic Geometry, Shanghai Center for Mathematical Sciences
 - 2025.06.23-2025.06.27, Workshop on Fano Varieties, BICMR

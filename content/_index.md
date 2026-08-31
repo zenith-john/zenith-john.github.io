@@ -7,23 +7,21 @@ draft = false
 
 ## Nantao Zhang (张南涛) {#nantao-zhang--张南涛}
 
-Graduate Student at Yau Mathematical Science Center, Tsinghua University
+Postdoc at School of Mathematics, Sun Yat-Sen University
 
-Supervised by [Will Donovan](https://w-donovan.github.io/)
+Supervisor: [Shizhuo Zhang](https://sites.google.com/view/shizhuozhang/home)
 
-Email: znt21 (at) mails.tsinghua.edu.cn
-
+Email: zhangnt (at) mail (dot) sysu (dot) edu (dot) cn and zenith-john (at) foxmail (dot) com
 
 ## Education {#education}
 
--   2021.09-now, PhD student, Mathematics, Tsinghua University, Supervisor: [Will Donovan](https://w-donovan.github.io/)
+-   2021.09-2026.06, PhD student, Mathematics, Tsinghua University, Supervisor: [Will Donovan](https://w-donovan.github.io/)
 -   2017.09-2021.06, Bachelor, Biology, Tsinghua University
 
 
 ## Current and Future Activities {#current-and-future-activities}
 
-TBD
-
+TBA
 
 ## Research Interest {#research-interest}
 
